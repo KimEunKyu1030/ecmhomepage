@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=ks_c_5601-1987" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="../default.css">
+<SCRIPT type=text/javascript src="../default.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16899"></HEAD>
+<BODY onmousedown=onBodyMouseDown(); class=bdstyle onload=onBodyLoad();><!-- Page Title -->
+<DIV id=areafixed class=bdstyleTitle>
+<DIV class=title>단위근 검정 
+<DIV class=version></DIV></DIV>
+<HR class=headerLine>
+</DIV><!-- Page Title --><!-- Begin Client Area -->
+<DIV id=areascroll class=bdstyleBody>
+<H3>개요</H3>
+<UL class=liType02>
+  <LI>불안정한 시계열(Non-stationary time series)은 자기회귀모형(autoregressive model)으로 나타낼 
+  경우 특성근이 1입니다. 즉 단위근(unit root)을 갖습니다. 시계열 검정 메뉴에서는 KPSS(Kwiatkowski &amp; 
+  Phillips &amp; Schmidt &amp; Shin) 검정,&nbsp;ADF (Augmented Dickey-Fuller) 검정을 
+  지원하는데, ADF검정은 변수에 단위근이 존재 한다는 귀무가설 이며, KPSS 검정은 변수에 단위근이 존재하지 않는다는 것이 귀무가설입니다. 
+  검정통계량 (TAU)과 유의확률(p-value)등을 통해 귀무가설을 채택할 것인지 기각할 것인지를 결정합니다. </LI></UL>
+<H3>실행방법</H3>
+<UL class=liType02>
+  <LI><SPAN class=genExHighlight>[분석] - [시계열 분해] - [시계열 검정] - [단위근 검정]</SPAN> 를 선택하면 <SPAN 
+  class=genExHighlight>[단위근 검정]</SPAN> 윈도우가 나타납니다.<BR>창에서 어떠한 검정 방법을 사용할 것인지 
+  선택하고, 각 방법에 필요한 parameter를 선택/입력한 후 검정할 변수를 선택합니다. 확인 버튼을 클릭하면 시계열 검정이 수행됩니다. 
+  <P><IMG src="../images/tst1_1.jpg"></P><BR></LI></UL>
+<H3>KPSS(Kwiatkowski &amp; Phillips &amp; Schmidt &amp; Shin) Test</H3>
+<UL class=liType02>
+  <LI>KPSS의 test statistics value를 구하는 식은 아래와 같습니다. 
+  <P><IMG src="../images/tst1_5.jpg"></P><BR>시계열을 <IMG 
+  src="../images/tst1_6.jpg"> 와 같이 random work + deterministic trend + 
+  stationary error 의 회귀식으로 나타낼 때, <IMG src="../images/tst1_7.jpg"> 입니다.(e_t (t = 
+  1, 2, … , N)는 residuals )<BR>Type을 mu로 입력한 경우 test statistics 계산 시의 residual = 
+  y - mean(y) 이고, tau로 입력한 경우 y를 종속 변수로 하고 time trend를 독립 변수로 linear regression 
+  한 결과의 residuals를 사용합니다.<BR>SelectLags를 nil로 입력한 경우, 
+  <P><IMG src="../images/tst1_8.jpg"></P><BR>로 계산하고, short, long일 때는 
+  <P><IMG src="../images/tst1_9.jpg"></P><BR>로 계산합니다. Short일 경우 lag 값이 4 * (0.01 
+  * N)^1/4 의 정수 부분을 취하고, long일 경우 12 * (0.01 * N)^1/4 의 정수 부분을 취합니다. </LI></UL>
+<H3>결과</H3>
+<UL class=liType02>
+  <P><IMG src="../images/tst1_2.jpg"></P><BR></UL>
+<H3>ADF(Augmented Dichey-Fuller) Test</H3>
+<UL class=liType02>
+  <LI>시계열 데이터는 상수와 확정적 추세(trend)의 포함 여부에 따라 다른 형태로 나타낼 수 있습니다. ADF Test의 선택항목 
+  Type은 검정할 시계열 데이터의 형태에 맞게 입력해야 합니다.<BR>상수와 확정적 추세를 포함하지 않는 경우(Type = none)의 
+  검정모형은 
+  <P><IMG src="../images/tst1_14.jpg"></P><BR>입니다. 상수만을 포함하는 경우(Type = Drift)의 
+  검정 모형은 아래와 같이 나타낼 수 있습니다. 
+  <P><IMG src="../images/tst1_15.jpg"></P><BR>상수와 확정적 추세 모두를 포함하는 경우(Type = 
+  Trend)의 검정모형은 
+  <P><IMG src="../images/tst1_16.jpg"></P><BR>입니다.<BR>Lag은 검정모형의 회귀식에 포함되는 1차 
+  자기회귀항의 차수로, 위 회귀식의 p값입니다. 따라서 Lag 값이 1 이상일 때 올바른 결과를 얻을 수 있습니다.<BR>SelectLags는 
+  likelihood값에 따라 lag order 자동 설정 여부에 관련된 입력입니다. SelectLags를 Fixed로 입력하면 직접 입력한 
+  Lag 값을 사용하고, AIC, BIC를 선택하면 Akaike Information Criterion인 -2 * log(likelihood) 
+  + k * npar 에 의해 lag값을 구합니다. k=log(n) (n은 observation 수) 일 때 BIC(Bayesian 
+  Information Criterion)라고 합니다. (npar = number of parameter). </LI></UL>
+<H3>결과</H3>
+<UL class=liType02>
+  <P><IMG src="../images/tst1_4.jpg"></P></UL>
+<HR class=footerLine>
+
+<P class=footer></P></DIV></BODY></HTML>
+
+	  		<p><img src="../images/tst1_3.jpg"></p><br>
+			각 검정 방법에 따른 Test-statistics의 값, Critical value, Coefficient 등과 Multiple R-square, Adjusted R-square, F-statistics, p-value 등의 통계량을 제공합니다. Coefficient에서 Intercept는 상수항, trend는 확정적 추세, y.l1은 y에 대한 값입니다.
+	  	</ul>
+		
+		<h3>ADF(Augmented Dichey-Fuller) Test</h3>
+		<ul class="liType02">
+			<li>
+				시계열 데이터는 상수와 확정적 추세(trend)의 포함 여부에 따라 다른 형태로 나타낼 수 있습니다. ADF Test의 선택항목 Type은 검정할 시계열 데이터의 형태에 맞게 입력해야 합니다.<br>
+				상수와 확정적 추세를 포함하지 않는 경우(Type = none)의 검정모형은
+			</li>
+			<p><img src="../images/tst1_14.jpg"></p><br>
+			입니다. 상수만을 포함하는 경우(Type = Drift)의 검정 모형은 아래와 같이 나타낼 수 있습니다.
+			<p><img src="../images/tst1_15.jpg"></p><br>
+			상수와 확정적 추세 모두를 포함하는 경우(Type = Trend)의 검정모형은
+			<p><img src="../images/tst1_16.jpg"></p><br>
+			입니다.<br>
+			Lag은 검정모형의 회귀식에 포함되는 1차 자기회귀항의 차수로, 위 회귀식의 p값입니다. 따라서 Lag 값이 1 이상일 때 올바른 결과를 얻을 수 있습니다.<br>
+			SelectLags는 likelihood값에 따라 lag order 자동 설정 여부에 관련된 입력입니다. SelectLags를 Fixed로 입력하면 직접 입력한 Lag 값을 사용하고, AIC, BIC를 선택하면 Akaike Information Criterion인 -2 * log(likelihood) + k * npar 에 의해 lag값을 구합니다. k=log(n) (n은 observation 수) 일 때 BIC(Bayesian Information Criterion)라고 합니다. (npar = number of parameter).
+		</ul>
+	  	<h3>결과</h3>
+	  	<ul class="liType02">
+	  		<p><img src="../images/tst1_4.jpg"></p><br>
+			각 검정 방법에 따른 Test-statistics의 값, Critical value, Coefficient 등과 Multiple R-square, Adjusted R-square, F-statistics, p-value 등의 통계량을 제공합니다. Coefficient에서 Intercept는 상수항, tt는 확정적 추세, z.lag.1은 y, z.diff.lag1은 y의 first difference 에 대한 값입니다.
+	  	</ul>
+		
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

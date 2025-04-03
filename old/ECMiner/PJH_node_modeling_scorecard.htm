@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">SCORECARD
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/scorecard_01.jpg"></div>
+    	<div class="nodeexplain">
+    		<span class="nodeExHighlight">Scorecard노드</span>는 Logistic 회귀분석의 알고리즘을 사용하여 종속변수(이산형)에 미치는 독립변수들의 영향도를 Score 형태로 계산해 줌으로써 사용자가 독립변수의 영향도를 더욱 쉽게 파악할 수 있도록 만든 모델링 방법입니다. 이는 금융 분야에서 고객의 신용 등급을 평가할 때 유용하게 사용되고 있습니다.
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>
+		
+
+    
+    <h3><a name="개요">개요</a></h3>
+    Scorecard는 기본적으로 Logistic 회귀분석의 방법론을 그대로 이용합니다. 쉽게 말해서 Scorecard는 Logistic 회귀분석을 더욱 쉽게 이해하기 위해서 만든 방법이라고 할 수 있습니다.  Scorecard의 기능을 수행하기 위해서는 일단 구간화 노드를 이용하여 변수를 구간화 하는 과정이 필요합니다. 이렇게 구간화된 변수를 가지고 Scorecard 노드를 이용해 Scorecard를 만들 수 있습니다.
+  	
+  	<h3><a name="고려사항">고려사항</a></h3>
+  	<span class="genExHighlight">독립변수, 종속변수</span>가 입력되어야 하며 독립변수는 연속형, 종속변수는 이산형이어야 합니다. 이 때 독립변수는 정수형으로 연속형이어야 합니다.(구간화 노드의 결과) 그리고 종속변수는 이산형이면서도 클래스가 2개이어야 합니다.
+      	
+  	<h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+			<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+			<li><span class="genExHighlight">구간화 노드</span>를 이용해 독립변수를 가지고 구간 변수를 만듭니다.</li>
+			<li><span class="genExHighlight">필터 노드</span>를 이용해 구간 변수와 종속변수를 제외한 다른 변수를 제외시킵니다.</li>
+			<li><span class="genExHighlight">형태변경 노드</span>를 이용해 독립변수, 종속 변수를 지정합니다.</li>
+			<li><span class="genExHighlight">ScoreCard 노드</span>를 이용해 ScoreCard를 만듭니다.</li>
+			<li><span class="genExHighlight">ScoreCard diagram</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/scorecard_02.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <h3><a name="속성">속성</a></h3>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="">속성명</th>
+					<th width="">설명</th>
+					<th width="40">기타</th>
+					<th width="">비고</th>
+				</tr>
+			</thead>
+			
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<th rowspan="3">선택사항</th>
+					<td>최대 반복수</td>
+					<td>Logistic 회귀분석을 위해 Maximum Likelihood Estimator를 추정할 때 최대 몇 번의 반복을 통해서 Estimator를 추정할지를 결정합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>최대값</td>
+					<td>Score의 최대값을 입력합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>최소값</td>
+					<td>Score의 최소값을 입력합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+
+				
+		</table>
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

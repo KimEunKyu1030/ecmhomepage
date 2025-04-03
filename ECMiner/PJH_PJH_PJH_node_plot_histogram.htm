@@ -1,0 +1,424 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">히스토그램
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/PJH_PJH_node_plot_histogram.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+					<span class="nodeExHighlight">히스토그램 노드</span>는 연속형 변수의 분포를 가늠해 볼 수 있는 히스토그램을 그리는 노드입니다. <span class="nodeExHighlight">연속형 변수</span>일 경우만 가능하며 정규분포와 T-분포 곡선을 동시에 그릴 수도 있습니다.
+
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+	
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/PJH_PJH_node_plot_histogram.files/image004.jpg"></p>				
+				<li>구간화 방법을 지정한 뒤 각 방법에 따른 값(구간 간격 혹은 구간 개수)를 입력합니다.</li>
+				<li>범위설정의 자동설정을 <span class="genExHighlight">예</span>로 선택하면 선택된 변수의 최대 / 최소값이 범위가 되며 아니오로 선택하였을 경우 적당한 최소 / 최대값을 입력하여야 합니다. </li>
+				<li>만약, 최대 / 최소값이 잘못 되었을 경우 히스토그램에 데이터가 나타나지 않거나 일부만 나타날 수 있습니다.</li> 						  	
+				<li>선택사항</li>
+				<p><span class="genExHighlight">그룹변수 옵션</span> 속성 변경</p>
+				<p><span class="genExHighlight">Y축 지정</span> 속성 변경</p>
+
+            </ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="80">속성그룹</th>
+						<th width="80">속성명</th>
+						<th width="">설명</th>
+						<th width="">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+    <tr>
+        <th rowspan="2">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 
+있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+            차트 옵션
+        </th>
+        <td>
+            변수별로 차트 생성
+        </td>
+        <td>
+            변수 개수 만큼 여러개의 차트를 그린다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            행 내 차트개수
+        </td>
+        <td>
+            행에 들어갈 차트 개수를 
+설정합니다.
+        </td>
+        <td>
+             
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="6">
+            그룹변수 옵션
+        </th>
+        <td>
+            그룹표시
+        </td>
+        <td>
+            데이터 내에 그룹 관련 변수가 
+있을 때 그룹 표시 방법을 선택합니다. 
+        </td>
+        <td>
+            그룹 사용 안함,
+            시리즈로 구분 중 택일
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#1
+        </td>
+        <td>
+            첫번째 그룹변수를 
+선택합니다
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#2
+        </td>
+        <td>
+            두번째 그룹변수를 
+선택합니다
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#3
+        </td>
+        <td>
+            세번째 그룹변수를 
+선택합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#4
+        </td>
+        <td>
+            네번째 그룹변수를 
+선택합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#5
+        </td>
+        <td>
+            다섯번째 그룹변수를 
+선택합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <th rowspan="3">
+            사용자 지정 최대/최소
+        </th>
+        <td>
+            Y축 지정
+        </td>
+        <td>
+            Y축 최대/최소값을 사용자가 수동으로 지정할 것인지 결정합니다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            Y축 최소값
+        </td>
+        <td>
+            Y축 지정이 
+<span class="genExHighlight">'예'</span>일 경우 활성화됩니다. Y축 최소값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            Y축 최대값
+        </td>
+        <td>
+            Y축 지정이 
+<span class="genExHighlight">'예'</span>일 경우 활성화됩니다. Y축 최대값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <th rowspan="3">
+            구간화 방법
+        </th>
+        <td>
+            구간화 방법
+        </td>
+        <td>
+            지정된 연속형 변수의 데이터 
+구간을 결정할 방법을 지정합니다.
+        </td>
+        <td>
+            구간간격, 구간 개수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            구간 간격
+        </td>
+        <td>
+            구간화 방법이 구간 간격일 경우 
+활성화됩니다. 지정된 간격마다 몇 개의 데이터가 있는지 계산 하여 히스토그램을 그립니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            구간 개수
+        </td>
+        <td>
+            구간화 방법이 구간 개수일 경우 
+활성화됩니다. 전체 구간을 지정된 개수만큼 나누고 각 
+구간에 몇 개의 데이터가 포함되는 지 계산하여 히스토그램을 그립니다.
+        </td>
+        <td>
+            자연수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="3">
+            범위설정
+        </th>
+        <td>
+            자동설정
+        </td>
+        <td>
+            히스토그램을 그릴 범위의 
+최소, 최대값을 계산할 방법을 지정합니다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            최소값
+        </td>
+        <td>
+            자동설정이 <span class="genExHighlight">'아니오'</span>일 경우 
+활성화됩니다. 히스토 그램을 그릴 범위 중 최소값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            최대값
+        </td>
+        <td>
+            자동설정이 <span class="genExHighlight">'아니오'</span>일 경우 
+활성화됩니다. 히스토 그램을 그릴 범위 중 최대값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            분포선
+        </th>
+        <td>
+            정규분포 곡선
+        </td>
+        <td>
+            정규분포 곡선을 같이 그리고자 
+한다면 예를 선택합니다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+ 				<tr>
+					<th rowspan="3">
+						변수선택
+					</th>
+					<td>
+						전체 변수 선택/해제
+					</td>
+					<td>
+						전체 변수를 선택하거나, 선택 해제하는 버튼으로 위의 이미지 1번 그림의 두 버튼입니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						변수 목록
+					</td>
+					<td>
+						히스토그램을 그릴 변수를 지정합니다. 위의 이미지 2번 그림에 표현된 체크박스를 이용하여, 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						필수
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						조건부 변수 선택
+					</td>
+					<td>
+						3번 이미지를 이용하여 변수 목록 중 제시하는 조건에 맞는 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+</table>
+   	
+
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=ks_c_5601-1987" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="./default.css">
+<SCRIPT type=text/javascript src="./default.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16899"></HEAD>
+<BODY onmousedown=onBodyMouseDown(); class=bdstyle onload=onBodyLoad();><!-- Page Title -->
+<DIV id=areafixed class=bdstyleTitle>
+<DIV class=title>멀티 차트 
+<DIV class=version></DIV></DIV>
+<HR class=headerLine>
+</DIV><!-- Page Title --><!-- Begin Client Area -->
+<DIV id=areascroll class=bdstyleBody>
+<P>멀티 차트는 여러 변수들의 특징을 한 눈에 보기 쉽도록 고안한 ECMiner 고유의 차트입니다. 데이터 탐색기의 차트에서 멀티차트를 
+선택하면 다음과 같은 화면이 나타납니다. </P><IMG 
+src="./files/DataExplorer_MultiChart.files/image002.jpg"> 
+<H3>차트</H3>
+<UL class=liType02>
+  <LI>차트형태 : 차트의 형태에는 Trend, Data, Box Plot, Distribution, Correlation이 있습니다. 
+  Trend는 데이터를 시간 순서대로 표현해 주는 기능이고, Data는 데이터를 단순하게 산점도로 표현해주는 기능입니다. Box는 데이터의 
+  분포를 알고자 할 때 그것을 Box Plot이라는 형태의 차트를 이용하여 표현해주는 기능입니다. Distribution의 경우 변수의 분포를 
+  정규 분포 확률 플롯으로 보여줍니다. Correlation을 통해서는 변수간 관계를 쉽게 파악할 수 있습니다. 
+  <LI>차트분할: 어떠한 그룹 변수로 차트를 나누어 그릴지를 선택합니다. 만약 어떠한 변수 A가 있어서 그 값이 1혹은 -1을 갖는다고 할 
+  때 A를 차트분할 변수로 설정하면 차트를 그릴 때 이 변수 값이 같은 것끼리 하나씩 그려주게 됩니다. 
+  <LI>범례: 어떠한 그룹 변수로 차트에 찍히는 점을 구분할지를 선택합니다. 만약 어떠한 변수 A가 있어서 그 값이 1혹은 -1을 갖는다고 
+  할 때 A를 범례 변수로 설정하면 차트를 그릴 때 그 값이 같은 것끼리 같은 색의 점을 찍어줍니다 </LI></UL>
+<H3>X축</H3>
+<UL class=liType02>
+  <LI>Label: 이는 차트형태이 Data일 때에만 활성화됩니다. 여기에는 이산형 변수만이 들어가고 이 이산형 변수를 X축으로 하여 차트를 
+  그립니다. 
+  <LI>Order: 이는 Label에 들어가는 변수를 어떤 순서로 X축에 나타낼지를 결정하는 변수입니다. 예를 들어 다음과 같이 변수가 
+  나열되어 있다고 합시다. 
+  <TABLE class=tbStyle01>
+    <THEAD>
+    <TR>
+      <TH width=100>Order변수</TH>
+      <TH width=100>Label 변수</TH></TR></THEAD>
+    <TBODY>
+    <TR>
+      <TD align=center>1</TD>
+      <TD align=center>A</TD></TR>
+    <TR>
+      <TD align=center>3</TD>
+      <TD align=center>B</TD></TR>
+    <TR>
+      <TD align=center>2</TD>
+      <TD align=center>C</TD></TR></TBODY></TABLE><BR>일단 Order변수에 의해서 정렬을 한 후 Label 
+  변수를 순차적으로 읽는 것입니다. 즉 A-&gt;C-&gt;B의 순서가 되는 것입니다. X축에 이와 같은 순서로 Data Chart가 
+  그려집니다. </LI></UL>
+<H3>Y축</H3>
+<UL class=liType02>
+  <LI>Y1 : Y1의 경우 왼쪽 Y축에 어떤 변수가 들어갈지를 결정합니다. 복수 선택 가능이 가능합니다. 
+  <LI>Y2 : Y2의 경우 오른쪽 Y축에 어떤 변수가 들어갈지를 결정합니다. 
+  <LI>X, Y: 차트형태로 Correlation을 선택했을 때 어떤 변수를 X축으로 사용하고, 어떤 변수를 Y축으로 사용할 것인지를 
+  결정합니다. 이 때 Y축은 복수 선택이 가능합니다 </LI></UL>
+<H3>체크 박스 관련</H3>
+<UL class=liType02>
+  <LI>회귀분석: 차트형태를 Correlation으로 선택할 경우, X축에 해당하는 변수를 독립변수로 사용하고 Y축에 해당하는 변수를 
+  종속변수로 사용하여 Regression을 하는 기능 수행에 대한 여부를 결정하는 옵션입니다 
+  <LI>점/선으로 표시: 차트형태를 Trend 혹은 Data로 사용할 경우, 점과 점 사이를 Line으로 연결할지에 대한 여부를 결정하는 
+  옵션입니다. 
+  <LI>기초통계: 차트형태를 Box로 선택할 경우, Median, Standard Deviation, Average, Maximum, 
+  Minimum, Range와 같은 간단한 통계량을 표시할지에 대한 여부를 결정하는 옵션입니다. 
+  <LI>이상치: Outlier를 표시할지에 대한 여부를 결정하는 옵션입니다. 다음은 ‘기초통계’와 ‘이상치’를 선택하였을 때의 Box 
+  Chart화면입니다.<BR><IMG src="./files/DataExplorer_MultiChart.files/image004.jpg"> 
+  </LI></UL>
+<H3>필터 옵션</H3><IMG 
+src="./files/DataExplorer_MultiChart.files/image006.jpg"><BR><BR>필터 옵션은 현재 데이터 
+테이블의 데이터 중에서 어떠한 조건을 만족하는 데이터만을 쓰고 싶을 때 이용하는 옵션입니다. 사용자는 변수를 선택하고 그 변수가 사용하고자 하는 
+부등호와 그에 대응하는 값을 적어줍니다. 그리고 Add단추를 누르면 아래의 선택 조건에 작성한 목록이 등록됩니다. 등록한 여러 조건 중에서 
+사용하고자 하는 조건을 체크한 후 확인을 누르면 이 후부터는 원하는 데이터만을 사용할 수 있습니다. 
+<H3>데이터 초기화</H3>실제 데이터로 바꾸어주는 기능입니다. 
+<H3>기타 옵션</H3>
+<UL class=liType02>
+  <LI>출력옵션(행): 한 화면에 가로로 몇 개의 차트를 보여줄지 설정합니다. 
+  <LI>출력옵션(열): 한 화면에 세로로 몇 개의 차트를 보여줄지 설정합니다. 
+  <LI>축 간격: X축에 Tick이 몇번 단위로 쓰여질지 설정합니다. 
+  <LI>관리 한계: UCL, LCL이 각각 어떤 변수를 기준으로 Control Line을 그릴지를 결정합니다 
+  <LI>규격 한계: USL과 LSL이 있는데 USL과 LSL은 값이 같은 Field를 사용해야 합니다. 
+  <LI>목표 관리선: 차트형태가 Trend, Data, Box일 때 선택한 변수에 해당하는 Target Line을 그려지는 모든 Chart에 
+  그려주는 옵션입니다. 
+  <LI>통계량 연결선: 범례에 의해서 각 차트당 두 개 이상의 Box Plot이 그려지는 경우 Box Link의 옵션에 해당하는 값을 
+  이어주는 기능입니다. 예를 들어Mean, Average, Max, Min의 옵션 중 Average를 선택하면 각 Box Plot에서 평균에 
+  해당하는 위치의 점들을 이어줍니다. </LI></UL>
+<H3>사용 예시</H3>차트형태로&nbsp;Trend를 사용하였을 때의 화면 <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image008.jpg"><BR><BR>차트형태로&nbsp;Box 
+Plot을 사용하였을 때의 화면.&nbsp;범례 변수에 의해 구별되는 데이터 별로 Box Plot이 그려집니다.(범례 변수는 사용하지 않을 수도 
+있습니다.) <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image010.jpg"><BR><BR>차트형태로&nbsp;Distribution을 
+사용하였을 때의 화면 <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image012.jpg"><BR><BR>차트형태로&nbsp;Correlation을 
+사용하였을 때의 화면 <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image014.jpg"><BR><BR>
+<HR class=footerLine>
+
+<P class=footer></P></DIV>.(Legend 변수는 사용하지 않을 수도 있습니다.) <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image010.jpg"><BR><BR>Chart Type으로 
+Distribution을 사용하였을 때의 화면 <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image012.jpg"><BR><BR>Chart Type으로 
+Correlation을 사용하였을 때의 화면 <BR><IMG 
+src="./files/DataExplorer_MultiChart.files/image014.jpg"><BR><BR>
+<HR class=footerLine>
+
+<P class=footer>
+<DIV></DIV></BODY></HTML>
+

@@ -1,0 +1,1232 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">이미지 처리노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/이미지%20처리%20노드.jpg"></div>
+    	<div class="nodeexplain">
+			<li><span class="nodeExHighlight">이미지 처리노드</span>는 디지털 이미지를 신호 처리하는 분야로 이미지로부터 유의미한 정보를 얻기 위하여 사용되는 일련의 알고리즘을 의미합니다. </li>
+			<li>또한 <span class="nodeExHighlight">이미지 처리노드</span>는 입력된 이미지에서 <span class="nodeExHighlight">변환, 분류, 탐지, 인식, 검출, 왜곡, 수정, 향상, 복원, 압축, 필터링</span> 등의 다양한 처리 작업을 할 수 있습니다. </li>
+
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#알고리즘 설명">알고리즘 설명</a>,
+    <a href="#기본화면">기본화면</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#사용법">고려사항</a>,
+    <a href="#속성">속성</a>
+
+	
+    <h3><a name="알고리즘 설명">알고리즘 설명</a></h3>
+    <ul class="liType02">
+		<span class="genExHighlight">이미지 처리노드</span>의 알고리즘에 대한 설명은 아래와 같습니다.<br/>
+		<li><span class="genExHighlight">Color space</span>: 색상 분리 추출 및 변환을 수행하는 필터 모음입니다 </li>
+		<li><span class="genExHighlight">Geometry</span>: 기하학 변환을 수행하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Arithmetic Operations</span>: 산술 연산 함수를 수행하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Threshold Operations</span>: 이미지 임계처리 필터이며 기본 임계처리는 사용자가 고정된 임계값을 결정하고 그 결과를 보여주는 단순한 형태이며 분석하고자 하는 물체와 배경을 픽셀 세기의 변화를 기반으로 분할하는 필터 모음입니다.. </li>
+		<li><span class="genExHighlight">Logical Operations</span>: 논리적 연산을 수행하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Filtering Operations</span>: 기본적인 이미지 처리를 수행하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Noise Creation</span>: 이미지 및 영상에 잡음을 발생시키는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Histogram</span>: 영상의 밝기값(명암값)의 분포를 보여주는 그래프를 통해 화질을 개선하며 물체인식, 물체 분리 등에 사용하는 필터 모음입니다.<br/>
+		(특징): 영상의 밝기 구성, 명암 대비 등 정보를 직관적으로 알 수 있음<br/>
+		(예시): 우주 사진, 위성 사진, 사무자동화, OCR, 자동화용 영상처리, 물건의 결함 검사</li>
+		<li><span class="genExHighlight">Edge Detection</span>: 이미지내에서 영역의 경계이자 픽셀밝기가 급격하게 변하는 불연속점 부분을 검출하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Corner Detection</span>: 객체가 갑자기 변하는 경계 지점의 점이나 두 개 또는 그 이상의 변의 교차점 같은 특징을 갖고있는 코너의 점들을 검출하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Hough Transform</span>: 영상분석, 컴퓨터 비전, 패턴 인식 등 분야에서 사용되는 특징추출 방법 중 하나로 직선, 원, 타원 등의 추출 패턴이 있으며 영상/이미지 내의 선형 구조를 검출하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Contours</span>: Contours 필터는 등고선이라는 의미로 동일한 색 또는 강도를 가지고 있는 영역의 경계선을 연결하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Morphology</span>: 미리 특정한 형태를 띄는 필터를 만들고 이 필터를 영상에 씌워 새로운 영상을 얻어내는 기법 필터 모음입니다.<br/>
+		(특징 1): 영상 내에 존재하는 특정 객체의 형태를 변환시키며 객체의 모양을 표현하거나 기술하기 위한 용도로 사용합니다.<br/>
+		(특징 2): 모폴로지 연산은 이진 영상 처리에 주로 사용되며 그레이 스케일 영상에도 확장되어 적용 가능합니다.</li>		
+		<li><span class="genExHighlight">Pyramid Algorithm</span>은 원본 이미지의 해상도가 제일 크고, 단계가 높아질 수록 이미지 해상도가 줄어드는 방식 때문에 이미지의 해상도에 따른 다단계 이미지 세트인 피라미드 알고리즘을 의미합니다. (내용 수정 필요) <br/?
+		마치 피라미드와 같이 이미지 단계가 놓여져 있기 때문에 하위 단계가 상위 단계 아래에 놓여져 있는 이미지가 됩니다.</li>
+		<li><span class="genExHighlight">Matching</span>은 템플릿 이미지의 위치를 찾는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Signal Process</span>는 신호처리를 수행하는 필터 모음입니다.</li>
+		<li><span class="genExHighlight">Simulation</span>은 시뮬레이션을 의미합니다. </li>
+
+  	</ul>
+  	
+  	<h3><a name="기본화면">기본화면</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">이미지 처리노드</span>의 프로그램상에서 화면은 
+		<span class="genExHighlight">메인 실행화면</span>/ 
+		<span class="genExHighlight">실행 결과 출력</span>/ 
+		<span class="genExHighlight">이미지 썸네일</span>/ 
+		<span class="genExHighlight">필터 목록</span>/ 
+		<span class="genExHighlight">필터 속성</span>/ 
+		<span class="genExHighlight">이미지 정보</span> 등의 영역으로 구성되어 있습니다. </li>
+		<li><span class="genExHighlight">이미지 처리노드</span>의 기본화면은 아래와 같습니다. </li>
+		 <p>			
+    	<img src="./images/이미지%20처리%20노드%20기본화면.jpg">
+  		</p>
+
+  	</ul>
+  	
+  	<h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+  		<li>먼저, <span class="genExHighlight">이미지 입력노드</span>을 통해 이미지 데이터 파일들을 읽어들입니다.</li>
+  		<li>그 다음 <span class="genExHighlight">이미지 처리노드</span>를 연결하여 사용을 원하는 각 필터들의 모음에서 해당 함수를 선택하고 <span class="genExHighlight">Method, Mask, Aperture, 추출 경로</span>와 같은 이미지 처리 함수들의 고유 파라미터 값을 입력합니다. </li>
+  		<li><span class="genExHighlight">이미지 처리노드</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/이미지%20처리%20노드%20연결2.jpg">
+  		</p>
+  	</ul>
+			
+	<h3><a name="고려사항">고려사항</a></h3>
+    <ul class="liType02">
+  		<li>원활한 실행을 위해 Image Process Tool에서는 선택된 이미지 중 100개만 우선 표시됩니다. 노드의 실행/부분실행 시에는 선택된 모든 이미지에 대해 동작이 수행됩니다.</li>
+  		<li>마지막 필터를 [모폴로지>닫기]로 추가했을때, <탐지 객체 수> 와 <탐지 객체 면적 비율> 이 계산됩니다.<br/>
+		<탐지 객체 수> : 필터를 적용하여 탐지된 객체의 개수.<br/>
+		<탐지 객체 면적 비율> : 이미지 면적 대비 탐지된 모든 객체 면적의 합의 백분율(%).</li>
+  	</ul>  	
+		
+    <h3><a name="속성">속성</a></h3>
+
+	<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="">필터 이름<br />(Filter Name)</th>
+					<th width="">필터 이름 (Function)</th>
+					<th width="240">필터의 작동원리 및 기능 설명 (Detailed)</th>
+					<th width="">파라미터 설정값 (Parameters)</th>
+				</tr>
+			</thead>
+	
+	
+    <TR>
+        <!-- 파라미터 세부 속성 -->
+        <TH rowspan="5">
+            <P>Color Space</P>
+        </TH>
+        <TD>
+            <P>Split to RGB</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 각각 Red, Blue, Green에 해당하는 값들만 추출해서 화면에 표시합니다. <br />
+		특징: 붉은계통(Red)이 가장 밝음</P>
+        </TD>
+        <TD>
+            <P>Result : Red, Green, Blue 선택 <br />
+		추출경로: 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>Split to HSV</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 색상을 사람이 시각적으로 인식하는 3가지 요인의 컬러 공간으로 옮겨서 표현합니다. <br/>
+		(색상 정보와 명도 정보를 분리하여 영상처리에 유용) <br />
+		H: 색상, S: 채도, I: 명도</P>
+        </TD>
+        <TD>
+            <P>Result : HUE(색상), Saturation(채도), Value 선택(명도)<br />
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+ <TR>
+        <TD>
+            <P>Split to YCbCr</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 명암도와 색차 신호에 기반하여 컬러 방식으로 표현합니다. (색상 정보를 줄이고 밝기 정보를 늘림) </P>
+        </TD>
+        <TD>
+            <P>Result : Y Channel, Cb Channel, Cr Channel <br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+
+ <TR>
+        <TD>
+            <P>RGB To Gray</P>
+        </TD>
+        <TD>
+            <P>입력된 컬러 이미지를 흑백 이미지로 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Result : Gray<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+
+ <TR>
+        <TD>
+            <P>Gray to RGB</P>
+        </TD>
+        <TD>
+            <P>입력된 흑백 이미지를 컬러 이미지로 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Result : RGB<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+
+    <!-- 일반정보 끝 -->
+    <TR>
+        <TH rowspan="9">
+            <P>Geometry</P>
+        </TH>
+              <TD>
+            <P>Rotation</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 ( X, Y )를 반시계 방향으로 라디안 만큼 회전합니다.</P>
+        </TD>
+        <TD>
+            <P>회전각[0~360도] : 이미지를 회전시킬 각도 입력<br/>
+		추출 경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>Scaling</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 크기를 사용자 임의 지정 크기로 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>가로  : 사용자 임의값 입력<br/>
+		세로 : 사용자 임의값 입력<br/>
+		조절단위 : 픽셀 , 배율 선택<br/>
+		인터폴레이션 : Nearest Neighbor, Linear, 픽셀영역 재샘플링, 3차 회선 보간<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+ <TR>
+        <TD>
+            <P>Super Resolution</P>
+        </TD>
+        <TD>
+            <P>입력된 저해상도의 이미지를 보정된 고해상도의 이미지로 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Super Resolutin 방법:  사용할 보정방법 선택<br/>
+		ESPCN / FSRCNN / LAPSRN 중 선택합니다.<br/>
+		Scaling 크기 : 이미지의 크기를 키워줄 배율을 선택<br/>
+		x2 / x3 / x4 의 항목 중 선택합니다.</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Cutting</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 사용자 임의 지정 크기로 잘라냅니다.</P>
+        </TD>
+        <TD>
+            <P>시작점 : 화면상에서 사용자 임의 선택 범위의 시작점 <br/>
+		끝점 : 화면상에서 사용자 임의 선택 범위의 끝점<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Perspective Transform</P>
+        </TD>
+        <TD>
+            <P>사용자 임의 선택 영역으로 이미지를 보는 시점 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Point1 : 화면상의 지정 범위에서 좌측 상단의 (x, y)좌표<br/>
+		Point2 : 화면상의 지정 범위에서 우측 상단의 (x, y)좌표<br/>
+		Point3 : 화면상의 지정 범위에서 좌측 하단의 (x, y)좌표<br/>
+		Point4 : 화면상의 지정 범위에서 우측 하단의 (x, y)좌표<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Affine Transform</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 직선, 길이(거리)의 비, 평행성(parallelism)을 보존하는 변환으로 선의 평행성은 유지하면서 이미지를 이동, 확대, Scale, 회전, 평행이동, 스케일 뿐만 아니라 Shearing, 반전(Reflection) 변환까지 지원하는 기능입니다. </P>
+        </TD>
+        <TD>
+            <P>Point1 : 화면상의 지정 범위에서 좌측 상단의 (x, y)좌표<br/>
+		Point2 : 화면상의 지정 범위에서 우측 상단의 (x, y)좌표<br/>
+		Point3 : 화면상의 지정 범위에서 좌측 하단의 (x, y)좌표<br/>
+		Point4 : 화면상의 지정 범위에서 우측 하단의 (x, y)좌표<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Flip</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 뒤집기 기능을 실행합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : 상하, 좌우, 상하좌우 선택<br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Translate</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 평행 이동시키며 영상 이동체 추적 문제에 있어서 추적 대상의 크기가 고정이고 회전도 일어나지 않는 경우에는 위치 변화만을 추적합니다.</P>
+        </TD>
+        <TD>
+            <P>이동할 Y : 사용자 지정 임의값 입력<br/>
+		이동할 X : 사용자 지정 임의값 입력<br/>
+		원 영상의 일부를  Translate(체크 박스) : <br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Log Polar</P>
+        </TD>
+        <TD>
+            <P>Log Polar는 입력된 2차원 이미지나 영상에서의 직각좌표계와 극좌표계 변환으로 사람의 시각 시스템 특성을 표현하고 회전, 크기 변환된 객체를 동일한 형태로 표현합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Forward, Inverse 선택 <br/>
+		M : Log Polar 필터 적용정도 범위의 사용자 임의값 입력 (Default 값: 80.0) <br/>
+		추출경로 : 이미지 필터 적용 결과를 추출할 경로 지정</P>
+        </TD>
+    </TR>
+
+    <TR>
+        <TH rowspan="3">
+            <P>Arithmetic Operations</P>
+        </TH>
+        <TD>
+            <P>AddSub</P>
+        </TD>
+        <TD>
+            <P>입력된 원본이미지에 추가로 불러온 이미지의 픽셀을 Add연산과 Sub연산으로 결합하여 결과물의 색상이 강조되어 표시합니다. </P>
+        </TD>
+        <TD>
+            <P>밝기 입력(+,-) : 강조할 색상의 범위를 사용자 지정 임의값 입력 <br/>
+		결합 이미지 로드 : 원본이미지에 결합시킬 이미지 입력 <br/>
+		이미지 뺄셈(체크 박스) :</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>MulDiv(Multiple Division)</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 다분법으로 필터 처리합니다. </P>
+        </TD>
+        <TD>
+            <P>연산값 : 사용자 임의 지정 Scale Factor값 (Default 값: 1.0) <br/>
+		나눗셈 연산(체크 박스) </P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>Blending</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 투명도를 조정하여 두 개의 이미지가 겹쳐보이게 하는 기능으로 두 개의 이미지들 또는 영상들 간에 Cross Disolve를 실행하는데 사용됩니다. </P>
+        </TD>
+        <TD>
+            <P>알파값 : 첫 번째 배열 요소의 가중치 (Default 값: 0.4) <br/>
+		이미지 로드 : Blending으로 사용할 이미지 입력</P>
+        </TD>
+    </TR>
+    <!-- 선택사항 끝 -->
+    <TR>
+        <!-- Threshold Operations -->
+        <TH  rowspan="2">
+            <P>Threshold Operations</P>
+        </TH>
+        <TD>
+            <P>Threshold</P>
+        </TD>
+        <TD>
+            <P>이진화는 입력된 영상 혹은 이미지 처리과정에서 주어진 임계값(Threshold)보다 밝은 픽셀들은 모두 흰색으로, 그렇지 않은 픽셀들은 모두 검은색으로 변환합니다. <br/>
+		※ 기준이 되는 임계값을 어떻게 결정할 것인지가 중요</P>
+        </TD>
+        <TD>
+            <P>Threshhold (임계) 값 : 임계값 (Default 값: 96.0) <br/>
+		Type(임계값 유형) : Binary/ Binary Inv/ Trunc/ Tozero/ Tozero Inv/ Otsu 선택 <br>
+		Max : 임계값 유형과 함께 사용할 최대 값 (Default 값: 255.0)</P>
+        </TD>
+    </TR>
+     <TR>
+        <TD>
+            <P>Adaptive Threshold</P>
+        </TD>
+        <TD>
+            <P>적응적 경계화 적분 기능은 각 화소를 이웃 화소의 평균값과 비교해서 구성하여 화소가 지역 평균값과 두드러지게 차이가 날 경우 이상치(Outlier)로 간주 후 경계화 과정에서 잘라내기 때문에 모든 화수 주변의 지역 평균 계산이 필요하며, 적분 영상을 통해 필요한 여러 윈도우 합산을 효율적으로 계산합니다. </P>
+        </TD>
+        <TD>
+            <P>Block : (Default 값 :7) 픽셀의 임계값을 계산하는 데 사용되는 픽셀 인접 영역의 크기 (3/ 5/ 7 등) <br/>
+		Param (C) : 평균 또는 가중 평균에서 상수를 뺍니다 (Default 값: 5.0) <br/>
+		Threshold의 유형 : (Binary/ Binary Inv 선택) <br/>
+		Adaptive(적응형)의 종류 :  (Mean/ Gaussian 선택) <br/>
+		Max : 조건이 만족되는 픽셀에 할당된 0이 아닌 값 (Default 값: 255.0)</P> <br/>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="1">
+            <P>Logical Operations</P>
+        </TH>
+        <TD>
+            <P>Logic</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 RGB to Gray를 통해 회색이미지로 전환 후 Threshold를 사용하여 흑백이미지로 변환시킨후 다음과 같은 방법으로 사용합니다. <br/>
+		AND : 원본이미지(Src1)와 비교이미지(Src2)의 픽셀이 둘다 1 이면 검은색으로 표현 <br/>
+		NAND : 원본이미지(Src1)와 비교이미지(Src2)의 픽셀이 모두 1 (참)인 경우에만 흰색으로 표현하며 그렇지 않은 경우는 모두 검은색(참)으로 표현 <br/>
+		OR : 원본이미지(Src1)와 비교이미지(Src2)의 픽셀 중 하나의 값만 1 이어도 검은색으로 표현 <br/>
+		NOR : 원본이미지(Src1)와 비교이미지(Src2)의 픽셀이 모두 0 인 경우에만 검은색으로 표현하며 그렇지 않은 경우는 모두 흰색(거짓)으로 표현 <br/>
+		XOR : 원본이미지(Src1)와 비교이미지(Src2)의 픽셀 중 하나만 1 이어도 검은색으로 표현하지만, 두개의 입력 모두 0 이거나 1 이면 흰색(거짓)으로 표현 <br/>
+		즉 두개의 입력들이 서로 다르면 검은색(1)으로 표현하며, 두 개의 입력이 서로 같으면 출력은 흰색(0)이 됨 <br/>(
+		Diference : ※ XOR의 기능에서 Gray 색상 정보가 조금 더 풍부하게 표현 </P>
+        </TD>
+        <TD>
+            <P>Logic타입 : AND, NAND, OR, NOR, XOR, Diference 선택<br/>
+		이미지 로드 : 원본이미지에 논리 연산을 적용할 이미지 선택</P>
+        </TD>
+    </TR>
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="12">
+            <P>Filtering Operations</P>
+        </TH>
+        <TD>
+            <P>Blurring.</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 흐릿하게 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>변환방법 : Blur/ Gaussian/ Bilateral/ Median 선택 <br/>
+		Mask = 2차원 배열의 가중치이며 필터가 동작하여 감지되는 영역 <br/>
+		Mask의 크기 : 3x3/ 5x5/ 7x7/ 9x9 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Embossing</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 양각효과로 이미지/영상의 경계가 튀어나오게 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Mask 타입 : 135, 90, 45, North, West, South, East, NorthEast <br/>
+		Mask : 비활성화 버튼</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Sharpening</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 선명하게 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Mask 타입 : Method 1, Method 2, Method 3, Method 4, Method 5, Method 6 선택</P>
+        </TD>
+    </TR>
+
+<TR>
+        <TD>
+            <P>Unsharpening</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 번지게 된 네거티브(음화)필름과 원본 Positive(양화) 필름을 결합시켜 이미지의 테두리를 부각시키는 기능으로 전통 필름 합성 기법의 이름을 본따서 Unsharpening Filter 라고도 표현합니다.</P>
+        </TD>
+        <TD>
+            <P>Mask 크기 : 3x3, 5x5, 7x7, 9x9 선택 <br/>
+		Bias 값 : (Default 값: 255.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Median Filter</P>
+        </TD>
+        <TD>
+            <P>선택된 이미지의 각 픽셀값을 이웃하는 픽셀들의 미디안 값으로 대체하는 기능이며 결과적으로 이미지가 부드러워지는 효과가 발생합니다. </P>
+        </TD>
+        <TD>
+            <P>Mask Height : (Default 값: 3.0) <br/>
+		Mask Width : (Default 값: 3.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Mean Filter</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 인접 픽셀들의 값을 합쳐서 평균을 내는 기능입니다.</P>
+        </TD>
+        <TD>
+            <P>Mask Height : (Default 값: 3.0) <br/>
+		Mask Width : (Default 값: 3.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Alpha Trim Mean Filter</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 마스크 내 화소값들을 크기 순으로 정렬(퀵 정렬 등)한 후, 알파 값에 따라 정렬된 자료들의 양쪽을 자르고 남은 가운데 값들의 평균값을 출력하는 기능으로 알파가 최소일 때 평균값 필터, 알파가 최대일 때 미디언 필터처럼 작동합니다.</P>
+        </TD>
+        <TD>
+            <P>Mask Height : (Default 값: 3.0)  <br/>
+		Mask Width : (Default 값: 3.0) <br/>
+		Alpha (절삭 평균값 필터링) : (Default 값: 0.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>MinMax Filter</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 극단적인 임펄스 잡음의 제거를 위해 사용하거나 이미지/ 영상에서 밝기 값 차이에 따른 특징을 부각시키는 기능으로 의료 영상 분야에서 많이 사용되고 있습니다.</P>
+        </TD>
+        <TD>
+            <P>Mask Height : (Default 값: 3.0) <br/>
+		Mask Width : (Default 값: 3.0) <br/>
+		Min/Max : Min, Max 선택 <br/>
+		Min은 영상에서 밝은 임펄스 값을 제거하여 전체적으로 영상을 어둡게 만듬 <br/>
+		Max 반대로 어두운 임펄스 값을 제거하여 영상을 전체적으로 밝게 만듬</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Gaussian Smoothing Filter</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 현재 픽셀값과 주변 이웃 픽셀값들의 가중 평균(weighted average)을 이용해서 현재 픽셀의 값을 대체합니다.</P>
+        </TD>
+        <TD>
+            <P>Sigma : (Default 값: 1.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Highpass Filter</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 낮은 주파수 성분을 고주파 필터로 제거하는 기능으로 보통 동종의 저주파 필터와 결합하여 사용하며 저주파 필터가 영상을 부드럽게 하고 고주파 필터로 경계를 날카롭게 처리하기 때문에 경계의 세밀함을 보존할 수 있습니다.</P>
+        </TD>
+        <TD>
+            <P>Mask 크기 : 3x3, 5x5, 7x7, 9x9 선택 <br/>
+		Alpha 값 : (Default 값: 1.0) <br/>
+		Bias 값 : (Default 값: 128.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Soften Filter</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지를 부드럽게 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Mask 타입 : Filter1/ Filter2/ Filter3/ Enhance Focus Filter/ Enhance Detail Filter/ <br/>
+		Blur Light Filter/ Blur blending Filter 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Border Line</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에 테두리를 생성합니다.</P>
+        </TD>
+        <TD>
+            <P>Border Size (경계라인의 크기) : (Default 값: 20.0)</P>
+        </TD>
+    </TR>
+
+    <!-- 일반정보 끝 -->
+		    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="1">
+            <P>Noise Creation</P>
+        </TH>
+        <TD>
+            <P>Noise</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지/영상의 복원을 위해 다양한 잡음(Noise)들을 발생시키는 기능입니다.</P>
+        </TD>
+        <TD>
+            <P>Noise 타입 :
+		Dev : (Default 값: 100.0) <br/>
+		Ave : (Default 값: 0.0) <br/>
+		Length : (Default 값: 1000.0)</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+   
+ <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="4">
+            <P>Histogram</P>
+        </TH>
+        <TD>
+            <P>Histogram Equalization</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지 혹은 영상의 히스토그램 값을 누적시켜 히스토그램 누적 합을 구하고 그 결과의 합을 전체 픽셀의 개수로 나누어 값을 정규화합니다. <br/>
+		특징: 정규화된 값에 최대 명암도 값을 곱한 후 반올림을 수행하며 입력 영상의 명암도에 대한 변환 값으로 대응</P>
+        </TD>
+        <TD>
+            <P>※ 설정값 없음</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Histogram Streching</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 영상 내 픽셀의 최소, 최대값의 비율을 이요하여 고정된 비율로 영상을 낮은 밝기와 높은 밝기로 당겨주는 처리 기능입니다. <br/>
+		특징: 입력된 이미지 혹은 영상에서 낮은 명암대비 영상의 명암값 분포의 히스토그램을 펼쳐서 보다 넓은 영역으로 명암값 분포를 갖게하기 위한 방법</P>
+        </TD>
+        <TD>
+            <P>※ 설정값 없음</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Histogram Sliding</P>
+        </TD>
+        <TD>
+            <P>입력된 영상/이미지를 입력한 파라미터 수치만큼 이동 시키며 선택된 이미지를 흑백 이미지로 변환합니다.</P>
+        </TD>
+        <TD>
+            <P>Sliding Value(-255~255) : 이동시킬 수치값 (Default 값: 0.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Histogram Specification</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지/영상의 Histogram을 무조건 균일하게 분포하지 않고 사용자가 원하는 모양으로 변환합니다. <br/>
+		특징: 이미 잘 분포되어 있는 이미지/영상이 있을때 이 이미지/영상의 명암 대비를 높이거나, 더 밝게 하거나, 더 어둡게하고 싶을때 사용자의 요구에	맞춘 Histogram 모양으로 변환</P>
+        </TD>
+        <TD>
+            <P>이미지 로드 : 기존에 입력 되어있는 원본이미지에 적용할 새로운 이미지 입력 기능</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="9">
+            <P>Edge Detection</P>
+        </TH>
+        <TD>
+            <P>Gradient Edge</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 경사(미분)값을 통하여 윤곽선을 검출합니다.</P>
+        </TD>
+        <TD>
+            <P>Mask = 2차원 배열의 가중치이며 필터가 동작하여 감지되는 영역 <br/>
+		Mast Height : (Default 값: 3.0) <br/>
+		Mask Width : (Default 값: 3.0) <br/>
+		Method = 이미지 처리 방법 <br/>
+		Method : Vertical/ Horizontal/ Gradient 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+           <P>Sobel Edge</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 모든 방향의 윤곽선을 검출하지만 수직, 수평보다 대각선 방향 윤곽선에 더 민감하게 반응하며 잡음에 강한것이 특징입니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Vertical/ Horizontal/ Gradient 선택 <br/>
+		X : (Default 값: 1.0) <br/>
+		Y : (Default 값: 0.0) <br/>
+		Aperture(필터의 직경값) : 1/ 3/ 5/ 7 선택 <br/>
+		Mask 사용(체크 박스) : 3x3/ 5x5/ 7x7/ 9x9 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Prewitt Edge</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 수직, 수평 엣지를 검출하며 수행속도가 다소 빠르기 때문에 비교적 널리 사용되지만 다른 윤곽선 검출 함수들보다 엣지가 덜 부각될 수 있습니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Vertical, Horizontal, Gradient 선택 <br/>
+		Mask : 3x3, 5x5, 7x7, 9x9 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Freichen Edge</P>
+        </TD>
+        <TD>
+            <P>등방성 평활화 가중 연산자는 수평, 수직 및 대각선 모서리의 기울기가 모서리 중심에서 동일해지므로 미묘한 모서리 디테일을 쉽게 추출 할 수 있으며 가장자리 선을 더 얇게 만들 수 있습니다. 하지만 잡음을 실제 엣지 점으로 잘못 감지할 가능성이 높아집니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Vertical, Horizontal, Gradient 선택 <br/>
+		Mask : 3x3, 5x5, 7x7, 9x9 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Stochastic Edge</P>
+        </TD>
+        <TD>
+            <P>확률분포를 기반으로 윤곽선을 검출합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Vertical, Horizontal, Gradient 선택 <br/>
+		Mask : 3x3, 5x5, 7x7, 9x9 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Roberts Edge</P>
+        </TD>
+        <TD>
+            <P>작은 크기의 마스크와 45도의 기울기로 경계가 확실한 윤곽선만 매우 빠른 속도로 검출하며 파라미터 값을 높일수록 윤곽선들이 밝아지지만 잡음에 민감하여 잡음제거가 어려울 수 있습니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Diagonal 1, Diagonal 2, Diagonal 3 선택 <br/>
+		대각선 Mask : 3x3, 5x5, 7x7, 9x9 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Laplacian Edge</P>
+        </TD>
+        <TD>
+            <P>저주파 값은 소거하고 고주파 값들은 강조하는 방식으로 모든 방향의 윤곽선을 검출하지만 국지적으로 최대인 점만 윤곽선으로 인정하는 특성으로 인해 2차 미분 검출기에서 많이 사용됩니다.</P>
+        </TD>
+        <TD>
+            <P>Mask : 3x3(4방향 마스크1), 3x3(4방향 마스크2), 3x3(8방향 마스크1), 3x3(8방향 마스크2), 1x1, 5x5, 7x7 선택 <br/>
+		Laplacian Sharpening (체크 박스) : 라플라시안 샤프닝 사용 여부 체크 기능</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Laplacian of Gaussian(Log) Edge</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지/영상에 가우시안 스무딩을 선적용 후 라플라시안을 후적용하는 방식으로 잡음에 민감한 라플라시안 연산자의 단점이 개선된 기능입니다.</P>
+        </TD>
+        <TD>
+            <P>Method : 3x3(4방향 마스크1)/ 3x3(4방향 마스크2)/ 3x3(8방향 마스크1)/ 3x3(8방향 마스크2)/ Log 공식 선택 <br/>
+		Sigma : 필터와 함께 연산되는 시그마 값으로 0.0 이상의 값 입력  (Default 값: 1.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Canny Edge</P>
+        </TD>
+        <TD>
+            <P>상,하한 임계값 설정을 통해 다양한 환경에 적용 가능하기 때문에 영상처리에 폭넓게 사용되고 있으며 명확하게 하나의 선으로 엣지를 검출합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Canny with Sobel, Canny with Prewitt, Canny with Roberts, CvCanny 선택 <br/>
+		Sigma : (Default 값: 1.0) <br/>
+		Threshold (임계값) : (Default 값: 1.0)</P>
+        </TD>
+    </TR>
+
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="6">
+            <P>Corner Detection</P>
+        </TH>
+        <TD>
+            <P>PreCorner</P>
+        </TD>
+        <TD>
+            <P>코너점 검출을 위해 특징맵(dst)을 Sobel 미분 연산자를 이용하여 계산하는 기능입니다.</P>
+        </TD>
+        <TD>
+            <P>Aperture : 1, 3, 5, 7 선택 <br/>
+		Threshold :  (Default 값: 0.01) <br/>
+		Max :  (Default 값: 255.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Eigenvalue and Eigenvectors Corner</P>
+        </TD>
+        <TD>
+            <P>코너점 검출을 위한 영상 블록의 고유벡터를 dst에 저장 후 blockSize * blockSize의 이웃에 있는 미분값을 이용하여 고유 벡터 (x1,y1), (x2,y2)의 고유값을 계산하고 dst에 다시 저장하는 방식으로 두 고유값이 모두 작은 곳은 평평한 영역에 있는 점이고 하나는 크고 다른 하나가 작으면 엣지이며 두 고유값이 모두 크면 코너점을 검출하는 방식으로 동작합니다.</P>
+        </TD>
+        <TD>
+            <P>Aperture : 1/ 3/ 5/ 7 선택 <br/>
+		ksize : Sobel 미분 연산자의 마스크 크기를 의미 <br/>
+		BlockSize : 코너 계산을 위한 평균 블록의 크기 (Default 값: 5.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Minimum Eigenvalue Corner</P>
+        </TD>
+        <TD>
+            <P>최소 고유값을 연산에 활용한 코너 검출 기법입니다. </P>
+        </TD>
+        <TD>
+            <P>Aperture : 1, 3, 5, 7 선택 <br/>
+		Threshold :  (Default 값: 0.01) <br/>
+		Max :  (Default 값: 255.0) <br/>
+		BlockSize :  (Default 값: 5.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Harris Corner</P>
+        </TD>
+        <TD>
+            <P>기본적으로 영상 내 객체 내에 작은 윈도우를 씌우고 상하 좌우로 움직이면서 위도우 내의 화소값의 변화를 분석하여 코너점을 찾습니다. <br/>
+		특징: 영상/이미지 내 객체의 밝기값이 변화가 없는 영역에서는 윈도우를 상하좌우로 움직여도 화소값은 항상 일정하기 때문에 해당 윈도우 내의 화소값 변화량이 크게 나타나는 점이 코너점을 의미</P>
+        </TD>
+        <TD>
+            <P>Aperture : 1/ 3/ 5/ 7 선택 <br/>
+		Threshold :  (Default 값: 0.01) <br/>
+		Max :  (Default 값: 255.0) <br/>
+		BlockSize :  (Default 값: 5.0) <br/>
+		K: Harris 알고리즘의 매개 변수  (Default 값: 0.04)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Sub-pixel Corner</P>
+        </TD>
+        <TD>
+            <P>하나의 픽셀에서 빛의 3원색인 R, G, B 값을 표현하는 서브 픽셀(부분화소)들을 연산에 활용하여 비교적 불투명한 윤곽선들을 정확하게 검출하는 기능입니다. </P>
+        </TD>
+        <TD>
+            <P>Aperture : 1/ 3/ 5/ 7 선택 <br/>
+		Threshold :  (Default 값: 0.01) <br/>
+		Max :  (Default 값: 255.0) <br/>
+		BlockSize :  (Default 값: 5.0) <br/>
+		K:   (Default 값: 0.04) <br/>
+		Maxiter : 최대 반복 횟수 [CvTermCriteria] (Default 값: 5.0) <br/>
+		Epsilon : 필수 정확도 (Default 값: 0.1)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Good Features to Track</P>
+        </TD>
+        <TD>
+            <P>Shi-Tomas Corner Detection의 또 다른 이름으로 흔히 optical flow 등을 계산할 때 사용할 특징점을 추출하는 용도 등으로 사용되며 기존의 방법들은 코너점 등 직관에 의지하여 특징점을 찾는 방식이었다면 Good Features To Track은 추적이 용이하도록 단순한 평행이동(translation)만을 가정하지 않고 affine 변화까지 고려해서 특징점을 검출하는 기능입니다.</P>
+        </TD>
+        <TD>
+            <P>Quality Level : 가장 좋은 코너의 측정 값에 퀄리티레벨 수치를 곱한 값 보다 낮은 값이면 해당 코너들은 무시하며  <br/>
+		만약 가장 좋은 코너의 측정값이 1000에 퀄리티레벨이 0.01이라면 10이하의 코너 측정값은 검출하지 않음 (Default 값: 0.001) <br/>
+		Min Distance : 검출된 코너들의 최소거리를 의미하며 최소거리의 이상의 값만 검출하고 <br/>
+		만약 최소거리가 5라면, 최소거리가 5이하인 값은 코너로 검출하지 않음 (Default 값: 10.0) <br/>
+		BlockSize : (Default 값: 3.0) <br/>
+		Use Harris : Harris 알고리즘을 사용할지에 대한 Bool값 (Default 값: 1.0) <br/>
+		K : (Default 값: 0.04)</P>
+        </TD>
+    </TR>
+
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>Hough Transform</P>
+        </TH>
+        <TD>
+            <P>Hough line</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 직선(Line)을 검출하는 모델링을 사용합니다.</P>
+        </TD>
+        <TD>
+            <P>Method (이미지 처리 방법) : Standard/ Probabilstic/ Multiscale <br/>
+		Rho : 좌표 원점으로부터의 거리로 실수 및 비희소 형식의 2차원 논리형 또는 숫자형 배열로 지정되며 <br/>
+		좌표 원점은 영상의 왼쪽 위 코너(0,0)를 의미 (0~1의 실수) (Default 값: 1.0) <br/>
+		Threshold (임계값): (Default 값: 100.0) <br/>
+		Param1 :  <br/>
+		- Classical 허프 변환의 경우는 사용되지 않음 <br/>
+		- Probabilistic의 경우 최소 선 길이를 의미 <br/>
+		- Multi Scale Hough변환의 경우 srn을 의미 <br/>
+		Param2 : (Default 값: 0.0) <br/>
+		- Classical 허프 변환의 경우는 사용되지 않음 <br/>
+		- Probabilistic의 경우 한개의 라인으로 구분하기 위해 동일한 라인에 있는 라인 세그먼트 사이의 최대 간격을 의미 <br/>
+		- Multi Scale Hough변환의 경우 srn을 의미 <br/>
+		Canny Setup(버튼) : Low: (Default 값: 50.0)/ High: (Default 값: 100.0)/ Max Size: 3x3/ 5x5/ 7x7</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Hough Circle</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 원(Circle)을 검출하는 모델링을 사용합니다.</P>
+        </TD>
+        <TD>
+            <P>Dp : 이미지 해상도에 대한 Accumulator 해상도 비율의 역수 (Default 값: 1.0) <br/>
+		Min Distance : 검출된 원사이의 최소 거리 (Default 값: 100.0) <br/>
+		Param1 : (Default 값: 100.0) <br/>
+		지정한 원 검출방법을 위한 파라미터이며 HOUGH_GRADIENT의 경우   <br/>
+		캐니 에지 디텍터의 높은 쓰레쏠드값으로 낮은 임계값은 0.5배해서 사용하게 됨 <br/>
+		Param2 : (Default 값: 50.0) <br/>
+		지정한 원 검출방법을 위한 파라미터이며 HOUGH_GRADIENT의 경우 accumulator 임계값으로 <br/>
+		이 값이 너무 작으면 거짓 원이 검출되고 가장 큰 accumulator 값을 가지는 원이 먼저 리턴됨 <br/>
+		Min Radius : (Default 값: 0.0) <br/>
+		검출하려는 원의 최소 반지름으로 크기를 알 수 없는 경우 0으로 지정   <br/>
+		Max Radius : (Default 값: 0.0 <br/>
+		검출하려는 원의 최대 반지름으로 크기를 알 수 없는 경우 0으로 지정을 권장하며 <br/>
+		음수를 지정하면 원의 중심만 리턴 </P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>Contours</P>
+        </TH>
+        <TD>
+            <P>Find Contours</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 동일한 색 또는 강도를 가지는 경계선으로 이미지의 윤곽을 찾습니다.</P>
+        </TD>
+        <TD>
+            <P>Threshold : (Default 값: 100.0) <br/>
+		Max : (Default 값: 255.0)</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Flood Fill</P>
+        </TD>
+        <TD>
+            <P>플러드 필 또는 시드필로 불리며, 다차원 배열의 특정 칸과 연결된 영역을 찾는 알고리즘을 의미합니다. <br/>
+		해당 함수는 다음과 같은 작업에 주로 사용됩니다. <br/>
+		1. 그림 프로그램에서 연결된 비슷한 색을 가지는 영역의 '채우기' 도구 <br/>
+		2. 바둑이나 지뢰 찾기 같은 게임에서 비어있는 칸을 표시용</P>
+        </TD>
+        <TD>
+            <P>Starting X : X 좌표의 시작점 (Default 값: 0.0) <br/>
+		Starting Y : Y 좌표의 시작점 (Default 값: 0.0) <br/>
+		Low Diff : (Default 값: 5.0) <br/>
+		현재 관찰된 픽셀과 해당 구성 요소에 속한 이웃 중 하나 또는 구성 요소에 추가되는 시드 픽셀 간의 최대 저휘도 / 색상 차이 <br/>
+		Up Diff : (Default 값: 5.0) <br/>
+		현재 관찰된 픽셀과 해당 구성 요소에 속한 이웃 중 하나 또는 구성 요소에 추가되는 시드 픽셀 간의 최대 밝기 / 색상 차이 <br/>
+		Color : Red/ Green/ Blue/ Light Red/ Light Green/ Light Blue/ Gray/ White/ Black/ Pink/ Yellow/ Orange/ OrangeRed 선택 </P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="8">
+            <P>Morphology</P>
+        </TH>
+        <TD>
+            <P>Erosion</P>
+        </TD>
+        <TD>
+            <P>입력 이미지/영상에서 커널을 필터로 하여 Iteration에 값을 입력 후, 원하는 만큼 침식시켜 이미지에서 원하지 않는 작은 노이즈들을 제거하는 것이 특징이지만 노이즈 성분이 제거되는 것뿐만 아니라 대상의 영역이 줄어들 수 있습니다. <br/>
+		Dilation과 반대로 이미지상의 물체를 축소(Shrinking)하는데 이를 위해 SE를 완전히 포함할 수 있는 이미지상의 픽셀들만 결과 이미지에 남게 되어 물체크기가 줄어들게 되고 이미지 상의 Noise나 Narrow Feature 등이 사라집니다. <br/>
+		특징: <br/> 
+		1: 매칭의 용도로 사용 가능 <br/>
+		2: SE를  찾고하는 패턴으로 지정하고 Erosion을 실행하면 결과 이미지는 패턴이 발견되는 위치들이 됨</P>
+        </TD>
+        <TD>
+            <P>Method = 이미지 처리 방식 <br/>
+		Method : No Conversion(이미지를 흐리게 회색으로 변환),  <br/>
+		Binary Conversion(이미지의 객체를 흑백 명암만 보이게 처리) 선택 <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0), <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0) 수직 방향에서의 시작 위치: (Default 값: 1.0), <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Dilation</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 물체를 확대시키며 SE Origin과 매칭된 이미지 상의 픽셀을 SE의 모든 다른 픽셀들로 확대합니다. <br/>
+		특징 <br/>
+		1: erode()와 사용법이 동일하고 결과에만 차이가 있으며 팽창 연산을 통해 이미지에서 대상이 가지는 작은 구멍들을 채울 수 있지만 대상의 크기가 전체적으로 전보다 커진다는 문제와 노이즈 성분이 커질 수 있음 <br/>
+		2: Erosion은 어두운 회색 이미지로 변환 시켰다면 Dilation의 No Conversion은 이미지를 밝은 회색으로 뿌옇게 변환</P>
+        </TD>
+        <TD>
+            <P>Method : No Conversion, Binary Conversion 선택 <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0),  <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0),  <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Opening</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 Erosion 연산 다음에 Dilation 연산을 적용합니다. 이미지 상의 노이즈(작은 흰색 물체)를 제거하는 용도로 사용합니다. <br/>
+		노이즈(작은 흰색 오브젝트)를 없애기 위해 사용한 Erosion에 의해서 작아졌던 오브젝트에 Dilation을 적용하면  오브젝트가 원래 크기로 돌아오게 됩니다.  </P>
+        </TD>
+        <TD>
+            <P>Method : No Conversion, Binary Conversion 선택 <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0), <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0),  <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Closing</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 Opening과 반대로 Dilation 연산을 먼저 적용한 후,  Erosion 연산을 적용합니다.<br/>
+		흰색 오브젝트에 있는 작은 검은색 구멍들을 메우거나 제거하는 용도로 사용합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : No Conversion, Binary Conversion 선택 <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0), <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0),  <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Top Hat</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지의 작은 요소들과 세부적인 것들을 추출하며 어두운 배경속에서 객체의 밝기를 증가시키는 용도로 사용합니다.</P>
+        </TD>
+        <TD>
+            <P>Contrast : (Default 값: 1.2) <br/>
+		Brightness (밝기) : (Default 값: 2.0) <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0),  <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0),  <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Well</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에 TopHat을 먼저 적용 후 BlackHat을 적용하여 연산하는 Morphology 기능입니다.</P>
+        </TD>
+        <TD>
+            <P>Element Setup : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0),  <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0),  <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Morphology Gradient</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지/영상이 이진 영상일때 영역의 외각선만 남기는 효과가 발생합니다. <br/>
+		팽창(Dilate)에서 침식(Erode)을 제외하는 방식으로 Gradient = Dilate(src) - Erode(src)와 동일합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : No Conversion, Binary Conversion <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0),  <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0),  <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Morphology Smoothing</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지/영상에서 주로 noise 또는 손상을 완화시키기 위해서 사용됩니다.</P>
+        </TD>
+        <TD>
+            <P>Method : No Conversion, Binary Conversion <br/>
+		Element Setup(버튼) : 구조화 요소의 높이: (Default 값: 3.0) , 구조화 요소의 너비: (Default 값: 3.0),  <br/>
+		수평 방향에서의 시작 위치: (Default 값: 1.0), 수직 방향에서의 시작 위치: (Default 값: 1.0), <br/>
+		구조화 요소의 모양: Recangle, Cross, Ellipse 선택</P>
+        </TD>
+    </TR>
+
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>Pyramid Algorithm</P>
+        </TH>
+        <TD>
+            <P>Pyramid UpDown</P>
+        </TD>
+        <TD>
+            <P>pyrDown 함수 같은 경우 입력된 이미지/영상에 가우시안 필터링을 적용 후 결과영상 사이즈를 축소하여 보통 디폴트 값은 가로, 세로 각각을 1/2배 크기로 축소합니다. <br/>
+		pyrUp 함수는 마찬가지로 입력된 이미지/영상에 가우시안 필터링을 적용하여 주어진 크기로 결과영상을 확대하여	보통 디폴트 값은 가로, 세로 각각 2배 크기로 확대합니다. <br/>
+		특징: UP기능을 설정하면 이미지가 확대되며, Down 기능은 이미지 축소가 이뤄짐</P>
+        </TD>
+        <TD>
+            <P>Method : Up, Down 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Pyramid Mean Shift Filtering</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 이미지 피라미드에 의한 평균 이동 분할 진행 알고리즘을 의미하며 레벨을 지정하여 이미지 피라미드를 만들고 이 정보를 이용하여 이미지 분할을 실행 후 공간 윈도우 반경과 색상 윈도우 반경을 사용하여 평균 공간값과 평균 색 벡터로 최종값을 설정하는 방법입니다. 하지만 매우 높은 계산 시간을 요구하기 때문에 적절한 이미지의 크기와 매개 변수값을 사용해야 효과적인 결과물을 얻을 수 있습니다.</P>
+        </TD>
+        <TD>
+            <P>SP : 공간 윈도우의 반지름 (Default 값: 2.0) <br/>
+		SR : 컬러 윈도우의 반지름 (Default 값: 40.0) <br/>
+		MaxLevel : 피라미드의 최대 레벨 (Default 값: 3.0)</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>Matching</P>
+        </TH>
+        <TD>
+            <P>Template Matching</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에 2차원 컨볼루션처럼 템플릿 이미지를 입력하여 이미지상 위에서 이동시키면서 대응하는 픽셀들을 비교합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : SQDIFF, SQDIFF_NORMED, CCORR, CCORR_NORMED, CCOEFF, CCOEFF_NORMED <br/>
+		이미지 로드(버튼) : 원본이미지에 적용시킬 새로운 이미지 선택 기능</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Shape Matching</P>
+        </TD>
+        <TD>
+            <P>입력된 이미지에서 다각형을 검출하거나 혹은 상황에 따라 모양을 비교합니다.</P>
+        </TD>
+        <TD>
+            <P>Method : CONTOURS_MATCH_L1, CONTOURS_MATCH_L2, CONTOURS_MATCH_L3 <br/>
+		이미지 로드(버튼) : 원본이미지에 적용시킬 새로운 이미지 선택 기능</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>Signal Process</P>
+        </TH>
+        <TD>
+            <P>Fast Fourier Transform</P>
+        </TD>
+        <TD>
+            <P>고속 푸리에 변환(FFT)은 이산 푸리에 변환과 그 역변환을 빠르게 수행하는 효율적인 알고리즘으로 디지털 신호 처리에서 편미분 방정식의 근을 구하는 알고리즘에 이르기까지 많은 분야에서 사용됩니다.</P>
+        </TD>
+        <TD>
+            <P>Method : Forward, Inverse 선택</P>
+        </TD>
+    </TR>
+<TR>
+        <TD>
+            <P>Wavelet Transform</P>
+        </TD>
+        <TD>
+            <P>웨이블릿 신호처리</P>
+        </TD>
+        <TD>
+            <P>방향 : Forward, Inverse 선택 <br/>
+		변환방식 : Haar1, Daub1~10, Bior(13, 15, 22, 24, 26, 28, 31, 33, 35, 37, 39, 46, 48, 53, 97,  <br/>
+		Coif(1~5), Inter(1~3), Rbio24 선택 <br/>
+		레벨 : (Default 값: 1.0) <br/>
+		추출경로 :</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>변화 탐지</P>
+        </TH>
+        <TD>
+            <P>변화 탐지</P>
+        </TD>
+        <TD>
+            <P>선택한 이미지 한 쌍을 픽셀 단위로 비교하여 차이를 검출합니다.</P>
+        </TD>
+        <TD>
+            <P>비교 파일 선택 방법: 다음 파일, 이전 파일, 사용자 지정 선택 (Default 값: 다음 파일)<br/>
+		비교 파일: <br/>
+		Threshold: (Default 값: 50)<br/>
+		노이즈 제거 필터: 1x1, 2x2, 3x3, 4x4, 5x5 선택 (Default 값: 3x3)<br/>
+		변화만 보기: true, false 선택 (Default 값: false)</P>
+        </TD>
+</TR>
+<TR>
+        <TD>
+            <P>변화 탐지(CNN)</P>
+        </TD>
+        <TD>
+            <P>선택한 이미지 한 쌍을 동일한 위치의 조각(Patch)으로 쪼개 비교한 후 변화 여부를 검출합니다.</P>
+        </TD>
+        <TD>
+            <P>비교 파일 선택 방법 : 다음 파일, 이전 파일, 사용자 지정 선택 (Default 값: 다음 파일)<br/>
+		비교 파일:<br/>
+		Patch 크기: 5, 7, 9 선택 (Default 값: 5)<br/>
+		Threshold: (Default 값: 50)<br/>
+		변화만 보기: true, false 선택 (Default 값: false)</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+
+    <!-- 일반정보 끝 -->
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="1">
+            <P>Simulation</P>
+        </TH>
+        <TD>
+            <P>내용 없음.</P>
+        </TD>
+        <TD>
+            <P>&nbsp;</P>
+        </TD>
+        <TD>
+            <P>&nbsp;</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+
+</table>
+
+
+
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>
+

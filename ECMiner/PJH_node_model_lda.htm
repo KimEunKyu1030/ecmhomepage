@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">LDA 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_model_lda.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">LDA 모델 노드</span>는 트레이닝 데이터를 러닝하여 새로운 데이터의 분류에 사용될 수 있습니다. 
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">클래스별 독립변수평균</span></li>
+		<p>분류된 각 클래스의 변수평균값을 나타냅니다.</p>
+		<p><img src="./images/modeling_ldameanofclass.gif"></p><br>
+
+		<li><span class="genExHighlight">클래스의 분산-공분산행렬</span></li>
+		<p>그룹별 분산-공분산이 같기 때문에 한 개의 분산-공분산 행렬이 출력됩니다.</p>
+		<p><img src="./images/modeling_ldacovariance.gif"></p><br>
+
+		<li><span class="genExHighlight">사전확률</span></li>
+		<p>점유도 옵션에서 지정한 클래스별 확률값을 보여줍니다.</p>
+		<p><img src="./images/modeling_ldapriorprobability.gif"></p><br>
+
+		<li><span class="genExHighlight">그룹별 선형판별함수</span></li>
+		<p>각 class에 대한 선형함수의 상수와 계수를 나타냅니다.</p>
+		<p><img src="./images/modeling_ldadiscfunction.gif"></p><br>
+
+		<li><span class="genExHighlight">Confusion matrix for number & percentage</span></li>
+		<p>원 클래스 인덱스와 분류분석을 통해 얻어진 클래스 인덱스에 대한 빈도와 퍼센트 교차표를 보여줍니다. 또한, 잘못 분류된 관측치의 수와 비율을 나타냅니다.</p>
+		<p><img src="./images/model_trainconfusion.gif"></p><br>
+
+
+
+	</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

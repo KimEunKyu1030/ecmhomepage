@@ -1,0 +1,390 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">산포차트
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/Chart_Dispersion.files/image001.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+	    			<span class="nodeExHighlight">산포 차트 노드</span>는 데이터를 이용하여 산포도와 박스 플롯을 그릴 수 있는 노드입니다.
+
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>,
+		<a href="#결과">결과</a>
+	
+	    
+	
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/Chart_Dispersion.files/image004.jpg"></p>
+				<li>차트 옵션</li>
+					<ul class="liType02">
+						<li>차트 표시 방식을 선택합니다. 산포도와 박스 플롯을 선택할 수 있습니다.</li>
+						<li><span class="genExHighlight">산포도</span> 선택 시 차트 옵션에서 변수별로 축 설정 및 평균 표시만 사용 유무를 선택할 수 있습니다.</li>
+						<li><span class="genExHighlight">박스 플롯</span> 선택 시 차트 옵션에서 모든 옵션의 사용 유무를 선택할 수 있습니다.</li>
+					</ul>
+				
+				<li> 선택사항</li>
+					<ul class="liType02">
+						<p><span class="genExHighlight">통계량 및 이상치 표시</span> 속성 변경</p>	
+						<p><span class="genExHighlight">그룹 변수 옵션</span> 속성 변경</p>
+						<p><span class="genExHighlight">Y축 지정</span> 속성 변경</p>
+					</ul>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					  <tr>
+        <th rowspan="2">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 
+있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="6">
+            차트 옵션
+        </th>
+        <td>
+            차팅 방식
+        </td>
+        <td>
+            차팅 방식을 선택합니다.  
+        </td>
+        <td>
+            산포도, 박스 플롯
+            중 택일
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            변수별로 축설정
+        </td>
+        <td>변수별로 축을 설정하여 차트를 그릴지 결정합니다.</td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            평균 표시
+        </td>
+        <td>
+            평균을 차트를 표시할지 결정합니다
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            표준편차 표시
+        </td>
+        <td>
+            표준편차을 차트를 표시할지 결정합니다
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            중앙값 표시
+        </td>
+        <td>
+            중앙값을 차트를 표시할지 결정합니다
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            이상치 표시
+        </td>
+        <td>
+            이상치을 차트를 표시할지 결정합니다
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <th rowspan="6">
+            그룹 변수 옵션
+        </th>
+        <td>
+            그룹표시
+        </td>
+        <td>
+            데이터 내에 그룹 관련 변수가 
+있을 때 그룹 표시 방법을 선택합니다.  
+        </td>
+        <td>
+            그룹 사용 안함,
+            시리즈로 구분 중 택일
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#1
+        </td>
+        <td>
+            첫번째 그룹변수를 
+선택합니다
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#2
+        </td>
+        <td>
+            두번째 그룹변수를 
+선택합니다
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#3
+        </td>
+        <td>
+            세번째 그룹변수를 
+선택합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#4
+        </td>
+        <td>
+            네번째 그룹변수를 
+선택합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            그룹변수
+#5
+        </td>
+        <td>
+            다섯번째 그룹변수를 
+선택합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <th rowspan="3">
+            사용자 지정 최대/최소
+        </th>
+        <td>
+            Y축 지정
+        </td>
+        <td>
+            Y축 최대/최소값을 사용자가 수동으로 지정할 것인지 결정합니다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            Y축 최소값
+        </td>
+        <td>
+            Y축 지정이 
+<span class="genExHighlight">'예'</span>일 경우 활성화됩니다. Y축 최소값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            Y축 최대값
+        </td>
+        <td>
+            Y축 지정이 
+<span class="genExHighlight">'예'</span>일 경우 활성화됩니다. Y축 최대값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td> </td>
+    </tr>
+    <tr>
+					<th rowspan="3">
+						차트 변수선택
+					</th>
+					<td>
+						전체 변수 선택/해제
+					</td>
+					<td>
+						전체 변수를 선택하거나, 선택 해제하는 버튼으로 위의 이미지 1번 그림의 두 버튼입니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						변수 목록
+					</td>
+					<td>
+						차트로 그릴 변수를 지정합니다. 위의 이미지 2번 그림에 표현된 체크박스를 이용하여, 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						필수
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						조건부 변수 선택
+					</td>
+					<td>
+						3번 이미지를 이용하여 변수 목록 중 제시하는 조건에 맞는 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+			</table>
+			
+
+	  	
+	  	
+	  	
+	  	<h3><a name="결과">결과</a></h3>
+	    <ul class="liType02">
+				<li>차트 표시 방식으로 박스 플롯을 선택하고 변수별로 축설정, 평균 표시, 표준편차 표시, 중앙값 표시, 이상치 표시, 2개의 변수를 선택하여 사용할 경우.</li>
+					<ul class="liType02">				
+						<li> 평균 표시, 표준편차 표시, 중앙값 표시는 레전드에 표시</li>						
+					</ul>
+				<p><img src="./files/Chart_Dispersion.files/image002.jpg"></p><br>
+
+				<li>차트 표시 방식으로 산포도를 선택하고 변수별로 축설정, 평균 표시, 2개의 변수를 선택하여 사용할 경우.</li>
+					<ul class="liType02">				
+						<li> 평균 표시는 레전드에 표시</li>						
+					</ul>
+				<p><img src="./files/Chart_Dispersion.files/image003.jpg"></p>	
+	  	</ul>
+	    
+	    
+	    
+    	
+
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

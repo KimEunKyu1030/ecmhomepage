@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=ks_c_5601-1987" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="../default.css">
+<SCRIPT type=text/javascript src="../default.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16899"></HEAD>
+<BODY onmousedown=onBodyMouseDown(); class=bdstyle onload=onBodyLoad();><!-- Page Title -->
+<DIV id=areafixed class=bdstyleTitle>
+<DIV class=title>GARCH 
+<DIV class=version></DIV></DIV>
+<HR class=headerLine>
+</DIV><!-- Page Title --><!-- Begin Client Area -->
+<DIV id=areascroll class=bdstyleBody>
+<H3>개요</H3>
+<UL class=liType02>
+  <LI>ARCH(AutoRegressive Conditional Hetroskedasticity) 방법론은 1980년대에 제시된 방법론으로 
+  이 방법을 제시한 Robert Engle은 2003년도 노벨 경제학상을 수상하였습니다. 본 방법론의 혁신적인 면은 그 동안의 Time 
+  Series 분석에서 Random Shock이 일정한 분산을 갖는다는 가정을 수정하여 Random Shock은 비조건부적으로는 일정한 분산을 
+  갖지만 조건부적으로는 변화하는 분산을 갖는다는 가정을 도입했다는 것입니다. Robert Engle 이 1984년에 ARCH Model을 
+  제시한 이후로 일반화된 ARCH 모델 즉 GARCH 모델이 제시되었고, 이후에 EGARCH, GARCH-M, GJR등의 여러 변형된 모델이 
+  제시되어 왔습니다. 이렇듯 ARCH의 변형된 모델이 많이 제시되고 또 많은 각광을 받은 이유는 금융 경제학의 발전과 더불어 단순히 Time 
+  Series의 예측뿐 아니라 변동성(분산)의 측정과 예측이 매우 중요해졌기 때문입니다. 많은 자본 자산 가격 결정 모형에서 기초 자산의 
+  변동성은 자산의 가격에 영향을 미치는 중요한 요인으로 여겨져 왔는데 이러한 변동성을 측정하고 예측하는 방법론이 ARCH 이전에는 발전되어 
+  있지 않았습니다. 1980년대뿐 아니라 그 이후, 그리고 최근에도 이와 관련된 연구는 꾸준히 지속되고 있으며 이제는 금융 경제학 이외에도 
+  여러 공학 분야 특히 Network Traffic분석에 GARCH 모형이 활용되고 있습니다. </LI></UL>
+<H3>실행방법</H3>
+<UL class=liType02>
+  <LI><SPAN class=genExHighlight>[분석] - [시계열 분석] - [시계열 모델] - [GARCH]</SPAN> 을 선택하면 <SPAN 
+  class=genExHighlight>[GARCH]</SPAN> 윈도우가 나타납니다.<BR>메인 화면에서는 GARCH 분석에 필요한 기본적인 
+  것들을 입력하도록 합니다. 종속변수(반응변수)와 독립변수(설명변수)를 선택하고&nbsp;ARCH 차수와 GARCH 차수를 선택해 줍니다. 
+  마지막으로 예측 생성 여부를 선택하면 모든 설정이 끝납니다. 
+  <P><IMG src="../images/SubTime6_1.jpg"></P><BR>
+  <LI>더욱 구체적인 설정은 아래의 옵션창에서 설정할 수 있습니다. 
+  <P><IMG src="../images/SubTime6_2.jpg"></P><BR>GARCH의 Parameter Estimation은 매우 
+  까다롭습니다. 경우에 따라서는 Estimation이 국부 최적해(Local Optimum)에서 종료하는 경우가 빈번하게 발생합니다. 따라서 
+  ECMiner™에서는 여러 최적화 방법론을 제시하여 사용자가 선택할 수 있도록 하였습니다. 사용자는 여러 방법론으로 최적화를 수행해 보고 
+  가장 좋은 해를 취할 수 있습니다. Parameter설정은 최적화 알고리즘을 수행하는데 있어서 설정할 옵션들입니다. 예측 관련 옵션을 
+  통해서는 어떠한 데이터를 모델링에 사용할지를 정합니다. 초기값의 선정방법을 통해서는 어떠한 방법으로 초기값을 선정할 것인지를 결정합니다. 
+  </LI></UL>
+<H3>결과</H3>
+<UL class=liType02>
+  <LI>모델 보고서 
+  <P>General Info : 시계열 데이터의 기본적인 정보를 보여줍니다.<BR>Model Info : GARCH 분석을 통해서 얻어진 
+  모수와 통계량, 그리고 예측 결과를 보여줍니다.<BR>잔차 차트 : 잔차 자기 상관함수, 잔차 자기 상관 함수를 보여줍니다. </P>
+  <P><IMG src="../images/SubTime6_3.jpg"></P><BR>
+  <LI>플롯 보기 
+  <P>GARCH 분석을 통해서 얻어진 데이터를 시각적으로 보여줍니다. 시계열도, 잔차제곱, 조건부 변동성, 그리고 잔차에 대한 플롯(잔차 
+  히스토그램, 잔차 정규확률 플롯, 잔차 대 순서, 잔차 대 적합치)을 보여줍니다. 아래는 시계열도의 예시입니다. 시계열 데이터와 적합치, 
+  그리고 적합치의 상한, 하한을 한 눈에 볼 수 있습니다. </P>
+  <P><IMG src="../images/SubTime6_4.jpg"></P><BR>아래 플롯은 조건부 변동성 플롯입니다. 모델링의 결과 
+  나타난 조건부 변동성의 값을 볼 수 있습니다. (만약 예측을 할 경우 조건부 변동성의 예측 값도 나타나게 됩니다.) 
+  <P><IMG src="../images/SubTime6_5.jpg"></P><BR>아래 플롯은 잔차 제곱 플롯입니다. 모델링의 결과 나타난 
+  잔차 제곱의 값을 볼 수 있습니다. 
+  <P><IMG src="../images/SubTime6_6.jpg"></P><BR>이와 함께 네가지의 잔차 관련 플롯을 통해서 정규성을 
+  확인해 볼 수 있습니다. <BR><BR>
+  <LI>통계량 분석 
+  <P>GARCH분석을 통해서 얻어진 통계량을 Table에서 볼 수 있습니다. 이와 함께 Table을 저장하는 기능도 제공합니다. 
+  </P></LI></UL>
+<HR class=footerLine>
+
+<P class=footer></P></DIV></BODY></HTML>
+?볼 수 있습니다.
+	  		<br><br>
+	  		
+	  		<li>통계량 보기</li>
+	  		<p>
+	  			GARCH분석을 통해서 얻어진 통계량을 Table에서 볼 수 있습니다. 이와 함께 Table을 저장하는 기능도 제공합니다.
+	  		</p>
+	  	</ul>
+			
+		
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">사용자 인터페이스
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	<p>
+    		ECMiner™은 효율적인 데이터 마이닝을 수행할 수 있도록 단위 기능을 노드화하고 이들을 연결하여 다양한 결과를 산출하는 방식으로 동작합니다. 이러한 방식을 지원하기 위하여 필요 요소를 UI상에 컨트롤바 형태로 나타내었으며 전체적인 모습은 다음과 같습니다. 
+    	</p>
+    	<p><img src="../images/ui_main.jpg"></p>
+    	
+    	
+    	<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">번호</th>
+						<th width="100">명칭</th>
+						<th width="">설명</th>
+					</tr>
+				</thead>
+					<tr>
+						<th>①</th>
+						<td>메인메뉴/툴바</td>
+						<td>프로젝트 파일 생성/편집/저장, 스트림 편집 등 ECMiner™ 사용을 위한 기능을 선택할 수 있는 부분입니다. 메뉴의 형태로 정리되어 있으며 자주 사용하는 기능은 툴바에 추가로 나타내어 사용자의 편의를 돕고 있습니다.</td>
+					</tr>
+					<tr>
+						<th>②</th>
+						<td>노드창</td>
+						<td>데이터 마이닝을 수행하기 위한 요소 기능인 노드를 유사한 정도에 따라 구분지어 놓은 컨트롤 창입니다. ECMiner™ 프로젝트 구성에 있어 기본이 되며 더블-클릭이나 드래그 & 드랍을 이용하여 사용하고자 하는 노드를 추가할 수 있습니다.</td>
+					</tr>
+					<tr>
+						<th>③</th>
+						<td>리소스창(메뉴)</td>
+						<td>
+							리소스창은 리소스 관리의 편의를 위하여 새로 추가된 기능입니다.<br>
+							ECMiner™에서 리소스는 데이터, 수행 결과, 생성된 모델, 프로젝트 파일 등을 의미합니다.<br>
+							리소스창(메뉴)에는 ECMiner™에서 사용하는 리소스를 트리 형태의 메뉴로 표현되어 있으며 Local, Model, Output이 해당 메뉴입니다.
+							<ul class="liType02">
+								<li>Local은 사용자가 지정한 작업폴더 및 하위 폴더 목록이 나타납니다. </li>
+								<li>Model은 프로젝트(스트림) 실행 시 모델링 노드가 있다면 모델링 노드에서 생성된 결과인 모델이 관리되는 곳입니다. </li>
+								<li>Output은 프로젝트(스트림) 실행 후 생성된 모델 외의 모든 결과물(화면표시, 차트 등)이 관리되는 곳입니다.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>④</th>
+						<td>리소스창(내용)</td>
+						<td>
+							리소스창(메뉴)에서 선택한 메뉴(Local, Model, Output)의 내용물이 나타나는 창입니다.
+							<ul class="liType02">
+								<li>Local을 선택하면 선택한 폴더 중 ECMiner™에서 사용하도록 지정된 확장자를 갖는 파일이 나타납니다. </li>
+								<li>Model을 선택하면 프로젝트(스트림) 실행 후 생성된 모델등이 목록화되어 나타납니다. 이 모델들은 임시로 생성된 것이기 때문에 ECMiner™ 종료 시 살아지게 됩니다. 만약 유용한 모델이라면 임시가 아닌 전역 모델화 하여 필요할 때마다 다시 사용할 수 있습니다. </li>
+								<li>Output을 선택하면 프로젝트(스트림) 실행 후 결과물이 프로젝트 별로 목록화되어 나타나며, 결과물 관리 기능을 제공합니다.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>⑤</th>
+						<td>작업창</td>
+						<td>작업창은 프로젝트를 편집하는 곳입니다. 프로젝트는 스트림으로 이루어지며 스트림은 노드와 이들을 연결지은 것입니다. 노드창을 이용하여 노드를 작업창에 생성하고, 이들을 연결짓고, 필요없는 노드나 연결을 삭제하는 등 프로젝트를 구성하는데 필요한 작업을 수행할 수 있습니다.</td>
+					</tr>
+					<tr>
+						<th>⑥</th>
+						<td>속성창</td>
+						<td>
+							노드는 데이터 마이닝을 위한 요소 기능을 모듈화 한 것이며 각 노드는 노드의 기능에 따라 필요한 옵션(속성)이 있습니다. 예를 들어, 텍스트 파일을 읽어 데이터화 하려고 한다면 "파일입력 노드"를 생성하고 해당 파일을 읽어 데이터화 하라고 "파일입력 노드"에 알려 주어야 합니다. 바로, 파일 경로를 알려 주어야 하는데 이 것이 노드의 속성이며 이를 편집하는 곳이 노드 속성창입니다.<br>
+							추가로 프로젝트에 대한 간단한 정보도 여기서 편집할 수 있습니다.
+						</td>
+					</tr>
+					<tr>
+						<th>⑦</th>
+						<td>메시지창</td>
+						<td>프로젝트(스트림) 실행 시 발생하는 메시지(로그) 등을 나타내는 곳입니다. 실행 시 오류 등이 발생하였다면 해당 내용을 메시지창에서 확인할 수 있습니다.</td>
+					</tr>
+					<tr>
+						<th>⑧</th>
+						<td>도움말</td>
+						<td>ECMiner™의 도움말이 나타나는 부분입니다. 각 노드의 속성에 대한 도움말과 노드에 대한 도움말 등을 표시하여 ECMiner™ 사용의 편의를 돕습니다.</td>
+					</tr>
+					<tr>
+						<th>⑨</th>
+						<td>상태 표시줄</td>
+						<td>ECMiner™의 상태를 나타냅니다. 실행 중인 프로젝트가 있는지, 키보드에 NUM LOCK 등이 켜졌는지 등이 표시되며, 메뉴 등을 선택할 때 간단한 Tooltip이 나타납니다.</td>
+					</tr>
+			</table>
+			
+			
+			<h3>관련 항목</h3>
+			<ul class="liType02">
+				<li><a href="../02ui/menu.htm">메인 메뉴</a></li>
+				<li><a href="../02ui/toolbar.htm">툴바</a></li>
+				<li><a href="../02ui/resource.htm">리소스창</a></li>
+				<li><a href="../02ui/workspace.htm">작업창</a></li>
+				<li><a href="../02ui/property.htm">속성창</a></li>
+				<li><a href="../02ui/message.htm">메시지창</a></li>
+				<li><a href="../02ui/help.htm">도움말</a></li>
+			</ul>
+				
+    	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">공차구간
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+			<span class="genExHighlight">공차구간</span>은 최소 모집단의 비율과 신뢰 수준을 설정하며, 샘플로부터 얻어진 통계량을 기초로 지정된 모집단에서의 최소비율과 신뢰 수준을 만족하는 구간을 제시합니다. 얻어진 공차구간과 고객의 요구사항을 비교하여 현재 공정상태를 파악할 수 있습니다.
+	    </p>
+	    
+	    <h3>실행 방법</h3>
+	    <ul class="liType02">
+	    	<li>
+			<span class="genExHighlight">[분석] - [SPC] - [공차구간]</span>을 선택하면 다음과 같은 공차구간 다이얼로그가 나타납니다.
+	    	</li>
+			<li>
+			변수 목록에서 공차구간을 구하고자 하는 변수를 선택하고(복수 선택 가능), 신뢰수준과 최소한 모집단 내 비율을 설정합니다(0~1값). 마지막으로 구간 방향을 선택합니다(양측/상한/하한).
+			</li>
+	    </ul>
+	    <img src="./files/ToleranceInterval.files/image001.jpg">
+	    
+		
+	    <h3>결과</h3>
+		<ul class="liType02">
+	    	<li>통계량: 선택한 변수의 기초 통계량들을 제공합니다.</li>
+			<li>공차구간: 선택한 변수로부터 지정된 신뢰수준과 최소합 모집단 비율을 만족하는 공차구간을 정규분포 또는 비모수 방법으로 계산하여 보여줍니다.</li>
+			<li>정규성 검정: 선택한 변수가 정규분포에 얼마나 따르는지 보여주는 Anderson-Darling 통계량과 P-value를 제공합니다. P-value가 0.05보다 크면, 변수는 정규분포를 따른다고 할 수 있습니다.</li>	
+	    </ul>
+	    <img src="./files/ToleranceInterval.files/image002.jpg">
+		
+		<ul class="liType02">
+	    	<li>히스토그램: 선택한 변수의 분포를 알 수 있는 히스토그램을 그려줍니다</li>
+	    </ul>
+	    <img src="./files/ToleranceInterval.files/image003.jpg">
+		
+		
+		
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

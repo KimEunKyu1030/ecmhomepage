@@ -1,0 +1,157 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">포스프레임 입력
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/CHM_PosFrame.files/posframein001.png"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight">포스프레임 입력 노드</span>는 포스프레임 입력 노드는 포스코 분석 Workbench 사용자 편의성을 개선하기 위해서 개발되었습니다. 포스코 측에서 API를 통해 상용툴 데이터 추출을 지원할 때, 해당 노드를 활용하여 포스프레임(하둡) 데이터를 직접 조회하거나 분석워크벤치용 마트데이터를 선택하여 지원하는 데이터를 csv파일 형태로 받아오는 역할을 수행합니다. 
+	    	</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+
+	  	<h3><a name="사용법">사용법</a></h3>
+	  	<ul class="liType02">	
+	  		<p><img src="./files/CHM_PosFrame.files/posframein002.png"></p>	  		
+			<li>사용 유형(가동계, 개발계) 및 게이트웨이 종류(포항, 광양)를 추출 데이터 종류에 맞게 선택합니다. 
+			</li>
+
+	  		<li><span class="genExHighlight">API 자원 분류</span>를 입력합니다. (ex. p-m00, k-m00 등)
+			</li>
+
+			<li><span class="genExHighlight">API 사용자 직번</span>을 입력합니다.
+			</li>
+
+			<li><span class="genExHighlight">API 활용 유형</span>을 선택합니다. (마트 데이터 추출, 포스프레임(하둡) 데이터 직접 추출)
+			</li>
+			
+            <li>파라미터 설정 버튼을 눌러서 데이터 추출에 필요한 세부적인 속성값들을 설정합니다.
+			</li>
+			
+			<li>변수정보를 확인합니다.
+			</li>
+	  	</ul>
+		
+		<ul class="liType02">	
+	  		<p><img src="./files/CHM_PosFrame.files/posframein003.png"></p>	  		
+			<li>좌측 상단(1)에 나열된 선택가능한 4개의 체크박스를 활용하여 condition parameters의 사용 여부를 설정합니다. 체크한 파라미터의 활성화된 에디트 박스에 원하는 값을 입력한 후에 마트 리스트 조회(2) 버튼을 클릭하여 해당 조건으로 마트 리스트를 조회합니다.
+			</li>
+
+	  		<li>마트 리스트를 조회하면 해당 정보가 좌측 하단(3) 리스트로 출력됩니다. 출력된 마트 리스트 중에 원하는 마트 데이터를 클릭하면 포커싱이 잡히면서 해당 데이터의 컬럼 리스트를 조회합니다.
+			</li>
+
+			<li>우측 상단(4)에 선택한 마트 데이터의 컬럼 리스트가 출력됩니다. 이 때, 우측 하단의 ‘확인’ 버튼을 누르면 파라미터 설정이 완료되고, 해당 마트 데이터를 csv파일 형식으로 가져옵니다.
+			</li>
+	  	</ul>
+		
+		<ul class="liType02">	
+	  		<p><img src="./files/CHM_PosFrame.files/posframein004.png"></p>	  		
+			<li>가장 먼저 좌측 상단(1)에서 불러올 데이터 유형을 선택합니다. 선택한 데이터 유형에 따라서 적합한 파라미터를 채워넣습니다.
+			</li>
+
+	  		<li>우측 상단(2)에서는 condition parameters 중에서 필수 파라미터 외에 사용자가 직접 지정한 파라미터 이름, sql 명령어, 값 등을 이용하여 추가할 수 있습니다.
+			</li>
+
+			<li>IN, >= Value =< (SQL 명령어)에서 에디트 박스에 두 개 이상의 값을 입력할 때에는 “A, B, C”와 같이 쉼표를 이용해서 구분하여 표기하도록 합니다.
+			</li>
+	  	</ul>
+	  		
+	  	
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력함</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드와 관련된 간단한 주석을 표기함</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="2">Resource</th>
+						<td>사용 유형</td>
+						<td>목적(실분석, 개발과정)에 따라 선택함 </td>
+						<td>필수</td>
+						<td>가동계, 개발계</td>
+					</tr>
+					<tr>
+						<td>게이트웨이 종류</td>
+						<td>게이트웨이가 포항인지 광양인지에 따라 선택함</td>
+						<td>필수</td>
+						<td>포항, 광양</td>
+					</tr>
+	
+					<tr>
+						<th rowspan="3">Body Params</th>
+						<td>API 자원 분류</td>
+						<td>해당 Application에서 조회할 자원 분류를 입력함</td>
+						<td>필수</td>
+						<td>예) p-m00, k-m00</td>
+					</tr>
+					<tr>
+						<td>API 사용자 직번</td>
+						<td>API를 사용할 직원의 직번을 입력함</td>
+						<td>필수</td>
+						<td>예) 568570</td>
+					</tr>
+					<tr>
+						<td>API 활용 유형</td>
+						<td>조회할 데이터의 종류에 따라 적합한 유형을 선택</td>
+						<td>필수</td>
+						<td>마트 데이터 추출, 포스프레임(Hadoop) 데이터 직접 추출</td>
+					</tr>					
+					<tr>
+						<th rowspan="1">변수정보</th>
+						<td>변수정보</td>
+						<td>입력 데이터의 변수 이름 및 데이터 형태를 나타냄</td>
+						<td></td>
+						<td></td>
+					</tr>
+			</table>
+			
+			
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

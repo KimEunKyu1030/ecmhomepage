@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	<!-- Page Title -->
+	<div id="areafixed" class="bdstyleTitle">
+		<div class="title">Random Forests
+		<div class="version"></div>
+		</div>
+		<hr class="headerLine">
+	</div>
+	<!-- Page Title -->
+	
+	
+	<!-- Begin Client Area -->
+	<div id="areascroll" class="bdstyleBody">
+		<p>
+		<div class="node"><img src="./files/Randomforest.files/image0.jpg"></div>
+		<div class="nodeexplain">
+			다수의 <span class="nodeExHighlight">의사결정나무(CART)</span>를 이용하여 <span class="nodeExHighlight">주요 인자를 검출</span>하고 <span class="nodeExHighlight">모델</span>을 생성합니다.
+		</div>
+		<div style="clear: both;"></div>
+
+	</p>
+	
+	<hr class="nodeLine">
+	
+	<a href="#개요">개요</a>,
+	<a href="#고려사항">고려사항</a>,
+	<a href="#사용법">사용법</a>,
+	<a href="#속성">속성</a>,
+	<a href="#결과">결과</a>
+	
+	<a name="개요"><h3>개요</h3></a>
+
+	<ul class="liType02">
+		<li>
+			<p>
+				Ensemble 분석 방식 중의 한 가지의 방법론으로 다수의 의사 결정 나무를 사용하여 예측 또는 분류를 진행하는 알고리즘입니다. CART(Classification and Regression Tree)와 동일한 방식으로 
+				분류 및 예측 모델을 구축 가능하나 분석하고자 하는 데이터의 Sampling 방삭에서 일반 의사 결정 나무와 큰 차이를 가집니다. 이 때 사용되는 Sampling 방식은 Bagging 방식을 사용하여 기존 데이터를 다양한
+				데이터로 재생산하여 다양한 방면에서 분석이 가능하도록 진행됩니다.
+			</p>
+		</li>
+		<li>
+			<p>
+				일반 의사 결정나무에서 Bagging을 활용하여 Decison Tree를 단순하게 사용할 경우를 Bagged CART라고 부릴며, Random Forests의 경우 변수 선택 또한 Random 하게 이루어진 형태의 Decison Tree가 작성됩니다.
+			</p>
+		</li>
+		<li>
+			<p>
+				예) 1000개의 공정 데이터와 50개의 변수를 바탕으로 불량품에 관한 분류, 모델을 만들 시, Bootrap을 활용하여 50개의 Data Set을 만들고 각각의 SEt은 랜덤하게 변수가 할당되며, 할당되는 변수는 50개중 랜덤하게 선택하여 사용함
+			</p>
+		</li>
+		<li>
+			<p>
+				<span class="genExHighlight">Varialbe Importance(주요변수)</span>는 기존 CART를 사용하였을 시에 의사 결정 나무를 호가인하여 불순도 함수 값을 가장 감소 시키는 변수를 확인하여 주요 인자로 검출 가능 하였으나 
+				Random forests는수 많은 불순도 함수가 사용 되기 때문에 직접 인자를 식별하기 어렵습니다.그렇기 때문에 Random forests를 활용하여 Varialbe Importance(주요변수)를 확인하기 위해서는 모든 의사 결정 나무 생성시에 
+				불순도 함수 변동값을 저장하고 이 값을 바탕으로 주요 변수 도출이 가능합니다. 이 방법론으로 확인한 주요변수는 CART보다 정확성을 가질 수 있습니다.
+			</p>
+		</li>
+	</ul>
+
+	
+	<a name="고려사항"><h3>고려사항</h3></a>
+	<ul class="liType02">
+		<li><span class="genExHighlight">독립변수</span>는 연속형/이산형의 변수 모두 사용 가능합니다. </li>
+		<li><span class="genExHighlight">종속변수</span>는 연속형/이산형에 따라 진행되는 패턴이 다릅니다. </li>
+	</ul>
+
+	<a name="사용법"><h3>사용법</h3></a>
+	<ul class="liType02">
+		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+		<li><span class="genExHighlight">형태 변경 노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를 지정)</li>
+		<li><span class="genExHighlight">Randomforests 노드</span>를 <span class="genExHighlight">형태 변경 노드</span>에 연결하고 옵션들을 선택합니다.</li>
+		<li><span class="genExHighlight">화면표시 노드</span>를 <span class="genExHighlight">Randomforests 노드</span>에 연결합니다. </li>
+		<li><span class="genExHighlight">Randomforests diagram</span> 예시는 아래와 같습니다.</li>
+		<p>	
+			<img src="./files/Randomforest.files/image1.jpg">
+		</p>
+	</ul>
+		
+		
+	<a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>조건부 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="8">선택사항</th>
+					<td>총나무수</td>
+					<td>Randomforests에서 생성할 가지수를 설정합니다.</td>
+					<td>필수</td>
+					<td>Default : 500, 0보다 큰 자연수</td>
+				</tr>
+				<tr>
+					<td>선택 변수 수</td>
+					<td>Tree생성 수행중 각노드별로 선택할 Feature 갯수를 지정합니다. 0으로 설정시 이산형 종속변수인 경우 독립변수 수의 제곱근 값으로 설정되며, 연속형 종속변수인 경우 독립변수 수의 나누기 3의 값으로 설정됩니다.</td>
+					<td>필수</td>
+					<td>0이상의 큰 자연수</td>
+				</tr>
+				<tr>
+					<td>표본 추출방법</td>
+					<td>표본추출 방법을 설정합니다.</td>
+					<td>필수</td>
+					<td>임의추출</td>
+				</tr>
+				<tr>
+					<td>표본크기 지정방법</td>
+					<td>표본크기 지정방법을 설정합니다.</td>
+					<td>필수</td>
+					<td>백분율, 개수</td>
+				</tr>
+				<tr>
+					<td>백분율</td>
+					<td>표분크기를 백분율로 지정합니다.</td>
+					<td>선택</td>
+					<td>0보다 크고 100보다 작은 실수</td>
+				</tr>
+				<tr>
+					<td>개수</td>
+					<td>표본크기를 개수를 지정합니다.</td>
+					<td>필수</td>
+					<td>0보다 크고  데이터 행 수보다 작은 자연수</td>
+				</tr>
+				<tr>
+					<td>불순도 함수</td>
+					<td>Tree생성에 사용할 불순도 함수를 지정합니다.</td>
+					<td>필수</td>
+					<td>Gini, Twoing, Entropy, LSD</td>
+				</tr>
+				<tr>
+					<td>OOB사용여부</td>
+					<td>OOB를 생성하여 Prediton를 계산할지 여부를 지정합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+		</table>
+
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">화면표시 노드</span>에서 생성된 결과 변수를 확인할 수 있습니다.</p>
+			<p>
+				<img src="./files/Randomforest.files/image2.jpg">
+			</p>
+			<br>
+			<li>Varialbe Importance</li>
+			<p><span class="genExHighlight">MDI / MDA</span> 변수 중요도를 그래프로 확인할 수 있습니다.</p>
+			<p>
+				<img src="./files/Randomforest.files/image3.jpg">
+			</p>
+			<br>
+		</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

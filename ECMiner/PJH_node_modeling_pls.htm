@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">PLS
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_modeling_pls.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">PLS(Partial least squares)</span> 는 여러 개의 반응변수를 예측하는데 사용되는 분석방법입니다. PLS는 독립변수간 상관성이 크거나 변수의 수가 관측치의 수보다 큰 데이터를 분석하는데 사용됩니다. PLS는 x와 y사이의 covariance에 기초하여 상관성이 없는 성분을 찾아내고 그 성분들을 이용하여 <span class="nodeExHighlight">최소제곱회귀분석</span>을 수행하는 방법입니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>
+		
+		
+    <a name="개요"><h3>개요</h3></a>
+
+    <ul class="liType02">
+  		<li>PLS는 특히 공정변수수(k)와 품질특성치수(m)가 매우클 때 [X(n by k), Y(n by m)]의 정보를 작은 수의 latent variable들을 갖는 저차원의 공간에 투영시키는 방법입니다. </li>
+		<li>A개의 latent variable을 <img src="./images/modeling_plsintro.jpg">이라 하고 이로 이루어지는 (n x A) 행렬을 T = [<img src="./images/modeling_plsintro.jpg">] 라 가정하면 T는 X가 축소된 형태로서 다음과 같이 쓸 수 있습니다.</li>
+		<p><dd><b>T = XP</b></dd></p>
+		<li>마찬가지로 행렬 Y에 대하여서도 dimension을 축소시킨 score matrix U를 산출할 수 있습니다. </li>
+		<p><dd><b>U = YQ</b></dd></p>
+		<li>여기서 (m x A) 행렬 Q는 Ua 에 대응하는 loading vector q<font size="1">a</font> (a=1,2,…,A)로 이루어진 것입니다. PLS의 주 아이디어는 T와 U의 관계를 설정함으로써 X로 Y를 설명하고자 하는 것입니다. </li>
+
+  	</ul>
+
+  	
+  	<a name="고려사항"><h3>고려사항</h3></a>
+    <ul class="liType02">
+		<li>PLS을 수행하기 위해 <span class="genExHighlight">종속변수</span>는 연속형이어야 하며, <span class="genExHighlight">독립변수</span>도 연속형이어야 합니다. </li>
+		<li><span class="genExHighlight">PLS노드</span>는 여러 개의 <span class="genExHighlight">종속변수</span>를 설정할 수도 있습니다.</li>
+		<li><span class="genExHighlight">PLS노드</span> 자체에 표준화 전처리과정을 포함하고 있습니다.</li>
+  	</ul>
+  	
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+  		<li><span class="genExHighlight">형태변경노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를 지정)</li>
+  		<li><span class="genExHighlight">PLS노드</span>를 <span class="genExHighlight">형태변경노드</span>에 연결하고 옵션들을 선택합니다.</li>  		
+		<li><span class="genExHighlight">PLS diagram</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/6/img11.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="4">선택사항</th>
+					<td>결과보기</td>
+					<td>Scree Plot of X, Scree Plot of Y, Coefficient Plot을 보여줍니다.</td>
+					<td>필수</td>
+					<td>모델링 후 클릭</td>
+				</tr>
+				<tr>
+					<td>잠재변수수</td>
+					<td>잠재변수수를 입력합니다.</td>
+					<td>필수</td>
+					<td>독립변수 수보다 작은 자연수</td>
+				</tr>
+				<tr>
+					<td>신뢰구간 저장</td>
+					<td>지정한 종속변수에 대한 95% 신뢰구간 저장여부를 결정합니다.</td>
+					<td>필수</td>
+					<td>True, False</td>
+				</tr>
+				<tr>
+					<td>예측구간 저장</td>
+					<td>예측값에 대한 95% 예측구간 저장여부를 결정합니다.</td>
+					<td>필수</td>
+					<td>True, False</td>
+				</tr>		
+				
+		</table>
+
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">PLS 노드</span>에 <span class="genExHighlight">화면표시노드</span>를 연결하면 추출된 각 종속변수에 대한 추정치와 각각의 잔차값을 볼 수 있습니다.</p>
+			<p>			
+			<img src="./images/modeling_plsresult.jpg">
+			</p>
+			<li>Scree Plot of X</li>
+			<p>각 잠재변수가 X에 대한 설명력을 얼마나 가지고 있는지를 plot으로 나타내고 있습니다.</p>
+			<p>			
+			<img src="./images/modeling_plsscreeplotofx.jpg">
+			</p>
+
+			<li>Scree Plot of Y</li>
+			<p>각 잠재변수가 Y에 대한 설명력을 얼마나 가지고 있는지를 plot으로 나타내고 있습니다.</p>
+			<p>			
+			<img src="./images/modeling_plsscreeplotofy.jpg">
+			</p>
+
+			<li>Coefficient Plot</li>
+			<p>각 종속변수에 대해 어떤 변수가 가장 영향을 많이 미치는지를 파악할 수 있습니다.</p>
+			<p>			
+			<img src="./images/modeling_plscoefficientplot.jpg">
+			</p>
+		</ul>
+		
+
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

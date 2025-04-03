@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">구간화 노드
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/interval.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+	    		<span class="nodeExHighlight">구간화 노드</span>는 종속변수에 미치는 영향도에 따라 독립변수를 여러 개의 구간으로 나누는 노드입니다.
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+				<li>형태변경 노드에서 종속변수를 선택합니다.</li>
+				<li>여러 개의 독립변수를 선택합니다.</li>
+	  		<p>			
+	    	<img src="./files/interval.files/image004.jpg">
+	  		</p>
+	  		<ul class="liType02">
+		    	<span class="genExHighlight"></span>
+					<li>Event : 2가지 종속변수의 값 중에서 어떤 것을 Event로 인식할 지를 선택합니다.</li>
+					<li>Independent Var: 여러 개의 독립변수에 대해 각각 구간화를 실행합니다.</li>
+					<li>Interval: 구간의 간격이 동일한 Bucket과 구간의 수가 동일한 Quantile 방식 중 선택합니다.</li>
+					<li>Interval Number: 구간 수를 설정합니다.</li>
+				</ul>
+				<li>Run 버튼을 누르면 아래와 같은 차트 및 통계량이 나타납니다.</li>
+				<table class="tbStyle03">
+		  		<tr>
+		  			<td>
+		  				<span class="genExHighlight">NOTE</span><br>
+		  				Interval과 Interval Number는 연속형 변수에만 해당합니다.
+		  			</td>
+		  		</tr>
+		  	</table>
+		  	<ul class="liType02">
+			  	<li>연속형 변수일 경우 화면</li>
+		  		<p>			
+		    	<img src="./files/interval.files/image006.jpg">
+		  		</p>
+	  		</ul>
+		  	<li>이산형 변수는 Interval, Interval Number 설정 없이 바로 Run 버튼을 누르면 모든 속성을 각각의 그룹으로 생성합니다.</li>
+		  	<ul class="liType02">
+			  	<li>이산형 변수일 경우 화면</li>
+		  		<p>			
+		    	<img src="./files/interval.files/image008.jpg">
+		  		</p>
+	  		</ul>
+				<li>Sum: 2개 이상의 구간을 병합합니다.</li>
+		  		<ul class="liType02">
+						<li>연속형 데이터는 인접 구간끼리만 병합할 수 있습니다.</li>
+						<li>이산형 데이터는 인접 구간이 아니더라도 병합할 수 있으며조건은 or로 변경됩니다.<br>(예: A2=a와 A2=b를 병합하면 A2=aor b)</li>
+					</ul>
+				<li>Div: 1개의 구간을 2개 이상으로 분할합니다.</li>
+		  		<ul class="liType02">
+						<li>연속형 데이터는 구간 내의 값을 입력해야 합니다. (2구간일 경우 21~28 사이의 수 입력)</li>
+						<li>이산형 데이터는 모든 속성을 각각의 그룹으로 분할합니다.</li>
+					</ul>
+	  		<p>			
+	    	
+	  		</p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>선택사항</th>
+						<td>구간환 편집</td>
+						<td>구간화를 위한 창을 불러옵니다.</td>
+						<td>필수</td>
+						<td> 콤보박스</td>
+					</tr>
+			</table>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

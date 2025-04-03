@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">병합 방법
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+			<li>ECMiner™에서는 다음과 같은 병합 방법을 제공합니다.</li>
+			
+			
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="">병합 방법</th>
+						<th width="">설명</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<td><a href="#내부 조인">내부 조인</a></td>
+						<td>입력된 데이터 소스 중 지정된 키필드가 모두 일치하는 행을 검색하여 새로운 데이터 소스에 추가합니다. 예를 들어, <span class="genExHighlight">고객정보_A</span>와 <span class="genExHighlight">고객정보_B</span> 데이터 소스에서 고객번호가 동일한 행만 새로운 데이터 소스에 추가합니다.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a href="#외부 조인">외부 조인</a></td>
+						<td>입력된 데이터 소스 중 지정된 키필드의 일치 여부에 상관 없이 모든 행을 새로운 데이터 소스에 추가합니다.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a href="#부분 외부 조인">부분 외부 조인</a></td>
+						<td>입력된 데이터 소스 중 지정된 키필드의 일치 여부에 상관 없이 모든 행을 새로운 데이터 소스에 추가합니다. 단, 지정된 데이터 소스의 데이터만 추가합니다.</td>
+						<td>포함할 데이터 소스를 지정하여야 합니다.</td>
+					</tr>
+					<tr>
+						<td><a href="#안티 조인">안티 조인</a></td>
+						<td>입력된 데이터 소스 중 지정된 키필드 중 일치하지 않는 키값을 주 데이터 소스에서 제거하여 새로운 데이터 소스를 구성합니다.</td>
+						<td></td>
+					</tr>
+			</table>
+	
+	    
+	    <h3><a name="예제">예제</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>다음과 같은 데이터 소스 A, B가 있다고 가정합니다.</li>
+	  		<p>			
+	    	<img src="./images/merge_method_ds.gif">
+	  		</p>
+	  		<li>위 두 데이터 소스 중 중복되는 필드인 "고객번호"를 키필드로 하여 각 병합법을 수행하면 다음과 같은 결과를 얻을 수 있습니다.</li>
+	  	</ul>
+	  	
+	  	<h3><a name="내부 조인">내부 조인</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>두 데이터 소스 중 중복되는(일치하는) 키값 즉, 고객번호 2, 3에 대해서만 병합을 수행합니다. 결과는 다음과 같습니다. </li>
+	  		<p>			
+	    	<img src="./images/merge_method_inner.gif">
+	  		</p>
+	  	</ul>
+	  	
+	  	<h3><a name="외부 조인">외부 조인</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>두 데이터 소스 중 모든 키값에 대하여 병합을 수행합니다. 키필드로 지정된 고객번호 필드의 경우 데이터 소스 A는 2, 3, 4, 6, 데이터 소스 B는 2, 3, 9, 10의 키값을 가지고 있으며 이들 모두에 대하여 병합을 수행합니다. 따라서, 2, 3, 4, 6, 9, 10의 고객번호에 대하여 다음과 같은 결과를 얻습니다. 이 경우 값이 없는 변수에 대하여 'NULL'값을 할당합니다.</li>
+	  		<p>			
+	    	<img src="./images/merge_method_outter.gif">
+	  		</p>
+	  	</ul>
+	  	
+	  	<h3><a name="부분 외부 조인">부분 외부 조인</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>두 데이터 소스 중 모든 키값에 대하여 외부 조인과 같이 병합을 수행한 후 선택된 데이터 소스에 있는 값만 반환합니다. 아래의 경우 데이터 소스 A만 선택하여 부분 외부 조인을 한 경우입니다. 결과에서 보듯이 데이터 소스 A에만 있는 2, 3, 4, 6의 고객번호에 대해서만 값을 반환합니다. </li>
+	  		<p>			
+	    	<img src="./images/merge_method_poutter_A.gif">
+	  		</p>
+	  		<li>다음의 결과는 데이터 소스 B만 선택하여 부분 외부 조인을 수행한 결과입니다. </li>
+	  		<p>			
+	    	<img src="./images/merge_method_poutter_B.gif">
+	  		</p>
+	  		<li>만약 모든 데이터 소스를 전부 선택한 경우 외부 조인과 같은 결과를 얻을 수 있습니다.</li>
+	  	</ul>
+	  	
+	  	<h3><a name="안티 조인">안티 조인</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>주 데이터 소스가 A일 때 주 데이터 소스가 아닌 데이터 소스 B에 있는 키값 중 중복되는 행을 제거합니다. 즉, A에 있는 키값 2, 3, 4, 6 중 B와 중복되는 2, 3이 제거되어 다음과 같은 결과를 얻을 수 있습니다. </li>
+	  		<p>			
+	    	<img src="./images/merge_method_anti.gif">
+	  		</p>
+	  	</ul>
+	  	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

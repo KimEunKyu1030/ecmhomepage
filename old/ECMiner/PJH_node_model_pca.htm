@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">PCA 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_model_pca.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">PCA 모델 노드</span>는 모델로서의 기능은 없습니다. 즉, 모델링 자체가 분석이 되는 경우입니다.
+			
+
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">PCA 수행정보</span></li>
+		<p>전체변수를 몇 개의 주성분으로 축약했는지 표시해주고 T^2의 Limit를 알 수 있습니다. </p>
+
+		<li><span class="genExHighlight">로드값</span></li>
+		<p>각 변수를 이용해 주성분을 생성하는 선형결합을 표시하고 있는 값으로 선형결합시 계수값을 의미합니다. 즉, 주성분 1은 다음과 같이 생성됩니다.
+주성분1 = (-0.2383*y3)+(-0.08679*x1)+(0.03601*x2)+…</p>
+		<p><img src="./images/modeling_pcaload.gif"></p><br>
+
+		<li><span class="genExHighlight">분산설명력</span></li>
+		<p>각 주성분이 전체데이터에 대한 정보를 어느 정도 가지고 있는지를 표시하고 있습니다. </p>
+		<p><img src="./images/modeling_pcavariance.gif"></p><br>
+
+		<li><span class="genExHighlight">Loading plot</span></li>
+		<p>Loading plot은 처음 두개의 주성분(주성분1과주성분2)의 loading값에 대한 정보를 제공합니다.</p>
+		<p><img src="./images/modeling_pcaloadplot.jpg"></p><br>
+
+		<li><span class="genExHighlight">Scree Plot</span></li>
+		<p>Scree plot은 각 주성분에 대한 Eigenvalue값을 표시한 것입니다. Scree plot은 주성분의 수를 결정하는 하나의 방법으로 Eigenvalue값의 변화가 거의 없는 곳에서 주성분의 수를 결정할 수 있습니다.</p>
+		<p><img src="./images/modeling_pcascreeplot.jpg"></p><br>
+
+
+
+	</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

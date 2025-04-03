@@ -1,0 +1,261 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">연관성 분석
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_modeling_apriori.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">연관성분석</span>은 상품 혹은 서비스간의 관계를 살펴보고 이로부터 유용한 규칙을 찾아내고자 할때 이용될 수 있는 기법입니다.
+			<span class="nodeExHighlight">연관성분석</span>은 동시에 구매될 가능성이 큰 상품들을 찾아냄으로써 <span class="nodeExHighlight">시장바구니분석(Market Basket Analysis)</span>에서 다루는 문제들에 적용됩니다.
+
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>
+
+	
+    <h3><a name="개요">개요</a></h3>
+    <ul class="liType02">
+		<li><span class="genExHighlight">연관성분석</span>은 어떤 특정 문제에 대해 아직은 일어나지 않은 답을 얻고자하는 <span class="genExHighlight">예측(Prediction)</span>의 문제나 상품 혹은 서비스(이하상품)의 거래기록(Historical) 데이터로부터 상품간의 <span class="genExHighlight">연관성정도</span>를 측정하여 관성이 많은 상품들을 그룹화하는 것입니다. </li>
+		<li><span class="genExHighlight">연관성측정</span>에서의 연관규칙은 "상품 A가 구매되어진 경우는 상품 B도 구매된다." 라고 해석됩니다. </li>
+		<li><span class="genExHighlight">연관성분석</span>은 제품이나 서비스의 <span class="genExHighlight">교차판매(cross selling), 매장진열(display), 첨부우편(attached mailings), 사기적발(fraud detection)</span> 등에 사용됩니다. </li>
+		<li><span class="genExHighlight">연관성분석</span>은 결과이해가 쉽고 거래내용에 대한 데이터를 변환없이 그 자체로 이용할 수 있는 간단한 자료구조를 갖는 분석방법입니다. 그러나 너무 세분화 된 품목을 가지고 <span class="genExHighlight">연관성규칙</span>을 찾으면 의미없는 분석이 될 수도 있고 거래량이 적은 품목은 당연히 포함된 거래수가 적을 것이고, 규칙발견시 제외되기가 쉽습니다. </li>
+  	</ul>
+  	
+  	<h3><a name="고려사항">고려사항</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">연관규칙기법</span>을 이용할 수 있는 데이터는 판매시점에서 기록되어진 거래와 품목에 관한 정보를 담고 있어야 합니다. </li>
+		<li>데이터의 형태는 <span class="genExHighlight">결과변수(targets)</span>를 갖지않는 <span class="genExHighlight">Unsupervised data</span>이며 특별히 각 고객들이 누구인지에 대한 구분이나 고객들에 관한 성별, 나이 등의 인구통계학적인 자료를 비롯한 기타정보들을 필요로 하지는 않습니다. </li>
+		<li><span class="genExHighlight">DATA TYPE</span> 은 아래와 같은 형태로 거래는 <span class="genExHighlight">1</span>, 비거래는 <span class="genExHighlight">0</span> 이 되어야 합니다.</li>
+		 <p>			
+    	<img src="./images/modeling_aprioridatatype.jpg">
+  		</p>
+
+  	</ul>
+  	
+  	<h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+  		<li><span class="genExHighlight">연관성분석노드</span>를 연결하고 <span class="genExHighlight">최소지지도, 아이템셋크기, 최소신뢰도</span>를 입력합니다. </li>
+  		<li><span class="genExHighlight">Apriori DIAGRAM</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/modeling_aprioriworkspace.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <h3><a name="속성">속성</a></h3>
+
+	<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+	
+	
+    <TR>
+        <!-- 일반정보 시작 -->
+        <TH  rowspan="2">
+            <P>일반정보</P>
+        </TH>
+        <TD>
+            <P>이름</P>
+        </TD>
+        <TD>
+            <P>노드의 이름을 입력합니다.</P>
+        </TD>
+        <TD>
+            <P>선택</P>
+        </TD>
+        <TD>
+            <P>&nbsp;</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>설명</P>
+        </TD>
+        <TD>
+            <P>노드에 대한 간단한 주석을 달 수 있습니다.</P>
+        </TD>
+        <TD>
+            <P>선택</P>
+        </TD>
+        <TD>
+            <P>&nbsp;</P>
+        </TD>
+    </TR>
+    <!-- 일반정보 끝 -->
+    <TR>
+        <TH rowspan="2">
+            <P>모델파일</P>
+        </TH>
+        <TD>
+            <P>모델파일 생성</P>
+        </TD>
+        <TD>
+            <P>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>예, 아니오</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>모델파일 경로</P>
+        </TD>
+        <TD>
+            <P>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>&nbsp;</P>
+        </TD>
+    </TR>
+    <TR>
+        <TH rowspan="7">
+            <P>선택사항</P>
+        </TH>
+        <TD>
+            <P>최소지지도(개)</P>
+        </TD>
+        <TD>
+            <P>항목들 간에 연관성을 정의하기위한 최소한의 지지도값을 설정하는 것으로 Default는 2입니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>자연수입력</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>아이템셋크기(개)</P>
+        </TD>
+        <TD>
+            <P>분석시 고려할 최대아이템수를 정합니다. Default는 3입니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>자연수입력</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>최소신뢰도(%)</P>
+        </TD>
+        <TD>
+            <P>연관성 정의시 최소한의 신뢰도값을 설정하는 것으로 Default&nbsp;값은 50(%)입니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>0~100</P>
+        </TD>
+    </TR>
+    <!-- 선택사항 끝 -->
+    <TR>
+        <TD>
+            <P>결과 아이템셋</P>
+        </TD>
+        <TD>
+            <P>결과 아이템 셋을 입력합니다. 단일 결과 혹은 다중 결과를 선택할 수 있습니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>단일결과, 다중결과</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>트랜잭션(TID) 옵션</P>
+        </TD>
+        <TD>
+            <P>트랜잭션 아이디로 정렬해야 하는지 혹은 이미 정렬되어 있는지 혹은 하나의 행을 아이디로 보면 되는지를 선택합니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>TID로 정렬해야 함, TID로 정렬되어 있음, 행이 TID임</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>아이템 옵션</P>
+        </TD>
+        <TD>
+            <P>현재의 데이터 형태가 아이템이 개수로 적혀 있는지 혹은 하나의 트랜잭션이 아이템명으로 표시되어 있는지를 선택합니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>아이템명으로 존재, 개수로 존재(아이템명은 변수명임)</P>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <P>지지도 아이템</P>
+        </TD>
+        <TD>
+            <P>최소 지지도로 이용할 아이템명을 입력합니다. 이 값을 지정하면 최소지지도는 무시됩니다.</P>
+        </TD>
+        <TD>
+            <P>필수</P>
+        </TD>
+        <TD>
+            <P>&nbsp;</P>
+        </TD>
+    </TR>
+		
+</table>
+
+
+
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

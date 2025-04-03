@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">연관성 분석 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_model_apriori.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">연관성 분석 모델 노드</span>는 모델로서의 기능은 없습니다. 즉, 모델링 자체가 분석이 되는 경우입니다.
+			작업창의 <span class="nodeExHighlight">모델 노드</span>를 더블 클릭하면 다음과 같은 정보를 볼 수 있습니다. 
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">연관성 분석 수행기본정보</span></li>
+		<p>수행시 선택된 옵션( 최소지지도, 아이템셋크기, 최소신뢰도) 에 대한 정보와 생성셋의 수를 나타냅니다.</p>
+
+		<li><span class="genExHighlight">생성된 Sets</span></li>
+		<p>연관성분석으로 생성된 Frequent Item Set으로 전체 Transaction에서 아이템들의 조합을 나타내고 있습니다.</p>
+		<p><img src="./images/modeling_aprioriset.gif"></p>
+
+		<li><span class="genExHighlight">생성된 규칙</span></li>
+		<p><img src="./images/modeling_apriorirule.gif"></p>
+			<ol class="liType02">
+				<li>연관규칙<br>[A->B] 연관규칙은 "상품 A가 구매되어진 경우는 상품 B도 구매된다." 라고 해석됩니다. </li>
+				<li>아이템 수<br>연관성을 정의한 전체 아이템수를 나타냅니다. </li>
+				<li>신뢰도(%)<br>신뢰도는 항목A를 포함하는 거래 중에서 항목B가 포함될 확률은 어느 정도인가를 나타내며 연관성의 정도를 파악할 수 있습니다.</li>
+				<li>향상도<br>항목A를 구매한 경우 그 거래가 항목B를 포함하는 경우와 항목B가 임의로 구매되는 경우의 비를 나타냅니다.</li>
+				<li>지지도(개)<br>지지도는 전체 거래중 항목A와 항목B를 동시에 포함하는 거래가 어느 정도인가를 나타내며 전체적 구매도에 대한 경향을 파악할 수 있습니다.</li>
+				<li>상대지지율(%)<br>지지도와 동일한 의미입니다. 즉, 지지도는 A와 B를 포함하는 거래의 수를 출력한 것이고, 상대지지율은 그 거래의 수를 전체 거래수로 나눈 값입니다.</li>
+			</ol>
+		<li><span class="genExHighlight">고려 사항</span></li>
+			<ol class="liType02">
+				<li>두 항목의 기본적인 구매율이 어느 정도 수준이 되어야만 의미가 있습니다. 즉, 지지도가 어느 정도 수준에 도달해야만 합니다. </li>
+				<li>신뢰도가 높을 경우에는 두 항목 A → B 에서 항목 B의 확률이 커야지 이 연관성규칙에 의미가 있습니다. 원래 B상품이 구매되는 기본확률보다 커야 A를 고려해서 B를 생각하는 것이 의미가 있습니다. 즉, Lift가 1보다 큰 값을 주어야 유용한 정보를 준다고 볼 수 있습니다.</li>
+			</ol>			
+		
+  	</ul>
+			
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

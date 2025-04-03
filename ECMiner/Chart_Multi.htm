@@ -1,0 +1,447 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">멀티 차트
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/Chart_Multi.files/image001.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+					<span class="nodeExHighlight">멀티 차트 노드</span>는 여러 변수들의 특징을 한 눈에 보기 쉽도록 고안한 ECMiner 고유의 차트입니다.</span>
+
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">	    
+		
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>,		 
+	  	<a href="#기본 화면">기본 화면</a>,	
+		<a href="#사용 예시">사용 예시</a>
+		
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/Chart_Multi.files/image011.jpg"></p>
+				<li>차트형태는 <span class="genExHighlight">Trend, Data, Box Plot, Distribution, Correlation</span> 중에 하나를 선택합니다.</li>
+				<ul class="liType02">
+					<li><span class="genExHighlight">Trend</span> : 데이터를 시간 순서대로 표현하는 기능.</li> 
+					<li><span class="genExHighlight">Data</span> : 데이터를 단순하게 산점도로 표현하는 기능.</li>
+					<li><span class="genExHighlight">Box Plot</span> : Box Plot을 그려주는 기능.</li>
+					<li><span class="genExHighlight">Distribution</span> : 변수의 분포를 정규 분포 확률 플롯으로 표현하는 기능.</li>
+					<li><span class="genExHighlight">Correlation</span> : 변수간 관계를 표현하는 기능.</li>
+				</ul>
+				<li><span class="genExHighlight">출력 옵션</span>은 화면에 가로(행) 및 세로(열)에 몇개의 표현할 차트를 보여줄지 입력합니다.</li>
+				<li><span class="genExHighlight">X축 변수</span></li> 
+				<ul class="liType02">
+					<li><span class="genExHighlight">Label</span> : 차트형태가 Data일 때에만 활성화됩니다.
+					 이산형 변수만이 선택 가능하며, 이산형 변수를 X축으로 하여 차트를 그립니다.</li> 
+					<li><span class="genExHighlight">X축 변수</span> : 차트형태가 Trend, Correlation일 때에만 활성화됩니다.
+					Trend는 날짜형 변수만을 선택할 수 있으며, Correlation은 연속형 변수만을 선택할 수 있습니다.</li>   
+				</ul>
+				<li><span class="genExHighlight">Y축 변수</span> 속성창에서 사용할 하나 이상의 Y변수를 선택합니다.</li>				
+				<li>선택사항</li>
+				<ul class="liType02">
+					<li><span class="genExHighlight">관리한계</span> UCL, LCL 변수 선택</li>
+					<li><span class="genExHighlight">차트분할</span> 변수 선택</li>
+					<li><span class="genExHighlight">그룹변수</span> 변수 선택</li>					
+				</ul> 		
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="60">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				<tr>
+					<th rowspan="2">
+						일반정보
+					</th>
+					<td>
+						이름
+					</td>
+					<td>
+						노드의 이름을 입력합니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						설명
+					</td>
+					<td>
+						노드에 대한 간단한 주석을 달 수 
+			있습니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="1">
+						차트형태
+					</th>
+					<td>
+						차트형태
+					</td>
+					<td>
+						차팅 방식을 선택합니다.
+					</td>
+					<td>
+						Trend, Data, Box Plot, Distribution, Correlation
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="4">
+						차트옵션
+					</th>					
+					<td>
+						회귀선 표시
+					</td>
+					<td>
+						차트형태가 Correlation일 때 희귀선의 표시 유무를 선택한다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						기초통계 표시
+					</td>
+					<td>
+						차트형태가 BoxPlot일 때 기초통계의 표시 유무를 선택한다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						점/선 표시
+					</td>
+					<td>
+						차트형태가 Trend, Data 두 경우일 때, 차트의 표시 방법을 점/선으로 변경 여부를 선택한다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						이상치 표시
+					</td>
+					<td>
+						차트형태가 BoxPlot일 때 이상치 표시 유무를 선택한다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				
+				<tr>
+					<th rowspan="2">
+						관리한계
+					</th>
+					<td>
+						UCL
+					</td>
+					<td>
+						차트형태가 Trend, Data일 때 UCL을 표시할 변수를 선택한다.
+					</td>
+					<td>
+						 연속형 변수
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						LCL
+					</td>
+					<td>
+						차트형태가 Trend, Data일 때 LCL을 표시할 변수를 선택한다.
+					</td>
+					<td>
+						 연속형 변수
+					</td>
+					<td>
+						 
+					</td>
+				</tr>				
+				<tr>
+					<th rowspan="2">
+						출력옵션
+					</th>
+					<td>
+						행 내 차트개수
+					</td>
+					<td>
+						한 화면에 가로로 몇개의 차트를 그릴지 입력한다.
+					</td>
+					<td>
+						정수
+					</td>
+					<td> 
+					
+					</td>
+				</tr>
+				<tr>
+					<td>
+						열 내 차트개수
+					</td>
+					<td>
+						한 화면에 세로로 몇개의 차트를 그릴지 입력한다.
+					</td>
+					<td>
+						정수
+					</td>
+					<td> 
+					
+					</td>
+				</tr>				
+				<tr>
+					<th rowspan="2">
+						X축변수
+					</th>
+					<td>
+						X축변수
+					</td>
+					<td>
+						차트형태가 Trend, Correlation일 때 X축으로 사용할 변수를 선택한다.<br>						
+					</td>
+					<td>
+						Trend : 날짜형 변수, Correlation : 연속형 변수
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						Label
+					</td>
+					<td>
+						차트형태가 Data일 때 X축으로 사용할 변수를 선택한다.						
+					</td>
+					<td>
+						이산형 변수
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>
+					<th rowspan="3">
+						Y축변수
+					</th>
+					<td>
+						전체 변수 선택/해제
+					</td>
+					<td>
+						전체 변수를 선택하거나, 선택 해제하는 버튼으로 위의 이미지 1번 그림의 두 버튼입니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						변수 목록
+					</td>
+					<td>
+						차트로 그릴 변수를 지정합니다. 위의 이미지 2번 그림에 표현된 체크박스를 이용하여, 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						필수
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						조건부 변수 선택
+					</td>
+					<td>
+						3번 이미지를 이용하여 변수 목록 중 제시하는 조건에 맞는 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>
+					<th rowspan="3">
+						차트분할
+					</th>
+					<td>
+						전체 변수 선택/해제
+					</td>
+					<td>
+						전체 변수를 선택하거나, 선택 해제하는 버튼으로 위의 이미지 4번 그림의 두 버튼입니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						변수 목록
+					</td>
+					<td>
+						차트로 그릴 변수를 지정합니다. 위의 이미지 5번 그림에 표현된 체크박스를 이용하여, 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						조건부 변수 선택
+					</td>
+					<td>
+						6번 이미지를 이용하여 변수 목록 중 제시하는 조건에 맞는 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>
+					<th rowspan="3">
+						그룹변수
+					</th>
+					<td>
+						전체 변수 선택/해제
+					</td>
+					<td>
+						전체 변수를 선택하거나, 선택 해제하는 버튼으로 위의 이미지 7번 그림의 두 버튼입니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						변수 목록
+					</td>
+					<td>
+						차트로 그릴 변수를 지정합니다. 위의 이미지 8번 그림에 표현된 체크박스를 이용하여, 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						조건부 변수 선택
+					</td>
+					<td>
+						9번 이미지를 이용하여 변수 목록 중 제시하는 조건에 맞는 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>				
+			</table>
+			
+		<h3><a name="기본 화면">기본 화면</a></h3>
+	    <ul class="liType02">			
+			<li><span class="genExHighlight">노드 속성창</span>에서 작성한 속성값들이 멀티차트 화면 옵션들에 입력되어 있습니다.</li>
+			<li><span class="genExHighlight">멀티차트 화면</span>에서 옵션의 수정이 가능합니다. 화면에서 옵션을 수정하면 노드 속성창에도 반영이 됩니다.</li>
+			<p><img src="./files/Chart_Multi.files/image012.jpg"></p>
+			<br>
+	  	</ul>
+		<h3><a name="사용 예시">사용 예시</a></h3>
+	    <ul class="liType02">			
+			<li>차트형태로 <span class="genExHighlight">Trend</span>를 사용하였을 때의 화면</li>			
+			<p><img src="./files/Chart_Multi.files/image013.jpg"></p>			
+			<br>
+			<li>차트형태로 <span class="genExHighlight">Data</span>를 사용하였을 때의 화면</li>			
+			<p><img src="./files/Chart_Multi.files/image014.jpg"></p>			
+			<br>
+			<li>차트형태로 <span class="genExHighlight">BoxPlot</span>을 사용하였을 때의 화면</li>			
+			<p><img src="./files/Chart_Multi.files/image015.jpg"></p>			
+			<br>
+			<li>차트형태로 <span class="genExHighlight">Distribution</span>을 사용하였을 때의 화면</li>			
+			<p><img src="./files/Chart_Multi.files/image016.jpg"></p>			
+			<br>
+			<li>차트형태로 <span class="genExHighlight">Correlation</span>를 사용하였을 때의 화면</li>			
+			<p><img src="./files/Chart_Multi.files/image017.jpg"></p>			
+			<br>
+	  	</ul>
+					
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

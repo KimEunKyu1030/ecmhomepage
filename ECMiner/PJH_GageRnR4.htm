@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Gage R&R 연구(교차설계)
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    
+	    <h3>개요</h3>
+	    <ul class="liType02">
+	  		<li>
+	  			Gage R&R 교차 설계는 각 부품을 각각의 운영자가 여러 번 관측할 경우에 사용하는 방법으로 분산 분석 방법과 Xbar R 방법이 있습니다. 분산 분석의 경우 관측치의 변동을 부품 대 부품, 재현성, 반복성 성분으로 나누어 분석합니다. 그리고 분산 분석을 선택하면 재현성의 경우 운영자와 부품의 성분으로 나눕니다.(Xbar R의 경우 재현성을 또 다시 나누지는 않습니다.) 여기에 부품과 운영자의 상호작용까지 고려하는데 ECMiner™ 에서는 부품과 운영자의 상호작용에 관련한 변동의 P value가 0.25보다 크면 자동적으로 상호작용을 무시하도록 하였습니다. ( P value가 0.25보다 크면 통계적으로 유의하지 않은 것을 의미합니다.) 교차 설계를 통해서 분석자는 관측치에서 나타나는 변동이 어떤 성분에 의해서 기인하였는지를 쉽게 분석할 수 있습니다.
+	  		</li>
+	  	</ul>
+	  	
+	  	<h3>실행방법</h3>
+	    <ul class="liType02">
+	  		<li>
+	  			<span class="genExHighlight">[분석] - [Gage R&R] - [Gage R&R 연구(교차설계)]</span> 를 선택하면 <span class="genExHighlight">[Gage R&R 연구(교차설계)]</span> 윈도우가 나타납니다.
+	  		</li>
+	  		<p><img src="./files/GageRnR4.files/image002.jpg"></p>
+	  		<ul class="liType02">
+	  			<li>부품 번호 : 부품 번호 혹은 부품을 구별할 수 있는 데이터가 들어있는 FIELD를 선택합니다.</li>
+	  			<li> 운영자 : 부품을 측정한 사람을 구별할 수 있는 데이터가 들어있는 FIELD를 선택합니다.</li>
+	  			<li>측정 데이터 : 실험을 통해서 측정된 데이터가 들어있는 FIELD를 선택합니다.</li>
+	  			<li>분석법 : 분산 분석으로 분석할 것인지 Xbar 및 R 방법으로 분석할 것인지를 선택합니다.</li>
+	  			<p><img src="./files/GageRnR4.files/image004.jpg"></p>
+	  			<li>연구 변동 : 연구 변동을 구하기 위해 표준 편차에 곱할 계수를 입력합니다.</li>
+	  			<li>공정 공차 : 경험적으로 알려진 공차를 입력합니다. 이를 통해서 %공차를 계산하게 됩니다.</li>
+	  			<li>역사적 표준 편차 : 경험적으로 알려진 역사적 표준 편차를 입력합니다. 이를 통해서 %공정을 계산하게 됩니다.</li>
+	  		</ul>
+	  	</ul>
+	  	
+	  	<h3>결과</h3>
+	  	<ul class="liType02">
+	  		<li>General Information : 분산 분석 결과(분산 분석을 선택하였을 때만)와 Gage R&R 분석 결과를 보여줍니다.</li>
+			<ul class="liType02">
+				<li>구별되는 범주의 수 : 측정시스템을 평가하는 척도로, 그 값이 5이상이면 측정시스템을 인정해도 좋다고 판단합니다.</li>
+			</ul>
+	  		<br><img src="./files/GageRnR4.files/image006.jpg"><br><br>
+	  		<li>운영자에 의한 R 관리도 : 운영자가 각 부품을 여러 번 측정하였을 때 얼마나 차이가 났는지(Range)를 표시해 줍니다.</li>
+	  		<br><img src="./files/GageRnR4.files/image008.jpg"><br><br>
+	  		<li>운영자에 의한 XBar 관리도 : 운영자가 각 부품을 여러 번 측정하였을 때 각 부품 당 관측치의 평균(XBar)을 표시해 줍니다.</li>
+	  		<br><img src="./files/GageRnR4.files/image010.jpg"><br><br>
+	  		<li>운영자*부품 상호 작용 : 운영자가 부품에 따라서 여러 관측치를 얻을 때 관측치의 평균을 표시해 줍니다.</li>
+	  		<br><img src="./files/GageRnR4.files/image012.jpg"><br><br>
+	  		<li>운영자별 관측치 : 부품이 어떠한 것인지를 고려하지 않고 오직 운영자 별로 관측치가 어떠한지를 표시해줍니다. 실선은 관측치의 평균을 나타냅니다.</li>
+	  		<br><img src="./files/GageRnR4.files/image014.jpg"><br><br>
+	  		<li>부품별 관측치 : 운영자를 고려하지 않고 오직 부품 별로 관측치가 어떠한지를 표시해줍니다. 실선은 관측치의 </li>
+	  		<br><img src="./files/GageRnR4.files/image016.jpg"><br><br>
+	  		<li>변동의 성분 : 관측치의 변동이 어디에서 기인하였는지를 표시해줍니다.</li>
+	  		<br><img src="./files/GageRnR4.files/image018.jpg">
+	  	</ul>
+	  	
+	  	
+
+	  	
+	  	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

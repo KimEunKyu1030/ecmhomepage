@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">RBF
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_modeling_rbf.jpg"></div>
+    	<div class="nodeexplain">
+    		<span class="nodeExHighlight">RBF신경망</span>은 은닉층이 한개만 있으며 수학적 형태는 <span class="nodeExHighlight">MLP신경망</span>과 유사하나, 은닉층의 결합함수로 원형기준함수를 사용합니다.
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>
+		
+	
+    <h3><a name="개요">개요</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">RBF(Radial-Basis Function)네트웍</span>은 <span class="genExHighlight">교사신경망(Supervised Neural Network)</span>으로서 고차원공간(High-dimensional Space)으로의 Feature mapping을 통한 Curve fitting에 주로 쓰입니다. 따라서 RBF네트웍의 관점에서 학습(Learning)이란 고차원공간에서 Training example을 가장 잘 fitting하는 surface를 찾는 것을 말합니다. RBF 네트웍의 hidden layer는 input pattern이 hidden space로 확장될 때, basis를 구성하는 function set을 제공하며 이러한 function들을 radial-basis function이라 합니다. 따라서 RBF네트웍은 이러한 radial-basis function들의 weighted combination의 형태를 띕니다. RBF네트웍은 서로 다른 역할을 수행하는 세개의 Layer로 구성되어 있습니다.</li>
+  		<li>Input layer는 외부환경과 네트웍을 연결하는 source(sensory) units로 구성됩니다. Hidden layer에서는 input space에서 hidden space로 nonlinear transformation을 수행합니다. 대개의 경우, Hidden space는 high dimension입니다. Output layer는 선형이며, Input layer에 적용된 pattern에 대한 결과를 제공합니다.</li>
+  		<li>RBF네트웍의 구조는 다음 그림과 같습니다.</li>
+  		<p>			
+    	<img src="./images/modeling_rbfintro.jpg">
+  		</p>
+  		<li><span class="genExHighlight">RBF네트웍</span>은 주로 복잡한 <span class="genExHighlight">Pattern classification</span> 문제들에 적용되며 이러한 문제들은 비선형형태로 high dimensional space으로의 transforming을 통해 풀려집니다. high dimensionspace로 transform된 pattern이 low-dimension space의 그것보다 좀 더 linearly separable하기 때문에 RBF네트웍은 대개 hidden space의 dimension을 크게하고 있습니다. 또 다른 중요한 관점은 hidden space의 dimension은 input-output mapping function의 추정의 정확도를 판가름한다는 것입니다. 즉, hidden space의 dimension을 더 높일수록 training data에 대해서는 좀 더 정확한 추정을할 수 있게 됩니다. </li>
+  	</ul>
+  	
+  	<h3><a name="고려사항">고려사항</a></h3>
+    <ul class="liType02">
+  		<li>종속변수의 데이터 타입에 맞는 <span class="genExHighlight">수행기법</span>을 선택해 종속변수가 연속형일 때는 <span class="genExHighlight">Regression</span>을 이산형일 때는 <span class="genExHighlight">Classification</span>을 선택해서 분석합니다.</li>
+  	</ul>
+  	
+  	<h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+			<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+			<li><span class="genExHighlight">형태변경노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를지정)</li>
+			<li><span class="genExHighlight">RBF노드</span>를 <span class="genExHighlight">형태변경노드</span>에 연결하고 옵션들을 선택합니다.</li>
+			<li><span class="genExHighlight">화면표시노드</span>를 <span class="genExHighlight">RBF노드</span>에 연결합니다.</li>
+			<li><span class="genExHighlight">RBF DIAGRAM</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/6/img12.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <h3><a name="속성">속성</a></h3>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">선택사항</th>
+					<td>중심수</td>
+					<td>Radial Basis Function의 center의 수입니다. 현재, ECMiner는 Input data중에서 랜덤선택하여 정하고 있습니다.</td>
+					<td>필수</td>
+					<td>필수</td>
+				</tr>
+				<tr>
+					<td>람다</td>
+					<td>Regularization parameter</td>
+					<td>필수</td>
+					<td></td>
+				</tr>				
+				
+		</table>
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li><br>
+			<span class="genExHighlight">화면표시노드</span>에서 분석 결과를 확인할 수 있습니다.아래는 회귀분석의 경우입니다.
+  		<p>			
+    	<img src="./images/modeling_rbfresult.jpg">
+  		</p>
+  	</ul>
+    
+    
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">MLR 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_model_mlr.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">MLR 모델 노드</span>는 트레이닝 데이터를 러닝하여 새로운 데이터의 예측에 사용될 수 있습니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">회귀식</span></li>
+		<p>독립변수들에 의해 생성된 종속변수 y를 예측하기위한 회귀식으로 MLR 수행의 최종결과입니다.</p>
+		<p><img src="./images/modeling_mlrequation.gif"></p><br>
+
+		<li><span class="genExHighlight">회귀테이블</span></li>
+		<p>각 독립변수의 유의성 및 회귀계수값을 파악하기 위한 테이블입니다.</p>
+		<p><img src="./images/modeling_mlrtable.gif"></p>
+			<ol class="liType02">
+				<li>Coef<br>각 독립변수의 모수추정치(회귀계수)입니다. </li>
+				<li>SE Coef<br>모수추정치(회귀계수)의 표준오차입니다. </li>
+				<li>t-value<br>(특정변수가 종속변수에 미치는 영향력이 없습니다.) 라는 귀무가설을 검증하기 위한 각 변수의 t값을 의미합니다.</li>
+				<li>p-value<br>각 추정치를 위한 확률로 p-값이 유의수준보다 크면 귀무가설(특정변수가 종속변수에 미치는 영향력이 없습니다.)을 기각할 수 없게 됩니다. 유의수준보다 작으면 귀무가설을 기각하게 됩니다. </li>
+			</ol>
+			<br>
+
+		<li><span class="genExHighlight">ANOVA 테이블</span></li>
+		<p>독립변수가 종속변수 y를 설명하는데 있어서 통계적으로 유의한지 검정하기 위해 F검정을 합니다. p-값이 유의수준보다 커서 유의하지 않다면 회귀계수에 대한 해석은 의미가 없습니다.</p>
+		<p><img src="./images/modeling_mlranova.jpg"></p><br>
+
+		<li><span class="genExHighlight">표준에러정보</span></li>
+		<p><img src="./images/modeling_mlrerror.jpg"></p>
+		<ol class="liType02">
+			<li>R-square(결정계수)</li>
+			<p>도출된 회귀식이 측정값들을 대표할만한가를 확인하는 것으로, 즉, 추정된 회귀선이 관측치들을 얼마나 잘 설명하는지를 검정하는 값입니다. 1에 가까울수록 회귀식이 데이터를 잘 설명하고 있음을 의미합니다. </p>
+
+			<li>Adjust R2</li>\
+			<p>투입되는 독립변수들이 많을수록 종속변수에 대한 설명력인 R-square는 자연히 증가합니다. 그러므로 실제 적합도를 판정하는 데에는 자유도를 고려하여 조정된 결정계수 R-square(adj)를 많이 활용합니다. 1에 가까울수록 회귀식이 데이터를 잘 설명하고 있음을 의미합니다. </p>
+			
+					<li>Root-MSE (Root-Mean Square Error)</li>
+			<p style="margin-left:50"><img src="./files/PCR.files/image013.gif"></p>
+
+			<li>MAE (Mean Absolute Error) </li>
+			<p style="margin-left:50"><img src="./files/PCR.files/image015.gif"></p>
+
+			<li>MPE (Mean Absolute Percentage Error) </li>
+			<p style="margin-left:50"><img src="./files/PCR.files/image017.gif"></p>
+			
+		</ol>
+		<p><b>③~ ⑤번 모두 종속변수의 원래값과 추정값의 오차를 나타낸 것으로 값이 작을수록 좋은 모형이라할 수 있습니다.</b></p><br>
+
+		<li><span class="genExHighlight">Trace and Statistical Table</span></li>
+		<p><img src="./images/modeling_mlrtracetable.gif"></p>
+			<ol class="liType02">
+				<li>이 결과는 기법을 stepwise로 선택했을 경우에만 출력됩니다. 각 단계별 모형에 대해 설명하고 있습니다. Trace값은 각 단계에서 어떤 변수가 입력되었는지를 나타냅니다.</li>
+				<li>Step1에서 x7만 Trace값이 1임을 알수 있습니다. 이는 Step1에서 x7변수가 모형에 추가되었음을 의미합니다.</li>
+				<li>Step2에서는 x4변수가 모형에 추가되었음을 알수 있습니다. 이 x4 변수가 모형에 추가되었을때 R2(R-Square)값은 Step1보다 좋아졌음을 알 수 있습니다.</li>
+				<li>Stepwise를 선택하면 앞에서의 회귀테이블에 마지막 단계에 포함되었던 변수들만이 출력되어 위와 같은 경우는 변수 x4,x7,x9에 대한 회귀테이블이 생성됩니다. </li>
+			</ol>		
+		
+  	</ul>
+			
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

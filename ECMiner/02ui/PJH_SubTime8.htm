@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">ARMAX
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    
+	    <h3>개요</h3>
+	    <ul class="liType02">
+	  		<li>
+	  			ARMAX는 ARMA with Exogenous Variable의 약자로 이미 언급한 ARMA 모형에 Exogenous Variable를 추가한 모델 형태입니다. 이 모델을 다음과 같이 기술할 수 있습니다.
+	  		</li>
+	  		<p><img src="../images/SubTime8_4.jpg"></p><br>
+	  		Parameter Estimation과 Forecasting 모두 기존 ARMA의 방법과 동일합니다. 단지 기존의 <img src="../images/SubTime8_5.jpg">  혹은  <img src="../images/SubTime8_6.jpg">  를  <img src="../images/SubTime8_7.jpg">  혹은  <img src="../images/SubTime8_8.jpg">  로 대체하면 모든 과정은 동일하다고 할 수 있습니다. 이는 단순히 ARMA 만으로 설명할 수 없는 시계열을 Exogenous Variable을 사용하여 더 잘 설명할 수 있도록 도와주는 모델이라고 할 수 있습니다.
+	  	</ul>
+
+	  	
+	  	<h3>실행방법</h3>
+	    <ul class="liType02">
+	  		<li>
+	  			<span class="genExHighlight">[분석] - [시계열 분석] - [시계열 모델] - [ARMAX]</span> 를 선택하면 <span class="genExHighlight">[ARMAX]</span> 윈도우가 나타납니다.<br>
+	  		<p><img src="../images/SubTime8_main.jpg"></p><br>	
+			메인 화면에서는 ARMAX 분석에 필요한 기본적인 것들을 입력하도록 합니다. 종속변수(반응변수)와 독립변수(설명변수)를 선택할 시에 독립 변수는 선택하지 않을 수 있습니다. 이 경우 기존의 ARIMA와 동일한 결과를 얻게 됩니다. 분석자는 기존과 ARIMA와 같이 계절성을 추가할 수도 있고 차분을 넣을 수도 있습니다. Main 화면에서 나타난 여러 차수 설정을 통해서 ARMAX분석을 할 수 있습니다.
+	  		</li>
+	  		<p><img src="../images/SubTime8_1.jpg"></p><br>
+			이 뿐 아니라 옵션 창을 통해서 보다 심화된 설정을 할 수 있습니다. AR차수를 분석자가 지정하는 차수로 입력하고 싶을 경우 체크 박스에서 기본에 해당하는 체크를 제거합니다. 그러면 space 단위로 하여 AR 차수를 지정할 수 있습니다. MA 차수를 분석자가 지정하는 차수로 입력하고 싶을 경우 체크 박스에서 기본에 해당하는 체크를 제거합니다. 그러면 space 단위로 하여 MA 차수를 지정할 수 있습니다.<br>
+			ARMAX의 모수를 추정하기 위해서 어떠한 방법을 사용할지에 대해서는 Maximum Likelihood와 Condional Least Square 중에서 하나를 선택할 수 있습니다. 최적화 방법으로는 Levenberg Marquardt와 Quasi Newton을 제공하는데 사용자는 이 두가지 방법을 사용해 봄으로써 둘 중에서 나오는 더 좋은 Parameter를 사용할 수 있습니다.<br>
+			최적화에 사용되는 사용되는 Parameter를 변경하고 싶을 경우 ‘변경’을 선택해서 하면 됩니다. 이를 통해서 좀 더 최적화를 자세히 할지 그렇지 않을지를 결정할 수 있습니다. 예측 관련 옵션을 통해서는 모델링에 사용되는 데이터를 선택하고 모델 검증을 수행할지를 결정합니다. 모델 검증을 선택할시에 모델링 데이터 이후부터 예측값을 계산합니다. 이를 통해서 모델링을 통해 얻은 모델이 얼마나 정확한지를 가늠할 수 있습니다.<br>
+			초기값 선택은 Nonlinear Optimization이 갖는 한계를 보완하기 위한 것입니다. 다양한 초기값 설정을 통해 최적의 해를 구하는데 도움이 됩니다.
+	  	</ul>
+	  	
+	  	<h3>결과</h3>
+	  	<ul class="liType02">
+	  		<li>모델 보고서</li>
+	  		<p>
+	  			General Info : 시계열 데이터의 기본적인 정보를 보여줍니다.<br>
+	  			Model Info : ARMAX분석을 통해서 얻어진 모수와 통계량, 그리고 예측 결과를 보여줍니다.<br>
+				잔차 차트 : 잔차 자기 상관함수, 잔차 자기 상관 함수를 보여줍니다.
+	  		</p>
+	  		<p><img src="../images/SubTime8_2.jpg"></p><br>
+	  		
+	  		<li>플롯 보기</li>
+	  		<p>
+	  			ARMAX 분석을 통해서 얻어진 데이터를 시각적으로 보여줍니다. 시계열도 그리고 잔차에 대한 플롯(잔차 히스토그램, 잔차 정규확률 플롯, 잔차 대 순서, 잔차 대 적합치)을 보여줍니다.<br>
+				아래는 시계열도의 예시입니다. 시계열 데이터와 적합치, 그리고 적합치의 상한, 하한을 한 눈에 볼 수 있습니다.
+	  		</p>
+	  		<p><img src="../images/SubTime8_3.jpg"></p><br><br>
+	  		
+	  		<li>통계량 보기</li>
+	  		<p>
+	  			ARMAX분석을 통해서 얻어진 통계량을 Table에서 볼 수 있습니다. 이와 함께 Table을 저장하는 기능도 제공합니다.
+	  		</p>
+	  	</ul>
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">MLR
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./files/MLR.files/image002.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">상관계수</span>를 이용하여 두 변수들 간의 관계의 정도는 파악할 수 있지만 변수들 간의 정확한 관계를 알기는 어렵습니다. 보통 하나 또는 둘 이상의 변수들이 다른 하나의 변수에 미치는 <span class="nodeExHighlight">영향의 정도와 방향</span>을 파악하기 위해 <span class="nodeExHighlight">회귀분석</span>을 사용합니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>,
+    <a href="#참조">참조</a>
+	
+    <a name="개요"><h3>개요</h3></a>
+
+    <ul class="liType02">
+  		<li>어떤 변수가 다른 변수에 영향을 주는 경우에, 영향을 주는 변수를 <span class="genExHighlight">독립변수 (independent variable, 설명변수)</span>라 하고, 영향을 받는 변수를 <span class="genExHighlight">종속변수(dependent variable, 반응변수)</span>라 합니다.</li>
+		<li>회귀분석의 목적은 독립변수와 종속변수의 관계를 파악하고, 종속변수를 예측하는 것입니다.</li>
+		<li>일반적으로 독립변수에 각기 다른 가중치를 곱한 선형함수로 종속변수를 추정하는 모형을 <span class="genExHighlight">회귀모형</span>이라고 합니다.</li>
+		 <p style="margin-left:50">			
+    	<img src="./files/MLR.files/image004.jpg">
+		<p>위의 식에서 Xi 는 독립변수, Yi 는 종속변수로써 자료에서 주어집니다. bi 는 회귀계수로 모형에서 추정되고 εi 는 모형 예측 시 나오는 잔차입니다. 여기서 각 변수의 회귀계수는 다른 변수들이 고정되어 있다고 가정할 때, 그 변수가 1단위 증가 시 전체의 증가량을 나타냅니다.</p>
+  		</p>
+
+  	</ul>
+
+  	
+  	<a name="고려사항"><h3>고려사항</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">종속변수</span>와 <span class="genExHighlight">독립변수</span>는 연속형이어야 합니다. </li>
+		<li><span class="genExHighlight">오차</span>의 기대값은 0, <span class="genExHighlight">분산</span>은 등분산인 <span class="genExHighlight">정규분포</span>를 따릅니다.</li>
+		<li>예측 오차 값들은 서로 독립적이어야 합니다.</li>
+		<li><span class="genExHighlight">독립변수</span>X와 <span class="genExHighlight">종속변수</span>Y 사이의 관계는 선형입니다.</li>
+		<li>각 <span class="genExHighlight">독립변수 X</span>에 대한 <span class="genExHighlight">종속변수 Y</span>값의 변동성은 독립변수X의 값에 상관없이 동일해야 합니다.(Homoskedasticity)</li>
+		<li><span class="genExHighlight">다중 공선성 문제</span>가 있을 경우 회귀계수 추정이 어렵게 되며, <span class="genExHighlight">부정확한 결과</span>를 도출해 냅니다. </li>
+  	</ul>  	
+
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+  		<li><span class="genExHighlight">형태 변경 노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를 지정)</li>
+  		<li><span class="genExHighlight">MLR 노드</span>를 <span class="genExHighlight">형태 변경 노드</span>에 연결하고 옵션들을 선택합니다.</li>
+  		<li><span class="genExHighlight">화면표시 노드</span>를 <span class="genExHighlight">MLR 노드</span>에 연결합니다. </li>
+		<li><span class="genExHighlight">MLR diagram</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./files/MLR.files/image005.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>조건부 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="7">선택사항</th>
+					<td>기법</td>
+					<td>분석기법을 선택합니다. General기법은 입력된 모든 독립변수를 모델에 넣고 모델링하는 기법입니다. Stepwise기법은 입력된 독립변수 모두를 사용하지 않고 stepwise변수선택 방법에 의해 유의한 변수만을 넣어 모델링하는 기법입니다.</td>
+					<td>필수</td>
+					<td>General, StepWise</td>
+				</tr>
+				<tr>
+					<td>입력유의수준</td>
+					<td>변수추가를 위한 유의수준입니다. 유의수준이 작을수록 모형에 추가되는 독립변수 수는 적어집니다.</td>
+					<td>필수</td>
+					<td>Stepwise 기법, 제거유의수준 이하</td>
+				</tr>
+				<tr>
+					<td>제거유의수준</td>
+					<td>변수제거를 위한 유의수준입니다. 유의수준이 클수록 모형에 추가되는 독립변수 수는 적어집니다.</td>
+					<td>필수</td>
+					<td>Stepwise 기법, 입력유의수준 이상</td>
+				</tr>
+				<tr>
+					<td>VIFs 구하기</td>
+					<td>VIFs값을 구하려면 True, 구하지 않으려면False값을 선택합니다. 수행시간이 길어지기 때문에 필요가 없다면 False로 합니다. VIF값이 10을 넘으면 변수간 다중 공선성이 있다고 판단합니다.</td>
+					<td>필수</td>
+					<td>True, False</td>
+				</tr>
+				<tr>
+					<td>신뢰구간 저장</td>
+					<td>지정한 종속변수에 대한 95% 신뢰구간 저장여부를 결정합니다.</td>
+					<td>필수</td>
+					<td>True, False</td>
+				</tr>
+				<tr>
+					<td>예측구간 저장</td>
+					<td>예측값에 대한 95% 예측구간 저장여부를 결정합니다.</td>
+					<td>필수</td>
+					<td>True, False</td>
+				</tr>		
+				<tr>
+					<td>다중 공선성 제거</td>
+					<td>다중 공선성을 확인하여 변수를 제거 후, 분석을 진행합니다.</td>
+					<td>필수</td>
+					<td>True, False</td>
+
+				</tr>
+		</table>
+
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">화면표시 노드</span>에서 Y추정치와 잔차, Leverage값을 볼 수 있습니다.</p>
+			<p>			
+			<img src="./files/MLR.files/image007.jpg">
+			</p>
+			<li>잔차PLOT</li>
+			<p><span class="genExHighlight">기본차트 노드</span>를 연결해서 볼 수 있습니다.</p>
+			<p>			
+			<img src="./files/MLR.files/image009.jpg">
+			</p>
+			<p>회귀모형이 잘 적합되었다면 오차는 평균이 0이고 분산이 등분산인 가정을 만족해야 합니다. 기본차트 노드에서 X축은 Data index, Y축은 Residual(MLR_RES)로 하여 수행하면 위와 같은 plot이 생성됩니다.</p>
+		</ul>
+
+		<h3><a name="참조">참조 - 다중 공선성 제거 방법론</a></h3>
+		<p>다중 공선성이 있는 경우, 예측되는 회귀계수와 통계량이 부정확하게 도출됩니다.</p>
+		<p>이 경우 <span class="genExHighlight">VIF값s 구하기</span> 또는 <span class="genExHighlight">다중 공선성 제거</span> 옵션을 이용하여 다중 공선성을 제거 할 수 있습니다.</p>
+		<p><span class="genExHighlight">VIF값s 구하기</span> 경우, 사용자가 직접 <span class="genExHighlight">필터 노드</span>를 통해 직접 제거해야 합니다. 일반적으로 VIF값이 10이상인 경우 다중 공선성이 있는 것으로 간주합니다.</p>
+		<p><span class="genExHighlight">다중 공선성 제거</span>를 사용할 경우, 자동으로 다중 공선성이 있는 변수를 탐지하여 제거 후, 회귀분석을 실시합니다.</p>
+		
+		<p> <span class="genExHighlight">다중 공선성 제거</span> 선택시 다중 공선성 제거 방법론은 아래와 같습니다.</p>
+		<br>
+		<div>
+			<ol class="liType02">
+				<li>예측변수 X행렬에 대해 QR분해를 이용합니다.</li>
+				<li>하나의 에측 변수를 다른 나머지 변수 다른 모든 예측 변수에 회귀 분석을 실시하고, R²값을 계산합니다. 계산된 변수가 1 - R²가 8.88E-16인 경우 예측 변수를 모형에서 제거 합니다.</li>
+				<li>나머지 예측 변수에 대해 1,2 단계를 반복적으로 실시합니다.</li>
+			</ol>
+		</div>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

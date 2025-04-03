@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">상관 관계 분석
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    데이터 탐색기에서에서는 <span class="genExHighlight">상관 관계</span> 기능을 사용하여, 데이터 영역내의 모든 필드(범주형 데이터 필드 제외)에 대해 서로간의 상관관계를 한번에 볼 수 있습니다. 상관 관계값을 표시하는 방법에는 아래 세 가지가 있는데, 사용자의 필요에 따라 선택할 수 있습니다.
+	    </p>
+	    
+	    <h3>화면표시</h3>
+	    <span class="genExHighlight">화면 표시</span> 기능은 상관관계 테이블을 화면에 바로 보여주는 기능입니다. 실행 되면 상관 관계를 표시하는 시트가 데이터 탐색기에 추가됩니다. 
+	    <ul class="liType02">
+	    	<li>
+	    		실행 결과
+	    	</li>
+	    	<table class="tbStyle02">
+	  			<tr>
+	  				<td><img src="./images/dataexplorer_correlation.jpg"></td>
+	  			</tr>
+	  			<tr>
+	  				<th>Figure 상관 관계</th>
+	  			</tr>
+	  		</table>
+	  		<li>결과 설명</li>
+	    	<ul class="liType02">
+	    		<li>
+	    			Cor : 상관관계(Correlation)값입니다.
+	    		</li>
+	    		<li>
+	    			p : 상관관계 값에 해당되는 p-Value입니다
+	    		</li>
+	    	</ul>
+	    	<li>상관 관계 차트</li>
+	    	<p>상관 관계 시트에서는 마우스 클릭을 통해, 선택된 필드들의 상관 관계 차트를 볼 수 있습니다.</p>
+	    	<ul class="liType02">
+	    		<li>
+	    			두 필드가 만나는 셀을 더블 클릭하시면, 두 필드에 대한 분포도 차트와 추세선을 볼 수 있습니다.
+	    		</li>
+	    		<p><img src="./images/dataexplorer_correlation_2d.jpg"></p><br>
+	    	</ul>
+	    </ul>
+	    
+	    <h3>파일로 저장</h3>
+	    <span class="genExHighlight">파일로 저장</span> 기능은 상관관계 테이블을 파일로 저장하는 기능입니다. 실행되면 아래와 같은 다이얼로그가 새로 보여지면서 <span class="genExHighlight">파일명</span> 지정 및 <span class="genExHighlight">상관 계수</span>를 지정할 수 있습니다. 결과는 적어도 하나의 상관 관계에서 지정된 <span class="genExHighlight">상관 계수</span>보다 큰 값을 가지는 변수들만 저장됩니다. 
+	    <p><img src="./images/dataexplorer_correlation_fileProp.jpg"></p><br>
+	    <ul class="liType02">
+	    	<li>실행 결과</li>
+	    	<p><img src="./images/dataexplorer_correlation_fileResult1.jpg"></p>
+	    </ul>
+	    
+	    <h3>네트워크</h3>
+	    <span class="genExHighlight">네트워크</span> 기능은 위의 두 가지 경우와 달리 상관관계를 테이블로 표시하지 않고, 선의 색깔과 굵기를 이용하여 변수간의 상관관계를 보여주는 기능입니다. 또한 상관 계수 조절을 통해 지정된 상관 계수값 이상을 가지는 관계만을 보여주는 기능이 있어, 의미있는 상관계수를 보이는 변수들만의 상관 관계를 선택적으로 볼 수도 있습니다.
+	    <ul class="liType02">
+	    	<li>실행 결과</li>
+	    	<table class="tbStyle02">
+	  			<tr>
+	  				<td><img src="./images/dataexplorer_correlation_network1.jpg"></td>
+	  			</tr>
+	  			<tr>
+	  				<th>네트워크 : 0.5 이하의 상관계수 숨기기</th>
+	  			</tr>
+	  		</table>
+	  		<br>
+
+	    </ul>
+
+
+	    
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

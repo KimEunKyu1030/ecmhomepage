@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">ROC차트
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_assessment_roc.jpg"></div>
+    	<div class="nodeexplain">
+				<span class="nodeExHighlight">ROC차트 노드</span>는 모델링을 통해 생성된 모델의 성능을 특이도와 민감도에 의해 판단합니다. <span class="nodeExHighlight">민감도(sensitivity)</span>란 특정범주 관측치 빈도와 특정범주 예측치의 정분류 빈도비를 말합니다. 즉, <span class="nodeExHighlight">민감도 = 특정범주 예측치의 정분류 빈도 / 특정범주 관측치 빈도</span> 입니다. 그리고 <span class="nodeExHighlight">특이도(specificity)</span>는 특정범주 관측치 빈도와 특정범주 예측치의 오분류 빈도비를 뜻합니다. 즉, <span class="nodeExHighlight">특이도 = 특정범주 예측치의 오분류 빈도 / 특정범주 관측치 빈도</span> 입니다. 
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#고려사항">고려사항</a>,	
+    <a href="#사용법">사용법</a>,
+    <a href="#결과">결과</a>
+		
+	<h3><a name="고려사항">고려사항</a></h3>
+    <ul class="liType02">
+  		<li>현재 분류모델 중 LDA, QDA, Logistic 모델 노드만 연결 가능합니다.</li>
+  	</ul>  	
+
+  	<a name="사용법"><h3>사용법 - Diagram 예시</h3></a>
+    <ul class="liType02">
+	  	<p>			
+    	<img src="./images/node_assessment_roc_result1.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <a name="결과"><h3>결과</h3></a>
+    <ul class="liType02">
+		<br>
+		<p><img src="./images/node_assessment_roc_result2.jpg"></p>
+		<br>
+		<li><span class="genExHighlight">ROC 곡선</span>은 생성된 모델의 성능을 보여줍니다.</li>
+		<li>위의 경우, <span class="genExHighlight">Logistic (0)</span>이 특정 특이도에서 민감도가 가장 높음을 알 수 있습니다. 이것은 이 모델이 해당 특이도에서 오분류율이 가장 낮음을 의미해, 세 모델 중 가장 좋은 모델임을 나타냅니다. </li>
+		<li>특히, 모델의 ROC 곡선이 QDA (0)의 경우와 같이 나타났다면 이는 모델링의 효과가 전혀 없음을 나타냅니다. 모든 분류기준값에서 특이도와 민감도가 동일하여 오분류행렬의 대각원소의 빈도가 비대각원소의 빈도와 동일하기 때문입니다. </li>
+
+
+	  	
+  	</ul>
+	
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

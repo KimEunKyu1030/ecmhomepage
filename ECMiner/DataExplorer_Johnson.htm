@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Johnson 변환
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    관리도에 적용하기 위한 전제조건으로는 데이터가 정규분포를 따라야 합니다. 그러나 많은 데이터가 정규분포를 따르기 어렵습니다. Johnson 변환은 정규분포를 따르지 않는 관측치들을 관리도에 적용하기 위하여 정규분포를 따르도록 변환 수식을 제공합니다.
+	    </p>
+	    
+	    <h3>실행 방법</h3>
+	    <ul class="liType02">
+	    <li>
+	    <span class="genExHighlight">[데이터] - [Johnson 변환]</span>을 다음과 같은 Johnson 변환 다이얼로그가 나타납니다.
+	    </li>
+	    <p><img src="./images/Daba_Johnson_001.jpg"></p>
+	    <ul class="liType02">
+  	    <p>변환하고자 하는 변수를 선택하고, 허용할 수 있는 기준 P-value를 설정합니다.</p>
+	    <br>
+	    </ul>
+		</ul>
+	    
+	    <h3>결과</h3>
+	    <ul class="liType02">
+		<li> 
+		최적 변환함수: 정규분포를 가장 만족하는 변환함수를 추정하기 위하여 계산되는 정보들을 제공하며, 변환 함수을 파생 변수 노드와 이용하여 변환된 변수로 사용할 수 있습니다.
+		</li>
+		<li>
+		정규성 검정: 선택한 변수가 정규분포에 얼마나 따르는지 보여주는 Anderson-Darling 통계량과 P-value를 제공합니다. P-value가 0.05보다 크면, 변수는 정규분포를 따른다고 할 수 있습니다.
+		</li>
+	    	<p><img src="./images/Daba_Johnson_002.jpg"></p>
+	    	<br>
+
+	    	<li>
+		정규 확률 Plot(변환전): 변환하기 전 데이터가 정규분포를 얼마나 따르는지 보여주는 그래프입니다. 빨간 선을 기준으로 빨간 선 근방에 데이터가 많이 분포하면 데이터가 정규성을 따른다고 할 수 있고, 빨간 선에 많이 벗어날수록 정규성 가정에 위배됩니다.
+	    	</li>
+	    	<p><img src="./images/Daba_Johnson_003.jpg"></p>
+	    	<br>
+	    	<li>
+	    	정규 확률 Plot(변환후): 추정된 변환 수식에 의해 변환된 데이터가 정규분포를 얼마나 따르는지 보여주는 그래프입니다. 빨간 선을 기준으로 빨간 선 근방에 데이터가 많이 분포하면 데이터가 정규성을 따른다고 할 수 있고, 빨간 선에 많이 벗어날수록 정규성 가정에 위배됩니다.
+	    	</li>
+	    	<p><img src="./images/Daba_Johnson_004.jpg"></p>
+	    	<br>
+	    	<li>
+		변환추정: Z값에 따라 달라지는 변환 데이터가 얼마나 정규분포를 따르는지 정도(P-value)를 파악할 수 있는 그래프를 제공합니다. P-value가 크면 클수록 정규분포를 더 만족한다고 할 수 있습니다.
+	    	</li>
+	    	<p><img src="./images/Daba_Johnson_005.jpg"></p>
+	    	<br>
+	    	
+	    </ul>
+	    
+	    
+	    
+	    
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=ks_c_5601-1987" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="./default.css">
+<SCRIPT type=text/javascript src="./default.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16899"></HEAD>
+<BODY onmousedown=onBodyMouseDown(); class=bdstyle onload=onBodyLoad();><!-- Page Title -->
+<DIV id=areafixed class=bdstyleTitle>
+<DIV class=title>적용 
+<DIV class=version></DIV></DIV>
+<HR class=headerLine>
+</DIV><!-- Page Title --><!-- Begin Client Area -->
+<DIV id=areascroll class=bdstyleBody>
+<P>데이터 탐색기상의 여러 전처리 과정을 프로젝트 상에 적용되는 기능입니다. 실행된 전처리 작업에 따라, <A 
+href="./PJH_node_pre_filter.htm">필터 노드</A>, <A 
+href="./PJH_node_pre_selector.htm">선택 노드</A>, <A 
+href="./PJH_PJH_PJH_node_pre_derived.htm">파생변수 노드</A>, <A 
+href="./PJH_node_pre_sort.htm">정렬 노드</A> 등의 노드들이 생성되어 스트림이 자동으로 구성됩니다. </P>
+<H3>실행 방법</H3>
+<UL class=liType02>
+  <LI>데이터 탐색기에 열삭제, 행삭제, 파생 필드 추가, 정렬 등의 전처리 작업을 한 후, 메뉴의 <SPAN 
+  class=genExHighlight>적용</SPAN>을 선택하거나, 툴바 메뉴의 <SPAN 
+  class=genExHighlight>적용</SPAN>아이콘을 선택하면 됩니다. </LI></UL>
+<H3>예제</H3>
+<UL class=liType02>
+  <LI>각각의 전처리 경우에 대해, 예를 들어 설명하도록 하겠습니다. 
+  <OL class=liType02>
+    <LI>예제 데이터 
+    <UL class=liType02>
+      <LI>이후의 예제는 모두 아래 데이터를 예를 들어 설명하겠습니다. 
+      <P><IMG src="./images/dataexplorer_apply_orgdata.jpg"></P><BR></LI></UL>
+    <LI>열삭제 
+    <UL class=liType02>
+      <LI>열(A5 필드) 삭제 후 데이터 변화 
+      <P><IMG src="./images/dataexplorer_apply_filter_data.jpg"></P>
+      <LI>열 삭제 후 프로젝트 변화 
+      <P>원래 단독으로 존재하던 <A href="./PJH_PJH_filein.htm">파일입력 노드</A>에 <A 
+      href="./PJH_node_pre_filter.htm">필터 노드</A>가 <SPAN 
+      class=genExHighlight>스트림</SPAN>으로 연결된 것을 볼 수 있습니다. 또한 추가된<A 
+      href="./PJH_node_pre_filter.htm">필터 노드</A>의 <SPAN 
+      class=genExHighlight>속성</SPAN>창의 <SPAN class=genExHighlight>변수필터</SPAN>부분을 
+      보면 A5필드가 제거된 형태로 나타나는 것을 볼 수 있습니다. </P>
+      <P><IMG src="./images/dataexplorer_apply_filter.jpg"></P><BR></LI></UL>
+    <LI>행삭제 
+    <UL class=liType02>
+      <LI>행(세번째 행) 삭제 후 데이터 변화 
+      <P><IMG src="./images/dataexplorer_apply_selector_data.jpg"></P>
+      <LI>행(세번째 행) 삭제 후 프로젝트 변화 
+      <P>원래 단독으로 존재하던 <A href="./PJH_PJH_filein.htm">파일입력 노드</A>에 <A 
+      href="./PJH_node_pre_selector.htm">선택 노드</A>가 <SPAN 
+      class=genExHighlight>스트림</SPAN>으로 연결된 것을 볼 수 있습니다. 또한 추가된 <A 
+      href="./PJH_node_pre_selector.htm">선택 노드</A>의 <SPAN 
+      class=genExHighlight>속성</SPAN>창의 <SPAN class=genExHighlight>선택조건</SPAN>부분을 
+      보면 <SPAN class=genExHighlight>(@ROWNUM &lt;&gt; 3)</SPAN> 조건문이 추가된 것을 볼 수 
+      있습니다. </P>
+      <P><IMG src="./images/dataexplorer_apply_selector.jpg"></P><BR>
+      <TABLE class=tbStyle03>
+        <TBODY>
+        <TR>
+          <TD><SPAN class=genExHighlight>NOTE</SPAN><BR><SPAN 
+            class=genExHighlight>(@ROWNUM &lt;&gt; 3)</SPAN>는 "행인덱스가 3이 아닌 행"을 
+            의미하는 조건문입니다. </TD></TR></TBODY></TABLE></LI></UL><BR>
+    <LI>파생필드 
+    <UL class=liType02>
+      <LI>파생 필드 추가 후 데이터 변화 : A1과 A6의 합을 새로운 값으로 가지는 필드를 새로 추가하였습니다. 
+      <P><IMG src="./images/dataexplorer_apply_derive_data.jpg"></P><BR>
+      <LI>파생 필드 추가 후 프로젝트 변화 
+      <P>원래 단독으로 존재하던 <A href="./PJH_PJH_filein.htm">파일입력 노드</A>에 <A 
+      href="./PJH_PJH_PJH_node_pre_derived.htm">파생변수 노드</A>가 <SPAN 
+      class=genExHighlight>스트림</SPAN>으로 연결된 것을 볼 수 있습니다. 또한 추가된 <A 
+      href="./PJH_PJH_PJH_node_pre_derived.htm">파생변수 노드</A>의 <SPAN 
+      class=genExHighlight>속성</SPAN>창의 <SPAN class=genExHighlight>파생변수</SPAN>부분을 
+      보면 <SPAN class=genExHighlight>{A1} + {A6}</SPAN> 조건문이 추가된 것을 볼 수 있습니다. 
+</P>
+      <P><IMG src="./images/dataexplorer_apply_derive.jpg"></P><BR></LI></UL>
+    <LI>정렬 
+    <UL class=liType02>
+      <LI>정렬 후 데이터 변화 : A7를 기준으로 오름차순, A8을 기준으로 내림차순으로 다중 정렬할 결과입니다. 
+      <P><IMG src="./images/dataexplorer_apply_sort_data.jpg"></P><BR>
+      <LI>정렬 후 프로젝트 변화 
+      <P>원래 단독으로 존재하던 <A href="./PJH_PJH_filein.htm">파일입력 노드</A>에 <A 
+      href="./PJH_node_pre_sort.htm">정렬 노드</A>가 <SPAN 
+      class=genExHighlight>스트림</SPAN>으로 연결된 것을 볼 수 있습니다. 또한 추가된 <A 
+      href="./PJH_node_pre_sort.htm">정렬 노드</A>의 <SPAN 
+      class=genExHighlight>속성</SPAN>창의 <SPAN class=genExHighlight>정렬</SPAN>부분을 
+      보면&nbsp;A7 필드와&nbsp; A8 필드에 대해 각각 오름 차순과 내림 차순으로 정렬하는 선택 리스트가 추가된 것을 볼 수 
+      있습니다. </P>
+      <P><IMG src="./images/dataexplorer_apply_sort.jpg"></P><BR></LI></UL>
+    <LI>여러 전처리 다중 적용 전처리 결과의 <SPAN class=genExHighlight>적용</SPAN>은 위의 예제처럼 하나씩 할 
+    수도 있지만, 한번에 여러 전처리 결과를 <SPAN class=genExHighlight>적용</SPAN>할 수 도 있습니다. 
+    <UL class=liType02>
+      <LI>여러 전처리 적용 후 프로젝트 변화 
+      <P><IMG 
+src="./images/dataexplorer_apply.jpg"></P><BR></LI></UL></LI></OL></LI></UL>
+<HR class=footerLine>
+
+<P class=footer></P></DIV></BODY></HTML>
+<ul class="liType02">
+							<li>여러 전처리 적용 후 프로젝트 변화</li>
+							<p><img src="./images/dataexplorer_apply.jpg"></p><br>
+						</ul>
+				</ol>
+			</ul>
+			
+			
+	  	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

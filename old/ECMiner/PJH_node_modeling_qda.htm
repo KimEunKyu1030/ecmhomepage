@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">QDA
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_modeling_qda.jpg"></div>
+    	<div class="nodeexplain">
+			다수의 속성(attribute) 또는 변수를 갖는 객체(object)를 사전에 정해진 <span class="nodeExHighlight">그룹 또는 범주(class, category)</span> 중의 하나로 분류하는 <span class="nodeExHighlight">분류분석기법</span> 중 하나로 각 그룹의 <span class="nodeExHighlight">분산-공분산 행렬</span>이 다를 때 이차식의 판별함수를 사용하는 <span class="nodeExHighlight">QDA</span>를 사용합니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>
+		
+	    
+    <a name="개요"><h3>개요</h3></a>
+
+    <ul class="liType02">
+		<li>분산-공분산 행렬이 범주에 관계없이 동일하다고 가정했을 때 판별함수는 선형으로 도출되지만(LDA), 분산-공분산 행렬이 범주별로 다르다고 가정하면 이차식의 판별함수가 유도되는데 이 경우를 <span class="genExHighlight">이차판별분석(quadratic discriminant analysis: QDA)</span> 이라고 합니다. </li>
+		 <ul class="liType02">
+  			<li>각 범주별 평균벡터를 계산합니다. </li>
+			<p><img src="./images/modeling_qdaintro1.jpg"></p>
+			<li>범주별 표본분산-공분산행렬을 계산합니다. </li>
+			<p><img src="./images/modeling_qdaintro2.jpg"></p>
+			<li>범주 k에 대한 판별함수가 아래와 같습니다. </li>
+			<p><img src="./images/modeling_qdaintro3.jpg"></p>
+			<li>분류규칙은 아래와 같습니다. </li>
+			<p><img src="./images/modeling_qdaintro4.jpg">일 때, x를 범주 k에 분류</p>
+  		</ul>
+		
+
+  	</ul>
+
+  	
+  	<a name="고려사항"><h3>고려사항</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">종속변수</span>는 이산형이어야 하며, <span class="genExHighlight">독립변수</span>는 연속형이어야 합니다. </li>
+		<li>벡터 x가 <span class="genExHighlight">다변량 정규분포</span>를 따르는 것을 가정합니다. </li>
+		<li>각 범주에 관계없이 <span class="genExHighlight">분산-공분산 행렬</span>이 다름을 가정합니다. </li>
+  	</ul>
+  	
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+  		<li><span class="genExHighlight">형태변경노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를 지정)</li>
+  		<li><span class="genExHighlight">QDA노드</span>를 <span class="genExHighlight">형태변경노드</span>에 연결하고 옵션들을 선택합니다.</li>
+		<li><span class="genExHighlight">점유도 입력</span>을 <span class="genExHighlight">기본값</span>으로 선택하면 동일한 비율로 분석하고 <span class="genExHighlight">직접입력</span>을 선택하면 위와같은 대화창이 떠서 사용자로부터 각 클래스별 점유비를 입력받습니다. 대화창에서 취소를 선택하면 기본값으로 분석합니다. </li>
+  		<p><img src="./images/modeling_prob.jpg"></p><br>
+		<li><span class="genExHighlight">화면표시노드</span>를 <span class="genExHighlight">QDA노드</span>에 연결합니다. </li>
+		<li><span class="genExHighlight">QDA DIAGRAM</span> 예시는 아래와 같습니다.</li>
+		<p><img src="./images/6/img18.jpg"></p>
+  	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="1">선택사항</th>
+					<td>점유도</td>
+					<td>점유비율 입력여부를 결정합니다. 점유도는 데이터에서 각 class의 비율을 의미합니다.</td>
+					<td>필수</td>
+					<td>기본값, 직접입력</td>
+				</tr>		
+				
+		</table>
+
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">화면표시노드</span>에서 분류분석 결과를 확인할 수 있습니다.</p>
+			<p>			
+			<img src="./images/modeling_qdaresult.jpg">
+			</p>
+		</ul>
+		
+
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

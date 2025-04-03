@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>My Simple Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* 상단 네비게이션 바 */
+    .topnav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #1e255c;
+      padding: 10px 50px;
+      color: white;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    .topnav a:hover {
+      background-color: #3a4070;
+    }
+
+    /* 페이지 본문 영역 */
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* 좌측 메뉴 */
+    .sidebar {
+      width: 250px;
+      background-color: #f4f4f4;
+      padding-top: 20px;
+      display: none; /* 처음엔 숨김 */
+      flex-direction: column;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    /* 본문 내용 */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 메뉴 -->
+  <div class="topnav">
+    <a href="#" onclick="showMenu('제품')">제품</a>
+    <a href="#" onclick="showMenu('수행실적')">수행실적</a>
+    <a href="#" onclick="showMenu('고객지원')">고객지원</a>
+    <a href="#" onclick="showMenu('자료실')">자료실</a>
+    <a href="#" onclick="showMenu('커뮤니티')">커뮤니티</a>
+  </div>
+
+  <!-- 본문 영역 -->
+  <div class="container">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="content" id="content">
+      여기에 본문 내용이 표시됩니다.
+    </div>
+  </div>
+
+  <script>
+    const menuItems = {
+      '제품': ['설치', '제품 개요', '버전 비교'],
+      '수행실적': ['프로젝트1', '프로젝트2', '프로젝트3'],
+      '고객지원': ['FAQ', '1:1 문의', '가이드 다운로드'],
+      '자료실': ['매뉴얼', 'API 문서', '릴리즈 노트'],
+      '커뮤니티': ['공지사항', '사용자 포럼', '이벤트']
+    };
+
+    function showMenu(menu) {
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
+
+      // 메뉴 갱신
+      sidebar.innerHTML = '';
+      if (menuItems[menu]) {
+        menuItems[menu].forEach(item => {
+          const link = document.createElement('a');
+          link.href = "#";
+          link.textContent = item;
+          sidebar.appendChild(link);
+        });
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>${menu}에 대한 내용이 여기에 표시됩니다.</p>`;
+      } else {
+        sidebar.style.display = 'none';
+        content.innerHTML = '내용 없음';
+      }
+    }
+  </script>
+
+</body>
+</html>

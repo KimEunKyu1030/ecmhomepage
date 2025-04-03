@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Plackett Burman 설계
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+	<p>
+	본 설계는 요인의 개수가 매우 많을 때 사용하는 설계입니다. 본 설계는 사용자가 요인이 반응 값에 줄 수 있는 효과는 오직 주효과 뿐이라는 사전적인 지식이 있을 때 사용가능합니다. 이러한 사전지식은 실험의 수를 매우 획기적으로 줄이는데 도움이 됩니다.
+	</p>
+
+	<p>
+	Plackett Burman 설계는 2수준 요인 설계와 분석 이후의 단계가 비슷합니다. 따라서 2 수준 요인 설계와 비교하여 차이가 있는 것을 위주로 설명하도록 하겠습니다.
+	</p>
+	<br>
+	
+	<p>Plackett Burman의 특징은 실험자가 사전에 요인과 반응 값 사이에 선형적인 관계만이 있다는 것을 알 때 실험의 수를 획기적으로 줄인다는 것에 있습니다. 예를 들어 51개의 요인에 대해서 52번의 실험만으로도 주효과를 검출해 낼 수가 있습니다. 이렇게 실험을 획기적으로 줄일 수 있다는 사실이 바로 Plackett Burman 설계를 사용하는 이유입니다.</p><br><br>
+
+	<p>Plackett Burman 설계를 선택하고 Step 1화면에서 요인을 20개를 선택합니다. Step 2 그 후에 Step 2화면으로 넘어가면 다음과 같은 실험 수를 선택할 수 있습니다.</p>
+	<p><img src="../images/doe_334_01.jpg"></p>
+	<br>
+
+	<p>만약 실험자가 한번의 실험을 최대한 적개 하고 싶으면 런 수가 24번인 설계를 선택하면 됩니다. 최대 런수가 52까지 선택가능 하지만 20개의 요인에 52번의 실험은 그리 부담스러운 수는 아닙니다. 사용자의 목적에 맞게 런 수를 설정하고 중심점의 개수와 반복 회수를 설정합니다. 중심점은 곡면성을 체크하기 위한 것이고 반복회수를 늘림으로써 같은 실험점에서 반응 값이 얼마나 큰 차이가 나는 것을 통해 순수 오차(Pure Error)를 체크할 수 있습니다. </p>
+	<p>Step 3에서는 설계 테이블이 완성되고 Step 4에서는 다음과 같은 화면이 나타납니다.</p>
+	<p><img src="../images/doe_334_02.jpg"></p>
+	<br>
+	<p>다른 설계와는 다르게 포함할 수 있는 항의 최대 차수라는 항목을 선택할 수 없습니다. 왜냐하면 Plackett Burman 설계의 특징상 주효과 외의 상호작용은 검출할 수가 없기 때문입니다. 위의 선택항은 따라서 주효과를 검출하고자 하는 요인을 말합니다. 요인을 선택하여 분석을 진행하면 그 이후의 과정은 2수준 요인 설계(기본 생성자)와 동일합니다.</p>
+	
+
+
+
+			
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

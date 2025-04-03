@@ -1,0 +1,287 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">OLEDB 출력
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./files/OLEDB.files/image002.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="genExHighlight">OLEDB 출력 노드</span>는 OLEDB 기술을 이용하여 데이터베이스에 데이터를 저장하는 노드입니다. 테이블을 직접 선택하거나 새로이 테이블 명을 입력하여 해당하는 데이터를 저장할 수 있습니다. ODBC 및 OLEDB를 모두 지원하는 데이터베이스라면 OLEDB를 사용할 것을 권장합니다.
+
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>
+		
+  	
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+	  	<p>			
+    	<img src="./images/6/img5.jpg">
+  		</p>
+		<li>접속하려는 데이터베이스에 맞는 <span class="genExHighlight">드라이버</span>를 지정합니다.</li>
+		<li>데이터베이스에 접속하기 위하여 <span class="genExHighlight">DB 서버 접속정보, 사용자명, 비밀번호</span>를 입력합니다.</li>
+		<li><span class="genExHighlight">DB 정보 가져오기</span> 버튼을 눌러 지정된 데이터베이스의 정보를 가져옵니다.</li>
+		<li>저장하기 전 <span class="genExHighlight">저장할 변수</span> 부분에 나타난 데이터를 확인합니다.</li>
+		<li>기존에 존재하는 테이블에 저장할 경우 데이터 형이 맞지 않으면 에러가 발생합니다.</li>
+		<li>데이터를 저장할 테이블을 선택하거나 아니면 테이블 명을 입력합니다.</li>
+		<li><span class="genExHighlight">저장 테이블</span>의 <span class="genExHighlight">테이블 생성</span> 옵션에서 <span class="genExHighlight">예</span>를 선택하면 기존 테이블 삭제 여부를 결정할 수 있고 <span class="genExHighlight">아니오</span>를 선택하면 기존 테이블 내용 지우기 여부를 결정할 수 있습니다.</li>
+		<li>이미 존재하는 테이블에 저장할 경우 <span class="genExHighlight">테이블 생성</span> 옵션에서 <span class="genExHighlight">예</span>를 선택한 후 테이블 삭제여부를 <span class="genExHighlight">예</span>로 선택하지 않으면 에러가 발생합니다.</li>
+  	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+
+<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="80">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+    <TR>
+		<th rowspan="2">일반정보</th>
+        <TD>
+            이름
+        </TD>
+        <TD>
+            노드의 이름을 입력합니다.
+        </TD>
+        <TD>
+            선택
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            설명
+        </TD>
+        <TD>
+            노드에 대한 간단한 주석을 
+입력합니다.
+        </TD>
+        <TD>
+            선택
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+<th rowspan="4">일반정보</th>	
+        <TD>
+            드라이버 선택
+        </TD>
+        <TD>
+            접속할 데이터베이스 종류에 
+맞는 OLE DB 드라이버를 선택합니다. ECMiner™은 
+이 드라이버를 통하여 데이터베이스에 접근합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            DB 서버 접속정보
+        </TD>
+        <TD>
+            데이터베이스를 인식할 수 있는 
+정보를 입력합니다. SQL 서버인 경우 데이터베이스 서버의 IP 
+어드레스를 입력하며, Oracle인 경우 TNS 
+명을 입력합니다. 기타 데이터베이스인 경우 데이터베이스를 인식할 수 있는 특정 정보를 
+입력합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            사용자명
+        </TD>
+        <TD>
+            데이터베이스에 접속하기 위한 
+사용자명을 입력합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            비밀번호
+        </TD>
+        <TD>
+            데이터베이스에 접속하기 위한 
+사용자의 비밀번호를 입력합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+
+		<th rowspan="4">저장테이블</th>
+        <TD>
+            DB 정보 가져오기
+        </TD>
+        <TD>
+            입력된 데이터베이스 접속정보를 
+이용하여 데이터베이스의 스키마, 테이블 등의 정보를 읽어옮니다. 
+가져온 정보는 아래쪽에 목록됩니다.
+        </TD>
+        <TD>
+            버튼
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            테이블 생성
+        </TD>
+        <TD>
+            테이블을 새로 생성할 것인지 
+아니면 기존 테이블을 그대로 사용할 것인지 여부를 결정합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            예, 아니오
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            스키마 선택
+        </TD>
+        <TD>
+            스키마를 선택합니다.
+        </TD>
+        <TD>
+            
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            저장할 테이블 명
+        </TD>
+        <TD>
+            데이터를 저장할 테이블을 
+선택하거나 입력합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            
+        </TD>
+    </TR>
+    <TR>
+		<th rowspan="3">선택사항</th>
+        <TD>
+            테이블 제거
+        </TD>
+        <TD>
+            <span class="genExHighlight">테이블 생성</span> 속성이 <span class="genExHighlight">예</span>일 경우 활성화 됩니다. 이미 존재하는 테이블의 내용 삭제여부를 결정합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            예, 아니오
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            테이블 지우기
+        </TD>
+        <TD>
+            <span class="genExHighlight">테이블 생성</span> 속성이 <span class="genExHighlight">아니오</span>일 경우 활성화 됩니다. 이미 존재하는 테이블의 내용 삭제 여부를 결정합니다.
+        </TD>
+        <TD>
+            필수
+        </TD>
+        <TD>
+            예, 아니오
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            저장 방식
+        </TD>
+        <TD>변수 순서별 혹은 변수명 일치를 선택할 수 있습니다. 이는 기존에 있던 테이블에 데이터를 추가적으로 입력할 때 Table의 변수 순서와 추가하려는 데이터 Table의 변수 순서가 일치하면 같은 변수로 볼지 혹은 변수명이 같을 때 같은 변수로 볼지를 선택하는 옵션입니다.</TD>
+        <TD>
+            필수
+        </TD>
+        <TD>변수 순서별, 변수명 일치</TD>
+    </TR>
+    <TR>
+        <th rowspan="1">
+            저장할 변수
+        </th>
+        <TD>
+            변수명
+        </TD>
+        <TD>
+            저장될 변수 정보를 
+나타냅니다.
+        </TD>
+        <TD>
+            
+        </TD>
+        <TD>
+            정수, 실수,
+            문자, 날짜
+        </TD>
+    </TR>
+
+</table>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

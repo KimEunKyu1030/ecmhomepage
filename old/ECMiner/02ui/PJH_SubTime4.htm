@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">ARIMA
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    
+	    <h3>개요</h3>
+	    <ul class="liType02">
+	  		<li>ARIMA 모델</li>
+	  		ARIMA 모델은 Univariate Time Series Analysis에서 가장 많이 쓰이는 모델로 다음과 같은 equation을 만족시킵니다. ARIMA(p,d,q)의 경우
+	  		<p>
+	  			<p style="margin-left:50"><img src="../images/SubTime4_1.gif"></p><br>
+	  			<p style="margin-left:50"><img src="../images/SubTime4_2.gif"></p><br>
+	  			<p style="margin-left:50"><img src="../images/SubTime4_3.gif"></p><br>
+	  		</p>
+	  		위와 같은 Equation에서 계수를 추정하고, 추정한 계수를 통해 만든 식의 적합성을 Test 하고 마지막으로 Forecasting까지 하는 것이 목적입니다.
+	  		<br><br>
+	  		
+	  		<li>Box-Jenkins의 방법론</li>
+	  		<p>Box-Jenkins는 Time Series Analysis의 일련의 과정을 다음의 그림으로 설명했습니다.</p>
+	  		<ol class="liType02">
+	  			<li>
+	  				From the interaction of theory and practice, a useful class of models for the purposes at hand is considered.
+	  			</li>
+	  			<li>
+	  				Because this class is too expensive to be conveniently fitted directly to data, rough methods for identifying subclass of these models are developed. Such methods of model identification employ data and knowledge of the system to suggest an appropriate parsimonious subclass of models which may tentatively entertained. In addition, the identification process can be used to yield rough preliminary estimates of the parameters in the model.
+	  			</li>
+	  			<li>
+	  				The tentatively entertained model is fitted to data and its parameters estimated. The rough estimates obtained during the identification stage can now be used as starting values in more refined iterative methods for estimating the parameters.
+	  			</li>
+	  			<li>
+	  				 Diagnostic checks are applied with the object of uncovering possible lack of fit and diagnosing the cause. If no lack of fit is indicated, the model is ready to use. If any inadequacy is found, the iterative cycle of identification, estimation, and diagnostic checking is repeated until a suitable representation is found.
+	  			</li>
+	  		</ol>
+	  		<p><img src="../images/SubTime4_4.gif"></p><br>
+	  		간단히 말하면 1. 일반적인 모델(ARIMA, ARCH등)을 상정하고, 2. 그 일반적인 모델 중에서 부분 모델(ARIMA(1,1,1)과 같은 것)을 정하고, 3. 이렇게 정한 모델의 Parameter를 Estimation 하고 4. 적합성 검증을 한 후 Forecasting과 같은 이후의 작업을 진행하는 것이라고 할 수 있습니다.
+	  	</ul>
+	  	
+	  	<h3>실행방법</h3>
+	    <ul class="liType02">
+	  		<li>
+	  			<span class="genExHighlight">[분석] - [시계열 분석] - [시계열 모델] - [ARIMA]</span> 를 선택하면 <span class="genExHighlight">[ARIMA]</span> 윈도우가 나타납니다.
+	  		</li>
+	  		<p><img src="../images/SubTime4_5.jpg"></p><br>
+	  		<li>
+	  			ARIMA 메인화면에서는 모델 식별 과정과 ARIMA 모델 추정 과정을 실행할 수 있습니다. 모델 식별을 통해서는 차분된 시계열 데이터의 자기 상관함수와 편자기 상관함수 그리고 산점도를 볼 수 있는데 이를 통해서 사용자는 ARIMA 모델을 추정할 때 필요한 ARIMA 모델의 차수를 결정하는데 도움을 받을 수 있습니다.<br>
+	  			아래는 자기 상관함수, 편자기 상관함수, 산점도의 예시입니다.
+	  			<br><img src="../images/SubTime4_6.jpg">
+	  			<br><img src="../images/SubTime4_7.jpg">
+	  			<br><img src="../images/SubTime4_8.jpg"><br>
+	  			이렇게 자기 상관함수, 편자기 상관함수, 산점도를 통해 모델을 식별하고 차수를 결정합니다. 옵션 버튼을 클릭하면 다음과 같이 ARIMA 방법론(Conditional Least Square, Maximum Likelihood)를 선택할 수 있고 Parameter Optimization을 위해서 사용하는 Levenberg Marquardt에 관련된 상수 설정, 초기값 선정 방법 등을 입력하도록 합니다.
+	  			<br><br><img src="../images/SubTime4_18.jpg"><br>
+	  			그리고 시계열 분석을 시작하면 다음과 같은 결과들을 얻을 수 있습니다.
+	  		</li>
+	  	</ul>
+	  	
+	  	<h3>결과</h3>
+	  	<ul class="liType02">
+	  		<li>모델 보고서</li>
+	  		<p><img src="../images/SubTime4_14.jpg"></p><br>
+	  		<p>
+	  			General Info : 시계열 데이터에 대한 기본적인 정보를 보여줍니다.<br>
+	  			Model Info : 시계열 분석 결과를 보여 줍니다. 모델 형태 정보, 모수 정보, Parameter Optimization 결과, 예측 결과를 얻을 수 있습니다.<br>
+	  			잔차 자기 상관 함수 및 잔차 편자기 상관함수 : 잔차 자기 상관 함수 및 편자기 상관함수를 통해서 Diagnostic Check를 해 볼 수 있습니다.
+	  		</p>
+	  		<br><img src="../images/SubTime4_15.jpg">
+	  		<br><img src="../images/SubTime4_16.jpg"><br><br>
+	  		<li>플롯 보기</li>
+	  		<p>
+	  			ARIMA 모델을 통해서 얻어진 데이터를 시각적으로 분석할 수 있습니다. 시계열도를 통해서는 관측값, 적합치, 예측값, 예측 상한, 하한을 볼 수 있습니다.
+	  		</p>
+	  		<p><img src="../images/SubTime4_17.jpg"></p><br>
+	  		다음의 잔차 관련 플롯들을 통해서는 Diagnostic Check를 위한 잔차 분석을 할 수 있습니다.
+	  		<br><br>
+	  		<p>
+	  			<img src="../images/SubTime4_9.jpg">
+	  			<img src="../images/SubTime4_10.jpg">
+	  		</p>
+	  		<p>
+	  			<img src="../images/SubTime4_11.jpg">
+	  			<img src="../images/SubTime4_12.jpg">
+	  		</p>
+	  		<br><br>
+	  		
+	  		<li>통계량 정보</li>
+	  		<p>
+	  			통계량 정보를 통해서는 모델을 생성한 후에 얻어지는 데이터를 Table에서 볼 수 있습니다. 이와 같이 얻어진 정보를 저장할 수 있는 기능 또한 제공합니다.
+	  		</p>
+	  		
+	  	</ul>
+			
+		
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">정보함수
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	
+    	<li>예시에 표현되는 결과값 형태는 함수 적용 결과 데이터 형태가 문자형일 경우 "결과값"의 형태로, 날짜형일 경우 #결과값#의 형태로 표현됩니다.(실제로 화면상에 표현되는 값은 ",#을 제외한 숫자/문자만 표현됩니다.)</li>
+  	<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="">함수</th>
+					<th width="">인수</th>
+					<th width="">설명</th>
+					<th width="">예</th>
+				</tr>
+			</thead>
+				<tr>
+					<td>BETWEEN(val, lval, hval) </td>
+					<td>val: 임의값<br>
+					lval: 임의값<br>
+					hval: 임의값  </td>
+					<td>val이 lval과 hval 사이에 있다면 TRUE를 반환합니다.</td>
+					<td>BETWEEN(1, 0, 2) -> TRUE  </td>
+				</tr>
+				<tr>
+					<td>DATASIZE() </td>
+					<td></td>
+					<td>현재 사용하고 있는 데이터의 크기(행 개수)를 반환합니다.</td>
+					<td>DATASIZE() -> 100</td>
+				</tr>
+				<tr>
+					<td>EQSTR(val1, val2[, ..., valN])</td>
+					<td>val1~valN: 임의의 문자값</td>
+					<td>문자형 val1과 valN 사이의 값이 모두 같다면 TRUE를 반환합니다.</td>
+					<td>EQSTR("A", "A") -> TRUE</td>
+				</tr>
+				<tr>
+					<td>ISALPHA(text) </td>
+					<td>text: 문자  </td>
+					<td>text이 알파벳이라면 TRUE를 반환합니다.  </td>
+					<td>ISALPHA("A") -> TRUE, ISALPHA("123") -> FALSE  </td>
+				</tr>
+				<tr>
+					<td>ISBOOL(val) </td>
+					<td>val: 임의값 </td>
+					<td>val이 Boolean 형태이면 TRUE를 반환합니다. </td>
+					<td>ISBOOL(1=2) -> TRUE, ISBOOL(123) -> FALSE </td>
+				</tr>
+				<tr>
+					<td>ISDATE(val) </td>
+					<td>val: 임의값 </td>
+					<td>val이 날짜형으로 변형 가능하면 TRUE를 반환합니다. </td>
+					<td>ISDATE(#2004-01-01#) -> TRUE  </td>
+				</tr>
+				<tr>
+					<td>ISDIGIT(text) </td>
+					<td>text: 문자  </td>
+					<td>text이 숫자이면 TRUE를 반환합니다. </td>
+					<td>ISDIGIT("123") -> TRUE  </td>
+				</tr>
+				<tr>
+					<td>ISIN(val, val1[, ..., valN]) </td>
+					<td>val, val1 ~ valN: 임의값  </td>
+					<td>val의 값이 val1 ~ valN값 중에 존재한다면 TRUE를 반환합니다.</td>
+					<td>ISIN(“BAG”, “BAG”, “Nice”,”Book”) -> TRUE </td>
+				</tr>
+				<tr>
+					<td>ISLOWER(text)  </td>
+					<td>text: 문자</td>
+					<td>text가 소문자이면 TRUE를 반환합니다.</td>
+					<td>ISLOWER("a") -> TRUE  </td>
+				</tr>
+				<tr>
+					<td>ISNULL(val) </td>
+					<td>val: 임의값  </td>
+					<td>val이 결측 혹은 NULL이라면 TRUE를 반환합니다.</td>
+					<td>ISNULL(@NULL) -> TRUE</td>
+				</tr>
+				<tr>
+					<td>ISNUMERIC(val) </td>
+					<td>val: 임의값  </td>
+					<td>val이 정수형 혹은 실수형이면 TRUE를 반환합니다.</td>
+					<td>ISNUMERIC(56) -> TRUE</td>
+				</tr>
+				<tr>
+					<td>ISSTRING(val) </td>
+					<td>val: 임의값  </td>
+					<td>val이 문자형이면 TRUE를 반환합니다. </td>
+					<td>ISSTRING("123") -> TRUE </td>
+				</tr>
+				<tr>
+					<td>ISUPPER(text) </td>
+					<td>text: 문자 </td>
+					<td>text가  대문자이면 TRUE를 반환합니다.</td>
+					<td>ISUPPER("A") -> TRUE </td>
+				</tr>
+				<tr>
+					<td>MAX(val1, val2 [, ..., valn]) </td>
+					<td>val1 ~ valn : 임의값  </td>
+					<td>val1과 valn 사이의 값 중 가장 큰 값을 반환합니다. val1, val2를 필수 입력입니다. </td>
+					<td>MAX(1, 2, 3) -> 3 </td>
+				</tr>
+				<tr>
+					<td>MIN(val1, val2 [, ..., valn])  </td>
+					<td>val1 ~ valn : 임의값  </td>
+					<td>val1과 valn 사이의 값 중 가장 작은 값을 반환합니다. val1, val2를 필수 입력입니다.  </td>
+					<td>MIN(1, 2, 3) -> 1 </td>
+				</tr>
+				<tr>
+					<td>SIGN(num) </td>
+					<td>num: 숫자 </td>
+					<td>num이 양수이면 1, 음수이면 -1, 0이면 0을 반환합니다.  </td>
+					<td>SIGN(-123) -> -1 </td>
+				</tr>
+				<tr>
+					<td>VARTYPE(val) </td>
+					<td>val: 임의값  </td>
+					<td>val의 형태를 대변하는 문자를 반환합니다. 문자형은 S, 숫자형은 N, Boolean은 B, 날짜형은 D, NULL이라면 X, 알수없는 형이라면 U를 반환합니다. </td>
+					<td>VARTYPE("A") -> "S" </td>
+				</tr>
+		</table>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

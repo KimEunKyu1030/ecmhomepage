@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">분할
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./images/node_pre_paritioning.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+	    		보다 좋은 모델을 산출하기 위하여 입력된 전체 데이터 중 일부를 평가용으로 사용할 수 있습니다. 즉, 분석용으로 분할된 데이터는 모델을 만드는데 사용되고 평가용으로 분할된 데이터를 이용하여 생성된 모델을 평가함으로써 더 좋은 모델을 얻을 수 있는 것입니다.
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+	    <h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+				<li>분할방법을 선택합니다.(현재는 임의추출만 가능합니다.)</li>
+				<li><span class="genExHighlight">분석 / 평가</span> 속성에서 추출된 표본을 분석용으로 사용할지 평가용으로 사용할 지 지정합니다. </li>
+				<li>분할 크기를 결정할 방법을 선택합니다.</li>
+				<li><span class="genExHighlight">분할크기 지정방법</span>에 따라 백분율 혹은 분할 개수를 입력합니다. </li>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="3">선택사항</th>
+						<td>분할방법</td>
+						<td>전체 데이터중 분석용 / 평가용으로 분할할 방법을 지정합니다. 현재는 임의추출만 지원합니다.</td>
+						<td>필수</td>
+						<td>임의추출</td>
+					</tr>
+					<tr>
+						<td>분석 / 평가</td>
+						<td>추출된 일부 데이터를 분석용으로 사용할 지 평가용으로 사용할 지 지정합니다.</td>
+						<td>필수</td>
+						<td>분석용, 평가용</td>
+					</tr>
+					<tr>
+						<td>분할크기 지정방법</td>
+						<td>분할크기를 결정할 방법을 지정합니다. </td>
+						<td>필수</td>
+						<td>백분율, 개수</td>
+					</tr>
+					<tr>
+						<th rowspan="2">표본크기</th>
+						<td>분할크기 (백분율)</td>
+						<td><span class="genExHighlight">분할크기 지정방법</span>이 <span class="genExHighlight">백분율</span>일 경우 활성화됩니다.</td>
+						<td></td>
+						<td>0 ~ 100 사이의 실수</td>
+					</tr>
+					<tr>
+						<td>분할크기 (개수)</td>
+						<td><span class="genExHighlight">분할크기 지정방법</span>이 <span class="genExHighlight">개수</span>일 경우 활성화됩니다. 분할하고자 하는 데이터 크기를 정수로 입력합니다. 만약, 전체 데이터 건수보다 클 경우 전체 데이터 수로 변경되어 처리됩니다.</td>
+						<td></td>
+						<td>정수.</td>
+					</tr>
+			</table>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

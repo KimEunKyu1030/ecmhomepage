@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>My Simple Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #1e255c;
+      padding: 10px 50px;
+      color: white;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    .topnav a:hover {
+      background-color: #3a4070;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f4f4f4;
+      padding-top: 20px;
+      display: none;
+      flex-direction: column;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="#" onclick="showMenu('제품')">제품</a>
+    <a href="#" onclick="showMenu('수행실적')">수행실적</a>
+    <a href="#" onclick="showMenu('고객지원')">고객지원</a>
+    <a href="#" onclick="showMenu('자료실')">자료실</a>
+    <a href="#" onclick="showMenu('커뮤니티')">커뮤니티</a>
+  </div>
+
+  <div class="container">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="content" id="content">
+      여기에 본문 내용이 표시됩니다.
+    </div>
+  </div>
+
+  <script>
+    const menuItems = {
+      '제품': ['설치', '제품 개요', '버전 비교'],
+      '수행실적': ['프로젝트1', '프로젝트2', '프로젝트3'],
+      '고객지원': ['FAQ', '1:1 문의', '가이드 다운로드'],
+      '자료실': ['도움말','매뉴얼', 'API 문서', '릴리즈 노트'],
+      '커뮤니티': ['공지사항', '사용자 포럼', '이벤트']
+    };
+
+    function showMenu(menu) {
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
+
+      sidebar.innerHTML = '';
+      if (menuItems[menu]) {
+        menuItems[menu].forEach(item => {
+          const link = document.createElement('a');
+          link.href = "#";
+          link.textContent = item;
+          link.onclick = () => {
+            if (menu === '자료실' && item === '도움말') {
+              content.innerHTML = `
+                <h2>📘 ECMiner 도움말</h2>
+                <iframe src="ECMiner.html" width="100%" height="800px" style="border:1px solid #ccc;"></iframe>
+              `;
+            } else if (menu === '자료실' && item === '매뉴얼') {
+              content.innerHTML = `
+                <h2>📘 ECMiner 매뉴얼</h2>
+                <iframe src="Manual.htm" width="100%" height="800px" style="border:1px solid #ccc;"></iframe>
+              `;
+            }
+            else {
+              content.innerHTML = `<h2>${item}</h2><p>${item}에 대한 내용이 여기에 표시됩니다.</p>`;
+            }
+          };
+          sidebar.appendChild(link);
+        });
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>${menu}에 대한 내용이 여기에 표시됩니다.</p>`;
+      } else {
+        sidebar.style.display = 'none';
+        content.innerHTML = '내용 없음';
+      }
+    }
+  </script>
+
+</body>
+</html>

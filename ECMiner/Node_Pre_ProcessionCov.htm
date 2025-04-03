@@ -1,0 +1,136 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<link href="./default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./default.js"></script>
+</head>
+
+<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	<!-- Page Title -->
+	<div id="areafixed" class="bdstyleTitle">
+		<div class="title">행렬변환
+
+		</div>
+		<hr class="headerLine">
+	</div>
+	<!-- Page Title -->
+
+
+	<!-- Begin Client Area -->
+	<div id="areascroll" class="bdstyleBody">
+		<p>
+			<div class="node"><img src="./images/node_pre_proces_01.jpg"></div>
+			<div class="nodeexplain">
+				<span class="nodeExHighlight"></span> 행과 열을 교환하여 입력 데이터 테이블을 변환합니다. 새 행 이름은 기본으로 설정되거나 이전 특정 행의 데이터로 설정할 수 있습니다. 새 열의
+				타입은 기본적으로 가장 명확한 타입이 되며, 한 행의 모든 셀에 적용됩니다.
+			</div>
+			<div style="clear: both;"></div>
+
+		</p>
+
+		<hr class="nodeLine">
+
+		<a href="#사용법">사용법</a>,
+		<a href="#속성">속성</a>
+
+
+		<h3><a name="사용법">사용법</a></h3>
+		<ul class="liType02">
+			<span class="genExHighlight"></span>
+			<li>행렬변환 노드는 다음과 같은 속성들을 설정할 수 있습니다. </li>
+			<p>
+				<img src="./images/node_pre_proces_02.jpg">
+			</p>
+			<li>이전 노드의 데이터 테이블의 필드명을 데이터로 변환하려면 <span class="genExHighlight">var_name열 생성여부</span> 속성을 지정합니다.</li>
+			<li>특정 열의 데이터를 변수명으로 변화하려면 <span class="genExHighlight">변수명 지정여부</span> 속성을 지정합니다. </li>
+			<li><span class="genExHighlight">변수명 지정여부</span> 속성을 지정하면 변수명으로 사용할 이전 노드 데이터 테이블의 필드명을 선택할 수 있습니다. </li>
+			<li>동일한 병수명이 있는 경우에 대한 처리를 <span class="genExHighlight">변수명 중복 시</span> 속성을 통해 설정할 수 있습니다. </li>
+			<li>이전 노드로부터 변수명을 제대로 가져오지 못한 경우 <span class="genExHighlight">[변수정보 가져오기]</span> 버튼을 눌러 다시 가져올 수 있습니다. </li>
+			<br />
+			<br />
+			<p>
+				다음과 같이 판매지역이 위쪽에 나열되어 있고 분기가 왼쪽에 나열되어 있는 데이터를 예를 들면
+			</P>
+			<p>
+				<img src="./images/node_pre_proces_03.jpg">
+			</p>
+			<br />
+			<p>
+				열과 행을 회전하여 다음과 같이 분기를 위쪽에 나열하고 지역을 옆쪽에 나열할 수 있습니다.
+			</P>
+			<p>
+				<img src="./images/node_pre_proces_04.jpg">
+			</p>
+		</ul>
+
+		<h3><a name="속성">속성</a></h3>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="">속성명</th>
+					<th width="">설명</th>
+					<th width="40">기타</th>
+					<th width="">비고</th>
+				</tr>
+			</thead>
+			<tr>
+				<th rowspan="2">일반정보</th>
+				<td>이름</td>
+				<td>노드의 이름을 입력합니다.</td>
+				<td>선택</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>설명</td>
+				<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+				<td>선택</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th rowspan="5">선택사항</th>
+				<td>var_name열 생성여부</td>
+				<td>이전 노드의 데이터 테이블의 필드명을 데이터로 변환하여 첫행의 데이터로 사용할 수 있습니다. var_name 필드가 생성됩니다.  </td>
+				<td></td>
+				<td>예,아니오</td>
+			</tr>
+			<tr>
+				<td>변수명 지정여부</td>
+				<td>특정열의 데이터를 변수정보로 사용할지 설정할 수 있습니다.</td>
+				<td></td>
+				<td>예,아니오</td>
+			</tr>
+			<tr>
+				<td>변수 선택</td>
+				<td>변수명으로 사용할 이전 노드 데이터 테이블의 필드명을 선택할 수 있습니다.</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>변수명 중복 시</td>
+				<td>동일한 병수명이 있는 경우에 대한 처리를 변수명 중복 시 속성을 통해 설정할 수 있습니다.</td>
+				<td></td>
+				<td>인덱스 부여, 오류 발생</td>
+			</tr>
+			<tr>
+				<td>변수정보 가져오기</td>
+				<td>변수정보가 제대로 보여지지 않은 경우 또는 var_name열 생성여부 , var_name열 생성여부 속성 설정의 변경이 있는 경우 [변수정보 가져오기]를 통해 다시 데이터를 가져와 변수정보를 설정합니다.</td>
+				<td>버튼</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>변수정보 </th>
+				<td>변수정보</td>
+				<td>행렬변환시 얻는 변수의 정보가 나타납니다. 총 변수의 개수, 변수명, 데이터형 등을 알 수 있습니다.</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+</body>
+
+</html>

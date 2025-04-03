@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ECMiner Style</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <header class="topnav">
+    <div class="logo"><img src="images/logo.png" alt="ECMiner 로고"></div>
+    <nav class="nav-links">
+      <a href="#" onclick="showMenu('제품')">제품</a>
+      <a href="#" onclick="showMenu('수행실적')">수행실적</a>
+      <a href="#" onclick="showMenu('고객지원')">고객지원</a>
+      <a href="#" onclick="showMenu('자료실')">자료실</a>
+      <a href="#" onclick="showMenu('커뮤니티')">커뮤니티</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar" id="sidebar"></aside>
+    <section class="content" id="content">
+        <div class="main-hero">
+          <h1>데이터에서 인사이트로, ECMiner</h1>
+          <p>ECMiner는 복잡한 데이터를 쉽게 분석하고 시각화하여, 고객사의 비즈니스를 더 스마트하게 만들어줍니다.</p>
+          <img src="images/Main.jpg" alt="ECMiner 메인 이미지">
+        </div>
+      </section>
+  </main>
+
+  <script>
+    const menuItems = {
+      '제품': ['설치', '제품 개요', '버전 비교'],
+      '수행실적': {
+        '2025년': ['프로젝트1', '프로젝트2', '프로젝트3'],
+        '2024년': ['프로젝트1', '프로젝트2', '프로젝트3'],
+        '2023년': ['프로젝트1', '프로젝트2', '프로젝트3']
+      },
+      '고객지원': ['FAQ', '1:1 문의', '가이드 다운로드'],
+      '자료실': ['도움말', '매뉴얼', 'API 문서', '릴리즈 노트'],
+      '커뮤니티': ['공지사항', '사용자 포럼', '이벤트']
+    };
+
+    function showMenu(menu) {
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
+
+      sidebar.innerHTML = '';
+      if (typeof menuItems[menu] === 'object' && !Array.isArray(menuItems[menu])) {
+        // 계층형 메뉴인 경우 (수행실적)
+        Object.entries(menuItems[menu]).forEach(([mainItem, subItems]) => {
+          const projectTitle = document.createElement('div');
+          projectTitle.className = 'project-title';
+          projectTitle.innerHTML = `
+            <span class="title-text">${mainItem}</span>
+            <span class="arrow">◀</span>
+            `;
+
+
+          const subMenu = document.createElement('div');
+          subMenu.className = 'submenu';
+
+          subItems.forEach(sub => {
+            const subLink = document.createElement('a');
+            subLink.href = "#";
+            subLink.textContent = sub;
+            subLink.onclick = () => {
+                subLink.onclick = () => {
+                    if (mainItem === '2024년' && sub === '프로젝트1') {
+                        content.innerHTML = `
+                        <h2>2024년 - 프로젝트1</h2>
+                        <img src="WP.png" alt="2024 프로젝트1 이미지" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                        <p>
+                            <a href="WP_완료보고서.pdf" target="_blank" rel="noopener" style="padding: 10px 16px; background-color: #1e3a8a; color: white; border-radius: 6px; text-decoration: none;">
+                            📄 PDF 열기 (새 탭)
+                            </a>
+                        </p>
+                        `;
+                    } else {
+                        content.innerHTML = `<h2>${mainItem} - ${sub}</h2><p>📄 ${sub}에 대한 내용이 여기에 표시됩니다.</p>`;
+                    }
+                    };
+
+            };
+            subMenu.appendChild(subLink);
+          });
+
+          projectTitle.onclick = () => {
+            const arrow = projectTitle.querySelector(".arrow");
+            const isOpen = subMenu.classList.contains("open");
+            subMenu.classList.toggle("open");
+            arrow.textContent = isOpen ? "◀" : "▼";
+          };
+
+          sidebar.appendChild(projectTitle);
+          sidebar.appendChild(subMenu);
+        });
+
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>하위 항목을 선택하세요.</p>`;
+      } else if (menuItems[menu]) {
+        menuItems[menu].forEach(item => {
+          const link = document.createElement('a');
+          link.href = "#";
+          link.textContent = item;
+          link.onclick = () => {
+            if (menu === '자료실' && item === '도움말') {
+              content.innerHTML = `
+                <h2>📘 ECMiner 도움말</h2>
+                <iframe src="ECMiner2.html" width="100%" height="800px"></iframe>
+              `;
+            } else if (menu === '자료실' && item === '매뉴얼') {
+              content.innerHTML = `
+                <h2>📘 ECMiner 매뉴얼</h2>
+                <iframe src="Manual.htm" width="100%" height="800px"></iframe>
+              `;
+            } else {
+              content.innerHTML = `<h2>${item}</h2><p>${item}에 대한 내용이 여기에 표시됩니다.</p>`;
+            }
+          };
+          sidebar.appendChild(link);
+        });
+
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>${menu}에 대한 내용이 여기에 표시됩니다.</p>`;
+      } else {
+        sidebar.style.display = 'none';
+        content.innerHTML = '내용 없음';
+      }
+    }
+
+    // 로고 클릭 시 초기화
+    document.querySelector('.logo').onclick = () => {
+      window.location.href = 'homepage5.html';
+    };
+  </script>
+
+</body>
+</html>

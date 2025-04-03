@@ -1,0 +1,366 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">기본차트
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/PJH_PJH_node_plot_plot.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+					<span class="nodeExHighlight">기본차트 노드</span>는 데이터를 이용하여 일반적인 이차원 차트를 그릴 수 있는 노드입니다. <span class="nodeExHighlight">기본차트 노드</span>를 사용하면 일반적인 이차원 차트뿐만 아니라 아래에서 설명되는 데이터/시리즈 인덱스 차트도 표현이 가능합니다. 
+
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+		<a href="#지원플롯">지원 플롯</a>,
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+		
+		 <h3><a name="지원플롯">지원 플롯</a></h3>
+	    <ul class="liType02">
+				<li>일반 이차원 차트 : X, Y축으로 지정된 두 변수 값을 사용하여 이들에 대한 이차원 차트를 그립니다.</li>
+				<p><img src="./files/PJH_PJH_node_plot_plot.files/image004.jpg"></p><br>
+
+				<li>데이터 인덱스 차트 : Y축으로 지정된 변수의 인덱스를 X축으로, 변수의 값을 Y축으로 사용하여 이들에 대한 이차원 차트를 그립니다.</li>
+				<p><img src="./files/PJH_PJH_node_plot_plot.files/image006.jpg"></p>  		
+				<li>시리즈 인덱스 차트 : Y축으로 지정된 변수의 시리즈 인덱스를 X축으로, 변수의 값을 Y축으로 사용하여 이들에 대한 이차원 차트를 그립니다.</li>
+				<p><img src="./files/PJH_PJH_node_plot_plot.files/image008.jpg"></p>  		
+	  	</ul>
+	    
+	
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/PJH_PJH_node_plot_plot.files/image010.jpg"></p>
+				<li>두 개 이상의 시리즈를 그릴 경우, 필요한 시리즈 개수만큼 <span class="genExHighlight">시리즈 추가</span> 버튼을 눌러 추가합니다.</li>
+				<li><span class="genExHighlight">시리즈 목록</span> 외 다른 인덱스를 X축으로 사용하고자 한다면, <span class="genExHighlight">X축 형태</span> 속성을 변경합니다.</li>
+				<li><span class="genExHighlight">시리즈 목록</span> 속성창에서 <span class="genExHighlight">X축</span> 및 <span class="genExHighlight">Y축</span>으로 사용할 변수를 선택합니다. 만약 <span class="genExHighlight">Data Index</span> 또는 <span class="genExHighlight">Series Index</span>를 사용하면, <span class="genExHighlight">Y축</span>으로 사용할 변수만 지정하면 됩니다. </li>
+				<li>선택사항</li>
+					<ul class="liType02">
+						<li><span class="genExHighlight">라벨</span> 속성 변경</li>
+						<li><span class="genExHighlight">차트 형태</span> 속성 변경</li>
+						<li><span class="genExHighlight">점모양</span> 속성 변경</li>
+					</ul>	  		
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="60">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				<tr>
+					<th rowspan="2">
+						일반정보
+					</th>
+					<td>
+						이름
+					</td>
+					<td>
+						노드의 이름을 입력합니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						설명
+					</td>
+					<td>
+						노드에 대한 간단한 주석을 달 수 
+			있습니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="7">
+						차트옵션
+					</th>
+					<td>
+						라벨
+					</td>
+					<td>
+						차트 상의 포인터에 표시될 라벨을 
+			지정합니다. 
+					</td>
+					<td>
+						None, Field
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						라벨별 색상 구분
+					</td>
+					<td>
+						라벨별로 색상을 구분하여 그려줄 것인지 선택한다.
+					</td>
+					<td>
+						예, 
+			아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						차트 형태
+					</td>
+					<td>
+						차트의 형태를 지정합니다. Scatter Plot일 경우 
+			흩뿌려져진 점들로만 그려지고, Line Plot일 경우 점들이 
+			선으로 이어져서 그려집니다.
+					</td>
+					<td>
+						Scatter 
+			Plot,
+						Line 
+			Plot
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						X축 형태
+					</td>
+					<td>
+						X축 타입을 결정합니다. Value가 선택되면 X축으로 지정된 변수가 X축이 되고, 
+			Data 
+			Index가 선택되면 Y축 변수의 데이터 
+			인덱스값이 X축이 되고, Series 
+			Index가 선택되면, Y축 변수의 시리즈 
+			인덱스값이 X축이 됩니다.
+					</td>
+					<td>
+						Value,
+						Data 
+			Index,
+						Series 
+			Index
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						시리즈 추가
+					</td>
+					<td>
+						여러 시리즈를 한 차트에 그리기 
+			위해 사용됩니다. 버튼을 누르면 시리즈 선택 리스트가 추가됩니다.
+					</td>
+					<td>
+						버튼
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						시리즈 삭제
+					</td>
+					<td>
+						마지막에 추가된 시리즈가 
+			삭제됩니다.
+					</td>
+					<td>
+						버튼
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						시리즈 편집
+					</td>
+					<td>
+						선택되지 않은 시리즈를 
+			삭제합니다.
+					</td>
+					<td>
+						버튼
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="6">
+						사용자 지정 최대/최소
+					</th>
+					<td>
+						Y축 지정
+					</td>
+					<td>
+						Y축 최대/최소값을 사용자가 수동으로 지정할 것인지 결정합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>
+						Y축 최소값
+					</td>
+					<td>
+						Y축 지정이 
+			예일 경우 활성화됩니다. Y축 최소값을 입력합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>
+						Y축 최대값
+					</td>
+					<td>
+						Y축 지정이 
+			예일 경우 활성화됩니다. Y축 최대값을 입력합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>
+						X축 지정
+					</td>
+					<td>
+						X축 최대/최소값을 사용자가 수동으로 지정할 것인지 결정합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>
+						X축 최소값
+					</td>
+					<td>
+						X축 지정이 
+			예일 경우 활성화됩니다. X축 최소값을 입력합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>
+						X축 최대값
+					</td>
+					<td>
+						X축 지정이 
+			예일 경우 활성화됩니다. X축 최대값을 입력합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<th rowspan="3">
+						시리즈 목록
+					</th>
+					<td>
+						X축
+					</td>
+					<td>
+						X축으로 사용할 변수를 
+			지정합니다. 차트 옵션에서 Data 
+			Index 또는 Series Index를 
+			선택하면, 자동으로 이들 인덱스로 X축이 
+			지정됩니다 
+					</td>
+					<td>
+						 
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Y축
+					</td>
+					<td>
+						Y축으로 사용할 변수를 
+			지정합니다. 
+					</td>
+					<td>
+						 
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						점모양
+					</td>
+					<td>
+						차트에 그려질 점들의 모양을 
+			지정합니다.
+					</td>
+					<td>
+						사각형, 원형, 삼각형, 
+			역삼각형, 십자형, X형, 별모양, 작은점, 
+			다이아몬드 
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+			</table>
+					
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

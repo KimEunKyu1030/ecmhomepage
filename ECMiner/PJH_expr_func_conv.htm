@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">변환함수
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	
+    	<li>예시에 표현되는 결과값 형태는 함수 적용 결과 데이터 형태가 문자형일 경우 "결과값"의 형태로, 날짜형일 경우 #결과값#의 형태로 표현됩니다.(실제로 화면상에 표현되는 값은 ",#을 제외한 숫자/문자만 표현됩니다.)</li>
+    	<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="">함수</th>
+						<th width="">인수</th>
+						<th width="">설명</th>
+						<th width="">예</th>
+					</tr>
+				</thead>
+					<tr>
+						<td>ASC(text) </td>
+						<td>text: 문자열 </td>
+						<td>문자열(text) 중 첫 문자의 ASCII 코드값을 반환합니다. </td>
+						<td>ASC("ABC") -> 65 </td>
+					</tr>
+					<tr>
+						<td>CHR(num) </td>
+						<td>num: ASCII 코드  </td>
+						<td>입력된 ASCII 코드에 해당하는 문자를 반환합니다.  </td>
+						<td>CHR(65) -> "A" </td>
+					</tr>
+					<tr>
+						<td>DATETOSTR(date, fmt) </td>
+						<td>date: 날짜형, fmt: 포맷</td>
+						<td>날짜시간형을 'yyyy-mm-dd HH:MM:SS' 과 같이 지정한 포맷 에 따라 문자형 형식으로 변경합니다. 년도는 y, 월은 m, 일은 d, 시간은 H, 분은 M, 초는 S로 대변됩니다. 예를 들어 문자열 '2004-10-23 23:28:11'의 경우 'yyyy-mm-dd HH:MM:SS'와 같이 fmt를 지정합니다. fmt가 없을 경우 'yyyymmdd'로 인식합니다. </td>
+						<td>DATETOSTR(#2004-01-01 12:10:10#, 'yyyymmdd-HHMMSS) -> "20040101-121010" </td>
+					</tr>
+					<tr>
+						<td>IIF(cond, expr1, expr2) </td>
+						<td>cond: 조건문<br>
+								expr1: 수식1<br>
+								expr2: 수식2
+					  </td>
+						<td>주어진 조건문(cond)이 참이면 수식1(expr1), 거짓이면 수식2(expr2)를 계산합니다.  </td>
+						<td>IIF(1 > 0, 1 + 2, 1 + 3) -> 3 </td>
+					</tr>
+					<tr>
+						<td>INT(num) </td>
+						<td>num: 실수  </td>
+						<td>입력된 실수를 정수로 변환합니다. 소수점 이하의 숫자가 모두 무시됩니다.  </td>
+						<td>INT(2.371) -> 2 </td>
+					</tr>
+					<tr>
+						<td>STR(num [, num1 [,num2]]) </td>
+						<td>num: 숫자<br>
+								num1: 최대 길이<br>
+								num2: 소수점 자리수
+						</td>
+						<td>입력된 숫자(num)을 문자로 변환합니다. num1은 변환할 때의 최대 길이, num2는 소수점 자리수이며 필수 인수는 아닙니다.  </td>
+						<td>STR(123.345, 6, 2) -> "123.35" (반올림된 결과 나옴)</td>
+					</tr>
+					<tr>
+						<td>STRTODATE(text, fmt) </td>
+						<td>text : 문자열, fmt : 포맷 </td>
+						<td>fmt에 지정한 포맷에 따라 text를 날짜형으로 변환합니다. 년도는 y, 월은 m, 일은 d, 시간은 H, 분은 M, 초는 S로 대변됩니다. 예를 들어 문자열 ‘2004-10-23 23:28:11’의 경우 ‘yyyy-mm-dd HH:MM:SS’와 같이 fmt를 지정합니다.  </td>
+						<td>STRTODATE("2004-01-01 11:50",’yyyy-mm-dd HH:MM’) -> #2004-01-01 11:50:00#</td>
+					</tr>
+					<tr>
+						<td>VAL(text) </td>
+						<td>text : 문자열 </td>
+						<td>문자열(text)을 숫자로 변환합니다. </td>
+						<td>VAL("123") -> 123 </td>
+					</tr>
+			</table>
+    	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

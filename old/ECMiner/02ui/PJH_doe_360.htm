@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Box-Behnken 설계
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+	<p>	Box Behnken의 설계는 2 수준 설계 및 3 수준 설계의 단점을 보완하기 위해서 만들어진 설계입니다. 일반적으로 p 수준 설계는 p-1 차의 polynomial 적합에 적당합니다. 따라서 2수준 설계로는 second order polynomial 적합이 어렵고 3수준 설계는 가능하긴 하지만 실험수가 많다는 단점이 있습니다. Box Behnken의 설계는 3수준 설계의 일부를 택하여 하는 실험으로서 더욱 효율적인 second order polynomial 적합이 가능합니다.
+	</p>
+	<br>
+	<p>Box Behnken 설계 또한 중심 합성 설계와 같은 목적에서 만들어진 설계입니다. 따라서 이에 대해서는 자세히 예를 들어 설명하기 보다는 중심 합성 설계에 대한 차이점에 대해서 설명하도록 하겠습니다. ( 반응 표면 설계의 기본적인 방법에 대해서는 반응 표면 설계의 중심 합성 설계를 참고하세요. )</p>
+	<br>
+	<p>1행부터 8행까지는 격자 점에서의 실험입니다. 그리고 9행부터 14행까지는 축점입니다. 그리고 마지막 두 행은 중심점입니다. 이렇게 하면 2차 곡선에 대한 회귀식을 충분히 잘 추정할 수 있는 설계가 됩니다. 이와 같은 실험 설계는 3수준 요인 설계보다 훨씬 적은 수의 실험으로 2차 곡선에 대한 회귀식을 찾을 수 있다는 장점이 있습니다. </p>
+	<br>
+	<p>반응 표면 설계의 Box Behnken 설계를 선택합니다. Step1 화면에서는 요인의 개수, 요인 이름, 그리고 상한과 하한을 입력하고, 반응 값의 개수와 반응 값에 따른 이름을 입력합니다.</p>
+	<p>Step 2의 화면은 다음과 같습니다.</p>
+	<br>
+	<p><img src="../images/doe_360_01.jpg"></p>
+
+	<br>
+	<p>선택하는 옵션은 보는 바와 같이 매우 단순합니다. 이러한 옵션을 지정하면 그 이후의 과정은 중심 합성 설계와 동일합니다.</p>
+	
+	
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

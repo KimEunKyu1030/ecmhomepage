@@ -1,0 +1,143 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">한셀 입력
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/CHM_Hancellin.files/hancellin001.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight">한셀 입력 노드</span>는 한셀 파일 형태로 저장된 데이터를 가져오는 노드입니다. 파일을 직접 선택하여 해당하는 데이터를 가져옵니다.
+	    	</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+
+	  	<h3><a name="사용법">사용법</a></h3>
+	  	<ul class="liType02">	
+	  		<p><img src="./files/CHM_Hancellin.files/hancellin002.jpg"></p>	  		
+			<li>한셀 파일 경로를 지정합니다.
+			</li>
+
+	  		<li>워크시트를 선택합니다.
+			</li>
+
+			<li>해당되는 경로의 데이터를 읽어옵니다.
+			</li>
+
+			<li><span class="genExHighlight">파일 부분 읽기 방식</span>을 지정합니다.
+			</li>
+
+			<li>변수정보를 확인합니다.
+			</li>
+	  	</ul>
+	  		
+	  	
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="2">엑셀파일</th>
+						<td>파일경로</td>
+						<td>한셀 파일의 경로를 지정합니다. 대화창이 뜨면 선택합니다.</td>
+						<td>버튼</td>
+						<td>대화창 인터페이스.</td>
+					</tr>
+					<tr>
+						<td>파일 다시 읽기</td>
+						<td>파일이 제대로 읽히지 않거나 파일을 수정한 경우 <span class="genExHighlight">파일 다시 읽기</span>를 통해 데이터를 다시 가져옵니다.</td>
+						<td>버튼</td>
+						<td></td>
+					</tr>
+	
+					<tr>
+						<th rowspan="2">부분읽기</th>
+						<td>부분 읽기 방법</td>
+						<td>파일을 부분적으로 읽는 방법을 지정합니다.</td>
+						<td>필수</td>
+						<td>전체읽기, 처음부터, 임의 추출</td>
+					</tr>
+					<tr>
+						<td>부분 읽기 인수</td>
+						<td>부분 읽기 방법이 '처음부터'라면 인수가 관측치 수가 되고 '임의 추출'이라면 관측치 퍼센티지가 됩니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="3">선택사항</th>
+						<td>워크시트</td>
+						<td>선택한 워크 시트의 데이터를 읽어옵니다.</td>
+						<td>필수</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>첫행은 변수명</td>
+						<td>파일의 첫 행에 변수명이 있다면 <span class="genExHighlight">‘예’</span>로 설정 합니다. <span class="genExHighlight">‘아니오’</span>로 설정되면 변수명을 자동으로 생성합니다. 첫 행에 변수명이 있는데 ‘아니오’로 설정할 경우 변수의 형태가 모두 문자형으로 설정될 수 있습니다.</td>
+						<td>자동 분석</td>
+						<td>예, 아니오</td>
+					</tr>
+					<tr>
+						<td>모든 필드 문자열 타입 처리</td>
+						<td>모든 입력 데이터를 문자형으로 읽어옵니다.</td>
+						<td></td>
+						<td>예, 아니오</td>
+					</tr>
+					<tr>
+						<th rowspan="1">변수정보</th>
+						<td>변수정보</td>
+						<td>읽을 데이터의 변수명 및 형태를 나타냅니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+			</table>
+			
+			
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

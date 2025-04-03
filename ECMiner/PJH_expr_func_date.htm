@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">날짜/시간함수
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	
+    	<li>예시에 표현되는 결과값 형태는 함수 적용 결과 데이터 형태가 문자형일 경우 "결과값"의 형태로, 날짜형일 경우 #결과값#의 형태로 표현됩니다.(실제로 화면상에 표현되는 값은 ",#을 제외한 숫자/문자만 표현됩니다.)</li>    	
+    	<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="">함수</th>
+						<th width="">인수</th>
+						<th width="">설명</th>
+						<th width="">예</th>
+					</tr>
+				</thead>
+					<tr>
+						<td>CMONTH(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 월명을 문자열로 반환합니다. </td>
+						<td>CMONTH(#2004-01-01#) -> "1월 " </td>
+					</tr>
+					<tr>
+						<td>CWEEK(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 요일명을 반환합니다. </td>
+						<td>CWEEK(#2004-01-01#) -> "목요일" </td>
+					</tr>
+					<tr>
+						<td>DATE([nYear, nMonth, nDay]) </td>
+						<td>nYear: 년도<br>
+						nMonth: 1 ~ 12<br>
+						nDay: 날수  </td>
+						<td>입력된 인수에 따라 날짜형을 데이터를 만들어 반환합니다. 인수가 없으면 현재 날짜를 반환합니다. </td>
+						<td>DATE(2004, 1, 1) -> #2004-01-01#  </td>
+					</tr>
+					<tr>
+						<td>DATETIME([nYear, nMonth, nDay [, nHours [, nMinutes [, nSeconds]]]]) </td>
+						<td>nYear: 년도<br>
+						nMonth: 1 ~ 12<br>
+						nDay: 날수<br>
+						nHours: 시간<br>
+						nMinutes: 분<br>
+						nSeconds: 초 </td>
+						<td>입력된 인수에 따라 날짜/시간을 날짜형 데이터로 반환합니다. 인수가 없으면 현재 날짜/시간을 반환합니다. </td>
+						<td>DATETIME(2004, 1, 1, 12) -> #2004-01-01 12:00:00# </td>
+					</tr>
+					<tr>
+						<td>DAY(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 날수(day)를 반환합니다. </td>
+						<td>DAY(#2004-01-01#) -> 1 </td>
+					</tr>
+					<tr>
+						<td>DAYOFYEAR(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜가 해당 해의 몇 번째 날인지 반환합니다. </td>
+						<td>DAYOFYEAR(#2004-02-01#) -> 32  </td>
+					</tr>
+					<tr>
+						<td>DAYS(date1, date2) </td>
+						<td>date1: 날짜<br>
+						date2: 날짜  </td>
+						<td>date1(end date)과 date2(start date) 사이의 날수 차이를 반환합니다.</td>
+						<td>DAYS(#2004-01-01#, #2003-02-01#) -> 334 </td>
+					</tr>
+					<tr>
+						<td>GODAY(date, day)</td>
+						<td>date: 날짜<br>day: 숫자</td>
+						<td>date에 day만큼 일수를 더하거나 뺀 날짜를 반환합니다.</td>
+						<td>GODAY(#2004-02-01#, 5) -> #2004-02-06#</td>
+					</tr>
+					<tr>
+						<td>GOMONTH(date, day)</td>
+						<td>date: 날짜<br>day: 숫자</td>
+						<td>date에 day만큼 달수를 더하거나 뺀 날짜를 반환합니다.</td>
+						<td>GOMONTH(#2004-02-01#, 5) -> #2004-07-01#</td>
+					</tr>
+					<tr>
+						<td>GOYEAR(date, day)</td>
+						<td>date: 날짜<br>day: 숫자</td>
+						<td>date에 day만큼 년수를 더하거나 뺀 날짜를 반환합니다.</td>
+						<td>GOYEAR(#2004-02-01#, 5) -> #2009-02-01#</td>
+					</tr>
+					<tr>
+						<td>HOUR(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 시간을 반환합니다. </td>
+						<td>HOUR(#2004-01-01 오후 1:30:20#) -> 13  </td>
+					</tr>
+					<tr>
+						<td>HOURS(date1, date2) </td>
+						<td>date1: 날짜<br>date2: 날짜</td>
+						<td>date1(end date)과 date2(start date) 사이의 시간 차이를 시간 단위로 반환합니다.</td>
+						<td>HOURS(#2004-01-01 오후 7:00:00#, #2004-01-01 오후 1:00:00#) -> 6</td>
+					</tr>
+					<tr>
+						<td>MINUTE(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 분을 반환합니다. </td>
+						<td>MINUTE(#2004-01-01 오후 1:30:20#) -> 30 </td>
+					</tr>
+					<tr>
+						<td>MINUTES(date1, date2) </td>
+						<td>date1: 날짜<br>date2: 날짜</td>
+						<td>date1(end date)과 date2(start date) 사이의 시간 차이를 분 단위로 반환합니다.</td>
+						<td>MINUTES(#2004-01-01 오후 1:30:00#, #2004-01-01 오후 1:00:00#) -> 30 </td>
+					</tr>
+					<tr>
+						<td>MONTH(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 월수를 반환합니다. </td>
+						<td>MONTH(#2004-01-01 오후 1:30:20#) -> 1 </td>
+					</tr>
+					<tr>
+						<td>MONTHS(date1, date2) </td>
+						<td>date1: 날짜<br>date2: 날짜</td>
+						<td>date1(end date)과 date2(start date) 사이의 차이를 월 단위로 반환합니다. </td>
+						<td>MONTHS(#2004-01-01#, #2003-01-01#) -> 12</td>
+					</tr>
+					<tr>
+						<td>SEC(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜 중 초를 반환합니다. </td>
+						<td>SEC(#2004-01-01 오후 1:30:20#) -> 20 </td>
+					</tr>
+					<tr>
+						<td>SECS(date1, date2) </td>
+						<td>date1: 날짜<br>date2: 날짜</td>
+						<td>date1(end date)과 date2(start date) 의 차이를 초 단위로 반환합니다.</td>
+						<td>SECS(#2004-01-01 오후 1:30:40#, #2004-01-01 오후 1:30:20#) -> 20</td>
+					</tr>
+					<tr>
+						<td>TIME() </td>
+						<td></td>
+						<td>현재 시간을 날짜형으로 반환합니다. </td>
+						<td>TIME() -> #2004-01-01 오후 1:30:20#</td>
+					</tr>
+					<tr>
+						<td>TRIMDATE(date) </td>
+						<td>date : 날짜</td>
+						<td>입력된 날짜에서 날짜를 제외한 시간만 반환합니다.</td>
+						<td>TRIMDATE(#2004-01-01 오후 1:30:20#) -> #1:30:20#</td>
+					</tr>
+					<tr>
+						<td>TRIMTIME(date) </td>
+						<td>date : 날짜</td>
+						<td>입력된 날짜에서 시간을 제외한 날짜만 반환합니다.</td>
+						<td>TRIMTIME(#2004-01-01 오후 1:30:20#) -> #2004-01-01#</td>
+					</tr>
+					<tr>
+						<td>WEEK(date) </td>
+						<td>date: 날짜</td>
+						<td>입력된 날짜의 요일수를 반환합니다. 일요일은 1, 월요일은 2, ..., 토요일은 7을 반환합니다. </td>
+						<td>WEEK(#2004-01-01 오후 1:30:20#) -> 5 </td>
+					</tr>
+					<tr>
+						<td>YEAR(date) </td>
+						<td>date: 날짜</td>
+						<td>연도를 반환합니다.</td>
+						<td>YEAR(#2004-01-01 오후 1:30:20#) -> 2004 </td>
+					</tr>
+					<tr>
+						<td>YEARS(date1, date2) </td>
+						<td>date1: 날짜<br>date2: 날짜</td>
+						<td>date1(end date)과 date2(start date) 사이의 년수를 반환합니다. </td>
+						<td>YEARS(#2008-01-01 오후 1:00:00#, #2006-02-01 오후 1:30:20#) -> 2</td>
+					</tr>
+			</table>
+    	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,192 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">상관관계
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/Chart_Correlation.files/correlation_node.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+					<span class="nodeExHighlight">상관 관계 노드</span>는 데이터 영역내의 모든 필드(범주형과 Time 데이터 필드 제외)에 대해 서로 간의 상관관계를 한번에 볼 수 있습니다. 상관 관계값을 표시하는 방법에는 네트워크, 매트릭스, Heat Map 세 가지 방법이 있습니다.
+
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">	    
+		
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>,
+		<a href="#결과">결과</a>
+	  	
+		
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/Chart_Correlation.files/correlation_instruction.jpg"></p>
+				<li><span class="genExHighlight">차트 옵션</span>에서 네트워크, 매트릭스, Heat Map 3가지 중 하나를 선택합니다. </li>
+				
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="60">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				<tr>
+						<th rowspan="2">
+							일반정보
+					</th>
+					<td>
+						이름
+					</td>
+					<td>
+						노드의 이름을 입력합니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						설명
+					</td>
+					<td>
+						노드에 대한 간단한 주석을 달 수 있습니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<th>
+						옵션
+					</th>
+					<td>
+						차트 옵션
+					</td>
+					<td>
+						상관관계를 표현할 방법을 선택합니다.
+					</td>
+					<td>
+						네트워크, 매트릭스, Heat Map 중 하나 선택
+					</td>
+					<td>
+						
+					</td>
+				</tr>    
+			</table>
+			
+			
+			<h3><a name="결과">결과</a></h3>
+			<ul class="liType02">
+	    	<li>
+	    		네트워크
+	    	</li>
+			<ul class="liType02">
+	    		<li>
+	    			<span class="genExHighlight">네트워크</span> 기능은 선의 색깔과 굵기를 이용하여 변수 간의 상관관계를 보여주는 기능입니다. 또한 상관 계수 조절을 통해 지정된 상관 계수값 이상을 가지는 관계만을 보여주는 기능이 있어, 의미 있는 상관계수를 보이는 변수들만의 상관 관계를 선택적으로 볼 수도 있습니다.
+	    		</li>
+	    		<table class="tbStyle02">
+					<tr>
+						<td><img src="./files/Chart_Correlation.files/correlation_network.jpg"></td>
+					</tr>
+					<tr>
+						<th>네트워크 : 0.5 이하의 상관계수 숨기기</th>
+					</tr>
+				</table>
+	    	</ul>
+		</ul>
+		
+		<ul class="liType02">
+	    	<li>
+	    		매트릭스
+	    	</li>
+			<ul class="liType02">
+	    		<li>
+	    			<span class="genExHighlight">매트릭스</span> 기능은 상관관계 테이블을 화면에 바로 보여주는 기능입니다. 
+	    		</li>
+	    		<table class="tbStyle02">
+					<tr>
+						<td><img src="./files/Chart_Correlation.files/correlation_metrix.jpg"></td>
+					</tr>
+					<tr>
+						<th>Figure 상관 관계</th>
+					</tr>
+				</table>
+				<li>
+	    			결과 설명
+	    		</li>
+				<ul class="liType02">
+					<li>
+						Cor : 상관관계(Correlation)값입니다.
+					</li>
+					<li>
+						p : 상관관계 값에 해당되는 p-Value입니다.
+					</li>
+				</ul>
+				<li>
+	    			상관 관계 차트
+	    		</li>
+				<p> 상관 관계 시트에서는 마우스 클릭을 통해, 선택된 필드들의 상관 관계 차트를 볼 수 있습니다.</p>				
+				<ul class="liType02">					
+					<li>
+						두 필드가 만나는 셀을 더블 클릭하시면, 두 필드에 대한 분포도 차트와 추세선을 볼 수 있습니다.
+					</li>
+					<p><img src="./files/Chart_Correlation.files/correlation_correlation.jpg"></p><br>
+				</ul>
+	    	</ul>
+		</ul>		
+		
+		<ul class="liType02">
+	    	<li>
+	    		Heat Map
+	    	</li>
+			<ul class="liType02">
+	    		<li>
+	    			<span class="genExHighlight">Heat Map</span> 기능은 각 변수들 간의 상관관계 값을 색(양의 값 : 적색, 음의 값 : 청색)으로 표현하여 화면에 보여주는 기능입니다. 
+	    		</li>
+				<ul class="liType02">
+					<li>
+						색 표현은 찐한 적색일수록 강한 양의 관계, 찐한 청색일수록 강한 음의 관계를 나타냅니다.
+					</li>
+				</ul>
+				<p><img src="./files/Chart_Correlation.files/correlation_Heatmap.jpg"></p><br>
+			</ul>
+		</ul>
+
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

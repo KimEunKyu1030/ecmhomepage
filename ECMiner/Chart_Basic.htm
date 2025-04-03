@@ -1,0 +1,385 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">기본차트
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/Chart_Basic.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+					<span class="nodeExHighlight">기본차트 노드</span>는 데이터를 이용하여 일반적인 이차원 차트를 그릴 수 있는 노드입니다. 기본차트 노드를 사용하면 산점도 차트뿐만 아니라 시계열 차트도 표현이 가능합니다.</span>
+
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">	    
+		
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>,		 
+	  	 <a href="#지원 플롯">지원 플롯</a>	
+		
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/Chart_Basic.files/image004.jpg"></p>
+				<li>차팅방식은 <span class="genExHighlight">시계열 Y</span>, <span class="genExHighlight">X 대 Y(들)</span> 중에 하나를 선택합니다.</li>
+				<li>'<span class="genExHighlight">시계열 Y</span>'는 시간척도 변수 옵션에 따라 선택한 변수의 시계열 트랜드를 나타내며, <span class="genExHighlight">시간척도 변수</span>를 선택할 수 있습니다.</li>
+				<li>'<span class="genExHighlight">X 대 Y(들)</span>'은 선택한 변수의 산점도(Scatter plot)를 나타내며, X축 변수를 1개 선택할 수 있습니다.</li>
+				<li><span class="genExHighlight">그룹변수 옵션</span>을 통해 그룹으로 표시할 변수와 그룹표시 방식을 선택합니다.</li> 
+				<li><span class="genExHighlight">그룹표시</span> 방식 옵션</li>
+				<ul class="liType02">
+					<li>'<span class="genExHighlight">X 대 Y(들)</span>' : 시리즈로 구분</li>
+					<li>'<span class="genExHighlight">시계열 Y</span>' : 시리즈로 구분, 색상으로 구분, 라벨로 표시</li>
+				</ul>
+				<li>'<span class="genExHighlight">Y 변수 선택</span>'에서 Y값으로 표시할 변수들을 선택합니다.</li>
+				<li>선택사항</li>
+				<ul class="liType02">
+					<li><span class="genExHighlight">변수별로 축 생성</span> 속성 변경</li>
+					<li><span class="genExHighlight">변수별로 Y축 분리</span> 속성 변경</li>
+					<li><span class="genExHighlight">그룹변수 옵션</span> 속성 변경</li>
+					<li><span class="genExHighlight">Y축 지정</span> 속성 변경</li>
+				</ul>	  		
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="60">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				<tr>
+					<th rowspan="2">
+						일반정보
+					</th>
+					<td>
+						이름
+					</td>
+					<td>
+						노드의 이름을 입력합니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						설명
+					</td>
+					<td>
+						노드에 대한 간단한 주석을 달 수 
+			있습니다.
+					</td>
+					<td>
+						선택
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="6">
+						차트옵션
+					</th>
+					<td>
+						차팅 방식
+					</td>
+					<td>
+						차트의 형태를 지정합니다. X대 Y(들)일 경우 두 변수의 산점도 차트로 그려지고, 시계열 Y일 경우 시간척도 변수 시점에 대한 시계열 차트로 그려집니다. 
+					</td>
+					<td>
+						시계열 Y, X 대 Y(들)
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						표시 방법
+					</td>
+					<td>
+						데이터 표시 방법을 지정합니다. 점으로 표시일 경우 관측 시점의 데이터는 점으로 그려지고, 선으로 연결 일 경우 관측 시점의 데이터에 대한 표시 없이 전/후 값을 연결한 선으로만 그려지며, 점/선으로 표시일 경우에는 관측 시점의 데이터는 점으로 표시되고 선으로 이어져서 그려집니다.
+					</td>
+					<td>
+						점으로 표시, 선으로 연결, 점/선으로 표시
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						변수별로 축 생성
+					</td>
+					<td>
+						Y변수를 각 변수별 차트로 표시할지 하나의 차트에서 표시할지를 지정합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						변수별로 Y축 분리
+					</td>
+					<td>
+						변수별로 축 생성이 ‘아니요’일 경우에만 활성화됩니다. Y 변수를 하나의 차트로 표시할 때, Y축을 분리할지 하나의 축을 사용할지 지정합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						X축 변수
+					</td>
+					<td>
+						차팅 방식이 X대 Y(들)일 경우에만 활성화되며, X축으로 사용할 변수를 지정해야 합니다.
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						시간척도 변수
+					</td>
+					<td>
+						차팅 방식이 시계열 Y일 경우에만 활성화되며, X축으로 사용할 시간척도 변수를 지정해야 합니다. 시간척도 변수가 없을 경우에는 Data Index를 사용할 수 있습니다. 
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				
+				<tr>
+					<th rowspan="6">
+						그룹변수 옵션
+					</th>
+					<td>
+						그룹표시
+					</td>
+					<td>
+						데이터의 그룹 표시를 지정합니다. 차팅방식이 X대 Y(들)인 경우에는 시리즈로 구분만 지정할 수 있습니다. 시계열 Y인 경우에는 시리즈로 구분, 색상으로 구분, 라벨로 표시를 지정할 수 있습니다.
+					</td>
+					<td>
+						 시리즈로 구분, 색상으로 구분, 라벨로 표시
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						그룹변수 #1
+					</td>
+					<td>
+						첫번째 그룹변수를 선택합니다.
+					</td>
+					<td>
+						 
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						그룹변수 #2
+					</td>
+					<td>
+						두번째 그룹변수를 선택합니다.
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						그룹변수 #3
+					</td>
+					<td>
+						세번째 그룹변수를 선택합니다.
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						그룹변수 #4
+					</td>
+					<td>
+						네번째 그룹변수를 선택합니다.
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						그룹변수 #5
+					</td>
+					<td>
+						다섯번째 그룹변수를 선택합니다.
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						 
+					</td>
+				</tr>
+				
+				<tr>
+					<th rowspan="3">
+						사용자 지정 최대/최소
+					</th>
+					<td>
+						Y축 지정
+					</td>
+					<td>
+						Y축 최대/최소값을 사용자가 수동으로 지정할 것인지 결정합니다.
+					</td>
+					<td>
+						예, 아니오
+					</td>
+					<td> 
+					
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Y축 최소값
+					</td>
+					<td>
+						Y축 지정 시에만 활성화됩니다. Y축의 최소값을 결정합니다.
+					</td>
+					<td>
+						실수
+					</td>
+					<td> 
+					
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Y축 최대값
+					</td>
+					<td>
+						Y축 지정 시에만 활성화됩니다. Y축의 최대값을 결정합니다.
+					</td>
+					<td>
+						실수
+					</td>
+					<td> 
+					
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<th rowspan="3">
+						변수선택
+					</th>
+					<td>
+						전체 변수 선택/해제
+					</td>
+					<td>
+						전체 변수를 선택하거나, 선택 해제하는 버튼으로 위의 이미지 1번 그림의 두 버튼입니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						변수 목록
+					</td>
+					<td>
+						기본차트로 그릴 변수를 지정합니다. 위의 이미지 2번 그림에 표현된 체크박스를 이용하여, 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						필수
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+				<tr>					
+					<td>
+						조건부 변수 선택
+					</td>
+					<td>
+						3번 이미지를 이용하여 변수 목록 중 제시하는 조건에 맞는 변수를 선택할 수 있습니다.
+					</td>
+					<td>
+						
+					</td>
+					<td> 
+					
+					</td>					
+				</tr>
+			</table>
+			
+		<h3><a name="지원 플롯">지원 플롯</a></h3>
+	    <ul class="liType02">			
+			<li><span class="genExHighlight">X 대 Y(들)</span> : 산점도 차트로 X, Y 축으로 지정된 두 변수 값을 사용하여 이들에 대한 이차원 차트를 그립니다.</li>
+			<p><img src="./files/Chart_Basic.files/image005.jpg"></p> <br><br>
+			<li><span class="genExHighlight">시계열 Y</span> : 시간척도 변수나 데이터 인덱스를 X축으로, 변수의 값을 Y축으로 사용하여 이들에 대한 이차원 차트를 그립니다.</li>			
+			<p><img src="./files/Chart_Basic.files/image006.jpg"></p>
+	  	</ul>
+					
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

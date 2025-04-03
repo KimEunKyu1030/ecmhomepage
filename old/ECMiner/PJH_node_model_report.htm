@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">모델 보고서
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	<p class="genEx"></p>
+			알고리즘에 따라 생성되는 출력값이 달라지기 때문에 모델 보고서도 적용된 알고리즘에 달라지게 됩니다. 그러나 알고리즘의 큰 분류 즉, Classification(분류), Clustering(군집), Prediction(회귀 / 예측), Association(연관성)에 따라 같은 형태의 출력값이 산출되기도 합니다. 이번 장에서는 각 분류에 따른 모델 보고서와 각각 알고리즘별로 생성되는 보고서에 대하여 설명합니다. 
+		<ul class="liType02">
+			<li><a href="#CLASSIFICATION">Classification (분류)</a> </li>
+			<p>오분류표, 오분류 개수, 오분류율 등의 값이 공통으로 생성되며, CART, LOGISTIC, MLP, RBF, LDA, QDA, MANUAL TREE, RBF DDA 알고리즘이 해당됩니다.</p>
+
+			<li><a href="#CLUSTERING">Clustering (군집)</a>  </li>
+			<p>군집에 대한 빈도표가 공통으로 생성되며, KMEANS, HIERARCHICAL, SOM 알고리즘이 해당됩니다.</p>
+
+			<li><a href="#PREDICTION">Prediction (회귀 / 예측)</a>  </li>
+			<p>표준에러에 대한 통계량인 R-Square, RMSE, MAE, MPE 값, 아노마 테이블 등이 공통으로 생성되며, CART, MLP, RBF, MLR, MANUAL TREE, PCR, PLS 알고리즘이 해당됩니다.</p>
+
+			<!-- note -->
+			<table class="tbStyle03">
+				<tr>
+					<td>
+						<span class="genExHighlight">NOTE</span><br>
+						<ul class="liType02">
+						<li>CART, MLP, RBF 알고리즘은 경우에 따라 Classification 혹은 Prediction(Regression)으로 사용될 수 있습니다. 종속변수의 형태가 이산형이라면 Classification, 연속형이라면 Prediction으로 고려되어 계산됩니다.</li>
+						<li>PCA의 경우 ECMiner™에서는 Prediction으로 구분이 되어 있지만 Prediction에 해당하는 통계량 값을 산출할 수 없으며 독립적인 형태의 보고서를 가집니다</li>
+						<li>Association의 경우 ECMiner™에서는 Apriori만 제공하고 있으며 Association에 대한 보고서 형을 이번 장에서 따로 설명하지 않습니다. Apriori 보고서 부분을 참조하시기 바랍니다.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</ul>
+
+		<hr class="nodeLine">
+	
+	 <h3><a name="#CLASSIFICATION">Classificatoin (분류)</a></h3>
+	 <ul class="liType02">
+		<li>다음과 같은 형태의 공통적인 출력값을 볼 수 있습니다.</li>
+		<p><img src="./images/model_rpt_class.gif"></p>
+
+		 <ul class="liType02">
+			<li>(1)은 오분류표입니다. 왼쪽에 원래 값, 위쪽에 예측된 값을 나타내며, 원래값이 생성된 모델을 통하였을 때 어떤 예측값을 가지는지 알 수 있습니다. 위의 경우, 원래값이 N이였는데 N으로 예측된 것은 18개, Y로 예측된 것은 3개임을 알 수 있습니다. N이였는데 Y로 분류된 것들은 오분류된 데이터입니다.</li>
+			<li>(2)에는 잘못 분류된 데이터 개수가 나타납니다. 위의 경우 N이였는데 Y로 분류된 데이터 3개가 오분류 수가 됩니다. </li>
+			<li>오분류 수에 대한 비율입니다. 위의 경우 총 50개의 데이터에서 3개가 오분류이므로 3 / 50 * 100 = 60%의 오분류율을 가지게 됩니다. </li>
+
+		
+		</ul>
+	</ul>
+
+
+	<h3><a name="#CLUSTERING">Clustering (군집)</a></h3>
+	 <ul class="liType02">
+		<li>다음과 같은 형태의 공통적인 출력값을 볼 수 있습니다.</li>
+		<p><img src="./images/model_rpt_cluster.gif"></p>
+
+		 <ul class="liType02">
+			<li>(1)은 군집에 속해 있는 원소(데이터) 개수를 나타낸 표입니다. 위의 경우 군집1로 분류된 데이터가 38개로 가장 많고 군집2로 분류된 데이터가 8개로 가장 적음을 알 수 있습니다. </li>
+			<li>(2)은 군집간의 거리를 나타낸 표입니다. 군집화 알고리즘은 지정된 군집의 개수만큼 데이터를 군집화하여 그 군집의 중심을 산출하게 됩니다. (2)는 이 군집의 중심들 간의 거리입니다. </li>		
+		</ul>
+	</ul>
+		
+
+	<h3><a name="#PREDICTION">Prediction (회귀 / 예측)</a></h3>
+	 <ul class="liType02">
+		<li>다음과 같은 형태의 공통적인 출력값을 볼 수 있습니다.</li>
+		<p><img src="./images/model_rpt_prediction.jpg"></p>
+
+		 <ul class="liType02">
+			<li>독립변수가 종속변수 Y를 설명하는데 있어서 통계적으로 유의한지 검정하기 위해 F-검정을 수행합니다. 검정 결과로 산출되는 것이 아노바 테이블이며 (1)과 같은 형태로 나타납니다. p-값이 유의수준보다 크면 유의하지 않은 것이며 이런 경우 회귀계수에 대한 해석은 의미가 없습니다. </li>
+			<li>(2)~(6)는 표준 에러에 대한 정보입니다. </li>
+			<li>(2)는 Adjust R2로, 실제 적합도를 판정하기 위하여 자유도를 고려한 조절된 결정계수입니다.</li>
+			<li>(3)는 R-square로,도출된 회귀식이 측정값들을 대표할 만한 가를 확인할 수 있습니다. 1에 가까울수록 회귀식이 데이터를 잘 설명하고 있음을 의미합니다.</li>
+			<li>(4)은 Root Mean Square Error입니다.</li>
+			<li>(5)은 Mean Absolute Error입니다. </li>
+			<li>(6)은 Mean Absolute Percentage Error입니다.</li>
+		</ul>
+	</ul>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

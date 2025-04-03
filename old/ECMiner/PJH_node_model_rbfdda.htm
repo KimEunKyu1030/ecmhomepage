@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">RBF DDA 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/model_rbfdda_01.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">RBF DDA 모델 노드</span>는 RBF 분류분석의 결과로 생성됩니다 Training 데이터 셋으로 RBF DDA분석을  수행하고 분석 결과인 RBF 모델 노드를 Test 데이터 셋(새로운 데이터 셋)에 적용하여 <span class="nodeExHighlight">새로운 데이터의 분류</span>에 사용될 수 있습니다. 
+
+
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">옵션정보</span></li>
+		<p>RBF DDA를 이용해서 모델링 시 어떤 옵션을 사용했는지를 보여줍니다. 이것을 통해 옵션이 바뀌었을 때 결과가 어떻게 바뀌었는지 판단할 수 있습니다.</p>
+
+
+		<li><span class="genExHighlight">Weight, Sigma, 중심</span></li>
+		<p>RBF DDA의 Training 의 결과로 얻어진 Weight, Sigma, 중심을 보여줍니다.</p>
+		<p><img src="./images/model_rbfdda_02.bmp"></p><br>
+
+		<li><span class="genExHighlight">오분류정보</span></li>
+		<p>원래 클래스와 예측 클래스에 대한 교차표를 통하여 예측이 잘못된 관측치 수와 백분율을 알 수 있습니다. </p>	
+		<p><img src="./images/model_trainconfusion.gif"></p><br>
+	</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

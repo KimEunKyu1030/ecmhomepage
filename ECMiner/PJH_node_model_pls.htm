@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">PLS 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_model_pls.jpg"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">PLS 모델 노드</span>는 트레이닝 데이터를 러닝하여 새로운 데이터의 예측에 사용될 수 있습니다. 
+			
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">독립변수로딩</span></li>
+		<p>PLS 기본설명에서 P에 대한 값들 입니다. 알고리즘의 각 iteration에서 X를 업데이트할 때 사용됩니다.</p>
+		<p><img src="./images/modeling_plsxload.gif"></p><br>
+
+		<li><span class="genExHighlight">독립변수가중치</span></li>
+		<p>잠재변수의 스코어를 구하기 위한 X행렬에 대한 weight입니다.
+		<p><img src="./images/modeling_plsxweight.gif"></p><br>
+
+		<li><span class="genExHighlight">종속변수로딩</span></li>
+		<p>PLS 기본설명에서 Q에 대한 값들입니다. 알고리즘의 각 iteration에서 Y를 업데이트할 때 사용됩니다.</p>
+		<p><img src="./images/modeling_plsyload.gif"></p>
+
+		<li><span class="genExHighlight">Inner Relation Coefficients</span></li>
+		<p>잠재변수들 간의 회귀계수입니다.</p>
+		<p><img src="./images/modeling_plsinnercoefficient.gif"></p><br>
+
+		<li><span class="genExHighlight">Coefficient Beta</span></li>
+		<p>표준화 데이터에 대한 회귀계수를 나타냅니다. 잠재변수수가 늘어남에 따라 y1과 y2의 식이 변화되는 정보가 나옵니다.</p>
+		<p><img src="./images/modeling_plscoefficient.gif"></p><br>
+
+		<li><span class="genExHighlight">분산설명력</span></li>
+		<p>각 잠재변수가 전체데이터에 대한 정보를 어느 정도 가지고 있는지를 표시하고 있습니다.</p>
+		<p><img src="./images/modeling_plsvariance.gif"></p><br>
+
+		<li><span class="genExHighlight">표준에러정보</span></li>
+		<p><img src="./images/modeling_plserror.jpg"></p><br>
+	
+		<ol class="liType02">
+			<li>R-square(결정계수)</li>
+			<p>도출된 회귀식이 측정값들을 대표할만한가를 확인하는 것으로, 즉, 추정된 회귀선이 관측치들을 얼마나 잘 설명하는지를 검정하는 값입니다. 1에 가까울수록 회귀식이 데이터를 잘 설명하고 있음을 의미합니다. </p>
+
+			<li>R-square(adj)</li>\
+			<p>투입되는 독립변수들이 많을수록 종속변수에 대한 설명력인 R-square는 자연히 증가합니다. 그러므로 실제 적합도를 판정하는 데에는 자유도를 고려하여 조정된 결정계수 R-square(adj)를 많이 활용합니다. 1에 가까울수록 회귀식이 데이터를 잘 설명하고 있음을 의미합니다. </p>
+			
+			<li>Root-MSE (Root-Mean Square Error)</li>
+
+			<li>MAE (Mean Absolute Error) </li>
+
+			<li>MPE (Mean Absolute Percentage Error) </li>
+			
+		</ol>
+
+		<p><b>③~ ⑤번 모두 종속변수의 원래값과 추정값의 오차를 나타낸 것으로 값이 작을수록 좋은 모형이라할 수 있습니다.</b></p><br>
+
+		<li><span class="genExHighlight">Scree Plot of X</span></li>
+		<p>각 잠재변수가 X에 대한 설명력을 얼마나 가지고 있는지를 plot으로 나타내고 있습니다.</p>
+		<p><img src="./images/modeling_plsscreeplotofx.jpg"></p><br>
+
+		<li><span class="genExHighlight">Scree Plot of Y</span></li>
+		<p>각 잠재변수가 Y에 대한 설명력을 얼마나 가지고 있는지를 plot으로 나타내고 있습니다.</p>
+		<p><img src="./images/modeling_plsscreeplotofy.jpg"></p><br>
+
+		<li><span class="genExHighlight">Coefficient Plot</span></li>
+		<p>각 종속변수에 대해 어떤 변수가 가장 영향을 많이 미치는지를 파악할 수 있습니다.</p>
+		<p><img src="./images/modeling_plscoefficientplot.jpg"></p><br>
+	</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

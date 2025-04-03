@@ -1,0 +1,258 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">HIERARCHICAL
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_modeling_hierarchical.jpg"></div>
+    	<div class="nodeexplain">
+    		<span class="genExHighlight">군집분석</span>은 데이터를 비슷한 특성끼리 묶는 것으로 개체들 사이의 상사성 또는 비상사성에 근거하여 군집을 찾고 자료를 요약하는 탐색적 자료분석 방법입니다. 군집 분석 중 <span class="genExHighlight">계층적 방법</span>은 사전에 군집 수 k를 정하지 않고 단계적으로 서로 다른 군집결과를 제공하는 것입니다. 
+		<span class="genExHighlight">ECMiner™</span>에서는 계층적 군집분석 중 <span class="genExHighlight">가까운 객체끼리 군집화</span>시키는 <span class="genExHighlight">agglomerative</span> 알고리즘을 제공합니다. 
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>,
+    <a href="#참조">참조</a>
+		
+		
+    <h3><a name="개요">개요</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">Agglomerative알고리즘</span>에 의한 계층적 군집방법은 각 객체를 하나의 군집으로 시작하여 군집들을 묶어가는 과정을 반복하여 결국 모든 객체가 하나의 군집이 되도록 하는 것이다.</li>
+  		<li><span class="genExHighlight">계층적 군집분석</span>은 개체의 수가 적을 때 유용한 방법입니다.</li>
+  		<li><span class="genExHighlight">계층적 군집분석</span>이 수행되는 과정은 다음과 같습니다.</li>
+  		<ol class="liType02">
+  			<li>처음에는 각 개체를 하나의 군집으로 생각합니다. (따라서, n개의 군집이 있습니다.</li>
+  			<li>각 군집간의 거리 또는 유사성을 구합니다.</li>
+  			<li>가장 가까운 한 쌍의 군집을 선택하여 이 두 군집을 합하여 한 개의 새로운 군집을 형성합니다.(따라서, 군집의 수가 하나 줄어듭니다.)</li>
+  			<li>새로 형성된 군집의 모임에 대하여 ②와 ③을 반복합니다.</li>
+  		</ol>
+  		<li><span class="genExHighlight">Hierarchical Clustering</span>은 <a href="#참조">거리계산방법</a>이나 <a href="#참조">연결(Linkage)방법</a>에 따라 여러가지 결과가 도출될 수 있습니다. </li>
+  	</ul>
+  	
+  	<h3><a name="고려사항">고려사항</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">Hierarchical Clustering</span>을 수행하기 위해 데이터의 형태는 연속형이어야 합니다. </li>
+  	</ul>
+  	
+  	<h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+  		<li><span class="genExHighlight">HIERARCHICAL노드</span>를 <span class="genExHighlight">입력노드</span>에 연결하고 옵션들을 선택합니다.</li>
+  		<li><span class="genExHighlight">화면표시노드</span>를 <span class="genExHighlight">HIERARCHICAL노드</span>에 연결합니다.</li>
+  		<li><span class="genExHighlight">HIERARCHICAL DIAGRAM</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/6/img19.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <h3><a name="속성">속성</a></h3>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="8">선택사항</th>
+					<td>결과보기</td>
+					<td>모델링 후 Class Chart를 보여줍니다.</td>
+					<td>클릭</td>
+					<td>모델링 후 클릭</td>
+				</tr>
+				<tr>
+					<td>절단기준</td>
+					<td>전체 데이터들을 그룹화하는 기준으로 클러스터 개수는 입력된 클러스터 개수로 전체 데이터를 그룹화합니다. 그리고 절단거리를 선택한 경우, 클러스터 간의 절대적 거리를 바탕으로 전체 데이터를 그룹화합니다.
+					</td>
+					<td>필수</td>
+					<td>클러스터 개수, 절단거리</td>
+				</tr>
+				<tr>
+					<td>클러스터개수</td>
+					<td>전체 데이터를 그룹화하려는 그룹의 수를 지정합니다.</td>
+					<td>필수</td>
+					<td>자연수입력</td>
+				</tr>
+				<tr>
+					<td>절단거리</td>
+					<td>그룹화의 기준이 되는 클러스터 간의 절대적 거리로써 0이상의 실수값을 가집니다.</td>
+					<td>필수</td>
+					<td>>= 0</td>
+				</tr>
+				<tr>
+					<td><a href="#참조">거리측정</a></td>
+					<td>거리측정에 사용되는 사용되는 방법을 선택합니다.</td>
+					<td>필수</td>
+					<td>Euclidean, Seuclidean, Manhattan, Mahalanobis, Minkowski, Cosine, Correlation, Hamming, Jaccard</td>
+				</tr>
+				<tr>
+					<td><a href="#참조">연결방법</a></td>
+					<td>연결방법을 선택합니다.</td>
+					<td>필수</td>
+					<td>Single, Complete, Average, Centroid, Ward</td>
+				</tr>
+				<tr>
+					<td>민코브시키계수</td>
+					<td>Minkowski 거리를 이용할 때 사용되는 계수를 입력합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>전처리방법</td>
+					<td>입력자료 전처리방법을 결정합니다.</td>
+					<td>필수</td>
+					<td>비처리,표준화,평균보정</td>
+				</tr>
+				
+		</table>
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>클래스차트</li><br>
+			옵션창의 결과보기 버튼을 클릭하면 뜨게 됩니다.
+  		<p>			
+    	<img src="./images/modeling_classchart.jpg">
+  		</p>
+  		<li>군집할당정보</li><br>
+			<span class="genExHighlight">화면표시노드</span>에서 각 관측치의 군집정보 즉, 어떤 Cluster에 할당되었는지를 알 수 있습니다.
+  		<p>			
+    	<img src="./images/modeling_hierarchicalassign.jpg">
+  		</p>
+  	</ul>
+				
+    <h3><a name="참조">참조</a></h3>
+		<table class="tbStyle01">
+		<thead>
+		<TR>
+		<TH width="100">참조 그룹</TH>
+		<TH width="">참조명</TH>
+		<TH width="">설명</TH>
+		</TR>
+		</thead>
+		
+		<TR>
+		        <!-- 거리측정법 시작 -->
+		<TH rowspan="9">거리측정법</TH>
+		<TD>Euclidean</TD>
+		<TD>일반적인 거리지표입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Squared Eculidean</TD>
+		<TD>표준화된 유클리드 거리입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Manhattan</TD>
+		<TD>coordinate의 절대차이의 합을 바탕으로 한 거리입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Mahalanobis</TD>
+		<TD>Covariance matrix를 이용한 거리지표입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Minkowski</TD>
+		<TD>Manhattan distance에서 minkowski계수가 지수에 들어간 거리입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Cosine</TD>
+		<TD>두벡터(점) 간의 각도를 거리로 봅니다.</TD>
+		</TR>
+		<TR>
+		<TD>Correlation</TD>
+		<TD>상관계수를 바탕으로 한 거리입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Hamming</TD>
+		<TD>서로 다른 coordinate의 수를 바탕으로 한 거리입니다.</TD>
+		</TR>
+		<TR>
+		<TD>Jaccard</TD>
+		<TD>서로 다른 nonzero coordinate의 수를 바탕으로 한 거리입니다.</TD>
+		</TR>
+		    <!-- 거리측정법 끝 -->
+		<TR>
+		<TH rowspan="5">연결방법</TH>
+		<TD>Single</TD>
+		<TD>단일연결법에서는 군집 i와 군집 j의 유사성 척도로 두 군집의 모든 객체쌍의 거리 중 가장 가까운 거리를 
+		사용합니다.</TD>
+		</TR>
+		<TR>
+		<TD>Complete</TD>
+		<TD>완전연결법에서는 군집 i와 군집 j의 유사성 척도로 두 군집의 모든 객체쌍의 거리 중 가장 먼 거리를 
+		사용합니다.</TD>
+		</TR>
+		<TR>
+		<TD>Average</TD>
+		<TD>평균연결법은 Sokal and Michener (1958)에 의하여 비롯된 것으로, 군집 i와 군집 j의 유사성 
+		척도로 두 군집의 모든 객체쌍의 평균거리를 사용합니다.</TD>
+		</TR>
+		<TR>
+		<TD>Centroid</TD>
+		<TD>두 군집의 중심간 거리를 사용합니다.</TD>
+		</TR>
+		<TR>
+		<TD>Ward</TD>
+		<TD>모든 쌍을 묶은 경우 각각에 대하여 전체 군집내 제곱합을 산출한 후 가장 
+		이 값이 작게되는 군집쌍을 묶습니다.</TD>
+		</TR>
+		
+		</table>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

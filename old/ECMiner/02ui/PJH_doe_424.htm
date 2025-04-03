@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">손실함수와 SN비
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    
+	    <h3>손실함수</h3>
+		<p>품질의 특성치를 다음과 같이 세가지로 분류하여 각각에 대한 손실함수를 별도로 정의합니다. </p>
+		<ul class="liType02">
+		<li><b>망목 특성</b></p></li>
+			<p>특정한 목표치가 주어져 있는 경우로 길이, 무게, 두께 등과 같이 지정된 목표가 있는 경우이다. 측정치가 y이고 목표치가 m인 경우에 인 경우에 손실함수</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_01.gif"></p><br>
+
+			<p>로 정의합니다. 특성치의 소비자 허용 한계점 m+?, m-?에서의 소비자의 손실이 A원이면 이는 다음과 같은 식에 의해 결정됩니다.</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_02.gif"></p><br>
+
+			<p>즉 망목 특성인 경우에 손실함수는</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_03.gif"></p><br>
+
+			<p>이 됩니다.</p>
+
+		<li><b>망소 특성</b></p></li>
+			<p>특성치가 작으면 작을수록 좋은 경우로 마모, 진동, 불량률 등의 특성치입니다. 이 경우는 망목 특성의 m=0이라고 볼 수 있으므로 손실함수는 다음과 같이 됩니다.</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_04.gif"></p><br>
+
+		<li><b>망대 특성</b></p></li>
+			<p>특성치가 클수록 좋은 경우로 강도, 수명, 연료 효율 등의 특성치입니다. 이 때의 손실함수는 다음과 같습니다.</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_05.gif"></p><br>
+
+
+		</ul>
+
+
+
+	    <h3>SN비</h3>
+		<br><p style="margin-left:50"><img src="../images/doe_427_06.gif"></p><br>
+		<p>로 표현되는데 이는 종류별로 다르게 정의됩니다.</p>
+		<ul class="liType02">
+		<li><b>망목 특성인 경우</b></p></li>
+			<br><p style="margin-left:50"><img src="../images/doe_427_07.gif"></p><br>
+
+			<p>이 때 분산의 추정 값은</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_08.gif"></p><br>
+			<p>입니다. <img src="../images/doe_427_09.gif">인 경우에  <img src="../images/doe_427_10.gif">이 성립이 되므로,</p>
+			<p style="margin-left:50"><img src="../images/doe_427_11.gif"></p>
+			<p style="margin-left:50"><img src="../images/doe_427_12.gif"></p><br>
+			<p>이 됩니다.</p>
+
+			<br><p style="margin-left:50"><img src="../images/doe_427_13.gif"></p><br>
+
+			<p>에서 상용로그를 위하면 다음의 값을 얻을 수 있습니다.</p>
+
+			<br><p style="margin-left:50"><img src="../images/doe_427_14.gif"></p><br>
+
+			<p>이 값이 크면 클수록 신호의 힘이 크고 잡음의 힘이 작아지는 것으로, 이 SN값을 가장 크게 하는 조건이 최적 조건이 됩니다. 그런데 이므로 SN비는 다음과 같이 되고</p>
+
+			<br><p style="margin-left:50"><img src="../images/doe_427_16.gif"></p><br>
+
+			<p> n 이 충분히 크면 무시될 수 있을 정도로 작아지므로 <img src="../images/doe_427_17.gif">으로 나타나는 경우에</p>
+
+			<br><p style="margin-left:50"><img src="../images/doe_427_18.gif"></p><br>
+
+			<p>가 됩니다.</p>
+
+
+
+
+		<li><b>망소 특성인 경우</b></p></li>
+		<p>망소 특성인 경우에는 손실함수의 기대값을 최소화시키는 SN비를 생각하여 줍니다. 반복 측정 데이터  <img src="../images/doe_427_19.gif">이 얻어진 경우에 E(y)의 추정 값은 </p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_20.gif"></p><br>
+
+			<p>으로 볼 수 있습니다. 이를 이용하여 다음과 같이 SN비를 구해줍니다.</p>
+			
+			<br><p style="margin-left:50"><img src="../images/doe_427_21.gif"></p><br>
+
+		<li><b>망대 특성인 경우</b></p></li>
+		<p>망소 특성인 경우와 같이 기대손실을 L 작게 해주기 위하여  E(1/y)의 추정값을</p>
+			<br><p style="margin-left:50"><img src="../images/doe_427_22.gif"></p><br>
+
+			<p>으로 사용하여 SN비를 </p>
+			
+			<br><p style="margin-left:50"><img src="../images/doe_427_23.gif"></p><br>
+			<p>으로 정해 주도록 합니다.</p>
+
+
+
+		</ul>
+
+
+
+	<hr class="nodeLine">
+
+		<p>정리하면 다음과 같습니다.</p>
+
+		<table class="tbStyle01">
+    <tr>
+        <th>
+            특성치의 종류
+        </th>
+        <th>
+            1개 데이터 y의 손실함수
+        </th>
+        <th>
+            n개 데이터가 얻어진 경우 평균 손실함수
+        </th>
+        <th>
+            SN비
+        </th>
+    </tr>
+    <tr>
+        <th>
+            망목 특성
+        </th>
+        <td>
+            <img src="../images/doe_427_24.gif">
+        </td>
+        <td>
+            <img src="../images/doe_427_25.gif">
+        </td>
+        <td>
+            <img src="../images/doe_427_26.gif">
+        </td>
+    </tr>
+    <tr>
+        <th>
+            망소 특성
+        </th>
+        <td>
+           <img src="../images/doe_427_27.gif">
+        </td>
+        <td>
+           <img src="../images/doe_427_28.gif">
+        </td>
+        <td>
+            <img src="../images/doe_427_29.gif">
+        </td>
+    </tr>
+    <tr>
+        <th>
+            망대 특성
+        </td>
+        <td>
+           <img src="../images/doe_427_30.gif">
+        </td>
+        <td>
+           <img src="../images/doe_427_31.gif">
+        </td>
+        <td>
+            <img src="../images/doe_427_32.gif">
+        </td>
+    </tr>
+</table>
+
+
+		
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

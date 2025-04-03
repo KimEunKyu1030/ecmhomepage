@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">꼭지점 설계
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+	<p>	꼭지점 설계는 상한 및 하한 조건 그리고 여기에 선형 제약 조건까지 더해졌을 때 이러한 조건이 만족되는 Convex Set의 꼭지점을 구해서 이 꼭지점을 가지고 실험을 증대한 후 이 점들에게 실험을 하는 것을 말합니다. n차원 공간에서 오직 상한과 하한 조건, 그리고 선형 제약 조건만이 있을 때 이러한 조건들로 만들어지는 공간의 꼭지점을 구하는 것은 상당히 쉽지 않은 과정이라는 것을 직감적으로 알 수 있습니다. 따라서 이는 단순한 과정을 통해서는 구할 수 없는데 이러한 꼭지점을 구하는 알고리즘을 Piepel(1988)이 제시 하였습니다.<br>꼭지점 설계를 통해서는 혼합물 설계에 공정 변수를 추가할 경우에 대해서 설명하겠습니다.</p>
+
+
+	
+	<hr class="nodeLine">	
+		<p><b>실험 소개</b></p><br>
+
+		<p>본 실험은 3가지의 성분과 함께 어떠한 공정변수(작업온도)가 product의 quality에 영향을 미쳐서 그 관계를 알아보고자 하는 것입니다. 이 때 3가지 성분의 제한 조건은 다음과 같습니다.</p>
+		<br>
+		<p style="margin-left:30"><img src="../images/doe_384_01.gif"></p>
+
+	<hr class="nodeLine">
+	
+
+	<p>먼저 꼭지점 설계를 선택합니다.</p>
+	<p><img src="../images/doe_384_02.jpg"></p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b> Step 1 : 요인(성분) 및 수준 명명</b></li></ul>
+	<p>먼저 다음과 같은 공정변수 추가를 선택하여 공정변수를 추가합니다.</p>
+	<p><img src="../images/doe_384_03.jpg"></p><br>	
+	<p>그리고 Step1의 Main화면에서 성분들의 제한 조건을 입력하고 다음 단추를 클릭합니다.</p>
+	<p><img src="../images/doe_384_04.jpg"></p><br>	
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 2 : 설계 선택</b></li></ul>
+	<p><img src="../images/doe_384_05.jpg"></p><br>	
+	<p>설계 선택 단계에서는 여러가지 옵션을 지정할 수 있습니다. 
+	<br>
+	<ul class="liType02">
+		<ul class="liType02">
+			<li>설계 차수 : 현재 꼭지점을 가지고 몇 차까지 점을 증대할지를 결정합니다. </li>
+			<li>중심점을 추가하여 설계 증대 : 중심점을 추가할지의 여부</li>
+			<li>축점을 추가하여 설계 증대 : 중심점과 각 꼭지점에 이르는 중간점인 축점을 추가할 것인지의 여부</li>
+			<li>반복 설정</li>
+			<ul class="liType02">
+				<li>전체 설계점에 대한 반복 수 지정 : 같은 실험 전체를 몇 번이나 반복할지를 지정</li>
+				<li>선택한 설계점에 대한 반복 수 지정 : 점의 유형에 따라 반복 수를 서로 다르게 합니다.</li>
+			</ul>
+		</ul>
+	</ul>
+	
+
+
+	
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 3 : 설계 테이블</b></li></ul>
+	<p><img src="../images/doe_384_06.jpg"></p>	
+	<p>설계 테이블 단계에서는 설계 테이블이 생성되고 실험자는 생성된 설계에 따라 실험을 한 후 반응 값을 입력합니다. 입력을 완료한 다음에는 다음 단추를 클릭하여 Step 4로 넘어갑니다.
+	</p>
+			
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 4 : 통계 분석</b></li></ul>
+	<p>통계 분석을 시작하기 전에 현재 알고리즘을 통해서 만들어진 설계점들이 공간상에 어떻게 분포되어 있는지를 심플렉스 설계 플롯을 통해 확인해 봅니다.</p>
+	<p><img src="../images/doe_384_07.jpg"></p><br>
+
+	<p>제한 조건으로 인하여 설계 점들의 집합 모양이 삼각형은 아니지만 제한된 공간 상에서 매우 균일하게 설계 점들이 배치되어 있는 것을 확인할 수 있습니다.</p>
+	<p><img src="../images/doe_384_08.jpg"></p><br>
+
+	<p>모형 유형에서는 공정 변수 추가를 선택하고 포함할 항의 최대 차수와 포함되는 공정 변수 항의 최대 차수를 사용자의 필요에 따라 입력합니다. 그럼 다음과 같은 결과를 얻을 수 있습니다.</p>
+	<br>
+	<ul class="liType02">
+		<ul class="liType02">
+			<li>General Info : 설계에 대한 기본적인 정보를 제공합니다.</li><br><br>
+
+			<li>Model Info : 회귀분석, 분산 분석, 비정상적 관측치(극단 레버리지, 표준화 잔차)에 대한 정보를 제공합니다.</li>
+			<p><img src="../images/doe_384_09.jpg"></p><br>
+
+			<li>잔차 관련 (잔차 히스토그램, 잔차 정규 확률 플롯, 잔차 대 순서, 잔차 대 적합치) </li>
+			<p><img src="../images/sum4img12.jpg"></p><br>
+
+			<li>기타 정보 : 기타 잔차 관련 정보들을 정리하여 보여줍니다.</li>
+			<p><img src="../images/doe_384_14.jpg"></p><br>
+			<p>자세한 내용은 DOE 설정 및 분석을 참고하세요.</p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 5 : 플롯 및 반응 최적화</b></li></ul>
+	<p>Step 5에서는 Step 4에서 만든 Regression Model이 어떠한 모양인지를 표면 플롯, 등고선 플롯을 통해서 보여줍니다.</p>
+	<p><img src="../images/sum4img123.jpg"></p><br>
+
+	<p>실험자의 목적에 따라 반응 최적화를 실행합니다. 현재 실험은 Quality를 최대화시키는 것이 목적일 것이므로 목적을 최대화로 하고 하한과 목표값을 각각 -1, 1000으로 해서 최적화를 수행하면 다음과 같은 결과를 얻을 수 있습니다.</p>
+	<p><img src="../images/doe_384_17.jpg"></p><br>
+	<p>즉 성분 (A, B, C) = (0.5, 0, 0.5), 공정변수=1 (작업온도=100도) 일 때 최대의 Quality 36.05873를 얻을 수 있음을 알 수 있습니다. </p>
+
+
+	
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">선택
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./images/node_pre_selector.jpg"></div>
+	    	<div class="nodeexplain">
+	    		주어진 조건에 맞는 행만 선택하는 노드입니다. 데이터 중 일부만 추출한다는 점에서 <span class="genExHighlight">표본추출 노드</span>와 비슷하지만 <span class="genExHighlight">표본추출 노드</span>는 특정 방법에 의해서 추출하고 선택 노드는 사용자에 의해 지정된 조건으로 추출한다는 차이점이 있습니다.
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	    
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+				<li><span class="genExHighlight">조건형식</span>을 지정합니다. 선택 조건을 임의로 지정하려면 <span class="genExHighlight">사용자 입력</span>을 선택하고 결측치만 제거하고자 하며 <span class="genExHighlight">결측치 포함 행 제거</span> 를 선택합니다. </li>
+				<li><span class="genExHighlight">조건형식</span>이 <span class="genExHighlight">선택조건</span>을 지정하여야 합니다. 편집 버튼을 누르면 나타나는 <span class="genExHighlight"><a href="./PJH_expr_editor.htm">수식 편집기</a></span>를 이용하여 조건에 해당하는 수식을 입력합니다. </li>
+				<table class="tbStyle03">
+		  		<tr>
+		  			<td>
+		  				<span class="genExHighlight">NOTE</span><br>
+		  				사용자가 정의한 선택 조건일 경우, 입력된 수식의 형태에 관계 없이 결과가 참이기만 하면 그 행을 선택합니다. 즉, 간단한 조건문 (예, {A} < 1) 혹은 IF ~ ENDIF 구문이 입력되었을 지라도 수행된 결과가 참이기만 하면 행을 선택합니다.
+		  			</td>
+		  		</tr>
+		  	</table>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="3">선택사항</th>
+						<td>조건형식</td>
+						<td>특정 조건을 지정하려면 <span class="genExHighlight">사용자 입력</span>으로 선택하고 결측치만 제거하고 싶다면 <span class="genExHighlight">결측치 포함 행 제거</span>를 선택합니다.</td>
+						<td>필수</td>
+						<td>사용자 입력, 결측치 포함 행 제거</td>
+					</tr>
+					<tr>
+						<td>선택조건</td>
+						<td>행을 선택할 조건을 입력합니다. 편집 버튼을 누르면 조건 수식을 편집할 수 있는 <a href="./expr_editor.htm">수식 편집기</a>가 나타납니다. <span class="genExHighlight">조건형식</span>이 <span class="genExHighlight">사용자 입력</span>일 경우 활성화됩니다.</td>
+						<td>버튼</td>
+						<td><a href="./expr_editor.htm">수식 편집기</a> 참조</td>
+					</tr>
+					<tr>
+						<td>조건 열람창</td>
+						<td>현재 입력된 조건 수식이 나타납니다. 열람만 할 수 있으며 직접 편집할 수는 없습니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+			</table>
+			
+			
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

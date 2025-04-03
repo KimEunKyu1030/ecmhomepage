@@ -1,0 +1,151 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">R 연동
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_R.png"></div>
+    	<div class="nodeexplain">
+			<span class="nodeExHighlight">R 연동</span> 노드는 local 경로의 R 실행 환경과 연동하여 입력 data에 대해 R script를 실행하고 결과를 출력하는 기능을 수행합니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#속성창">속성창</a>
+		
+		
+    
+    <a name="개요"><h3>개요</h3></a>
+
+    <ul class="liType02">
+  		<li><span class="genExHighlight">R 연동 노드</span>는 local에 설치된 R 실행 환경과 연동하는 기능을 수행합니다. </li>
+		<li><span class="nodeExHighlight">스크립트 편집기</span>를 이용하여 이미 작성된 R script(*.r)를 불러오거나 직접 입력할 수 있습니다. </li>
+		<li>입력 data를 DataFrame 형식으로 변환하고 R script를 수행하여 결과를 출력합니다. </li>
+  	</ul>
+
+  	
+  	<a name="고려사항"><h3>고려사항</h3></a>
+    <ul class="liType02">
+		<li><span class="genExHighlight">R 환경</span> 항목에서 R 구동 환경을 선택합니다.
+		<li><span class="genExHighlight">스크립트</span> 항목의 <span class="genExHighlight">편집</span> button을 click하면 <span class="genExHighlight">스크립트 편집기</span> 대화 상자가 출력됩니다. </li>
+  		<li>노드 동작을 위해 필수적인 library는 없습니다. 사용자가 필요한 library가 있다면 사용하고자 하는 R 환경에 별도로 설치하여야 합니다. </li>
+		<li>입력 data는 <span class="genExHighlight">ecmData</span> 라는 이름의 DataFrame 형식으로 저장됩니다. 따라서 입력 data에 대하여 작업을 수행하기 위해서는 DataFrame 형식의 data에 적용할 수 있는 함수를 이용하여야 합니다. </li>
+		<li>마찬가지로 노드 동작 후에는 <span class="genExHighlight">ecmData</span> DataFrame 내에 존재하는 data를 출력하게 됩니다. </li>
+		<li>노드 실행 직전에는 <span class="genExHighlight">필수적으로 출력 변수 목록을 갱신</span>해주어야 합니다. </li> 
+  	</ul>
+  	
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 data를 읽어들입니다. </li>
+		<li>입력 data에 대하여, 필요한 경우 여러 전처리 노드를 추가적으로 연결하여 R 연동 노드를 동작하고자 하는 data로 정제합니다. </li> 
+  		<li><span class="genExHighlight">R 연동 노드</span>를 연결하고, 노드 속성창의 <span class="genExHighlight">R 환경</span> 항목의 <span class="genExHighlight">R 환경</span> ComboBox에서 연동하고자 하는 R 환경을 선택합니다. 선택한 환경에 대한 정보, 환경 위치, R 실행 파일 경로가 아래에 표시됩니다. </li>
+		<li>노드 속성창의 <span class="genExHighlight">스크립트</span> 항목의 <span class="genExHighlight">편집</span> button을 click하면 <span class="genExHighlight">스크립트 편집기</span> 대화 상자가 출력됩니다. 스크립트 편집기에서는 R script를 새로 입력하거나 <span class="genExHighlight">불러오기</span> 기능을 이용하여 이미 작성된 R script file(*.r)을 불러올 수 있습니다. </li>
+		<li>별도의 library들이 필요한 경우는 사용하고자 하는 R 환경에 설치하고 <span class="genExHighlight">스크립트 편집기</span>에서 library 명령문을 통하여 받아오도록 합니다. </li>
+  	    <li><span class="genExHighlight">ecmData</span>라는 이름의 DataFrame 객체를 이용하여 data를 처리합니다. 기본적으로 <span class="genExHighlight">ecmData</span>는 노드에 입력되는 data를 가지고 있습니다. </li>
+		<li>따라서, R script 상에서 입력 data에 대하여 작업을 수행하기 위해서는 <span class="genExHighlight">ecmData</span>에 대하여 DataFrame 형식의 data를 다루는 데에 사용되는 함수를 이용하여야 합니다. </li>
+		<li>마찬가지로 노드 동작 후에는 <span class="genExHighlight">ecmData</span> 내에 존재하는 data를 출력하게 됩니다. R script 상에서 새로 생성되는 변수 또는 결과값을 출력 data로 확인하고자 한다면 <span class="genExHighlight">ecmData</span> DataFrame에 추가해주어야 합니다. </li>
+		<li>노드 실행 직전에는 <span class="genExHighlight">반드시 변수 목록 갱신 기능을 이용하여 출력 변수 목록을 갱신</span>해주어야 합니다. 갱신 후 변수 목록에 표시되는 변수들은 입력 data에 대한 R script 동작 후 최종적으로 <span class="genExHighlight">ecmData</span> DataFrame 내에 존재하는 변수들입니다. </li>
+	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="3">선택사항</th>
+					<td>스크립트</td>
+					<td>R script를 작성합니다.</td>
+					<td>선택</td>
+					<td><span class="genExHighlight">스크립트 편집기</span>를 이용하여 R script를 입력할 수 있습니다. 기존에 작성된 script를 불러올 수도 있습니다. </td>
+				</tr>
+				<tr>
+					<td>R 환경</td>
+					<td>R script를 동작시킬 R 환경을 선택합니다.</td>
+					<td>선택</td>
+					<td>Conda에서 생성된 가상 환경들을 포함하여 이용 가능한 R 환경들 중 사용하고자 하는 환경을 ComboBox 형식으로 선택할 수 있습니다.</td>
+				</tr>
+				<tr>
+					<td>변수정보</td>
+					<td>노드 동작 후 출력되는 변수명과 데이터형이 표시됩니다.</td>
+					<td>필수</td>
+					<td>입력 데이터에 대하여 R script 동작 후 출력되는 변수들의 이름과 데이터형이 표시됩니다.</td>
+				</tr>
+				<tr>
+					<th rowspan="1">필수사항</th>
+					<td>변수 목록 갱신</td>
+					<td>변수정보에 표시되는 변수 목록을 갱신합니다.</td>
+					<td>필수</td>
+					<td>스크립트 편집기에서 R script를 수정한 후 <span class="genExHighlight">변수 목록 갱신</span> button을 click하여 수정된 script에 따른 출력 변수 목록을 갱신합니다. R 연동 노드 동작 전에는(특히 <span class="genExHighlight">스크립트 편집기</span>의 R script를 수정하였을 때) 필수적으로 <span class="genExHighlight">변수 목록 갱신</span> button을 click하여 변수 목록을 갱신하여야 합니다.</td>
+				</tr>		
+		</table>
+
+
+		<h3><a name="속성창">속성창</a></h3>
+		<ul class="liType02">
+			<p>(1) 노드 속성창</p>
+			<p>노드 속성창에서 노드 설정 정보를 변경할 수 있습니다.</p>			
+			<p><img src="./images/R_options.png"></p>
+		
+			<p>(2) 스크립트 편집기</p>
+			<p>노드 속성창의 <span class="genExHighlight">편집</span> button을 click하면 <span class="genExHighlight">스크립트 편집기</span> 대화창이 출력됩니다. 기존의 R script(*.py)를 불러오거나 직접 입력하여 작성할 수 있습니다.</p>			
+			<p><img src="./images/R_script_editor.png"></p>
+		
+			<p>(3) R 환경 선택</p>
+			<p>노드 속성창의 <span class="genExHighlight">R 환경</span> ComboBox를 이용하여 R 환경을 선택할 수 있습니다. Local 경로 내에 존재하는 R 환경들의 목록이 출력됩니다.</p>			
+			<p><img src="./images/R_options_EnvListSelection.png"></p>
+			
+			<p>(4) 변수 목록 갱신</p>
+			<p>노드 속성창의 <span class="genExHighlight">변수 목록 갱신</span> button을 click하면 변수 목록을 갱신할 수 있습니다. 입력 변수들에 대하여 R script를 동작시킨 후 최종적으로 출력되는 변수들의 목록 및 데이터형이 갱신됩니다.</p>
+			<p><img src="./images/R_options_VarListUpdate.png"></p>
+		</ul>
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

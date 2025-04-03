@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Box-Cox 변환
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p> 관리도에 적용하기 위한 전제조건으로는 데이터가 정규분포를 따라야 합니다.. 그러나 많은 데이터가 정규분포를 따르기 어렵습니다. Box-Cox 변환은 정규분포를 따르지 않는 관측치들을 관리도에 적용하기 위하여 정규분포를 따르도록 변환 수식을 제공합니다.</p>
+	       <h3>실행 방법</h3>
+	    <ul class="liType02">
+	    <li><span class="genExHighlight">[데이터] - [Box-Cox 변환]</span>을 선택하면다음과 같은 Box-Cox 변환 다이얼로그가 나타납니다.</li>
+	    	<p><img src="./images/Data_Boxcox_001.jpg"></p>
+	    <p>변환이 필요한 변수를 선택합니다.</p>	
+	    </br>
+
+	    </ul>
+	    
+	    <h3>결과</h3>
+	    <ul class="liType02">
+	    	<li>
+    		  변환 수식을 결정하기 위한 추정 람다 정보를 제공하며, 변환 전과 후의 정규성 검정 통계량을 제공함으로써 변환이 되면서 얼마나 더 정규분포를 따르는지 알 수 있습니다. 또, 변환 수식을 파생 변수 노드와 이용하여 변환된 변수로 사용할 수 있습니다.
+	    	</li>
+	    	<p><img src="./images/Data_Boxcox_002.jpg"></p>
+	    	<br>
+	    	<li>
+		  정규 확률 Plot(변환전): 변환하기 전 데이터가 정규분포를 얼마나 따르는지 보여주는 그래프입니다. 빨간 선을 기준으로 빨간 선 근방에 데이터가 많이 분포하면 데이터가 정규성을 따른다고 할 수 있고, 빨간 선에 많이 벗어날수록 정규성 가정에 위배됩니다.
+	    	</li>
+	    	<p><img src="./images/Data_Boxcox_003.jpg"></p>
+	    	<br>
+	    	<li>
+	    	  정규 확률 Plot(변환후): 추정된 변환 수식에 의해 변환된 데이터가 정규분포를 얼마나 따르는지 보여주는 그래프입니다. 빨간 선을 기준으로 빨간 선 근방에 데이터가 많이 분포하면 데이터가 정규성을 따른다고 할 수 있고, 빨간 선에 많이 벗어날수록 정규성 가정에 위배됩니다.
+	    	</li>
+	    	<p><img src="./images/Data_Boxcox_004.jpg"></p>
+	    	<br>
+	    	<li>
+		  람다 추정: Likelihood가 최대가 되는 람다를 추정치로 사용하여 변환 수식을 결정하며, 람다에 따라 Likelihood의 변화를 보여주는 그래프를 제공합니다. 
+	    	</li>
+	    	<p><img src="./images/Data_Boxcox_005.jpg"></p>
+	    	<br>
+	    	
+	    </ul>
+	    
+	    
+	    
+	    
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

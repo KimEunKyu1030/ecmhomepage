@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+		<div class="title">모델링노드
+		<div class="version"></div>
+		</div>
+		<hr class="headerLine">
+	</div>
+	<!-- Page Title -->
+	
+	
+	<!-- Begin Client Area -->
+	<div id="areascroll" class="bdstyleBody">
+		<p>
+		실제로 데이터를 분석하는 부분이 모델링 노드입니다. <span class="genExHighlight">ECMiner™</span>에서 지원하는 분석 알고리즘은 다음과 같습니다.
+	</p>
+	<ul class="liType02">
+		<span class="genExHighlight"></span>
+		<li><a href="PJH_node_modeling_apriori.htm">연관성 분석</a></li><br>
+		변수들 간의 연관규칙을 찾아냅니다.(Apriori 알고리즘)
+		<li><a href="New_New_Cart.htm">CART</a></li><br>
+		의사결정나무를 통해 분류 및 회귀분석을 합니다.(Classification and Regression Tree)
+		<li><a href="PJH_node_modeling_ElmanNet.htm">ElmanNet</a></li><br>
+		ElmanNet은 RNN(Recurrent Neural network) 개념을 이용하여, 은닉층(Hidden Layer) 하나의 인공 신경망 구성하여 회귀분석을 합니다..
+		<li><a href="PJH_node_modeling_hierarchical.htm">HIERARCHICAL</a></li><br>
+		유사성에 따른 군집분석을 합니다.
+		<li><a href="PJH_KMeans.htm">KMEANS</a></li><br>
+		입력받은 군집수만큼 유사성에 따라 군집을 나눕니다.
+		<li><a href="PJH_node_modeling_knn.htm">KNN</a></li><br>
+		이미 분류된 데이터에 새로운 관측치를 유사도에 따라 맵핑시켜 분류합니다.
+		<li><a href="PJH_node_modeling_lda.htm">LDA</a></li><br>
+		각 클래스를 구분하는 공간상의 선형평면으로 관측치를 분류합니다.
+		<li><a href="PJH_Logistic.htm">LOGISTIC</a></li><br>
+		종속변수가 범주형 일때 이를 효과적으로 분류하는 분석법입니다.(Logistic Regression)
+		<li><a href="PJH_MLP.htm">MLP</a></li><br>
+		다층신경망으로 자가학습을 통해 분류 및 회귀분석을 합니다.(Multi Layer Perception)
+		<li><a href="PJH_MLR.htm">MLR</a></li><br>
+		다변량 선형회귀분석을 합니다.
+		<li><a href="PJH_node_modeling_pca.htm">PCA</a></li><br>
+		독립변수를 종속변수에 영향을 미치는 공헌도에 따라 주성분으로 변환합니다.
+		<li><a href="PJH_node_modeling_pcr.htm">PCR</a></li><br>
+		PCA를 거친 주성분으로 회귀분석을 합니다.
+		<li><a href="PJH_node_modeling_pls.htm">PLS</a></li><br>
+		동시에 여러 종속변수들을 회귀분석합니다.
+		<li><a href="PJH_node_modeling_qda.htm">QDA</a></li><br>
+		각 클래스를 공간상의 비선형평면으로 구분하여 관측치를 분류합니다.
+		<li><a href="PJH_node_modeling_rbf.htm">RBF</a></li><br>
+		입력데이터를 신경망을 통해 고차원 공간(High-dimensional Space)으로 Feature mapping을 하여 분류 및 회귀분석을 합니다.
+		<li><a href="PJH_node_modeling_rbfdda.htm">RBF-DDA</a></li><br>
+		공간상에 배치되는 RBF의 개수를 자동적으로 정해 줌으로써 사용자가 알고리즘을 실행하기 위해 입력해야 하는 모수를 결정하는데 생기는 어려움을 해결한 알고리즘입니다.
+		<li><a href="node_modeling_SVC.htm">SVC</a></li><br>
+		다수의 속성(attribute) 또는 변수를 갖는 객체(object)를 사전에 정해진 그룹 또는 범주(class, category) 중의 하나로 분류하는 분류분석 기법 중 하나로 Support Vector Machine 알고리즘을 사용합니다.
+		<li><a href="node_modeling_SVR.files.htm">SVR</a></li><br>
+		Support Vector Machine의 아이디어를 사용하여 회귀분석을 수행합니다.
+		<li><a href="PJH_SOMModel.htm">SOM</a></li><br>
+		Training 데이터 셋으로 SOM 분석을  수행하고 분석 결과인 SOM 모델 노드를 Test 데이터 셋(새로운 데이터 셋)에 적용하여 새로운 데이터의 Clustering에 사용될 수 있습니다.
+		<li><a href="PJH_Factor%20Analysis.htm">Factor Analysis</a></li><br>
+		Factor Analysis의 결과 어떠한 공통 요인이 추출되었는지를 확인하고 해석할 수 있습니다
+		<li><a href="PJH_MANUAL%20CART.htm">Manual CART</a></li><br>
+		Manual trees노드 분석수행의 결과로 생성됩니다.
+		<li><a href="PJH_node_modeling_scorecard.htm">ScoreCard</a></li><br>
+		Logistic 회귀분석의 알고리즘을 사용하여 종속변수(이산형)에 미치는 독립변수들의 영향도를 Score 형태로	 계산해 줌으로써 사용자가 독립변수의 영향도를 더욱 쉽게 파악할 수 있도록 만든 모델링 방법입니다. 이는 금	  융 분야에서 고객의 신용 등급을 평가할 때 유용하게 사용되고 있습니다.
+		<li><a href="PJH_tnscktjddusrhks.htm">순차연관성</a></li><br>
+		상품 혹은 서비스간의 관계를 살펴보고 이로부터 유용한 규칙을 찾아내고자 할 때 이용될 수 있는 기법입니다. ECMiner™에서는 연관성 분석을 위해 Apriori 알고리즘을 제공합니다. 
+		<li><a href="PJH_oneclasssvm.htm">One Class SVM</a></li><br>
+		One class SVM은 Support Vector Machine을 활용하여 이상치 판별을 하는 알고리즘입니다.
+		<li><a href="PJH_LOF.htm">LOF</a></li><br>
+		LOF는 Local Outlier Factor의 약자로, 데이터가 입력되었을 때 입력된 데이터와 가까운 곳에 위치한 기존 데이터들의 지역적인 밀도를 반영하여 이상치를 판별하는 알고리즘입니다.
+		<li><a href="PJH_node_modeling_ElmanNet.htm">ElmanNet</a></li><br>
+		ElmanNet은 RNN의 개념의 은닉층 1개인 인공신경망을 생성하여 회귀분석을 실시합니다.
+	</ul>
+	
+	
+	<!-- line*.gif 그림 파일을 불러오지 못 해서 넣은 코드 -->
+		<div style="display:none">
+	<img src="./images/line3.gif">
+	</div> 
+	<!-- line*.gif 그림 파일을 불러오지 못 해서 넣은 코드 -->
+	
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

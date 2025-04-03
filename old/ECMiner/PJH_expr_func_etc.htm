@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=ks_c_5601-1987" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="./default.css">
+<SCRIPT type=text/javascript src="./default.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16899"></HEAD>
+<BODY onmousedown=onBodyMouseDown(); class=bdstyle onload=onBodyLoad();><!-- Page Title -->
+<DIV id=areafixed class=bdstyleTitle>
+<DIV class=title>기타함수 
+<DIV class=version></DIV></DIV>
+<HR class=headerLine>
+</DIV><!-- Page Title --><!-- Begin Client Area -->
+<DIV id=areascroll class=bdstyleBody>
+    	
+<TABLE class=tbStyle01>
+  <THEAD>
+  <TR>
+    <TH>함수</TH>
+    <TH>인수</TH>
+    <TH>설명</TH>
+  </THEAD>
+  <TBODY> 
+  <TR>
+    <TD>GETDEFDATE(key)</TD>
+    <TD>key: 문자열</TD>
+    <TD>지정한 문자열 key에 해당하는 기-정의된 날짜/시간 값을 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>GETDEFNUM(key)</TD>
+    <TD>key: 문자열</TD>
+    <TD>지정한 문자열 key에 해당하는 기-정의된 숫자 값을 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>GETDEFSTR(key) </TD>
+    <TD>key: 문자열</TD>
+    <TD>지정한 문자열 key에 해당하는 기-정의된 문자열 값을 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>GETROWNUM(field_index, val) </TD>
+    <TD>val: 임의값</TD>
+    <TD>지정된 변수 인덱스에 해당하는 변수에서 val에 지정된 값을 찾아 해당 행의 번호를 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>GETVALUE(field_index, row) </TD>
+    <TD>row: 임의값</TD>
+    <TD>지정된 변수 인덱스에 해당하는 row번째 값을 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>LARGEST(field_index, k) </TD>
+    <TD>k: 임의값</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들중 결측치를 제외한 데이터 중 k번째로 큰 값을 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>LOOKUP(field_index1, val, field_index2)</TD>
+    <TD>val: 임의값</TD>
+    <TD>지정된 변수 인덱스(field_index1)에 해당하는 변수에서 val에 지정된 값을 찾아 같은 위치(행)에 있는 field_index2의 값을 반환합니다.</TD>
+  </TR>
+  <TR>
+    <TD>MOVINGAVERAGE(field_index, k) </TD>
+    <TD>k: 임의값</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수의 이동평균을 구해줍니다. k는 이동평균의 길이입니다.</TD>
+  </TR>
+  <TR>
+    <TD>MOVINGMEDIAN(field_index, k) </TD>
+    <TD>k: 임의값</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수의 이동 중위값을 구해줍니다. k는 이동 중위값의 길이입니다.</TD>
+  </TR>
+  <TR>
+    <TD>MOVINGSTD(field_index, k) </TD>
+    <TD>k: 임의값</TD>
+    <TD>지정된 인덱스에 해당하는 변수의 이동 표준편차를 구해줍니다. K는 이동 표준편차의 길이입니다.</TD>
+  </TR>
+  <TR>
+    <TD>REGSLOPE(field_index, k) </TD>
+    <TD>k: 임의값</TD>
+    <TD>시간을 X축으로 할 때, 지정된 인덱스에 해당하는 변수의 회귀 계수의 기울기를 반환합니다. k는 시간의 길이입니다.</TD>
+  </TR>
+  <TR>
+    <TD>SMALLEST(field_index, k) </TD>
+    <TD>k: 임의값</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 오름차순으로 정렬하여 k번째 값의 변수값을 반환합니다.</TD>
+  </TR>
+
+
+ </TBODY></TABLE>
+
+<li>GETDEFDATE,GETDEFNUM,GETDEFSTR 함수의 경우 ECMiner2014가 설치된 위치의 'ECMvalue.txt'파일에 기-정의된 내용이 있어야합니다. ECMvalue.txt는 정해진 형태로 구성되어야 합니다. 첫번째 열에는 key문자열이 구성되며, 두번째 열은 반환타입(D:date/N:number/S:string), 세번째 열은 반환값으로 구성되어 있어야합니다. 각 열의 구분은 tab으로 구분하여야 합니다. </li>
+    	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

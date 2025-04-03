@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=ks_c_5601-1987" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="./default.css">
+<SCRIPT type=text/javascript src="./default.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16899"></HEAD>
+<BODY onmousedown=onBodyMouseDown(); class=bdstyle onload=onBodyLoad();><!-- Page Title -->
+<DIV id=areafixed class=bdstyleTitle>
+<DIV class=title>
+<P>레코드 함수</P></DIV>
+<HR class=headerLine>
+</DIV><!-- Page Title --><!-- Begin Client Area -->
+<DIV id=areascroll class=bdstyleBody>
+    	
+<TABLE class=tbStyle01>
+  <THEAD>
+  <TR>
+    <TH>함수</TH>
+    <TH>인수</TH>
+    <TH>설명</TH>
+ </THEAD>
+  <TBODY>
+  <TR>
+    <TD>RAVERAGE(f, [varIdx1, …, varIdxN])</TD>
+    <TD>f : 0 or 1, varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 각 변수들의 평균을 계산합니다. 인덱스를 지정하지 않으면 전체 평균을 계산합니다. f=0이면 결측치 미포함 f=1이면 결측치 포함 </TD>
+  <TR>
+    <TD>RCNTBTN(val1, val2[varIdx1, …, varIdxN])</TD>
+    <TD>val1 : 임의값, val2: 임의값, varIdx: field_index</TD>
+    <TD>현재 열에서 전체 혹은 지명된 인덱스에 해당하는 변수의 값이 val1보다 크거나 같고 val2보다 작거나 같은 변수의 개수를 반환합니다. </TD>
+  <TR>
+    <TD>RCNTEQ(val[,varIdx1, …, varIdxN]) </TD>
+    <TD>val : 임의값, varIdx: field_index </TD>
+    <TD>현재 열에서 전체 혹은 지명된 인덱스에 해당하는 변수의 값이 입력한 값과 같은 변수의 개수를 반환합니다.  </TD>
+  <TR>
+    <TD>RCNTEQGT(val[,varIdx1, …, varIdxN]) 
+    </TD>
+    <TD>val : 임의값, varIdx: field_index </TD>
+    <TD>현재 열에서 전체 혹은 지명된 인덱스에 해당하는 변수의 값이 입력한 값보다 크거나 같은 변수의 개수를 반환합니다.</TD>  
+  </TR>
+  <TR>
+    <TD>RCNTEQLT(val[,varIdx1, …, varIdxN])</TD>
+    <TD>val : 임의값, varIdx: field_index </TD>
+    <TD>현재 열에서 전체 혹은 지명된 인덱스에 해당하는 변수의 값이 입력한 값보다 작거나 같은 변수의 개수를 반환합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RCNTGT(val[,varIdx1, …, varIdxN])</TD>
+    <TD>val : 임의값, varIdx: field_index </TD>
+    <TD>현재 열에서 전체 혹은 지명된 인덱스에 해당하는 변수의 값이 입력한 값보다 큰 변수의 개수를 반환합니다 </TD>
+  </TR>
+  <TR>
+    <TD>RCNTLT(val[,varIdx1, …, varIdxN]) </TD>
+    <TD>val : 임의값, varIdx: field_index  </TD>
+    <TD>현재 열에서 전체 혹은 지명된 인덱스에 해당하는 변수의 값이 입력한 값보다 작은 변수의 개수를 반환합니다.  </TD>
+  </TR>
+  <TR>
+    <TD>RCOUNT(f[,varIdx1, …, varIdxN])</TD>
+    <TD>f: 0 or 1, varIdx: field_index </TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 각 변수들의 개수를 반환합니다. 인덱스를 지정하지 않으면 전체 필드를 대상으로 계산합니다. f=0이면 수치형 데이터, f=1이면 전체 데이터(결측치 제외)</TD>
+  </TR>
+  <TR>
+    <TD>RCSS([,varIdx1, …, varIdxN])</TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들의 수정제곱합을 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 수정제곱합을 계산합니다.</TD>
+  </TR>
+  <TR>
+    <TD>RDEVSQ([,varIdx1, …, varIdxN])</TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 각 변수들을 표본 평균으로부터 편차의 제곱합으로 계산하여 결과값을 반환합니다. 인덱스를 지정하지 않으면 전체에서 연속형인 변수들을 대상으로 계산합니다.</TD>
+  </TR>
+  <TR>
+    <TD>RMAXA([,varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수 중 가장 큰 값을 반환합니다. 인덱스를 지정하지 않으면 전체 변수를 대상으로 합니다. 텍스트 논리값 포함(텍스트는 0으로 인식, false =0, true = 1)</TD>
+  </TR>
+  <TR>
+    <TD>RMAXVAR([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수 중 가장 큰 값을 가지는 변수명을 반환합니다. 인덱스를 지정하지 않으면 전체 연속형 변수를 대상으로 합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RMAXVARIDX([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수 중 가장 큰 값을 가지는 변수의 인덱스를 반환합니다. 인덱스를 지정하지 않으면 전체 연속형 변수를 대상으로 합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RMEAN([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들의 평균을 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 평균을 계산합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RMINA([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수 중 가장 작은 값을 반환합니다. 인덱스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 텍스트 논리값 포함(텍스트 =0 으로 인식, false =0 , true =1)</TD>
+  </TR>
+  <TR>
+    <TD>RMINVAR([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수 중 가장 작은 값을 가지는 변수명을 반환합니다. 인덱스를 지정하지 않으면 전체 연속형 변수를 대상으로 합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RMINVARIDX([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수 중 가장 작은 값을 가지는 변수의 인덱스를 반환합니다. 인덱스를 지정하지 않으면 전체 연속형 변수를 대상으로 합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RRANK(ranking, [varIdx1, …, varIdxN])</TD>
+    <TD>ranking: 순위, varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들 중 ranking번째 값의 변수값을 반환합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수만 고려합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RRANKIDX(ranking, [varIdx1, …, varIdxN]) </TD>
+    <TD>ranking: 순위, varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들 중 ranking번째 값의 변수 인덱스를 반환합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수만 고려합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RRMS([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>지정된 인덱스에 해당하는 변수들의 제곱평균제곱근을 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 제곱평균제곱근을 계산합니다.</TD>
+  </TR>
+  <TR>
+    <TD>RSTD([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들의 표준편차를 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 표준편차를 계산합니다. </TD>
+  </TR>
+  <TR>
+    <TD>RSTDA([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 표본집단의 표준편차로 계산하여 반환합니다. 인덱스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 결측치 제외 텍스트 포함(텍스트 = 0 ) </TD>
+  </TR>
+  <TR>
+    <TD>RSTDP([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 모집단의 표준편차로 계산하여 반환합니다. 인덱스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 결측치 텍스트 제외.</TD>
+  </TR>
+  <TR>
+    <TD>RSTDPA([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 모집단의 표준편차로 계산하여 반환합니다. 인덱스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 결측치 제외, 텍스트 포함(텍스트 = 0)</TD>
+  </TR>
+  <TR>
+    <TD>RSUM(([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들의 총합을 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 총합을 계산합니다.</TD>
+  </TR>
+  <TR>
+    <TD>RUSS(([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 각 변수들의 제곱합을 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 제곱평균제곱근을 계산합니다.</TD>
+  </TR>
+  <TR>
+    <TD>RVAR(([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들의 분산을 계산합니다. 인덱스를 지정하지 않으면 전체 변수 중 연속형인 변수의 분산을 계산합니다.</TD>
+  </TR>
+  <TR>
+    <TD>RVARA(([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 표본집단의 분산으로 계산하여 반환합니다. 인덱스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 결측치 제외 텍스트 포함(텍스트 = 0)</TD>
+  </TR>
+  <TR>
+    <TD>RVARP(([varIdx1, …, varIdxN])  </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 모집단의 분산을 계산하여 반환합니다. 인데스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 텍스트 제외.</TD>
+  </TR>
+  <TR>
+    <TD>RVARPA(([varIdx1, …, varIdxN]) </TD>
+    <TD>varIdx: field_index</TD>
+    <TD>현재 열에서 지정된 인덱스에 해당하는 변수들을 모집단의 분산을 계산하여 반환합니다. 인덱스를 지정하지 않으면 전체 변수들을 대상으로 계산합니다. 결측치 제외, 텍스트 포함(텍스트 = 0 )</TD>
+  </TR>
+</TBODY></TABLE>
+<HR class=footerLine>
+
+<P class=footer></P></DIV>/td&gt; <TD>date: 날짜</TD> <TD>연도를 반환합니다.</TD> 
+<TD>YEAR(#2004-01-01 오후 1:30:20#) -&gt; 2004 </TD></TR><TR><TD>YEARS(date1, 
+date2) </TD><TD>date1: 날짜<BR>date2: 날짜</TD> <TD>date1과 date2 사이의 년수를 반환합니다.</TD> 
+<TD>YEARS(#2004-01-01 오후 1:00:00#, #2006-02-01 오후 1:30:20#) -&gt; 2</TD> 
+</TR></TABLE>
+<HR class=footerLine>
+
+<P class=footer>
+<DIV></DIV></BODY></HTML>

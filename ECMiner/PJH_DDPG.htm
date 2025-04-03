@@ -1,0 +1,256 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">DDPG
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./files/imagesRL/DDPG0.png"></div>
+    	<div class="nodeexplain">
+			 <span class="nodeExHighlight">DDPG(Deep Deterministic Policy Gradient)</span>는 <span class="nodeExHighlight">연속적인 형태의 행동(action)</span>을 예측합니다. <span class="nodeExHighlight">Actor-Critic</span>과 유사하게 하나의 신경망으로 정책(policy)을 근사하고, 다른 하나의 신경망으로 Q 함수를 업데이트 합니다.   	
+          </div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>
+		
+	
+    <a name="개요"><h3>개요</h3></a>
+
+    <ul class="liType02">
+                   <p style="margin-left:50">			
+    	<img src="./files/imagesRL/DDPG1.png">
+                   <li><span class="nodeExHighlight">DDPG(Deep Deterministic Policy Gradient, 심층 결정론적 정책 경사법)</span>은 <span class="nodeExHighlight">off-policy, 연속적인 형태의 Actor-Critic DPG</span> 알고리즘을 기반으로 하고 있으나, 보다 복잡한 학습을 수행할 수 있도록 <span class="nodeExHighlight">Deep Learning</span>을 함께 사용하고자 하였습니다. Actor-Critic과 유사하게, 하나의 신경망으로 <span class="nodeExHighlight">정책(policy)</span>을 근사하고, 다른 하나의 신경망으로 <span class="nodeExHighlight">Q 함수</span>를 대체합니다.</li>
+  		<li><span class="genExHighlight">Actor</span>는 현재 환경으로부터 <span class="genExHighlight">t 시점의 상태(s(t))</span>를 인식하여 <span class="genExHighlight">정책(pi)</span>을 통해 <span class="genExHighlight">연속적인</span> 최적의 <span class="genExHighlight">행동(a(t))</span>을 산출합니다.</li>
+		<p style="margin-left:50">			
+    	<img src="./files/imagesRL/DDPG2.png">
+                   <li><span class="genExHighlight">Critic</span>은 Actor가 출력한 행동을 <span class="genExHighlight">Q 함수</span>를 이용하여 평가합니다.
+                   <p style="margin-left:50">			
+    	<img src="./files/imagesRL/DDPG3.png">
+                   </p>
+
+  	</ul>
+
+  	
+  	<a name="고려사항"><h3>고려사항</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">환경모델</span>이 필요합니다. </li>
+		<li><span class="genExHighlight">환경모델</span>에서 사용된 <span class="genExHighlight">독립변수</span>와 <span class="genExHighlight">종속변수</span>가 필요합니다. </li>
+		<li><span class="genExHighlight">독립변수</span>는 연속형/이산형의 변수 모두 사용 가능합니다. </li>
+		  	</ul>
+  	
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+		<li><span class="genExHighlight">DDPG 노드</span>를 <span class="genExHighlight">입력노드</span>에 연결하고 옵션들을 선택합니다.</li>		
+		<li><span class="genExHighlight">화면표시 노드</span>를 <span class="genExHighlight">DDPG 노드</span>에 연결합니다.</li>
+    	<p>			
+    	<img src="./files/imagesRL/DDPG4.png">
+  		</p>
+  	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>조건부 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="16">선택사항</th>
+					<td>환경모델파일 설정</td>
+					<td>환경모델로 불러올 gms 파일을 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>할인율</td>
+					<td>보상에 대한 할인율을 지정합니다.</td>
+					<td>필수</td>
+				</tr>
+				<tr>
+					<td>Actor 학습율</td>
+					<td>Actor 신경망의 학습률을 설정합니다.</td>
+					<td>필수</td>
+				</tr>
+				<tr>
+					<td>Critic 학습률</td>
+					<td>Critic 신경망의 학습률을 설정합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Epsilon</td>
+					<td>행동을 랜덤으로 선택할 확률을 설정합니다. 0일 때가 Q값이 높은 행동을 선택, 1일 때가 완전한 랜덤 행동을 선택합니다.</td>
+					<td>필수</td>
+					<td>0이상 1이하의 실수</td>
+				</tr>
+				<tr>
+					<td>Epsilon 감쇠율</td>
+					<td>Epsilon의 감쇠율을 지정합니다.</td>
+					<td>필수</td>
+					<td>0이상 1이하의 실수</td>
+				</tr>
+				<tr>
+					<td>Epsilon 최소값</td>
+					<td>Epsilon의 최소값을 지정합니다.</td>
+					<td>필수</td>
+					<td>0이상 1이하의 실수</td>
+				</tr>
+				<tr>
+					<td>리플레이 메모리 크기</td>
+					<td>리플레이 메모리에 저장할 샘플의 최대 개수를 설정합니다.</td>
+					<td>필수</td>
+					<td>자연수</td>
+				</tr>
+				<tr>
+					<td>최소 학습 시작 크기</td>
+					<td>리플레이 메모리에 저장할 샘플의 최대 개수를 설정합니다.</td>
+					<td>필수</td>
+					<td>리플레이 메모리 크기보다 작거나 같은 값.</td>
+				</tr>
+				<tr>
+					<td>배치 크기</td>
+					<td>학습을 위해 메모리에서 추출 할 샘플 배치 개수를 입력합니다.</td>
+					<td>필수</td>
+					<td>자연수</td>
+				</tr>
+				<tr>
+					<td>최대 에피소드</td>
+					<td>학습할 최대 에피소드 횟수를 지정합니다.</td>
+					<td>필수</td>
+					<td>자연수</td>
+				</tr>
+				<tr>
+					<td>최대 스텝</td>
+					<td>한 에피소드에서 최대 스텝 횟수를 지정합니다.</td>
+					<td>필수</td>
+					<td>자연수</td>
+				</tr>				
+				<tr>
+					<td>목표치 허용오차</td>
+					<td>환경 보상 정의를 위한 Target 값에 대한 허용오차를 입력합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>						
+				<tr>
+					<td>배치정규화 여부</td>
+					<td>배치정규화 사용 여부를 결정합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>	
+				<tr>
+					<td>제어, 타겟변수를 지정</td>
+					<td>제어, 타겟변수를 지정합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>					
+				<tr>
+					<td>출력층 활성함수</td>
+					<td>출력층의 활성함수를 지정합니다.</td>
+					<td>필수</td>
+					<td>Linear, Sigmoid, ReLU, Leaky ReLU, SoftMax</td>
+				</tr>				
+				<tr>
+				<th rowspan="2">은닉층 설정</th>
+					<td>은닉층 추가</td>
+					<td>은닉층을 추가합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>				<tr>
+					<td>마지막 은닉층 제거</td>
+					<td>마지막 은닉층을 제거합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>		
+				<tr>
+				<th rowspan="2">추가된 은닉층</th>
+					<td>노드개수</td>
+					<td>해당하는 은닉층을 노드개수를 입력합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>	
+				<tr>
+					<td>활성함수</td>
+					<td>해당하는 은닉층의 활성함수를 선택합니다.</td>
+					<td>필수</td>
+					<td>Linear, Sigmoid, ReLU, Leaky ReLU, SoftMax</td>
+				</tr>					
+		</table>
+
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">화면표시 노드</span>에서 생성된 결과 변수를 확인할 수 있습니다.</p>
+			<p>
+				<img src="./files/imagesRL/DDPG5.png">
+			</p>
+			<br>
+		</ul>
+		
+
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>
+
+
+
+

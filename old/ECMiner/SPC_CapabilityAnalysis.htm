@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">공정능력분석
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+			데이터 탐색기에서는 각각의 필드에 대해 <span class="genExHighlight">공정 능력 관리</span> 기능을 사용하여, 데이터가 원하는 공정 영역 내에서 분포하는지를 알 수 있습니다.
+	    </p>
+	    
+	    <h3>실행 방법</h3>
+	    <ul class="liType02">
+	    	<li>
+			<span class="genExHighlight">[분석] - [SPC] - [공정능력분석]</span>을 선택하면 아래와 같은 공정능력분석 다이얼로그가 나타납니다. 
+	    	</li>
+			<li>
+			대상 변수를 선택하기 위하여 [설정]버튼을 클릭합니다.
+			</li>
+	    </ul>
+	    <img src="./files/CapabilityAnalysis.files/image001.jpg">
+	    <ul class="liType02">
+	    	<li>
+			분석 대상 변수를 선택하고(다중 선택 가능) 이에 대한 LSL, USL, TSL, 부분군 크기, 히스토그램 작성을 위한 계급수를 설정합니다.
+	    	</li>
+	    </ul>
+		<img src="./files/CapabilityAnalysis.files/image002.jpg">
+	    
+	    <h3>실행 결과 및 용어</h3>
+	    <img src="./files/CapabilityAnalysis.files/image003.jpg">
+		
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="">명칭</th>
+					<th width="">설명</th>
+					<th width="">기타</th>
+				</tr>
+			</thead>
+				<tr>
+					<th rowspan="">히스토그램</th>
+					<td>선택된 필드의 히스토그램 차트입니다.</td>
+					<td>속성창의 계급수에 따라 차트가 달라집니다.</td>
+				</tr>
+				<tr>
+					<th rowspan="">군내</th>
+					<td>선택된 필드의 평균과 부분군 내의 표준편차를 이용한 정규 분포 곡선입니다.</td>
+					<td>부분군 크기에 따라 달라집니다.</td>
+				</tr>
+				<tr>
+					<th rowspan="">전체</th>
+					<td>선택된 필드의 평균과 표준편차를 이용한 정규 분포 곡선입니다.</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">LSL</th>
+					<td>Lower specification limit. 공정 명세서 상의 하한값으로 사용자의 입력이 필요합니다.</td>
+					<td>속성창의 LSL값에 따라 선이 이동합니다.</td>
+				</tr>
+				<tr>
+					<th rowspan="">USL</th>
+					<td>Upper specification limit. 공정 명세서 상의 상한값으로 사용자의 입력이 필요합니다.</td>
+					<td>속성창의 USL값에 따라 선이 이동합니다.</td>
+				</tr>
+				<tr>
+					<th rowspan="">LCL</th>
+					<td>Lower control limit. 결과 데이터 상의 하한값. LCL = 평균 - 3 * 표준편차</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">UCL</th>
+					<td>Upper control limit. 결과 데이터 상의 상한값. UCL = 평균 + 3 * 표준편차</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">Cp</th>
+					<td>PCI(Process capability index : 공정능력지수)를 가리키는 값. Cp = (USL - LSL)/(6 * 군내 표준편차)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">CpL</th>
+					<td>부분군내 평균이 규격 하한에 얼마나 근접해 있는지를 나타내는 값. CpL = (평균 - LSL)/(3 * 군내 표준편차)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">CpU</th>
+					<td>부분군내 평균이 규격 상한에 얼마나 근접해 있는지를 나타내는 값. CpL = (USL - 평균)/(3 * 군내 표준편차)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">Cpk</th>
+					<td>부분군내 평균과 규격 한계와의 차이이며 CpL과 CpU 중에 작은 값을 나타냄</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">Pp</th>
+					<td>부분군을 고려하지 않은 전체 공정에 대한 공정능력지수. Pp = (USL - LSL)/(6 * 표준편차)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">PpL</th>
+					<td>공정 전체 평균이 규격 하한에 얼마나 근접해 있는지를 나타내는 값. CpL = (평균 - LSL)/(3 * 표준편차)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">PpU</th>
+					<td>공정 전체 평균이 규격 상한에 얼마나 근접해 있는지를 나타내는 값. CpL = (USL - 평균)/(3 * 표준편차)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">Ppk</th>
+					<td>공정 전체 평균과 공정 한계와의 차이이며CpL과 CpU 중에 작은 값을 나타냅니다.</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="">Cpm</th>
+					<td>공정이 목표값에 얼마나 근접하였는지를 나타내는 공정능력지수. 공정 평균과 목표값과의 편차로 계산됨</td>
+					<td></td>
+				</tr>
+		</table>
+		
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

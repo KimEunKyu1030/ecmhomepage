@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Copy 입력
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/PJH_copyin.files/image001.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight">Copy 입력 노드</span>는 정해진 데이터 파일, DB의 형태가 아닌 사용자가 Web 또는 원하는 데이터를 Copy&Paste를 통해서 데이터 입력을 할 수 있는 노드입니다.
+	    	</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+
+	  	<h3><a name="사용법">사용법</a></h3>
+	  	<ul class="liType02">	
+	  		<p><img src="./files/PJH_copyin.files/image002.jpg"><img src="./files/PJH_copyin.files/image003.jpg"></p>
+			<li><span class="genExHighlight">Copy&Paste </span> 의 <span class="genExHighlight"> 붙여넣기</span> 버튼을 누르면 아래의 창이 뜹니다. 아래 창에서 원하는 데이터를 입력하거나 붙여넣으면 됩니다.</li>
+			<li>제대로 분석이 되었다면 <span class="genExHighlight">선택사항</span> 항목들이 자동으로 분석되어 나타나며 <span class="genExHighlight">변수정보</span> 속성에 변수정보들이 목록으로 나열됩니다.</li>
+			<li>만약 제대로 분석되지 않았다면 <span class="genExHighlight">선택사항</span> 항목을 직접 지정합니다.</li>
+			<li><span class="genExHighlight">선택사항</span> 항목들이 잘못 입력되었을 경우 올바른 데이터 마이닝을 수행할 수 없을 뿐 아니라 경우에 따라 <span class="genExHighlight">프로그램에 치명적인 영향</span>을 미칠 수도 있으므로 주의하시기 바랍니다.</li>
+			<li><span class="genExHighlight">변수정보</span> 목록 내용 중 잘못된 것이 있다면 수정합니다. 변수명, 변수형태 등을 수정할 수 있습니다. 변수형태는 정수, 실수, 문자, 날짜 등 총 4가지입니다.</li>
+			<li>변수형태를 잘못 지정하면 원하는 결과를 얻을 수 없습니다.</li>
+			<li>파일 <span class="genExHighlight">부분 읽기</span> 방식을 지정합니다.</li>
+	  	</ul>
+	  		
+	  	
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="1">Copy&Paste</th>
+						<td>붙여넣기</td>
+						<td>데이터를 입력하거나 붙여넣을 수 있는 다이얼로그가 활성화 됩니다.</td>
+						<td>필수</td>
+						<td>버튼</td>
+					</tr>
+					<tr>
+						<th rowspan="2">부분읽기</th>
+						<td>부분읽기 방법</td>
+						<td>파일을 부분적으로 읽는 방법을 지정합니다. </td>
+						<td>필수</td>
+						<td>전체읽기, 처음부터, 임의추출</td>
+					</tr>
+					<tr>
+						<td>부분읽기 인수</td>
+						<td>부분 읽기 방법이 '처음부터'라면 인수가 관측치 수가 되고 '임의 추출'이라면 관측치 퍼센티지가 됩니다. </td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="4">선택사항</th>
+						<td>첫 행에 변수명</td>
+						<td>파일의 첫 행에 변수명이 있다면 <span class="genExHighlight">예</span>로 설정 합니다. <span class="genExHighlight">아니오</span>로 설정되면 변수명을 자동으로 생성합니다. 첫 행에 변수명이 있는데 아니오로 설정할 경우 변수의 형태가 모두 문자형으로 설정될 수 있습니다.</td>
+						<td>자동 분석</td>
+						<td>예, 아니오 </td>
+					</tr>
+					<tr>
+						<td>구분자</td>
+						<td>컬럼을 구분하는 구분자를 입력합니다.<br>
+							기본적으로 <span class="genExHighlight">(탭), (공백), |(바), ,(콤마), :(콜론), ;(세미콜론)</span>을 지원하며 이들 이외의 구분자를 사용할 경우 <span class="genExHighlight">(기타)</span>를 선택합니다.</td>
+						<td>필수</td>
+						<td>(탭) '|' (공백) ','  ';'   ':' (기타)</td>
+					</tr>
+					<tr>
+						<td>기타 구분자</td>
+						<td>구분자 속성이 (기타)일 경우 활성화되며 기타 구분자를 입력합니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>텍스트 묶음 기호 있음</td>
+						<td>따옴표를 가지고 있는 문자형 데이터에서 따옴표를 제거하고 읽을 것인지 따옴표를 포함하여 데이터로 읽은 것인지 여부를 지정합니다.</td>
+						<td>예 일 경우 “ABC" -> ABC</td>
+						<td>예, 아니오 </td>
+					</tr>
+					<tr>
+						<th>변수정보</th>
+						<td>변수정보</td>
+						<td>파일을 분석하여 얻는 변수의 정보가 나타납니다. 총 변수의 개수, 변수명, 변수형태 등을 알 수 있으며 변수명, 변수형태의 변경이 가능합니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+			</table>
+			
+			
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

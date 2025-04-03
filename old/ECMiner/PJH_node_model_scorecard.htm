@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">ScoreCard 모델 노드
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/model_scorecard_01.jpg"></div>
+    	<div class="nodeexplain">
+
+			<span class="nodeExHighlight">ScoreCard 모델 노드</span>는 ScoreCard 분석의 결과로 생성됩니다 Training 데이터 셋으로 ScoreCard분석을  수행하고 분석 결과인 ScoreCard 모델 노드를 Test 데이터 셋(새로운 데이터 셋)에 적용하여 <span class="nodeExHighlight">새로운 데이터의 분류</span>에 사용될 수 있을 뿐 아니라 새로운 데이터에 대해서 Score를 구하는데에도 사용할 수 있습니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+  	<h3> </h3>
+    <ul class="liType02">
+
+		<li><span class="genExHighlight">클래스 수와 총 시행 수 </span>종속변수의 클래스 수와 알고리즘이 실행된 총 시행 수를 알 수 있습니다.</li>
+
+		<li><span class="genExHighlight">Y Value </span></li>
+		<p>종속변수 Y의 클래스 별 빈도 및 비율을 보여줍니다.</p>
+		<p><img src="./images/model_scorecard_02.bmp"></p><br>
+
+		<li><span class="genExHighlight">로지스틱 테이블 </span></li>
+		<p><span class="genExHighlight">Coef</span>는 각 변수의 계수값을 나타내며, <span class="genExHighlight">SECoef</span>는 각 계수(Beta)의 standard error입니다. 각 변수 유의성 검정의 <span class="genExHighlight">z-value, p-값</span>을 보여줍니다. p-값이 유의수준보다 작을때 유의한 변수라고 판단합니다. <span class="genExHighlight">Odds Ratio</span>는 입력변수가 분류결정에 미치는 영향의 정도를 나타내는 값입니다. 오즈비가 1보다 작다는 것은 입력변수 xi가 (-)의 영향을 준다는 것이고, 오즈비가 1보다 크다는 것은 (+)영향을 줌을 의미합니다. 
+	</p>
+
+		<p><img src="./images/model_scorecard_03.bmp"></p><br>
+
+		<li><span class="genExHighlight">Score 테이블     </span></li>
+		<p>테이블을 통해서 Logistic 회귀분석의 결과를 더 쉽게 해석할 수 있습니다. 예를 들어 위의 G1은 G1_VAR1, G1_VAR2, G1_VAR3, G1_VAR4 새로운 파생변수를 만들어서 Score Card에서 활용하는데 이는 G1변수의 범주가 4개이기 때문입니다. G1_VAR1, G1_VAR2, G1_VAR3, G1_VAR4 중 스코어가 가장 큰 것은 G1_VAR2로 이는 이중에 범주 2가 가장 큰 영향을 미친다는 의미입니다. 이런식으로 다른 변수들 또한 해석할 수 있고 이를 통해 어떠한 독립변수가 분류에 큰 영향을 주는지 알 수 있습니다. </p>
+		<p><img src="./images/model_scorecard_04.bmp"></p><br>
+
+		<li><span class="genExHighlight">Confusion matrix for number & percentage </span></li>
+		<p>종속변수의 원래값과 Logistic Regression을 통해 얻어진 예측값 간의 빈도, 퍼센트 교차표를 보여줍니다. Confusion Matrix를 통해 각 범주에 대한 분류정확도를 판단할 수 있습니다.</p>
+		<p><img src="./images/model_scorecard_05.bmp"></p><br>
+	
+
+	</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

@@ -1,0 +1,219 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">바차트
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/PJH_BARChart.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+	    			<span class="nodeExHighlight">바차트 노드</span>는 데이터를 이용하여, 바차트를 그릴 수 있는 노드입니다.					
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+	
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+			<p><img src="./files/PJH_BARChart.files/image004.jpg"></p>
+				<li>두 개 이상의 시리즈를 그릴 경우, 필요한 시리즈 개수만큼 <span class="genExHighlight">시리즈 추가</span> 버튼을 눌러 추가합니다.</li>
+				<li><span class="genExHighlight">시리즈 목록</span> 속성창의 변수 속성에 차트로 표현할 변수를 지정합니다.</li>
+
+
+				<li>선택사항</li>
+					<ul class="liType02">
+						<li><span class="genExHighlight">라벨</span> 속성 변경</li>
+						<li><span class="genExHighlight">Bar Stack</span> 속성 변경</li>
+					</ul>	  		
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="80">속성그룹</th>
+						<th width="80">속성명</th>
+						<th width="">설명</th>
+						<th width="">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+		    <tr>
+        <th rowspan="2">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="5">
+            차트 
+옵션
+        </th>
+        <td>
+           Bar Stack
+        </td>
+        <td>
+           바차트의 유형을 선택합니다.(단, X축 형태가 series index로 선택될 경우 Bar chart 특성상 이 기능은 비활성화 됩니다.)
+        </td>
+        <td>
+None
+Stacked
+Stacked 100%
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            X축 형태
+        </td>
+        <td>
+            X축 형태를 결정합니다. Data Index가 선택되면, 지정된 변수의 데이터 인덱스 값이 X축이 되고, Series Index가 선택되면, series별로 차트가 구분되며, 이는 범례를 통해 파악할 수 있습니다. 
+        </td>
+        <td>
+            Data 
+Index, Series
+            Index
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            시리즈 추가
+        </td>
+        <td>
+            여러 시리즈를 한 차트에 그리기 위해 사용됩니다. 
+버튼을 누르면 시리즈 선택 리스트가 추가됩니다.
+        </td>
+        <td>
+            버튼
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            시리즈 삭제
+        </td>
+        <td>
+            마지막에 추가된 시리즈가 삭제됩니다.
+        </td>
+        <td>
+            버튼
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            시리즈 편집
+        </td>
+        <td>
+            선택되지 않은 시리즈를 제거합니다.
+        </td>
+        <td>
+            버튼
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+            시리즈 
+목록
+        </th>
+        <td>
+            변수
+        </td>
+        <td>
+            바차트로 표현될 변수를 지정합니다. 
+
+        </td>
+        <td>
+             
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            라벨
+        </td>
+        <td>
+            라벨로 사용할 변수를 지정합니다. 
+변수 속성에 지정된 변수의 형태가 <span class="genExHighlight">이산형</span>이라면, 
+이 속성은 무시됩니다. 
+
+        </td>
+        <td>
+             
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+</table>
+<li>Note: 변수 형태에 따른 Bar chart 의미
+<p>변수 형태가 연속형인 경우, x값이 데이터 인덱스가 되며 y값이 해당 변수값이 표현됩니다. 변수 형태가 이산형(범주형)인 경우, x 값은 범주 이름이 되며 y 값은 해당 범주에 속하는 데이터 빈도수가 됩니다. </li>
+					
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

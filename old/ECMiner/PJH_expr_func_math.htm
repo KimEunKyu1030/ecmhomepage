@@ -1,0 +1,1024 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">수학/삼각함수
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	
+    	    	<li>예시에 표현되는 결과값 형태는 함수 적용 결과 데이터 형태가 문자형일 경우 "결과값"의 형태로, 날짜형일 경우 #결과값#의 형태로 표현됩니다.(실제로 화면상에 표현되는 값은 ",#을 제외한 숫자/문자만 표현됩니다.)</li>
+		<li>인수의 제약조건에서 벗어난 값이 입력될 경우, 결과값은 null(빈값)이 생성됩니다.</li>    	
+		<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="">함수</th>
+						<th width="">인수</th>
+						<th width="">설명</th>
+						<th width="">예</th>
+					</tr>
+				</thead>
+					<tr>
+						<td>ABS(num) </td>
+						<td>num: 숫자 </td>
+						<td>절대값을 계산합니다.  </td>
+						<td>ABS(-123) -> 123  </td>
+					</tr>
+					<tr>
+						<td>ACOS(num) </td>
+						<td>num: 숫자 </td>
+						<td>acos을 계산합니다. 어떤 숫자의 acos 값은 cos 값을 구하면 그 숫자가 되는 각도입니다. 결과 각도는 라디안 으로 표시되며 0에서 pi까지 입니다.  </td>
+						<td>ACOS(-0.5) -> 2.09440</td>
+					</tr>
+					<tr>
+						<td>ACOSH(num) </td>
+						<td>num: 1 이상의 값</td>
+						<td>역하이퍼볼릭 코사인의 값을 계산합니다. </td>
+						<td>ACOSH(2) -> 1.31696</td>
+					</tr>
+					<tr>
+						<td>ASIN(num) </td>
+						<td>num: -1 이상 1 이하인 값</td>
+						<td>asin을 계산합니다. 어떤 숫자의 asin값은 sin값을 구하면 그 숫자가 되는 각도입니다. 결과 각도는 라디안으로 표시되며 -pi/2 에서 pi/2까지 입니다.</td>
+						<td>ASIN(-0.5) -> 0.52360(pi/6 라디안)</td>
+					</tr>
+					<tr>
+						<td>ASINH(num) </td>
+						<td>num: 숫자</td>
+						<td>역하이퍼볼릭 사인의 값을 계산합니다. </td>
+						<td>ACOSH(2) -> 1.44364</td>
+					</tr>
+					<tr>
+						<td>ATAN(num) </td>
+						<td>num: 숫자 </td>
+						<td>atan을 계산합니다. 어떤 숫자의 atan 값은 tan 값이 그 숫자인 각도입니다. 표시 되는 각도는 -pi/2에서 pi/2까지의 라디안 값입니다.  </td>
+						<td>ATAN(1) -> 0.78540</td>
+					</tr>
+					<tr>
+						<td>ATAN2(num1, num2) </td>
+						<td>num1: 숫자<br>
+								num2: 숫자 	</td>
+						<td>아크탄젠트2 값을 계산합니다.. 지정된 x, y 좌표의 아크탄젠트 값을 구합니다. 아크탄젠트는 원점 에서 좌표(x_num, y_num)까지의 선과  x축이 이루는 각도입니다. 이 각도는 -pi에서 pi사이의 라디안 값(-pi 제외)입니다.   </td>
+						<td>ATAN2(1, 1) -> 0.78540</td>
+					</tr>
+					<tr>
+						<td>ATANH(num) </td>
+						<td>num: 숫자(-1 < num < 1) </td>
+						<td>역 하이퍼볼릭 탄젠트 값을 계산합니다.  </td>
+						<td>ATANH(0.2) -> 0.20273</td>
+					</tr>
+					<tr>
+						<td>BETACDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 Beta분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>BETACDF(2, 2, 1) -> 1.0</td>
+					</tr>
+					<tr>
+						<td>BETAINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 Beta분포의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>BETAINV(2, 2, 1) -> 1.0</td>
+					</tr>
+					<tr>
+						<td>BETAMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 Beta분포의 평균을 계산합니다.</td>
+						<td>BETAMEAN(2, 2) -> 0.5</td>
+					</tr>
+					<tr>
+						<td>BETAPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 Beta분포의 num3에서의 PDF 값을 계산합니다.</td>
+						<td>BETAPDF(2, 2, 1) -> 0</td>
+					</tr>
+					<tr>
+						<td>BETAVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 Beta분포의 분산을 계산합니다.</td>
+						<td>BETAVARIANCE(2, 2) -> 0.05</td>
+					</tr>
+					<tr>
+						<td>BINOCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1(n), num2(p)에 해당하는 이항분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>BINOCDF(4, 0.3, 3) -> 0.9919</td>
+					</tr>
+					<tr>
+						<td>BINOINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1(n), num2(p)에 해당하는 이항분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>BINOINV(4, 0.3, 0.9919) -> 3</td>
+					</tr>
+					<tr>
+						<td>BINOMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1(n), num2(p)에 해당하는 이항분포의 평균을 계산합니다.</td>
+						<td>BINOMEAN(10, 0.5) -> 5</td>
+					</tr>
+					<tr>
+						<td>BINOPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1(n), num2(p)에 해당하는 이항분포의 num3에서의 PDF 값을 계산합니다.</td>
+						<td>BINOPDF(4, 0.3, 3) -> 0.07560</td>
+					</tr>
+					<tr>
+						<td>BINOVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1(n), num2(p)에 해당하는 이항분포의 분산을 계산합니다.</td>
+						<td>BINOVARIANCE(10, 0.5) -> 2.5</td>
+					</tr>
+					<tr>
+						<td>CEILING(num) </td>
+						<td>num: 숫자 </td>
+						<td>num보다 크거나 같은 가장 작은 정수를 계산합니다. </td>
+						<td>CEILING(2.1) -> 3 </td>
+					</tr>
+					<tr>
+						<td>CEILING2(num1, num2) </td>
+						<td>num1, num2: 숫자 </td>
+						<td>num1을 num2의 배수가 되도록 올림한 값을 반환하는 함수입니다.</td>
+						<td>CEILING2(6, 4) -> 8</td>
+					</tr>
+					<tr>
+						<td>CHICDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 카이제곱분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>CHICDF(1, 0.3) -> 0.41612</td>
+					</tr>
+					<tr>
+						<td>CHIINV(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 카이제곱분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>CHIINV(1, 0.41612) -> 0.3</td>
+					</tr>
+					<tr>
+						<td>CHIMEAN(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 카이제곱분포의 평균을 계산합니다.</td>
+						<td>CHIMEAN(10) -> 10</td>
+					</tr>
+					<tr>
+						<td>CHIPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 카이제곱분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>CHIPDF(1, 0.3) -> 0.62691</td>
+					</tr>
+					<tr>
+						<td>CHIVARIANCE(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 카이제곱분포의 분산을 계산합니다.</td>
+						<td>CHIVARIANCE(10) -> 20</td>
+					</tr>
+					<tr>
+						<td>COMB(num1, num2)</td>
+						<td>num1, num2: 숫자(num1 > num2, 두 인수는 0 또는 양의 정수)</td>
+						<td>Combination값을 계산합니다. num1개 중에서 num2개를 선택하는 조합의 수를 계산합니다.</td>
+						<td>COMB(4, 2) -> 6</td>
+					</tr>
+					<tr>
+						<td>COS(num) </td>
+						<td>num: 숫자</td>
+						<td>코사인 값을 계산합니다. </td>
+						<td>COS(1.047) -> 0.50017</td>
+					</tr>
+					<tr>
+						<td>COSH(num) </td>
+						<td>num: 숫자</td>
+						<td>하이퍼볼릭 코사인 값을 계산합니다. </td>
+						<td>COSH(4) -> 27.30823</td>
+					</tr>
+					<tr>
+						<td>DEGREE(num) </td>
+						<td>num: 숫자  </td>
+						<td>Radians을 Degree로 변환합니다.  </td>
+						<td>DEGREE(3.14159265) -> 180 </td>
+					</tr>
+					<tr>
+						<td>DIGAMMA(num) </td>
+						<td>num: 숫자(num>0)  </td>
+						<td>digamma 함수의 값을 반환하는 함수, lgamma 함수의 미분값을 계산합니다.</td>
+						<td>DIGAMMA(1) -> -0.57722</td>
+					</tr>
+					<tr>
+						<td>ERF(num) </td>
+						<td>num: 숫자</td>
+						<td>오차 함수 값을 반환합니다.</td>
+						<td>ERF(1) -> 0.8427</td>
+					</tr>
+					<tr>
+						<td>ERFC(num) </td>
+						<td>num: 숫자</td>
+						<td>오차함수 여함수값을 반환합니다.</td>
+						<td>ERFC(1) -> 0.157776</td>
+					</tr>
+					<tr>
+						<td>EVEN(num)</td>
+						<td>num: 숫자</td>
+						<td>num에 가장 가까운 짝수로 올림한 값을 반환합니다.</td>
+						<td>EVEN(1.5) -> 2</td>
+					</tr>
+					<tr>
+						<td>EVCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 극단값 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>EVCDF(0, 1, 0.4) -> 0.77504</td>
+					</tr>
+					<tr>
+						<td>EVINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 극단값 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>EVINV(0, 1, 0.77504) -> 0.40001</td>
+					</tr>
+					<tr>
+						<td>EVMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 극단값 분포의 평균을 계산합니다.</td>
+						<td>EVMEAN(0, 1) -> 0.57722</td>
+					</tr>
+					<tr>
+						<td>EVPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 극단값 분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>EVPDF(0, 1, 0.4) -> 0.3356</td>
+					</tr>
+					<tr>
+						<td>EVVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 극단값 분포의 분산을 계산합니다.</td>
+						<td>EVVARIANCE(0, 1) -> 1.64493</td>
+					</tr>
+					<tr>
+						<td>EXP(num) </td>
+						<td>num: 숫자</td>
+						<td>exp를 계산합니다. e = 2.71828182845904이고 자연 로그의 밑입니다.  </td>
+						<td>EXP(2.1) -> 4 </td>
+					</tr>
+					<tr>
+						<td>EXPCDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 지수 분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>EXPCDF(1, 0.4) -> 0.32968</td>
+					</tr>
+					<tr>
+						<td>EXPINV(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 지수 분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>EXPINV(1, 0.32968) -> 0.4</td>
+					</tr>
+					<tr>
+						<td>EXPMEAN(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 지수 분포의 평균을 계산합니다.</td>
+						<td>EXPMEAN(10) -> 10</td>
+					</tr>
+					<tr>
+						<td>EXPPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 지수 분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>EXPPDF(1, 0.4) -> 0.67032</td>
+					</tr>
+					<tr>
+						<td>EXPVARIANCE(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 지수 분포의 분산을 계산합니다.</td>
+						<td>EXPVARIANCE(10) -> 100</td>
+					</tr>
+					<tr>
+						<td>FACT(num) </td>
+						<td>num: 숫자</td>
+						<td>팩토리얼을 계산합니다.  </td>
+						<td>FACT(4) -> 24 </td>
+					</tr>
+					<tr>
+						<td>FISHER(num) </td>
+						<td>num: 숫자 (-1 < num < 1)</td>
+						<td>FISHER 변환값을 계산합니다.  </td>
+						<td>FISHER(0.5) -> 0.54931 </td>
+					</tr>
+					<tr>
+						<td>FISHERINV(num) </td>
+						<td>num: 숫자 </td>
+						<td>FISHER 변환의 역변환값값을 계산합니다.  </td>
+						<td>FISHERINV(0.54931) -> 0.5 </td>
+					</tr>
+					<tr>
+						<td>FACT(num) </td>
+						<td>num: 숫자</td>
+						<td>팩토리얼을 계산합니다.  </td>
+						<td>FACT(4) -> 24 </td>
+					</tr>
+					<tr>
+						<td>FLOOR(num) </td>
+						<td>num: 숫자</td>
+						<td>num보다 작거나 같은 가장 큰 정수를 계산합니다. </td>
+						<td>FLOOR(2.1) -> 2 </td>
+					</tr>
+					<tr>
+						<td>FCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자</td>
+						<td>모수 num1, num2에 해당하는 F분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>FCDF(2, 4, 3) -> 0.84</td>
+					</tr>
+					<tr>
+						<td>FINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자</td>
+						<td>모수 num1, num2에 해당하는 F분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>FINV(2, 4, 0.84) -> 3</td>
+					</tr>
+					<tr>
+						<td>FMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자</td>
+						<td>모수 num1, num2에 해당하는 F분포의 평균을 계산합니다.</td>
+						<td>FMEAN(5, 5) -> 1.66667</td>
+					</tr>
+					<tr>
+						<td>FPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자</td>
+						<td>모수 num1, num2에 해당하는 F분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>FPDF(2, 4, 3) -> 0.064</td>
+					</tr>
+					<tr>
+						<td>FVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자</td>
+						<td>모수 num1, num2에 해당하는 F분포의 분산을 계산합니다.</td>
+						<td>FVARIANCE(5, 5) -> 8.8889</td>
+					</tr>
+					<tr>
+						<td>GAMCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자</td>
+						<td>모수 num1, num2에 해당하는 감마분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>GAMCDF(1, 2, 1) -> 0.39347</td>
+					</tr>
+					<tr>
+						<td>GAMINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자</td>
+						<td>모수 num1, num2에 해당하는 감마분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>GAMINV(1, 2, 0.39347) -> 1</td>
+					</tr>
+					<tr>
+						<td>GAMMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자</td>
+						<td>모수 num1, num2에 해당하는 감마분포의 평균을 계산합니다.</td>
+						<td>GAMMEAN(3, 3) -> 9</td>
+					</tr>
+					<tr>
+						<td>GAMPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자</td>
+						<td>모수 num1, num2에 해당하는 감마분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>GAMPDF(1, 2, 1) -> 0.30327</td>
+					</tr>
+					<tr>
+						<td>GAMVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자</td>
+						<td>모수 num1, num2에 해당하는 감마분포의 분산을 계산합니다.</td>
+						<td>GAMVARIANCE(3, 3) -> 27</td>
+					</tr>
+					<tr>
+						<td>GEOCDF(num1, num2)</td>
+						<td>num1, num2: 숫자 (0< num1 <1, num2 >= 0의 정수)</td>
+						<td>모수 num1에 해당하는 기하 분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>GEOCDF(0.3, 2) -> 0.657</td>
+					</tr>
+					<tr>
+						<td>GEOINV(num1, num2)</td>
+						<td>num1, num2: 숫자 (0< num1 <1)</td>
+						<td>모수 num1에 해당하는 기하 분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>GEOINV(0.3, 0.657) -> 3</td>
+					</tr>
+					<tr>
+						<td>GEOMEAN(num1)</td>
+						<td>num1: 숫자 (0< num1 <1)</td>
+						<td>모수 num1에 해당하는 기하 분포의 평균을 계산합니다.</td>
+						<td>GEOMEAN(0.25) -> 3</td>
+					</tr>
+					<tr>
+						<td>GEOPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 (0< num1 <1, num2 >= 0의 정수)</td>
+						<td>모수 num1에 해당하는 기하 분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>GEOPDF(0.3, 2) -> 0.147</td>
+					</tr>
+					<tr>
+						<td>GEOVARIANCE(num1)</td>
+						<td>num1: 숫자 (0< num1 <1)</td>
+						<td>모수 num1에 해당하는 기하 분포의 분산을 계산합니다.</td>
+						<td>GEOVARIANCE(0.25) -> 12</td>
+					</tr>
+					<tr>
+						<td>GEVCDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = mu, num2 = sigma, num3 = k)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 극단값 분포의 num4에서의 CDF값을 계산합니다.</td>
+						<td>GEVCDF(0, 1, 0, 2) -> 0.87342</td>
+					</tr>
+					<tr>
+						<td>GEVINV(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = mu, num2 = sigma, num3 = k)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 극단값 분포 CDF의 num4에서의 역함수 값을 계산합니다.</td>
+						<td>GEVINV(0, 1, 0, 0.87342) -> 1.99997</td>
+					</tr>
+					<tr>
+						<td>GEVMEAN(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma, num3 = k)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 극단값 분포의 평균을 계산합니다.</td>
+						<td>GEVMEAN(1, 3, 0.1) -> 3.05886</td>
+					</tr>
+					<tr>
+						<td>GEVPDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = mu, num2 = sigma, num3 = k)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 극단값 분포의 num4 에서의 PDF 값을 계산합니다.</td>
+						<td>GEVPDF(0, 1, 0, 2) -> 0.1182</td>
+					</tr>
+					<tr>
+						<td>GEVVARIANCE(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma, num3 = k)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 극단값 분포의 분산을 계산합니다.</td>
+						<td>GEVVARIANCE(1, 3, 0.1) -> 20.03617</td>
+					</tr>
+					<tr>
+						<td>GPCDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = sigma, num2 = theta, num3 = K)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 파레토 분포의 num4에서의 CDF값을 계산합니다.</td>
+						<td>GPCDF(0, 1, 0, 2) -> 0.86466</td>
+					</tr>
+					<tr>
+						<td>GPINV(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = k, num2 = sigma, num3 = theta)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 파레토 분포 CDF의 num4에서의 역함수 값을 계산합니다.</td>
+						<td>GPINV(0, 1, 0, 0.86466) -> 1.99997</td>
+					</tr>
+					<tr>
+						<td>GPMEAN(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = k, num2 = sigma, num3 = theta)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 파레토 분포의 평균을 계산합니다.</td>
+						<td>GPMEAN (0.1, 3, 1) -> 4.33333</td>
+					</tr>
+					<tr>
+						<td>GPPDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = k, num2 = sigma, num3 = theta)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 파레토 분포의 num4 에서의 PDF 값을 계산합니다.</td>
+						<td>GPPDF(0, 1, 0, 2) -> 0.13534</td>
+					</tr>
+					<tr>
+						<td>GPVARIANCE(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = k, num2 = sigma, num3 = theta)</td>
+						<td>모수 num1, num2, num3에 해당하는 일반화 파레토 분포의 분산을 계산합니다.</td>
+						<td>GPVARIANCE(0.1, 3, 1) -> 13.88889</td>
+					</tr>
+					<tr>
+						<td>HYGECDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = m, num2 = k, num3 = n)</td>
+						<td>모수 num1, num2, num3에 해당하는 초기하 분포의 num4에서의 CDF값을 계산합니다.</td>
+						<td>HYGECDF(100, 20, 10, 2) -> 0.68122</td>
+					</tr>
+					<tr>
+						<td>HYGEINV(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = m, num2 = k, num3 = n)</td>
+						<td>모수 num1, num2, num3에 해당하는 초기하 분포 CDF의 num4에서의 역함수 값을 계산합니다.</td>
+						<td>HYGEINV(100, 20, 10, 0.68122) -> 2</td>
+					</tr>
+					<tr>
+						<td>HYGEMEAN(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = m, num2 = k, num3 = n)</td>
+						<td>모수 num1, num2, num3에 해당하는 초기하 분포의 평균을 계산합니다.</td>
+						<td>HYGEMEAN(10, 5, 4) -> 2</td>
+					</tr>
+					<tr>
+						<td>HYGEPDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자 (num1 = m, num2 = k, num3 = n)</td>
+						<td>모수 num1, num2, num3에 해당하는 초기하 분포의 num4 에서의 PDF 값을 계산합니다.</td>
+						<td>HYGEPDF(100, 20, 10, 2) -> 0.31817</td>
+					</tr>
+					<tr>
+						<td>HYGEVARIANCE(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = m, num2 = k, num3 = n)</td>
+						<td>모수 num1, num2, num3에 해당하는 초기하 분포의 분산을 계산합니다.</td>
+						<td>HYGEVARIANCE(10, 5, 4) -> 0.66667</td>
+					</tr>
+					<tr>
+						<td>LGAMMA(num) </td>
+						<td>num: 양의 실수</td>
+						<td>감마함수의 자연로그값을 반환합니다. </td>
+						<td>LGAMMA(3) -> 0.69315</td>
+					</tr>
+					<tr>
+						<td>LN(num) </td>
+						<td>num: 양의 실수</td>
+						<td>자연 로그값을 계산합니다. </td>
+						<td>LN(86) -> 4.45435</td>
+					</tr>
+					<tr>
+						<td>LOG(num,base) </td>
+						<td>num: 양의 실수 base: 1이 아닌 양의 실수</td>
+						<td>지정한 base에 대한 로그값을 계산합니다. </td>
+						<td>LOG(7,2) -> 2.80735</td>
+					</tr>
+					<tr>
+						<td>LOG10(num) </td>
+						<td>num: 양의 실수</td>
+						<td>상용 로그값을 계산합니다. </td>
+						<td>LOG10(86) -> 1.93450</td>
+					</tr>
+					<tr>
+						<td>LOGBETA(num1,num2) </td>
+						<td>num1,2: 양의 실수</td>
+						<td>베타함수의 자연로그값을 반환합니다. </td>
+						<td>LOGBETA(5,3) -> -4.65396</td>
+					</tr>
+					<tr>
+						<td>LOGNCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 mu, num2는 sigma)</td>
+						<td>모수 num1, num2에 해당하는 로그 정규 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>LOGNCDF(0, 1, 2) -> 0.75589</td>
+					</tr>
+					<tr>
+						<td>LOGNINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 mu, num2는 sigma)</td>
+						<td>모수 num1, num2에 해당하는 로그 정규 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>LOGNINV(0, 1, 0.75589) -> 1.99999</td>
+					</tr>
+					<tr>
+						<td>LOGNMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자(num1은 mu, num2는 sigma)</td>
+						<td>모수 num1, num2에 해당하는 로그 정규 분포의 평균을 계산합니다.</td>
+						<td>LOGNMEAN(-2, 2) -> 1</td>
+					</tr>
+					<tr>
+						<td>LOGNPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 mu, num2는 sigma)</td>
+						<td>모수 num1, num2에 해당하는 로그 정규 분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>LOGNPDF(0, 1, 2) -> 0.15687</td>
+					</tr>
+					<tr>
+						<td>LOGNVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자(num1은 mu, num2는 sigma)</td>
+						<td>모수 num1, num2에 해당하는 로그 정규 분포의 분산을 계산합니다.</td>
+						<td>LOGNVARIANCE(-2, 2) -> 53.59815</td>
+					</tr>
+					<tr>
+						<td>MOD(num1, num2) </td>
+						<td>num1: 숫자<br>
+							num2: 숫자
+						</td>
+						<td>num1을 num2로 나누었을 때 나머지를 계산합니다.  </td>
+						<td>MOD(5, 2) -> 1 </td>
+					</tr>
+					<tr>
+						<td>NBINCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 r, num2는 p)</td>
+						<td>모수 num1, num2에 해당하는 음이항 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>NBINCDF(3, 0.5, 2) -> 0.5</td>
+					</tr>
+					<tr>
+						<td>NBININV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 r, num2는 p)</td>
+						<td>모수 num1, num2에 해당하는 음이항 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>NBININV(3, 0.5, 0.5) -> 2</td>
+					</tr>
+					<tr>
+						<td>NBINMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자(num1은 r, num2는 p)</td>
+						<td>모수 num1, num2에 해당하는 음이항 분포의 평균을 계산합니다.</td>
+						<td>NBINMEAN(10, 0.5) -> 10</td>
+					</tr>
+					<tr>
+						<td>NBINPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 r, num2는 p)</td>
+						<td>모수 num1, num2에 해당하는 음이항 분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>NBINPDF(3, 0.5, 2) -> 0.1875</td>
+					</tr>
+					<tr>
+						<td>NBINVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자(num1은 r, num2는 p)</td>
+						<td>모수 num1, num2에 해당하는 음이항 분포의 분산을 계산합니다.</td>
+						<td>NBINVARIANCE(10, 0.5) -> 20</td>
+					</tr>
+					<tr>
+						<td>NCFCDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자(num1은 nu1, num2는 nu2, num3는 delta) </td>
+						<td>모수 num1, num2, num3에 해당하는 비중심 F 분포의 num4에서의 CDF값을 계산합니다.</td>
+						<td>NCFCDF(5, 20, 10, 2) -> 0.2719</td>
+					</tr>
+					<tr>
+						<td>NCFINV(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자(num1은 nu1, num2는 nu2, num3는 delta) </td>
+						<td>모수 num1, num2, num3에 해당하는 비중심 F 분포 CDF의 num4에서의 역함수 값을 계산합니다.</td>
+						<td>NCFINV(5, 20, 10, 0.2719) -> 2</td>
+					</tr>
+					<tr>
+						<td>NCFMEAN(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 nu1, num2는 nu2, num3는 delta) </td>
+						<td>모수 num1, num2, num3에 해당하는 비중심 F 분포의 평균을 계산합니다.단 num1 > 2인 경우 평균 계산 가능</td>
+						<td>NCFMEAN(10, 100, 4) -> 1.42857</td>
+					</tr>
+					<tr>
+						<td>NCFPDF(num1, num2, num3, num4)</td>
+						<td>num1, num2, num3, num4: 숫자(num1은 nu1, num2는 nu2, num3는 delta) </td>
+						<td>모수 num1, num2, num3에 해당하는 비중심 F 분포의 num4 에서의 PDF 값을 계산합니다.</td>
+						<td>NCFPDF(5, 20, 10, 2) -> 0.26075</td>
+					</tr>
+					<tr>
+						<td>NCFVARIANCE(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num1은 nu1, num2는 nu2, num3는 delta) </td>
+						<td>모수 num1, num2, num3에 해당하는 비중심 F 분포의 분산을 계산합니다.단 num1!=0, num2>4인 경우 분산 계산 가능</td>
+						<td>NCFVARIANCE(10, 100, 4) -> 0.42517</td>
+					</tr>
+					<tr>
+						<td>NCTCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 T 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>NCTCDF(10, 1, 2) -> 0.80761</td>
+					</tr>
+					<tr>
+						<td>NCTINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 T 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>NCTINV(10, 1, 0.80761) -> 1.99999</td>
+					</tr>
+					<tr>
+						<td>NCTMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 T 분포의 평균을 계산합니다.(num1>2 인 경우 평균 계산 가능)</td>
+						<td>NCTMEAN(4, 1) -> 1.25331</td>
+					</tr>
+					<tr>
+						<td>NCTPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 T 분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>NCTPDF(10, 1, 2) -> 0.00006</td>
+					</tr>
+					<tr>
+						<td>NCTVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 T 분포의 분산을 계산합니다.(num1>2인 경우 분산 계산 가능)</td>
+						<td>NCTVARIANCE(4, 1) -> 2.4292</td>
+					</tr>
+					<tr>
+						<td>NCX2CDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 카이 제곱 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>NCX2CDF(4, 2, 2) -> 0.13048</td>
+					</tr>
+					<tr>
+						<td>NCX2INV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 카이 제곱 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>NCX2INV(4, 2, 0.13048) -> 2.00003</td>
+					</tr>
+					<tr>
+						<td>NCX2MEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 카이 제곱 분포의 평균을 계산합니다.</td>
+						<td>NCX2MEAN(4, 2) -> 6</td>
+					</tr>
+					<tr>
+						<td>NCX2PDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 카이 제곱 분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>NCX2PDF(4, 2, 2) -> 0.10763</td>
+					</tr>
+					<tr>
+						<td>NCX2VARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = nu, num2 = delta)</td>
+						<td>모수 num1, num2에 해당하는 비중심 카이 제곱 분포의 분산을 계산합니다.</td>
+						<td>NCX2VARIANCE(4, 2) -> 16</td>
+					</tr>
+					<tr>
+						<td>NORMCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 정규 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>NORMCDF(-1, 1, 2) -> 0.99865</td>
+					</tr>
+					<tr>
+						<td>NORMDIST(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자(num2=mu, num3=sigma)</td>
+						<td>모수 num2, num3에 해당하는 정규 분포의 num1에서의 CDF값을 계산합니다. 만약 num1 < num2인 경우 1-CDF값을 반환합니다</td>
+						<td>NORMDIST(6, 5, 1) -> 0.84134</td>
+					</tr>
+					<tr>
+						<td>NORMINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 정규 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>NORMINV(-1, 1, 0.99865) -> 1.99998</td>
+					</tr>
+					<tr>
+						<td>NORMMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 정규 분포의 평균을 계산합니다.</td>
+						<td>NORMMEAN(0, 2) -> 0</td>
+					</tr>
+					<tr>
+						<td>NORMPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 정규 분포의 num3 에서의 PDF 값을 계산합니다.</td>
+						<td>NORMPDF(-1, 1, 2) -> 0.00443</td>
+					</tr>
+					<tr>
+						<td>NORMVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = mu, num2 = sigma)</td>
+						<td>모수 num1, num2에 해당하는 정규 분포의 분산을 계산합니다.</td>
+						<td>NORMVARIANCE(0, 2) -> 4</td>
+					</tr>
+					<tr>
+						<td>ODD(num) </td>
+						<td>num: 숫자</td>
+						<td>num에 가장 가까운 홀수로 올림합니다. </td>
+						<td>ODD(1.1) -> 3 </td>
+					</tr>
+					<tr>
+						<td>PERM(num1, num2) </td>
+						<td>num1, num2: 숫자(단 num1 > num2, 두 인수는 0 또는 양의정수)</td>
+						<td>num1개 중에서 num2개를 선택하는 순열의 수를 계산합니다. </td>
+						<td>PERM(4, 2) -> 12 </td>
+					</tr>
+					<tr>
+						<td>POISCDF(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = lamda)</td>
+						<td>모수 num1에 해당하는 포아송 분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>POISCDF(4, 2) -> 0.2381</td>
+					</tr>
+					<tr>
+						<td>POISINV(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = lamda)</td>
+						<td>모수 num1에 해당하는 포아송 분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>POISINV(4, 0.2381) -> 1</td>
+					</tr>
+					<tr>
+						<td>POISMEAN(num1)</td>
+						<td>num1: 숫자 (num1 = lamda)</td>
+						<td>모수 num1에 해당하는 포아송 분포의 평균을 계산합니다.</td>
+						<td>POISMEAN(2) -> 2</td>
+					</tr>
+					<tr>
+						<td>POISPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 (num1 = lamda)</td>
+						<td>모수 num1에 해당하는 포아송 분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>POISPDF(4, 2) -> 0.14653</td>
+					</tr>
+					<tr>
+						<td>POISVARIANCE(num1)</td>
+						<td>num1: 숫자 (num1 = lamda)</td>
+						<td>모수 num1에 해당하는 포아송 분포의 분산을 계산합니다.</td>
+						<td>POISVARIANCE(2) -> 2</td>
+					</tr>
+					<tr>
+						<td>POWER(num1, num2) </td>
+						<td>num1: 숫자<br>
+							num2: 숫자</td>
+						<td>num1을 num2만큼 거듭제곱한 값을 계산합니다. </td>
+						<td>POWER(4, 0.5) -> 2 </td>
+					</tr>
+					<tr>
+						<td>PRODUCT(num1, num2, ..., numn) </td>
+						<td>num1, num2, ..., numn: 숫자</td>
+						<td>인수들의 곱을 계산합니다. </td>
+						<td>PRODUCT(1, 2) -> 2 </td>
+					</tr>
+					<tr>
+						<td>RADIANS(num) </td>
+						<td>num: 숫자</td>
+						<td>Degree를 Radians으로 변환합니다. </td>
+						<td>RADIANS(180) -> 3.14159(pi) </td>
+					</tr>
+					<tr>
+						<td>RAND() </td>
+						<td>num: 숫자</td>
+						<td>0에서 1사이의 난수를 계산합니다.  </td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>RAYLCDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 레일리 분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>RAYLCDF(1, 2) -> 0.86466</td>
+					</tr>
+					<tr>
+						<td>RAYLINV(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 레일리 분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>RAYLINV(1, 0.86466) -> 1.99998</td>
+					</tr>
+					<tr>
+						<td>RAYLMEAN(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 레일리 분포의 평균을 계산합니다.</td>
+						<td>RAYLMEAN(2) -> 2.50663</td>
+					</tr>
+					<tr>
+						<td>RAYLPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 레일리 분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>RAYLPDF(1, 2) -> 0.27067</td>
+					</tr>
+					<tr>
+						<td>RAYLVARIANCE(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 레일리 분포의 분산을 계산합니다.</td>
+						<td>RAYLVARIANCE(2) -> 1.71681</td>
+					</tr>
+					<tr>
+						<td>ROUND(num1, digit) </td>
+						<td>num1: 숫자<br>
+							digit: 자리수</td>
+						<td>num1을 지정한 자리수(num2)로 반올림합니다. </td>
+						<td>ROUND(12.345, 2) -> 12.35 </td>
+					</tr>
+					<tr>
+						<td>ROUNDDOWN(num1, digit) </td>
+						<td>num1: 숫자<br>
+							digit: 자리수</td>
+						<td>num1을 지정한 자리수(digit)로 내림합니다. </td>
+						<td>ROUNDDOWN(2.50663, 2) -> 2.50 </td>
+					</tr>
+					<tr>
+						<td>ROUNDUP(num1, digit) </td>
+						<td>num1: 숫자<br>
+							digit: 자리수</td>
+						<td>num1을 지정한 자리수(digit)로 올림합니다. </td>
+						<td>ROUNDUP(2.50663, 2) -> 2.51 </td>
+					</tr>
+					<tr>
+						<td>SIN(num) </td>
+						<td>num: 숫자</td>
+						<td>사인 값을 계산합니다. </td>
+						<td>SIN(3.141592) -> 0 </td>
+					</tr>
+					<tr>
+						<td>SINH(num) </td>
+						<td>num: 숫자</td>
+						<td>하이퍼볼릭 사인 값을 계산합니다. </td>
+						<td>SINH(1) -> 1.17520</td>
+					</tr>
+					<tr>
+						<td>SQRT(num) </td>
+						<td>num: 숫자</td>
+						<td>양의 제곱근을 계산합니다. </td>
+						<td>SQRT(4) -> 2 </td>
+					</tr>
+					<tr>
+						<td>TAN(num) </td>
+						<td>num: 숫자</td>
+						<td>탄젠트 값을 계산합니다. </td>
+						<td>TAN(0.785) -> 0.99920</td>
+					</tr>
+					<tr>
+						<td>TANH(num) </td>
+						<td>num: 숫자</td>
+						<td>하이퍼볼릭 탄젠트 값을 계산합니다. </td>
+						<td>TANH(-2) -> -0.96403 </td>
+					</tr>
+					<tr>
+						<td>TCDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 t 분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>TCDF(1, 0.5) -> 0.64758</td>
+					</tr>
+					<tr>
+						<td>TINV(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 t 분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>TINV(1, 0.64758) -> 0.49999</td>
+					</tr>
+					<tr>
+						<td>TMEAN(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 t 분포의 평균을 계산합니다.</td>
+						<td>TMEAN(4) -> 0</td>
+					</tr>
+					<tr>
+						<td>TPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 t 분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>TPDF(1, 0.5) -> 0.25465</td>
+					</tr>
+					<tr>
+						<td>TOMAX(var, limit)</td>
+						<td>var: 변수값 limit: 임의값</td>
+						<td>변수값(var)이 지정된 한계값(limit)보다 작거나 같을 때 변수값을 반환하며, 클경우 한계값을 반환합니다</td>
+						<td>TOMAX(9, 10) -> 9</td>
+					</tr>
+					<tr>
+						<td>TRIGAMMA(num1)</td>
+						<td>num1: 숫자 num1 > 0</td>
+						<td>Trigamma를 계산합니다.</td>
+						<td>TRIGAMMA(1) -> 1.64493</td>
+					</tr>
+					<tr>
+						<td>TRUNC(num1, num2)</td>
+						<td>num1, num2: 숫자 (num2 는 정수)</td>
+						<td>지정한 자릿수만큼 소수점 아래에 남기고 나머지는 버린 값을 계산합니다.</td>
+						<td>TRUNC(0.76, 1) -> 0.7</td>
+					</tr>
+					<tr>
+						<td>TVARIANCE(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 t 분포의 분산을 계산합니다.</td>
+						<td>TVARIANCE(4) -> 2</td>
+					</tr>
+					<tr>
+						<td>UNIDCDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 이산균일 분포의 num2에서의 CDF값을 계산합니다.</td>
+						<td>UNIDCDF(50, 20) -> 0.4</td>
+					</tr>
+					<tr>
+						<td>UNIDINV(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 이산균일 분포 CDF의 num2에서의 역함수 값을 계산합니다.</td>
+						<td>UNIDINV(50, 0.4) -> 20</td>
+					</tr>
+					<tr>
+						<td>UNIDMEAN(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 이산균일 분포의 평균을 계산합니다.</td>
+						<td>UNIDMEAN(5) -> 3</td>
+					</tr>
+					<tr>
+						<td>UNIDPDF(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1에 해당하는 이산균일 분포의 num2에서의 PDF 값을 계산합니다.</td>
+						<td>UNIDPDF(50, 20) -> 0.02</td>
+					</tr>
+					<tr>
+						<td>UNIDVARIANCE(num1)</td>
+						<td>num1: 숫자 </td>
+						<td>모수 num1에 해당하는 이산균일 분포의 분산을 계산합니다.</td>
+						<td>UNIDVARIANCE(5) -> 2</td>
+					</tr>
+					<tr>
+						<td>UNIFCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 연속 균일 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>UNIFCDF(-1, 1, 0.7) -> 0.85</td>
+					</tr>
+					<tr>
+						<td>UNIFINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 연속 균일 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>UNIFINV(-1, 1, 0.85) -> 0.7</td>
+					</tr>
+					<tr>
+						<td>UNIFMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 연속 균일 분포의 평균을 계산합니다.</td>
+						<td>UNIFMEAN(1, 7) -> 4</td>
+					</tr>
+					<tr>
+						<td>UNIFPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 연속 균일 분포의 num3에서의 PDF 값을 계산합니다.</td>
+						<td>UNIFPDF(-1, 1, 0.7) -> 0.5</td>
+					</tr>
+					<tr>
+						<td>UNIFVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 연속 균일 분포의 분산을 계산합니다.</td>
+						<td>UNIFVARIANCE(1, 7) -> 3</td>
+					</tr>
+					<tr>
+						<td>WBLCDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 와이블 분포의 num3에서의 CDF값을 계산합니다.</td>
+						<td>WBLCDF(0.15, 0.8, 0.5) -> 0.53846</td>
+					</tr>
+					<tr>
+						<td>WBLINV(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 와이블 분포 CDF의 num3에서의 역함수 값을 계산합니다.</td>
+						<td>WBLINV(0.15, 0.8, 0.53846) -> 0.5</td>
+					</tr>
+					<tr>
+						<td>WBLMEAN(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 와이블 분포의 평균을 계산합니다.</td>
+						<td>WBLMEAN(2, 0.5) -> 4</td>
+					</tr>
+					<tr>
+						<td>WBLPDF(num1, num2, num3)</td>
+						<td>num1, num2, num3: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 와이블 분포의 num3에서의 PDF 값을 계산합니다.</td>
+						<td>WBLPDF(0.15, 0.8, 0.5) -> 1.53846</td>
+					</tr>
+					<tr>
+						<td>WBLVARIANCE(num1, num2)</td>
+						<td>num1, num2: 숫자 </td>
+						<td>모수 num1, num2에 해당하는 와이블 분포의 분산을 계산합니다.</td>
+						<td>WBLVARIANCE(2, 80) -> 0.00100</td>
+					</tr>
+			</table>
+    	
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

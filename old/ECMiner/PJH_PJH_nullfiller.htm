@@ -1,0 +1,149 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">결측치 처리
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/PJH_nullfiller.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		
+	    		입력된 변수에 결측치가 존재할 경우, 지정값으로 채워 넣는 노드입니다.
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>,
+	    <a href="#채우기 값 정의">채우기 값 정의</a>
+	
+	    
+	  	
+	  	<h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+				<li><span class="nodeExHighlight">연속형 변수</span>에 대한 채우기 값을 지정합니다.</li>
+				<li><span class="nodeExHighlight">이산형 변수</span>에 대한 채우기 값을 지정합니다.</li>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="3">선택사항</th>
+						<td>대상변수</td>
+						<td>처리 대상이되는 변수를 선택합니다.</td>
+						<td></td>
+						<td>모든 변수, 이산형 변수만, 연속형 변수만</td>
+					</tr>
+					<tr>
+						<td>연속형 변수</td>
+						<td>변수가 <span class="genExHighlight">연속형</span>일 경우, 채워 넣을 값을 지정합니다.</td>
+						<td></td>
+						<td>평균, 중앙값, 이전값, 이후값, 구간 평균, 0할당</td>
+					</tr>
+					<tr>
+						<td>이산형 변수</td>
+						<td><span class="genExHighlight">이산형</span> 변수에 대한 채우기 값을 지정합니다.</td>
+						<td></td>
+						<td>최대횟수에 해당하는 값, 최소횟수에 해당하는 값, 이전값, 이후값 </td>
+					</tr>
+			</table>
+			
+			
+				    <h3><a name="채우기 값 정의">채우기 값 정의</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">변수형태</th>
+						<th width="">값</th>
+						<th width="">설명</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="6">연속형</th>
+						<td>평균</td>
+						<td>결측치를 해당 변수의 평균값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>중앙값</td>
+						<td>결측치를 해당 변수의 중앙값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>이전값</td>
+						<td>결측치를 해당 변수의 이전값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>이후값</td>
+						<td>결측치를 해당 변수의 이후값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>구간평균</td>
+						<td>결측치를 (이전값 + 이후값)/2의 값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>0 할당</td>
+						<td>결측치를 0으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<th rowspan="4">이산형</th>
+						<td>최대 횟수에 해당하는 값</td>
+						<td>결측치를 최대 횟수 범주값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>최소 횟수에 해당하는 값</td>
+						<td>결측치를 최소 횟수 범주값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>이전값</td>
+						<td>결측치를 해당 변수의 이전값으로 대체합니다.</td>
+					</tr>
+					<tr>
+						<td>이후값</td>
+						<td>결측치를 해당 변수의 이후값으로 대체합니다.</td>
+					</tr>
+			</table>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

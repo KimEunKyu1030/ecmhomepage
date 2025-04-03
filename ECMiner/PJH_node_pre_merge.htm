@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">병합
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./images/node_pre_merge.jpg"></div>
+	    	<div class="nodeexplain">
+	    		
+	    		둘 이상의 데이터를 하나로 합쳐 새로운 데이터 소스를 만들고자 한다면 <span class="nodeExHighlight">병합 노드</span>를 이용합니다. 단, 데이터를 합칠 때 기준이 되는 필드는 각각의 데이터에 모두 있어야 합니다. 예를 들어 고객 정보에 대한 데이터가 데이터 소스 A와 소스 B에 나눠져 있을 경우 이를 고객 번호(키필드)를 기준으로 하나로 합쳐 새로운 데이터 소스 C로 만들 때 사용합니다.<br>
+	    		<span class="nodeExHighlight">내부 조인, 외부 조인, 안티 조인</span> 등 다양한 병합 방법을 제공하며 이를 이용하여 얻고자하는 새로운 데이터 소스를 얻을 수 있습니다.
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+
+	    <a href="#속성">속성</a>,
+	    <a href="#참고사항">참고사항</a>
+	
+	    
+	    <h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>병합 노드는 다음과 같은 속성변경 인터페이스를 갖습니다.</li>
+	  		<ul class="liType02">
+	  			<li><span class="genExHighlight">데이터 소스 순위</span> 인터페이스는 추가할 데이터 소스가 표시되고, 이들의 우선 순위를 결정하는 인터페이스입니다. 가장 높은 우선순위의 데이터 소스(맨위에 위치하는 데이터 소스)는 <span class="genExHighlight">주 소스</span>가 되어서 병합의 기준이 됩니다.</li>
+	  			<p>			
+		    	<img src="./images/node_pre_merge_01.jpg">
+		  		</p>
+		  		<table class="tbStyle01">
+						<thead>
+							<tr>
+								<th width="">아이콘</th>
+								<th width="">기능</th>
+							</tr>
+						</thead>
+							<tr>
+								<td><img src="./images/btn_up.jpg"></td>
+								<td>데이터 소스의 순위를 높이는 버튼입니다.</td>
+							</tr>
+							<tr>
+								<td><img src="./images/btn_down.jpg"></td>
+								<td>데이터 소스의 순위를 내리는 버튼입니다.</td>
+							</tr>
+					</table>
+					<li><span class="genExHighlight">키필드</span> 는 나눠져 있는 데이터를 하나로 합칠 때 기준이 되는 값입니다. <span class="genExHighlight">키필드</span> 인터페이스는 키필드로 사용 가능한 변수명이 좌측에 표시되고, 키필드로 선택한 변수들이 우측에 표시됩니다. 가운데 버튼을 이용하여 사용하고자 하는 키필드를 선택 혹은 해제할 수 있습니다.</li>
+	  			<p>			
+		    	<img src="./images/node_pre_merge_02.jpg">
+		  		</p>
+		  		<table class="tbStyle01">
+						<thead>
+							<tr>
+								<th width="">아이콘</th>
+								<th width="">기능</th>
+							</tr>
+						</thead>
+							<tr>
+								<td><img src="./images/btn_right.jpg"></td>
+								<td>선택된 키필드를 추가합니다.</td>
+							</tr>
+							<tr>
+								<td><img src="./images/btn_left.jpg"></td>
+								<td>선택된 키필드를 삭제합니다.</td>
+							</tr>
+					</table>
+					<li><span class="genExHighlight">포함할 데이터 소스</span> 인터페이스는 <span class="genExHighlight">병합방법</span>이 <span class="genExHighlight">부분 외부 조인</span>인 경우 활성화되며 포함될 데이터 소스를 선택하게 합니다. <span class="genExHighlight">부분 외부 조인</span>은 <span class="genExHighlight">외부 조인</span>과 마찬가지로 데이터 병합를 하지만 전체 데이터 소스가 아니라 선택된 데이터 소스의 데이터만 반환한다는 차이가 있습니다.</li>
+	  			<p>			
+		    	<img src="./images/node_pre_merge_03.jpg">
+		  		</p>
+	  		</ul>
+				
+	  	</ul>
+	  	
+		<p>
+	    	<span class="genExHighlight"></span>
+				<li><span class="genExHighlight">데이터 소스 순위</span> 리스트에서, 소스들의 순서를 변경하고, <span class="genExHighlight">주 소스</span>를 지정합니다. </li>
+				<li><span class="genExHighlight">키필드 지정 방법</span>을 선택합니다. <span class="genExHighlight">수동</span>을 선택하면 인터페이스가 활성화되어 키필드로 사용될 필드를 선택 혹은 삭제할 수 있습니다. </li>
+				<li><span class="genExHighlight">병합 방법</span>을 결정합니다. <span class="genExHighlight">변수명 중복 시</span> 처리법을 선택하고 <span class="genExHighlight">병합 방법</span>을 선택합니다. </li>
+				<li><span class="genExHighlight">병합 방법</span>이 <span class="genExHighlight">부분 외부 조인</span>일 때 <span class="genExHighlight">포함할 데이터 소스</span> 인터페이스가 활성화되어 데이터 소스를 선택할 수 있습니다. </li>
+
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="">데이터 소스 순위</th>
+						<td>데이터 소스</td>
+						<td>추가할 데이터 소스의 리스트로, 순위 조정을 통해 소스의 우선순위 조정과 <span class="genExHighlight">주 소스</span> 결정을 할 수 있습니다. </td>
+						<td>기타 UI</td>
+						<td>사용자 인터페이스 참조</td>
+					</tr>
+					<tr>
+						<th rowspan="2">키필드</th>
+						<td>키필드 지정 방법</td>
+						<td>변수병합 시 키가 되는 필드를 지정해줍니다. <span class="genExHighlight">수동</span> 선택시 키필드 선택 인터페이스가 활성화되어 사용자가 직접 키필드를 선택할 수 있습니다. </td>
+						<td>필수</td>
+						<td>자동, 수동</td>
+					</tr>
+					<tr>
+						<td>키필드 지정 인터페이스</td>
+						<td><span class="genExHighlight">키필드 지정 방법</span>이 <span class="genExHighlight">수동</span>의 경우 활성화됩니다. 사용자가 직접 키필드를 선택 혹은 삭제할 수 있습니다.</td>
+						<td>기타 UI</td>
+						<td>사용자 인터페이스 참조</td>
+					</tr>
+					<tr>
+						<th rowspan="3">병합방법</th>
+						<td>변수명 중복시</td>
+						<td><span class="genExHighlight">변수명 중복시</span>처리법을 선택합니다.</td>
+						<td>필수</td>
+						<td>필터링, 인덱스부여, 오류발생</td>
+					</tr>
+					<tr>
+						<td>병합방법</td>
+						<td><span class="genExHighlight">병합방법</span>을 선택합니다. <span class="genExHighlight">부분 외부 조인</span>의 경우 포함할 <span class="genExHighlight">데이터 소스</span> 인퍼테이스를 활성화시켜 데이터 소스 선택이 가능하게 합니다. </td>
+						<td>필수</td>
+						<td>내부 조인, 외부 조인, 부분 외부 조인, Anti-Join</td>
+					</tr>
+					<tr>
+						<td>포함할 데이터 소스</td>
+						<td><span class="genExHighlight">병합 방법</span>이 <span class="genExHighlight">부분 외부 조인</span>의 경우 활성화됩니다. 사용자가 직접 체크박스를 통해 데이터 소스를 선택 혹은 해제할 수 있습니다.</td>
+						<td>기타 UI</td>
+						<td>사용자 인터페이스 참조</td>
+					</tr>
+			</table>
+			
+			
+	  	<h3><a name="참고사항">참고사항</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+				<li>각 병합 방법에 대하여 알고 싶으신 분은 <a href="./merge_method.htm">병합 방법</a> 부분을 참조하시기 바랍니다. </li>
+	  	</ul>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

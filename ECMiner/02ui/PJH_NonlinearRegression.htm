@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">Nonlinear Regression
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	일반적으로 함수 f가 다음과 같은 성질을 가질 때 우리는 그 함수를 선형함수(Linear Function 혹은 Linear Map)이라고 합니다.
+	    </p>
+	    
+	    
+	    <h3>개요</h3>
+	    <p>
+	    비선형 최적화 알고리즘(Nonlinear Optimization Algorithm)<br>
+	    	일반적으로 함수 f가 다음과 같은 성질을 가질 때 우리는 그 함수를 선형함수(Linear Function 혹은 Linear Map)이라고 합니다.<br>
+	    	F(x+y)=F(x)+F(y)… (a)<br>
+	    	F(ax)=aF(x) … (b)<br>
+	    정의상은 그렇지만 우리는 통상적으로 함수가 입력 변수에 대한 1차식으로 이루어져 있으면 선형함수라고 합니다. 비선형 함수는 선형 함수가 아닌 모든 함수를 가리킵니다.(더욱 일반적) 이러한 비선형 함수를 최적화 하는 것이 이번 Nonlinear Regression 의 목적이라고 할 수 있습니다.<br>
+	    	비선형 최소 제곱 회귀분석(Nonlinear Least Square Regression)<br>
+	    	다음과 같은 함수가 있다고 합시다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_8.gif">
+	    
+	    <p>
+	    	x와 진한 글씨로 나타낸 것은 그것이 vector임을 나타냅니다. 현재 (t_i, y_i)는 데이터로 주어진 상태에서 위의 F함수를 최소화하는 것을 비선형 최소 제곱 회귀분석(Nonlinear Least Square Regression)이라고 합니다. <br>
+	    	위의 f가 비선형 함수일 때 문제는 어려워집니다. 함수 f가 선형일 경우 F를 최소화하는 x 벡터는 Closed Form으로 구해집니다. 하지만 현재 선형 및 모든 함수를 포괄하는 방법을 찾아야 하는데 우리는 이를 위해 일반적인 비선형 최적화 알고리즘에 의존합니다. 이 중에서도 가장 널리 쓰이고 안정적이며 우수한 성능을 나타내는 것이 바로 Levenberg Marquardt 알고리즘입니다. ECMiner Nonlinear Regression에서는 이 알고리즘을 이용하여 위의 문제를 해결합니다. <br>
+	    	정형 수식과 사용자 정의 수식<br>
+	    	EC Miner에서 사용할 Curve Fitting의 구성을 간단히 정리하면 다음과 같습니다.<br>
+	    	정형 수식 회귀분석<br>
+	    	지수함수 <br>
+	    	다항함수 <br>
+	    	로그함수 <br>
+	    	거듭제곱함수<br>
+	    	선형함수 <br>
+	    	위의 기본적인 함수라는 것에는 공통점이 있습니다. 모든 함수를 소위 선형화시킬 수 있다는 것입니다. 다항함수, 로그함수, 선형함수는 모두 선형화되어 있습니다. Parameter가 서로 일차식의 관계를 갖기 때문입니다. 하지만 지수함수와 거듭제곱함수는 그렇지 않은데 이는 다음과 같은 방법으로 쉽게 변형함으로써 해결할 수 있습니다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_9.gif">
+	    
+	    <p>
+	    	이런식으로 하면 쉽게 Parameter를 추정할 수 있습니다. 하지만 이는 정확한 Least Square가 아니라 정확한 결과와는  차이가 있을 수 있습니다. 하지만 꽤나 잘 맞는 예측이라고 받아들일 수는 있겠습니다.<br>
+	    	사용자 정의 회귀분석<br>
+	    	이는 사용자가 형태를 지정한 복잡한 모양에 대한 회귀분석을 하기 위한 것입니다. 사용자는 어떤 형태로든 원하는 함수의 모양을 입력할 수 있고 알고리즘은 이 함수에 가장 잘 맞는 Parameter를 찾아줍니다.
+	    </p>
+	    
+	    
+
+			<h3>실행 방법</h3>
+	    <p>
+	    	<span class="genExHighlight">[분석] - [Nonlinear Regression]</span> 를 선택하면 <span class="genExHighlight">[Nonlinear Regression]</span> 윈도우가 나타납니다. 다음과 같은 메인 화면에서 회귀식을 찾기 위해서 사용자 정의 수식 지정을 할 수 있고, 정형 수식을 선택할 수 있습니다. 정형 수식을 선택하면 다음과 같이 독립변수와 종속변수를 지정할 수 있습니다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_1.jpg"><br><br>
+	    
+	    <p>
+	    	변수를 지정하고 함수의 형태를 선택하여 실행 단추를 누르면 다음과 같이 Estimation된 결과( 플롯 및 회귀 분석 결과) 를 볼 수 있습니다. 
+	    </p>
+	    <img src="../images/Nonlinear_Regression_2.jpg"><br><br>
+	    
+	    <p>
+	    	그리고 잔차를 선택하면 실제 시계열 데이터와 적합치를 한번에 볼 수 있고 그 아래의 잔차도를 통해 잔차는 어떠한 형태를 띄는지 알 수 있습니다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_3.jpg"><br><br>
+	    
+	    <p>
+	    	사용자 정의 수식을 위해서 수식 지정을 선택합니다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_4.jpg"><br><br>
+	    
+	    <p>
+	    	버튼을 클릭하면 다음과 같은 수식 편집기 창이 나타나게 되는데 여기서 사용자가 원하는 형태의 수식을 지정할 수 있습니다. (이 때 추정하고자 하는 Parameter의 이름은 @T1, @T2,…와 같은 형태로 써 주어야 함에 주의합니다.)
+	    </p>
+	    <img src="../images/Nonlinear_Regression_5.jpg"><br><br>
+	    
+	    <p>
+	    	Main화면에서 초기 값을 설정하고 실행 버튼을 클릭합니다. 만약 위에서 독립변수로 사용하는 변수를 두 개로 하면 다음과 같은 3차원 플롯을 결과로 얻을 수 있습니다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_6.jpg"><br><br>
+	    
+	    <p>
+	    	잔차 라디오 버튼을 선택하면 다음과 같이 실제 시계열 데이터와 적합치, 그리고 잔차의 추이를 볼 수 있습니다.
+	    </p>
+	    <img src="../images/Nonlinear_Regression_7.jpg">
+	    
+	    
+	  	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

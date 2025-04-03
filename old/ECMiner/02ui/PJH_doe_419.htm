@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">분산 분석 (Analysis of Variance, ANOVA)
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+	<p>	분산 분석은 전체 변동에서 각 항에 의해 생기는 변동의 정도가 어느 정도인지를 파악하여 각 항이 반응 값에 영향을 미치는지에 대한 여부를 판단할 수 있도록 해 줍니다. 분산 분석은 회귀 분석에 사용된 Regressor Matrix를 통해서 쉽게 수행될 수 있습니다.
+
+<br>먼저 블록이 있는 경우 블록에 대한 변동을 구해야 합니다. Regressor Matrix X의 첫 번째부터 i번째 Column 으로 이루어진 Submatrix라고 하고, 블록의 총 개수를 bn(>=2)이라고 할 때
+</p>
+	
+	<br><p style="margin-left:50"><img src="../images/doe_419_01.gif"></p><br>
+
+	<p>입니다. 만약 블록의 개수가 1이면 위의 과정을 실행하지 않습니다. 그리고 이 때의 자유도는 bn-1입니다. <br>
+	이제 각 항에 대한 Sum of Squares를 구해야 합니다. 하나의 항은 X의 하나의 Column에 해당합니다. 어떤 항이 j번 째 Column에 해당한다고 하면 그 항의 Sum of square는 </p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_02.gif"></p><br>
+
+	<p>입니다. 이 때 이 항의 자유도는 1입니다. 하지만 ECMiner DOE에서는 각 항에 대해서 Sum of Square를 구하지 않고 주 효과와 2원 상호작용, 3원 상호작용 혹은 다른 특징에 의해 묶어서 SS를 구하도록 합니다.  먼저는 주 효과에 의한 열이 i부터 j까지라고 한다면 </p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_03.gif"></p><br>
+
+	<p>의 공식을 써서 Sum of Square를 구합니다. 이는 결국 주효과를 구성하는 열에 대한 각각의 Sum of Square를 모두 더한 것과 같은 값입니다. 이것의 자유도는 i-j가 됩니다. 마찬가지 방법으로 k원 상호작용도 묶어서 Sum of Square를 구하도록 합니다.<br>만약 설계에 중심점이 있다면 가장 마지막 열이 그에 해당합니다. 중심점에 대한 변동을 우리는 Curvature라고 합니다.  X의 column의 개수를 Ncols라고 할 때 </p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_04.gif"></p><br>
+
+	<p>이고 이에 대한 자유도는 1이 됩니다.<br>SSE와, SST의 경우는 다음과 같이 구합니다.</p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_05.gif"></p>
+	<p style="margin-left:50"><img src="../images/doe_419_06.gif"></p><br>
+
+	<p>로 구합니다. 이 때의 자유도는 ‘전체 데이터 개수-1’ 이 됩니다. 블록, Curvature, 주효과, 2원 상호작용…. 의 F value 및 P value는 </p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_07.gif"></p><br>
+
+	<p>을 통해서 구합니다. 이에 덧붙여 고려해야 할 것은 적합성 결여입니다.(Lack of Fit) SSE를 구할 때 SSE는 Pure Error와 Lack of Fit으로 구성된다고 할 수 있습니다. Pure Error는 같은 점에서 실험을 여러 번 한 경우(2번 이상)에 구할 수 있습니다. <br>
+
+(단 여기서 같은 점이라는 것은 실제의 같은 점을 의미하지 않습니다. 여기서는 Regressor  Matrix의 행이 같으면 같은 점이라고 말한 것입니다. 실제 실험 점이 다르더라도 선택 항을 어떻게 선택하느냐에 따라서 Regressor Matrix의 행은 같을 수 있습니다.)<br>
+
+만약  <img src="../images/doe_419_08.gif"> 실험 점에서 <img src="../images/doe_419_09.gif">번의 실험을 하였을 경우) Pure Error는 </p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_10.gif"></p>
+	<p style="margin-left:50"><img src="../images/doe_419_11.gif"></p><br>
+
+	<p>그리고 Pure Error의 자유도는 다음과 같습니다. </p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_12.gif"></p><br>
+
+	<p>이와 같이 Pure Error와 그것의 자유도를 구하면 Lack of Fit의 SS와 자유도 또한 다음과 같이 구할 수 있습니다.</p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_13.gif"></p>
+	<p style="margin-left:50"><img src="../images/doe_419_14.gif"></p><br>
+
+	<p>이 때 구한 Lack of Fit의 F value 및 P value는</p>
+	<br><p style="margin-left:50"><img src="../images/doe_419_15.gif"></p>
+	<p style="margin-left:50"><img src="../images/doe_419_16.gif"></p><br>
+
+	<p>이를 통해 본 모델의 적합성에 결여가 있는지를 통계적으로 확인해 볼 수 있습니다.</p>
+	
+
+
+	<br>
+	<ul class="liType02">
+		<ul class="liType02">
+			<li>요인 설계 분산 분석 결과</li>
+			<p><img src="../images/doe_419_17.jpg"></p><br>
+
+			<li>반응 표면 설계 분산 분석 결과</li>
+			<p><img src="../images/doe_419_18.jpg"></p><br>
+
+			<li>혼합물 설계 분산 분석 결과</li>
+			<p><img src="../images/doe_419_19.jpg"></p>
+
+		</ul>
+	</ul>
+
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

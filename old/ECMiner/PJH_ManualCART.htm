@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">MANUAL CART
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./files/MANUAL%20CART.files/image001.jpg"></div>
+    	<div class="nodeexplain">
+    		<span class="nodeExHighlight">MANUAL CART노드</span>는 사용자 CART(Decision Tree)로써 본인이 원하는 조건에 따라 의사결정 나무를 그려 가는 노드입니다.
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>
+		
+
+    <h3><a name="개요">개요</a></h3>
+    <ul class="liType02">
+  		<li>사용자 CART로 사용자가 임의로 분기조건을 주어 분석할 수 있는 노드입니다. 일반적인 의사결정나무 분석과 같지만 사용자가 임의로 분기조건을 주기도 하고 자동으로 줄 수도 있습니다. 그리고 트리완성 옵션이 있어서 일반 CART 노드에서 사용자 정의 형태 노드라고 볼 수 있습니다.</li>
+  	</ul>
+  	
+<H3><A name=고려사항>고려사항</A></H3>
+<UL class=liType02>
+  <LI>CART노드 자체가 종속변수의 데이터 타입에 맞는 수행기법을 선택해 종속변수가 연속형일 때는 <SPAN 
+  class=genExHighlight>예측분석</SPAN>을 이산형일 때는 <SPAN 
+  class=genExHighlight>분류분석</SPAN>을 수행합니다. 
+  <LI>CART노드에서의 불순도 함수는 종속변수가 연속형일 때(예측분석 시)는 LSD(Least Squared Deviation)을 
+  사용하며, 종속변수가 이산형일 때(분류분석 시)는 Gini,Twoing,Entropy 중 선택할 수 있습니다 </LI></UL>
+
+  	
+  	<h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+			<li>일반적인 CART 알고리즘에 <span class="genExHighlight">MANUAL CART 노드</span>를 넣고 분석을 수행합니다.</li>
+			<p><img src="./files/MANUAL%20CART.files/image002.jpg"></p>
+			<li>그러면 다음과 같은 화면이 뜹니다. 이때 개인이 원하는 분기조건을 선택합니다.</li>
+			<br>
+			<span><img src="./files/MANUAL%20CART.files/image003.jpg"></span>
+
+			<p><span><img src="./files/MANUAL%20CART.files/image005.jpg"></span></p>
+  	</ul>
+			
+		
+    <h3><a name="속성">속성</a></h3>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="">속성명</th>
+					<th width="">설명</th>
+					<th width="40">기타</th>
+					<th width="">비고</th>
+				</tr>
+			</thead>
+			
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>조건부 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="3">선택사항</th>
+					<td>불순도 함수</td>
+					<td>분류 분석의 경우 Gini, Twoing, Entropy 중 하나의 불순도 함수를 선택합니다. 예측 분석의 경우 LSD만 선택가능 합니다.</td>
+					<td>필수</td>
+					<td>Gini, Twoing, Entropy, LSD</td>
+				</tr>
+				<tr>
+					<td>오분류 비용</td>
+					<td>오분류 비용(i,j)는 i-클래스를 j-클래스로 오분류 했을 시의 비용을 나타냅니다. Default는 diagonal=0, 나머지는1. 즉, 제대로 분류하면0, 오분류하면 1이 됩니다.</td>
+					<td>필수</td>
+					<td>기본값, 직접입력</td>
+				</tr>
+				<tr>
+					<td>점유도</td>
+					<td>점유도는 i-class가 차지하는 비율을 나타냅니다. Default는 받아들인 데이터 내에서의 각 클래스 비율을 사용합니다.</td>
+					<td>필수</td>
+					<td>기본값, 직접입력</td>
+				</tr>
+
+				
+		</table>
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li><br>
+			<span class="genExHighlight">화면표시 노드</span>에서 각 관측치의 예측 클래스를 알 수 있습니다.
+  		<p>			
+    	<img src="./files/MANUAL%20CART.files/image007.jpg">
+  		</p>
+  	</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

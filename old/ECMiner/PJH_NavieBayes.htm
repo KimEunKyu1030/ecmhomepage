@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+		<div class="title">NavieBayes
+		<div class="version"></div>
+		</div>
+		<hr class="headerLine">
+	</div>
+	<!-- Page Title -->
+	
+	
+	<!-- Begin Client Area -->
+	<div id="areascroll" class="bdstyleBody">
+		<p>
+		<div class="node"><img src="./files/NavieBayes.files/image0.jpg"></div>
+		<div class="nodeexplain">
+			베이즈 정리를 활용하여 연속형 데이터와 범주형 데이터를 확률 모형으로 변경하고 이를 화용하여 더 높은 확률 값을 가지는 범주를 예측값으로 하는 분류 모델을 생성합니다.
+		</div>
+		<div style="clear: both;"></div>
+
+	</p>
+	
+	<hr class="nodeLine">
+	
+	<a href="#개요">개요</a>,
+	<a href="#고려사항">고려사항</a>,
+	<a href="#사용법">사용법</a>,
+	<a href="#속성">속성</a>,
+	<a href="#결과">결과</a>
+
+	<a name="개요"><h3>개요</h3></a>
+
+	<ul class="liType02">
+		<li>
+			<p>
+				Navie Bayes란 베이즈 정리를 황용하여 연속형 데이터와 이산형 데이터를 확률 모형으로 변경하고 이를 활용하여 더 높은 확률값을 가지는 범주를 예측 값으로 가지는 분류 모델입니다. 
+			</p>
+		</li>
+		<li>Navie Bayes은 독립변수들의 독립성을 가정하고 진행합니다. 이 가정에 적합하지 않을 경우, 분류 결과에 오차가 크게 발생할 수 있습니다.</li>
+		<li>Navie Bayes는 연속형의 경우 표준 분포를 따른다는 가정하에 Gaussian Navie Bayes를 사용하고 범주형 값은 확률 모델을 활용한 Multinomial Navie Bayes를 사용합니다. 또한, 연속형과 범주형을 혼합하여 분류을 할 수 있습니다.</li>
+		<li>
+			<div>
+				<p>
+					Navie Bayes는 아래 정의된 계산을 통해 확률을 정의합니다.
+					<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image5.jpg">
+					</div>
+					<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+					</div>
+					<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image6.jpg">
+					</div>
+					<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image7.jpg">
+					</div>
+					<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image8.jpg">
+					</div>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div>
+				<p>
+					Gaussian Naive Bayes는 독립변수가 연속형 변수일때 사용되는 식은 아래와 같습니다.
+				</p>
+				<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image9.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div>
+				<p>
+					Mininomial Naive Bayes는 독립변수가 이산형 변수일때 사용되는 식은 아래와 같습니다.
+				</p>
+				<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image10.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div>
+				<p>
+					종속변수가 이산형일 경우, 예측모델 생성시 없던 범주가 나타날 경우 확률 값이 0으로 처리되는 현상을 방지하기 위해 아래와 같이 Laplace smoothing(주로 1)값의 분자와 분모에 각각 더해 줍니다.
+				</p>
+				<div style="margin-left:50;padding-left:10px; padding-bottom:10px;">
+						<img src = "./files/NavieBayes.files/image11.jpg">
+				</div>
+			</div>
+		</li>
+	</ul>
+	
+	<a name="고려사항"><h3>고려사항</h3></a>
+	<ul class="liType02">
+		<li><span class="genExHighlight">독립변수</span>는 연속형/이산형의 변수 모두 사용 가능합니다.. </li>
+		<li><span class="genExHighlight">종속변수</span>는 이산형이어야 합니다. </li>
+	</ul>
+	
+	<a name="사용법"><h3>사용법</h3></a>
+	<ul class="liType02">
+		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+		<li><span class="genExHighlight">형태 변경 노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를 지정)</li>
+		<li><span class="genExHighlight">NavieBayes 노드</span>를 <span class="genExHighlight">형태 변경 노드</span>에 연결하고 옵션들을 선택합니다.</li>
+		<li><span class="genExHighlight">화면표시 노드</span>를 <span class="genExHighlight">NavieBayes 노드</span>에 연결합니다. </li>
+		<li><span class="genExHighlight">NavieBayes diagram</span> 예시는 아래와 같습니다.</li>
+		<p>
+			<img src="./files/NavieBayes.files/image1.jpg">
+		</p>
+	</ul>
+	
+	<a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>조건부 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="7">선택사항</th>
+					<td>가중치 부여</td>
+					<td>분석에 필요한 가중치 부여 방법을 선택합니다.</td>
+					<td>필수</td>
+					<td>기본값, 사용자입력</td>
+				</tr>
+				<tr>
+					<td>Laplace Smoothing</td>
+					<td>Laplace Smoothing 사용여부를 지정합니다.</td>
+					<td>필수</td>
+					<td>예,아니오</td>
+				</tr>
+		</table>
+		
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">화면표시 노드</span>에서 분류분석 결과를 확인할 수 있습니다.</p>
+			<p>	
+				<img src="./files/NavieBayes.files/image2.jpg">
+			</p>
+		</ul>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

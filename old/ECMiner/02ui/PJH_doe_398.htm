@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">2수준 설계
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+	<p>	2수준 설계는 요인당 수준이 2개일 때 사용하는 설계입니다. 다음과 같은 실험이 있다고 합니다.</p>
+	
+	
+	
+	<hr class="nodeLine">	
+		<p><b>실험 소개</b></p><br>
+
+		<p>배기가스 가운데 CO의 양을 줄이기 위하여 관련이 있는 인자 A-H를 직교 배열표 배치하고, 잡음인자로 세종류의 도로에서 어떤 정하여진 방법으로 주행했을 때 CO의 양을 구하였을 때, 최적 조건을 구하여라.</p>
+
+	<hr class="nodeLine">
+	
+
+	<p>다구찌 2수준 설계를 선택합니다.</p>
+	<p><img src="../images/doe_398_02.jpg"></p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b> Step 1 : 요인(성분) 및 수준 명명</b></li></ul>
+	<p><img src="../images/doe_398_03.jpg"></p><br>	
+	<p>7가지의 요인을 선택하고 반응 값의 개수로 3개를 선택합니다. 이 때 반응 값의 개수 3개는 세 종류의 도로를 의미합니다.</p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 2 : 설계 선택</b></li></ul>
+	<p><img src="../images/doe_398_04.jpg"></p><br>
+	<p>선택할 수 있는 설계가 많이 있는데 이 중에서 실험 수가 가장 적은 L8설계를 선택합니다.</p>
+	
+
+
+	
+	<br>
+	<br>
+	<ul class="liType02"><li><b> Step 3 : 설계 테이블</b></li></ul>
+	<p><img src="../images/doe_398_05.jpg"></p>	<br>
+	<p>완성된 설계 테이블에 세 종류의 도로에서의 CO의 양을 입력합니다. 이렇게 입력된 값은 추후에 통계분석에 사용될 것입니다.</p>
+			
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 4 : 통계 분석</b></li></ul>
+	<p><img src="../images/doe_398_06.jpg"></p>	<br>
+	<p>현재 CO는 작으면 작을수록 좋은 값이므로 망소 특성을 선택하고 분석을 시작합니다. 분석 결과로 SN비와 함께 분산분석표를 얻을 수 있습니다. 현재 SS가 매우 작은 요인의 경우 처음에 실험할 때 아예 제외를 하고 실험을 해도 좋습니다. E의 SS가 매우 큰 것으로 보아 이 요인이 CO의 SN비에 매우 결정적인 요인들임을 알 수 있습니다.<br>이에 대한 자세한 설명은 DOE 설정 및 분석을 참고하세요.</p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 5 : 플롯 및 반응 최적화</b></li></ul>
+	<p><img src="../images/doe_398_07.jpg"></p><br>
+	<p>본 단계에서는 SN비에 대한 주효과 플롯을 통해서 최적 조건을 찾을 수 있습니다. SN비는 크면 클수록 좋습니다. 따라서 A2, B1, C2, D1, E1, F2, G1 조건을 최적조건이라고 할 수 있습니다. 하지만 이 중에서 몇 개의 요인의 수준 만을 결정할 수 있다면 우선적으로 B,E를 각각 1,1수준으로 맞추어야 합니다. 그리고 남은 요인에 대해서는 경제적, 비용적 효과를 고려하여 수준을 결정하도록 합니다. 재실험을  통해  최적으로 결정된 수준에서 재현성을 판단해 본 후 실험계획을 종료합니다.</p>
+
+	
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

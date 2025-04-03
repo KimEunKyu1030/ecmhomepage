@@ -1,0 +1,509 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">LOGISTIC
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./files/Logistic.files/image002.jpg"></div>
+    	<div class="nodeexplain">
+    		종속변수가 범주형 자료에 대하여 하나 또는 둘 이상의 변수들이 다른 하나의 변수에 미치는 영향의 정도와 방향을 파악하기 위해 회귀분석을 사용합니다. 
+    		</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#연결함수">연결함수</a>,
+    <a href="#모델검증 통계량">모델검증 통계량</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>,
+    <a href="#참조">참조</a>
+    
+    <h3><a name="개요">개요</a></h3>
+    <ul class="liType02">
+  		<li>
+  			Binary Logistic Regression은 종속변수가 2가지 값의 범주를 취하는 경우에 사용되는 분류 방법입니다. <span class="genExHighlight">베르누이(Bernoulli) 분포</span>를 따르는 경우 <span class="genExHighlight">Log-likelihood Function</span>은 아래와 같습니다.
+	  		<p>			
+	    	<img src="./files/Logistic.files/image004.jpg">
+	  		</p>
+  			한편, 이항분포(binomial distribution)를 따르는 경우의 Likelihood Function은 아래와 같습니다.
+	  		<p>			
+	    	<img src="./files/Logistic.files/image006.jpg">
+	  		</p>
+  			위와 같은 <span class="genExHighlight">likelihood function</span>들로부터 <span class="genExHighlight">beta</span>들을 추정하여 아래 model을 fitting하도록 합니다.
+	  		<p>			
+	    	<img src="./files/Logistic.files/image008.jpg">
+	  		</p>
+  			이 로지스틱 회귀모형에서 기본적인 분류규칙은 Y가 1일 확률이 0일 확률보다 크면 1로 분류하고 그렇지 않으면 0으로 분류하는 것입니다. 즉,
+	  		<p>			
+	    	<img src="./files/Logistic.files/image010.jpg"><br>
+	    	<img src="./files/Logistic.files/image012.jpg">
+	  		</p>
+  			이 규칙은 로짓에 대하여서는 다음과 같습니다.
+	  		<p>			
+	    	<img src="./files/Logistic.files/image014.jpg"><br>
+	    	<img src="./files/Logistic.files/image016.jpg">
+	  		</p>
+				종속변수의 값이 3개 이상일 경우는 <span class="genExHighlight">Nominal Logistic Regression</span>을 사용합니다.
+				</li>
+  	</ul>
+    <h3><a name="연결함수">연결함수</a></h3>
+		<div>
+			<p>
+				로지스틱 회귀분석은 범주형 설명변수에 대해 반응변수의 관계를 유연한 분석하는 방법론입니다. 로짓스틱 분석은 설명변수에 대한 확률을 결정하는 함수로 로짓을 사용한 방법론 입니다. 일반적으로 이항로지스틱 분석에는 로짓이외 다른 여러가지 함수를 사용할 수 있습니다. 
+			</p>
+			<p>
+				ECMiner™에는 로짓 이외에 노밋과, 곰핏에 대한 연결함수 기능을 지원합니다
+			</p>
+			<div>
+				<table class="tbStyle01">
+					<tr>
+						<th width="60">이름</th>
+						<th width="">모형</th>
+						<th width="">연결함수</th>
+					</tr>
+				</tr>
+					
+					<tr>
+						<td>
+							로짓
+						</td>
+						<td>
+							이항, 다항
+						</td>
+						<td>
+							<img src="./files/Logistic.files/logistic.jpg"></img>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							노밋(프로빗)
+						</td>
+						<td>
+							이항
+						</td>
+						<td>
+							<img src="./files/Logistic.files/nomit.jpg"></img>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							곰핏
+						</td>
+						<td>
+							이항
+						</td>
+						<td>
+							<img src="./files/Logistic.files/gompit.jpg"></img>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+    <h3><a name="모델검증 통계량">모델검증 통계량</a></h3>
+    <div>
+		<p>
+			로지스틱 회귀분석에서는 설명변수를 범주형 변수를 다루기 때문에 Pearson의 카이제곱 검증을 사용합니다.
+		</p>
+		<p>
+			Pearson 카이제곱 검증을 위해서는 Pearson 잔차를 구해야 합니다. Pearson 잔차의 식은 다음과 같습니다.
+		</p>
+		<div>
+			<img src="./files/Logistic.files/pearson_residual.jpg"></img>
+		</div>
+		<p>
+			Pearson 카이제곱의 통계량값은 아래와 같습니다.
+		</p>
+		<div>
+			<img src="./files/Logistic.files/pearsonX.jpg"></img>
+		</div>
+		<p>
+			또한, Pearson 통계량 이외에 Deviance값을 사용하기도 합니다. 
+		</p>
+		<div>
+			<img src="./files/Logistic.files/deviance.jpg"></img>
+		</div>
+		<p>
+			이항로지스틱에 대해서는 Pearson 잔차를 통해 다양한 잠재적인 문제를 쉽게 찾을 수 있습니다.
+		</p>
+		<p>
+			ECMiner™에는 Pearson 카이제곱과 Deviance값으로 잔차 관련 차트를 지원합니다.
+		</p>
+		<div>
+			<table class="tbStyle01">
+				<tr>
+					<th width="">잠재적인 문제</th>
+					<th width="">진단 통계량</th>
+					<th width="">통계량 정의</th>
+				</tr>
+				<tr rowspan="3">
+					<td>
+						허용 가능한 적합치가 없는 요인/공변량 패턴
+					</td>
+					<td>
+						Pearson 잔차
+					</td>
+					<td>
+						실제 관측치와 예측된 관측치 사이의 차이
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						델타 카이-제곱
+					</td>
+					<td>
+						j번째 요인/공변량 패턴이 제거될 때 Pearson 카이-제곱의 변화량
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						델타 이탈도
+					</td>
+					<td>
+						j번째 요인/공변량 패턴이 제거될 때 이탈도의 변화량
+					</td>
+				</tr>
+				<tr>
+					<td>
+						모수 추정치에 큰 영향을 미치는 요인/공변량 패턴
+					</td>
+					<td>
+						Pearson 잔차를 사용하여 계산된 델타 베타
+					</td>
+					<td>
+						j번째 요인/공변량 패턴이 제거될 때 계수의 변화량
+					</td>
+				</tr>
+				<tr>
+					<td>
+						레버리지가 큰 요인/공변량 패턴
+					</td>
+					<td>
+						레버리지
+					</td>
+					<td>
+						j번째 요인/공변량 패턴의 레버리지(예측 변수 값의 비정상 정도에 대한 측도)
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+    <h3><a name="고려사항">고려사항</a></h3>			
+    <li><span class="genExHighlight">종속변수</span>는 <span class="genExHighlight">이산형</span>이어야 합니다.</li>		
+	
+    <h3><a name="사용법">사용법</a></h3>
+    <ul class="liType02">
+		<li><span class="genExHighlight">입력 노드</span>를 통해 데이터를 읽어들입니다.</li>
+		<li><span class="genExHighlight">입련된 데이터의 구조</span>를 확인합니다.</li>
+		<p>
+			ECMiner™에서 로지스틱 회귀분석을 위해 지원하는 <span class="genExHighlight">데이터 구조</span>는 다음과 같습니다.
+		</p>
+		<table class="tbStyle01">
+			<thead>
+				<th width="100">열1</th>
+				<th width="100">열2</th>
+				<th width="100">열3</th>
+				<th width="100">열4</th>
+			</thead>
+			<tr style="background:#dfffbf; text-align: center;">
+				<td><span><b>종속변수(반응변수)</b></span></td>
+				<td>...</td>
+				<td style="text-align: center;">
+					<span><b>요인</b></span><br>
+					<span><b>독립변수(설명변수)중</b></span><br>
+					<span><b>이산형 변수</b></span>
+				</td>
+				<td>
+					<span><b>공변량</b></span><br>
+					<span><b>독립변수(설명변수)중</b></span><br>
+					<span><b>연속형 변수</b></span>
+				</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>0</td>
+				<td>...</td>
+				<td>1 or 범주1</td>
+				<td>10</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>1</td>
+				<td>...</td>
+				<td>1 or 범주1</td>
+				<td>10</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>1</td>
+				<td>...</td>
+				<td>2 or 범주2</td>
+				<td>20</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>1</td>
+				<td>...</td>
+				<td>3 or 범주3</td>
+				<td>20</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>0</td>
+				<td>...</td>
+				<td>1 or 범주1</td>
+				<td>30</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>0</td>
+				<td>...</td>
+				<td>2 or 범주2</td>
+				<td>20</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+		</table>
+		<br>
+		<li><span class="genExHighlight">독립변수(설명변수)</span>에 대해 새로운 변수(<span class="genExHighlight">교호작용</span> 또는 <span class="genExHighlight">이차항</span> 등)를 <span class="genExHighlight">파생변수</span>로 추가합니다.</li>
+		자세한 방법은 <a href="#참조">참조</a>를 확인해 주세요.
+		<li><span class="genExHighlight">형태 변경 노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를 지정)</li>
+		<li><span class="genExHighlight">Logistic</span>를 <span class="genExHighlight">형태 변경 노드</span>에 연결하고 옵션들을 선택합니다.</li>
+		<li><span class="genExHighlight">화면표시 노드</span>를 <span class="genExHighlight">Logistic 노드</span>에 연결합니다.</li>
+		<li><span class="genExHighlight">Logistic diagram</span> 예시는 아래와 같습니다.</li>
+		<p>	
+			<img src="./files/Logistic.files/image017.jpg">
+		</p>
+	</ul>
+
+    <h3><a name="속성">속성</a></h3>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="">속성명</th>
+					<th width="">설명</th>
+					<th width="40">기타</th>
+					<th width="">비고</th>
+				</tr>
+			</thead>
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>	
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>조건부 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="8">선택사항</th>
+					<td>최대시행수</td>
+					<td>모델 생성시 최대 시행수를 입력합니다.</td>
+					<td>필수</td>
+					<td>자연수</td>
+				</tr>
+				<tr>
+					<td>변수 선택기법</td>
+					<td>None, Stepwise, Forward, Backward 중 하나를 선택할 수 있습니다. None은 현재 선택된 변수를 기준으로 모델을 추정합니다. Forward는 선택된 변수를 최대 선택으로 하여 변수를 추가하면서 적절한 모델을 선택합니다. Backward는 선택된 변수를 기준으로 변수를 제외하면서 적절한 모델을 선택합니다. Stepwise는 Forward기법와 Backwad기법을 반복하여 적절한 모델을 선택합니다.</td>
+					<td>필수</td>
+					<td>None과 Stepwise, Forward, Backward  중 하나를 선택</td>
+				</tr>
+				<tr>
+					<td>입력 유의수준</td>
+					<td>Stepwise와 Forward 선택시 입력 유의수준을 입력합니다.</td>
+					<td>Stepwise, Forward 선택시 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>제거 유의수준</td>
+					<td>Stepwise와 Backward   선택시 제거 유의수준을 입력합니다.</td>
+					<td>Stepwise, Backward   선택시 필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(이항 분리) 분리 기준</td>
+					<td>이항 분리 시에 사용할 분리 기준점을 입력합니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(이항 분리) 연결 함수</td>
+					<td>이항 분리 시에 사용할 연결함수를 선택합니다. </td>
+					<td>이항 분리 시 필수</td>
+					<td>로짓, 노밋, 곰핏</td>
+				</tr>
+				<tr>
+					<td>적합도 검정</td>
+					<td>적합도 검정 표시 여부를 선택합니다. 모델에 대한 Peason 통계량 등을 표시합니다. 이항 분리기의 경우, Pearson 잔차에 대한 도표를 함께 표시합니다.</td>
+					<td>선택</td>
+					<td>모델정보, 차트</td>
+				</tr>
+				<tr>
+					<td>수럼오차</td>
+					<td>반복법을 위한 수렴오차를 설정합니다. 수렴오차는 내부로직에 대해 수렴근사범위를 설정하는 옵션입니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+		</table>
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li><br>
+			<span class="genExHighlight">화면표시 노드</span>에서 각 관측치의 예측 클래스를 알 수 있습니다.
+			<div>
+				<img src="./files/Logistic.files/image022.jpg">
+			</div>
+			<li>이항 로지스틱 잔차 관련 차트 정보</li>
+			<div>
+				<table>
+					<tr>
+						<td><img src="./files/Logistic.files/chart1.jpg" height="380" width="560" alt="델타 델타 대 확률"></img></td>
+						<td><img src="./files/Logistic.files/chart2.jpg" height="380" width="560" alt="델타 카이제곱 대 확률"></img></td>
+					</tr>
+					<tr>
+						<td><img src="./files/Logistic.files/chart3.jpg" height="380" width="560" alt="델타 이탈도 대 확률"></img></td>
+						<td><img src="./files/Logistic.files/chart4.jpg" height="380" width="560" alt="델타 델타 대 레버리지"></img></td>
+					</tr>
+					<tr>
+						<td><img src="./files/Logistic.files/chart5.jpg" height="380" width="560" alt="델타 카이제곱 대 레버리지"></img></td>
+						<td><img src="./files/Logistic.files/chart6.jpg" height="380" width="560" alt="델타 이탈도 대 레버리지"></img></td>
+					</tr>
+				</table>
+			</div>
+		</ul>
+		
+		<h3><a name="참조">참조 - 교호작용 추가 방법</a></h3>
+		
+		<p>
+		교호작용은 파생변수를 이용하여 추가할 수 있습니다.
+		<div>
+			<img src="./files/Logistic.files/image023.jpg"></img>
+		</div>
+		</p>
+		<br>
+		
+		<h5>&lt범주형 대 범주형의 교호작용 &gt</h5>
+		<p>
+		파생변수를 추가하여 교호작용 효과를 낼 수 있습니다.
+		예를 들어 <span class="genExHighlight">FIELD1</span>은 <span class="genExHighlight">{"A", "B", "C"}</span>, <span class="genExHighlight">FILED2</span>은 <span class="genExHighlight">{"a", "b"}</span>로 구성된 필드의 교호작용을 추가한다고 가정하면,
+		아래와 같이 <span class="genExHighlight">파생변수</span>에 <span class="genExHighlight">수식편집기</span>를 입력하여 <span class="genExHighlight">교호작용</span>을 추가할 수 있습니다.
+		</p>
+		<br>
+		
+		<div>
+			<span><b>IF {FIELD1} = "A" and {FIELD2} = "a" THEN</b></span> <br>
+			<span><b>"Aa"</b></span> <br>
+			<span><b>ELSEIF {FIELD1} = "A" and {FIELD2} = "b"  THEN</b></span> <br>
+			<span><b>"Ab"</b></span> <br>
+			<span><b>ELSEIF {FIELD1} = "B" and {FIELD2} = "a"  THEN</b></span> <br>
+			<span><b>"Ba"</b></span> <br>
+			<span><b>ELSEIF {FIELD1} = "B" and {FIELD2} = "b"  THEN</b></span> <br>
+			<span><b>"Bb"</b></span> <br>
+			<span><b>ELSEIF {FIELD1} = "C" and {FIELD2} = "a"  THEN</b></span> <br>
+			<span><b>"Ca"</b></span> <br>
+			<span><b>ELSEIF {FIELD1} = "C" and {FIELD2} = "b"  THEN</b></span> <br>
+			<span><b>"Cb"</b></span> <br>
+			<span><b>ENDIF</b></span> <br>
+		</div>
+		<br>
+		
+		<h5>&lt범주형 대 수치형의 교호작용&gt</h5>
+		<p>
+		각 범주에 대해 파생변수를 추가하여 교호작용 효과를 낼 수 있습니다.
+		예를 들어 <span class="genExHighlight">FIELD1</span>은 <span class="genExHighlight">{"A", "B", "C"}</span>, <span class="genExHighlight">FILED2</span>은 수치형으로 구성된 필드의 교호작용을 추가한다고 가정하면,
+		아래와 같이 <span class="genExHighlight">파생변수</span>에 <span class="genExHighlight">수식편집기</span>를 입력하여 <span class="genExHighlight">교호작용</span>을 추가할 수 있습니다.
+		</p>
+		<br>
+		<div>
+			# FIELD1중 - A에 대한 처리<br>
+			<span><b>IF {FIELD1} = "A" THEN</b></span> <br>
+			<span><b>{FIELD2}</b></span> <br>
+			<span><b>ELSE </b></span> <br>
+			<span><b>0</b></span> <br>
+			<span><b>ENDIF</b></span> <br>
+		</div><br>
+		<div>
+			# FIELD1중 - B에 대한 처리<br>
+			<span><b>IF {FIELD1} = "B" THEN</b></span> <br>
+			<span><b>{FIELD2}</b></span> <br>
+			<span><b>ELSE </b></span> <br>
+			<span><b>0</b></span> <br>
+			<span><b>ENDIF</b></span> <br>
+		</div><br>
+		<div>
+			# FIELD1중 - C에 대한 처리<br>
+			<span><b>IF {FIELD1} = "C" THEN</b></span> <br>
+			<span><b>{FIELD2}</b></span> <br>
+			<span><b>ELSE </b></span> <br>
+			<span><b>0</b></span> <br>
+			<span><b>ENDIF</b></span> <br>
+		</div><br>
+		
+		<h5>&lt 수치형 대 수치형의 교호작용	&gt</h5>
+		<p>
+				파생변수를 추가하여 교호작용 효과를 낼 수 있습니다.
+		예를 들어 <span class="genExHighlight">FIELD1</span>과, <span class="genExHighlight">FILED2</span>가 수치형으로 구성된 필드의 교호작용을 추가한다고 가정하면,
+		아래와 같이 <span class="genExHighlight">파생변수</span>에 <span class="genExHighlight">수식편집기</span>를 입력하여 <span class="genExHighlight">교호작용</span>을 추가할 수 있습니다.
+		</p><br>
+		<div>
+			<span><b>{FIELD1}*{FIELD2}</b></span> <br>
+		</div><br>
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

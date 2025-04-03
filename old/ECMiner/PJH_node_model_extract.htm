@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">모델 데이터 추출
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    	<p class="genEx"></p>
+			이 기능을 통해 모델 특정적인 각종 데이터를 추출할 수 있습니다. 이렇게 추출된 데이터는 다시 읽혀져 전처리 등으로 재사용 될 수 있습니다. 
+		<hr class="nodeLine">
+	
+	 <h3>사용법</h3>
+	 <ul class="liType02">
+		<li>저장할 파일명을 입력하거나 선택합니다</li>
+		<p><img src="./images/node_model_save.gif"></p><br>
+
+		<li>저장된 파일을 자동으로 읽어올 것인지 결정합니다.</li>
+		<p><img src="./images/node_model_reload.gif"></p><br>
+
+		<li>읽어온 데이터를 확인하거나 가공합니다.</li>
+		<p><img src="./images/node_model_data.gif"></p><br>
+	</ul>
+
+
+
+	 <h3>모델별 추출 데이터 유형</h3>
+	 <ul class="liType02">
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">모델명</th>
+						<th width="""">데이터 유형</th>
+						<th width="">기타</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="1">HIERARCHICAL</th>
+						<td>군집 중심</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="1">KMEANS</th>
+						<td>군집 중심 </td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="1">LDA</th>
+						<td>각 클래스별 평균, 각 클래스별 선형판별함수 계수 </td>
+						<td>C:클래스 </td>
+					</tr>
+					<tr>
+						<th rowspan="1">LOGISTIC</th>
+						<td>로지스틱 회귀테이블 </td>
+						<td>SE: SE Coef </td>
+					</tr>
+					<tr>
+						<th rowspan="1">MLR</th>
+						<td>회귀테이블 </td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="1">PCA</th>
+						<td>독립변수 로딩 </td>
+						<td>PC:주성분 </td>
+					</tr>
+					<tr>
+						<th rowspan="1">PCR</th>
+						<td>독립변수 로딩, 독립변수 회귀계수 </td>
+						<td>PC:주성분 </td>
+					</tr>
+					<tr>
+						<th rowspan="1">PLS</th>
+						<td>잠재변수 로딩, 잠재변수 가중치 </td>
+						<td>LV:잠재변수 </td>
+					</tr>
+					<tr>
+						<th rowspan="1">QDA</th>
+						<td>각 클래스별 평균 </td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="1">RBF</th>
+						<td>군집 중심 </td>
+						<td></td>
+					</tr>			
+			</table>
+			<br>
+		
+		
+		<li><span class="genExHighlight">HIERARCHICAL</span><br>각 군집 중심 정보와 전체 관측치 중심 정보를 나타내고 있습니다.</li>
+		<p><img src="./images/node_model_hr.gif"></p><br>
+
+		<li><span class="genExHighlight">KMEANS</span><br>각 군집 중심 정보를 나타내고 있습니다.</li>
+		<p><img src="./images/node_model_kr.gif"></p><br>
+
+		<li><span class="genExHighlight">LDA</span><br>각 변수의 클래스별 판별함수 상수와 계수를 나타냅니다. 그리고 각 변수의 클래스별 평균을 나타내고 있습니다.(C:클래스)</li>
+		<p><img src="./images/node_model_lr.gif"></p><br>
+
+		<li><span class="genExHighlight">LOGISTIC</span><br>로지스틱 테이블 정보를 나타내고 있습니다.</li>
+		<p><img src="./images/node_model_lor.gif"></p><br>
+
+		<li><span class="genExHighlight">MLR</span><br>회귀 테이블 정보를 나타내고 있습니다.</li>
+		<p><img src="./images/node_model_mr.gif"></p><br>
+
+		<li><span class="genExHighlight">PCA</span><br>주성분별 입력변수 로딩값을 나타내고 있습니다.(PC:주성분)</li>
+		<p><img src="./images/node_model_pr.gif"></p><br>
+
+		<li><span class="genExHighlight">PCR</span><br>주성분별 입력변수 로딩값과 계수를 나타내고 있습니다.(PC:주성분)</li>
+		<p><img src="./images/node_model_pcrr.gif"></p><br>
+
+		<li><span class="genExHighlight">PLS</span><br>잠재변수별 로딩,가중치 값과 각 종속변수에 대한 Coefficient Beta값을 나타내고 있습니다.(LV:잠재변수)</li>
+		<p><img src="./images/node_model_plsr.gif"></p><br>
+
+		<li><span class="genExHighlight">QDA</span><br>각 변수의 클래스별 평균을 나타내고 있습니다.</li>
+		<p><img src="./images/node_model_qr.gif"></p><br>
+
+		<li><span class="genExHighlight">RBF</span><br>각 군집 중심 정보를 나타내고 있습니다.</li>
+		<p><img src="./images/node_model_rr.gif"></p><br>
+	</ul>
+
+		
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">3수준 설계
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+	<p>3수준 설계는 요인당 수준이 3개일 때 사용하는 설계입니다. 다음과 같은 실험이 있다고 합니다.</p>
+	
+	<hr class="nodeLine">	
+		<p><b>실험 소개</b></p><br>
+
+		<p>어떤 수지를 생산하는 한 화학업체에서는 이 수지에 포함되는 불순물의 함량률을 줄이기 위한 실험을 실시하고자 한다. 규격 상한은 4.0%이고 , 이 규격이 만족되지 않으면 10kg당 50000원의 손실이 발생한다. 불순물에 영향을 주리라고 예상되는 4가지 제어인자를 다음과 같이 취하였다.</p>
+		<br>
+		<p><img src="../images/doe_404_01.gif"></p>
+		<p><img src="../images/doe_404_02.gif"></p>
+		<p><img src="../images/doe_404_03.gif"></p>
+		<p><img src="../images/doe_404_04.gif"></p>
+		<br>
+		<p>비 제어 인자로서</p>
+		<p><img src="../images/doe_404_05.gif"></p>
+		<p><img src="../images/doe_404_06.gif"></p>
+		<p>을 선택하고 생산된 수지를 실험실에서 분석하여 불순물의 함량을 얻었다.</p>
+
+		
+
+	<hr class="nodeLine">
+	
+
+	<p>다구찌 설계 3수준 설계를 선택합니다.</p>
+	<p><img src="../images/doe_404_07.jpg"></p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b> Step 1 : 요인(성분) 및 수준 명명</b></li></ul>
+	<p><img src="../images/doe_404_08.jpg"></p><br>	
+	<p>위와 같이 요인의 이름을 붙이고 반응 값의 개수를 4개를 선택해서 각 잡음 요인의 수준에 맞는 이름을 붙입니다.</p>
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 2 : 설계 선택</b></li></ul>
+	<p><img src="../images/doe_404_09.jpg"></p><br>	
+	<p>현재 선택할 수 있는 설계는 2개인데 이 중에서 L9를 선택합니다.</p>
+	
+
+
+	
+	<br>
+	<br>
+	<ul class="liType02"><li><b> Step 3 : 설계 테이블</b></li></ul>
+	<p><img src="../images/doe_404_10.jpg"></p><br>	
+	<p>설계 테이블이 완성되면 비제어인자들의 각 수준에서 실험한 특성치를 입력합니다.</p>		
+			
+
+
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 4 : 통계 분석</b></li></ul>
+	<p>현재 특성치가 불순물의 함량이므로 이것은 작으면 작을수록 좋은 값입니다.따라서 망소 특성을 선택하고 분석을 시작합니다.</p>
+	<p><img src="../images/doe_404_11.jpg"></p><br>	
+	<p>SN비를 기준으로 한 분산분석표는 B의 SS(Sum of Square)가 매우 작음을 보여줍니다. 이를 통해 볼 때 A, C, D 요인이 모두 SN비의 변동을 잘 설명하는 것을 알 수 있습니다.</p>
+	<br>
+	<br>
+	<ul class="liType02"><li><b>Step 5 : 플롯 및 반응 최적화</b></li></ul>
+	<p><img src="../images/doe_404_15.jpg"></p><br>	
+	<p>본 단계에서는 SN비에 대한 주효과 플롯을 통해 최적의 실험 조건을 찾을 수 있습니다. 현재 A는 2수준, B는 3수준, C는 3수준, D는 3수준에서 SN비가 가장 크므로 A, B, C의 상호 작용이 없다는 전제하에 A2, B3, C3, D3 이 가장 좋은 조건임을 알 수 있습니다. 이에 대해서 확인 실험을 하여 재현성을 확인하고 실험을 마칩니다.</p>	
+	
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

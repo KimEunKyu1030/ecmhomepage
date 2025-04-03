@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">PCR
+	    <div class="version"></div>
+	    </div>
+	    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+    	<div class="node"><img src="./images/node_modeling_pcr.jpg"></div>
+    	<div class="nodeexplain">
+			보통 종속변수예측을 위해 많이 사용되는 방법이 MLR입니다. 그러나 독립변수 x간의 <span class="nodeExHighlight">다중공선성(multicollinearity)</span>이 크거나 변수의 수가 관측치의 수보다 많을때 MLR을 사용하는 것은 효율적이지 않습니다. 이럴 경우 종속변수예측을 위해 <span class="nodeExHighlight">PCR(Principal Component Regression)</span>을 사용합니다.
+    	</div>
+    	<div style="clear: both;"></div>
+
+    </p>
+    
+    <hr class="nodeLine">
+    
+    <a href="#개요">개요</a>,
+    <a href="#고려사항">고려사항</a>,
+    <a href="#사용법">사용법</a>,
+    <a href="#속성">속성</a>,
+    <a href="#결과">결과</a>
+		
+		
+    
+    <a name="개요"><h3>개요</h3></a>
+
+    <ul class="liType02">
+  		<li>종속변수 y와 독립변수 x가 있을 때 y에 대한 회귀모형은 다음과 같습니다.</li>
+		<p><img src="./images/modeling_pcrintro1.jpg"></p>
+		<p>여기서 <span class="genExHighlight">β</span>는 <span class="genExHighlight">회귀계수벡터</span>며, <span class="genExHighlight">ε</span>은 <span class="genExHighlight">오차벡터</span>입니다. β는 최소자승법으로 구해지는데 x의 벡터들간 <span class="genExHighlight">다중공선성(multicollinearity)</span>이 높으면 분산이 커 효율적이지 못하며, 관측치수보다 변수수가 많을 때는 구할 수 없습니다. 이러한 문제가 있을 때 MLR 대신 PCR을 사용합니다. </p>
+		<p><img src="./images/modeling_pcrintro2.jpg"></p>
+		<p>여기서는 PCA를 적용해 PC score 행렬인 T를 먼저 구한 후, 이 값을 토대로 회귀분석을 실시합니다. </p>
+
+  	</ul>
+
+  	
+  	<a name="고려사항"><h3>고려사항</h3></a>
+    <ul class="liType02">
+  		<li>PCR을 수행하기 위해 <span class="genExHighlight">종속변수</span>는 연속형이어야 하며, <span class="genExHighlight">독립변수</span>도 연속형이어야 합니다.</li>
+		<li><span class="genExHighlight">PCR노드</span> 자체에 표준화 전처리과정을 포함하고 있습니다. </li>
+  	</ul>
+  	
+  	<a name="사용법"><h3>사용법</h3></a>
+    <ul class="liType02">
+  		<li><span class="genExHighlight">입력노드</span>를 통해 데이터를 읽어들입니다.</li>
+  		<li><span class="genExHighlight">형태변경노드</span>를 통해 읽어들인 데이터의 타입을 지정합니다.(<span class="genExHighlight">독립변수, 종속변수</span>를지정)</li>
+  		<li><span class="genExHighlight">PCR노드</span>를 <span class="genExHighlight">형태변경노드</span>에 연결하고 옵션들을 선택합니다.</li>
+  		<li><span class="genExHighlight">PCR DIAGRAM</span> 예시는 아래와 같습니다.</li>
+  		<p>			
+    	<img src="./images/6/img17.jpg">
+  		</p>
+  	</ul>
+			
+		
+    <a name="속성"><h3>속성</h3></a>
+		<table class="tbStyle01">
+			<thead>
+				<tr>
+					<th width="60">속성그룹</th>
+					<th width="100">속성명</th>
+					<th width="">설명</th>
+					<th width="60">기타</th>
+					<th width="60">비고</th>
+				</tr>
+			</thead>
+			
+				<tr>
+					<th rowspan="2">일반정보</th>
+					<td>이름</td>
+					<td>노드의 이름을 입력합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설명</td>
+					<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+					<td>선택</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="2">모델파일</th>
+					<td>모델파일 생성</td>
+					<td>모델링 후에 모델 파일을 생성할지의 여부를 선택합니다.</td>
+					<td>필수</td>
+					<td>예, 아니오</td>
+				</tr>
+				<tr>
+					<td>모델파일 경로</td>
+					<td>모델 파일을 생성할시 저장할 모델 파일의 경로를 선택합니다.</td>
+					<td>필수</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="3">선택사항</th>
+					<td>주성분수</td>
+					<td>전체 변수를 축약할 주성분의 수를 입력합니다. 주성분수는 독립 변수의 수보다는 작아야 합니다.</td>
+					<td>필수</td>
+					<td>독립변수 수보다 작은 자연수</td>
+				</tr>		
+				<tr>
+					<td>신뢰구간 저장</td>
+					<td>지정한 종속변수에 대한 95% 신뢰구간 저장여부를 결정합니다.</td>
+					<td></td>
+					<td>True, False</td>
+				</tr>
+				<tr>
+					<td>예측구간 저장</td>
+					<td>예측값에 대한 95% 예측구간 저장여부를 결정합니다.</td>
+					<td></td>
+					<td>True, False</td>
+				</tr>
+				<tr>
+					<th rowspan="3">변수정보</th>
+					<td>변수정보</td>
+					<td>읽을 데이터의 변수명 및 형태를 나타냅니다.</td>
+					<td></td>
+					<td></td>
+				</tr>	
+		</table>
+
+
+		<h3><a name="결과">결과</a></h3>
+		<ul class="liType02">
+			<li>분석결과정보</li>
+			<p><span class="genExHighlight">PCR 노드</span>에 <span class="genExHighlight">화면표시노드</span>를 연결하면 추출된 주성분값과 Y추정치와 잔차값을 볼 수 있습니다.</p>
+			<p>			
+			<img src="./images/modeling_pcrresult.jpg">
+			</p>
+		</ul>
+		
+
+
+		
+		<hr class="footerLine">
+		<p class="footer">
+	</div>
+	</body>
+</html>

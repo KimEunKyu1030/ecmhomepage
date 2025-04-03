@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ECMiner Style</title>
+  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drawflow/dist/drawflow.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/drawflow"></script>
+  <script src="drawflow-editor.js"></script>
+  <script src="menu-handlers.js"></script> <!-- 새로 추가된 분리 파일 -->
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <header class="topnav">
+    <div class="nav-inner">
+        <div class="logo">
+        <img src="images/logo.png" alt="ECMiner 로고">
+        </div>
+    <nav class="nav-links">
+      <a href="#" onclick="showMenu('제품')">제품</a>
+      <a href="#" onclick="showMenu('수행실적')">수행실적</a>
+      <a href="#" onclick="showMenu('고객지원')">고객지원</a>
+      <a href="#" onclick="showMenu('자료실')">자료실</a>
+      <a href="#" onclick="showMenu('커뮤니티')">커뮤니티</a>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <aside class="sidebar" id="sidebar"></aside>
+      <section class="content" id="content">
+        <section class="hero-blue">
+            <h1>The best choice for Bigdata & AI</h1>
+            <p>이씨마이너는 고객에게 bigdata & AI 분석을 위한 최고의 환경을 제공합니다.</p>
+            <div class="hero-buttons">
+              <a href="#" onclick="showMenu('제품'); setTimeout(() => document.querySelector('#sidebar a:nth-child(1)').click(), 100);">제품 소개</a>
+              <a href="#" onclick="showMenu('제품'); setTimeout(() => document.querySelector('#sidebar a:nth-child(2)').click(), 100);">제품 다운로드</a>
+              <a href="#" onclick="showMenu('제품'); setTimeout(() => document.querySelector('#sidebar a:nth-child(3)').click(), 100);">ECMiner<sup>TM</sup> 체험하기</a>
+            </div>
+        </section>
+        <div class="main-hero">
+          <h1>메인</h1>
+          <p>메인입니다</p>
+          <img src="images/Main.jpg" alt="ECMiner 메인 이미지" style="display: block; margin: 0 auto 50px;">
+          <img src="images/키키핑.webp" alt="ECMiner 메인 이미지" style="display: block; margin: 0 auto 50px;">
+          <img src="images/사탕핥는키키핑.jpg" alt="ECMiner 메인 이미지" style="display: block; margin: 0 auto;">
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const menuItems = {
+      '제품': ['제품 개요', '제품 설치', '제품 체험','버전 비교'],
+      '수행실적': {
+        '2025년': ['프로젝트1', '프로젝트2', '프로젝트3'],
+        '2024년': ['프로젝트1', '프로젝트2', '프로젝트3'],
+        '2023년': ['프로젝트1', '프로젝트2', '프로젝트3']
+      },
+      '고객지원': ['FAQ', '1:1 문의', '가이드 다운로드', 'AI도우미'],
+      '자료실': ['도움말', '매뉴얼', '교육자료', '릴리즈 노트'],
+      '커뮤니티': ['공지사항', '사용자 포럼', '이벤트']
+    };
+  
+    function showMenu(menu) {
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
+  
+      sidebar.innerHTML = '';
+      if (typeof menuItems[menu] === 'object' && !Array.isArray(menuItems[menu])) {
+        // 중첩 구조일 경우 (예: 수행실적 > 연도 > 프로젝트)
+        Object.entries(menuItems[menu]).forEach(([mainItem, subItems]) => {
+          const projectTitle = document.createElement('div');
+          projectTitle.className = 'project-title';
+          projectTitle.innerHTML = `
+            <span class="title-text">${mainItem}</span>
+            <span class="arrow">◀</span>
+          `;
+  
+          const subMenu = document.createElement('div');
+          subMenu.className = 'submenu';
+  
+          subItems.forEach(sub => {
+            const subLink = document.createElement('a');
+            subLink.href = "#";
+            subLink.textContent = sub;
+  
+            // 핵심: 연도 정보(mainItem)를 4번째 인자로 전달
+            subLink.onclick = () => handleMenuClick(menu, sub, content, mainItem);
+  
+            subMenu.appendChild(subLink);
+          });
+  
+          projectTitle.onclick = () => {
+            const arrow = projectTitle.querySelector(".arrow");
+            const isOpen = subMenu.classList.contains("open");
+            subMenu.classList.toggle("open");
+            arrow.textContent = isOpen ? "◀" : "▼";
+          };
+  
+          sidebar.appendChild(projectTitle);
+          sidebar.appendChild(subMenu);
+        });
+  
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>하위 항목을 선택하세요.</p>`;
+      } else if (menuItems[menu]) {
+        // 단일 레벨 메뉴 처리 (예: 제품, 자료실)
+        menuItems[menu].forEach(item => {
+          const link = document.createElement('a');
+          link.href = "#";
+          link.textContent = item;
+  
+          link.onclick = () => handleMenuClick(menu, item, content);
+  
+          sidebar.appendChild(link);
+        });
+  
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>${menu}에 대한 내용이 여기에 표시됩니다.</p>`;
+      } else {
+        sidebar.style.display = 'none';
+        content.innerHTML = '내용 없음';
+      }
+    }
+  
+    document.querySelector('.logo').onclick = () => {
+      window.location.href = 'index.html';
+    };
+  
+    // drawflow 초기화
+    window.addEventListener('DOMContentLoaded', () => {
+      if (typeof initDrawflowEditor === 'function') {
+        initDrawflowEditor("editor-container");
+      }
+    });
+  </script>
+  
+
+</body>
+</html>

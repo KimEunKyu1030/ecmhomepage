@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ECMiner Style</title>
+  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drawflow/dist/drawflow.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/drawflow"></script>
+  <script src="drawflow-editor.js"></script>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <header class="topnav">
+    <div class="nav-inner">
+        <div class="logo">
+        <img src="images/logo.png" alt="ECMiner 로고">
+        </div>
+    <nav class="nav-links">
+      <a href="#" onclick="showMenu('제품')">제품</a>
+      <a href="#" onclick="showMenu('수행실적')">수행실적</a>
+      <a href="#" onclick="showMenu('고객지원')">고객지원</a>
+      <a href="#" onclick="showMenu('자료실')">자료실</a>
+      <a href="#" onclick="showMenu('커뮤니티')">커뮤니티</a>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <aside class="sidebar" id="sidebar"></aside>
+      
+      <section class="content" id="content">
+        <section class="hero-blue">
+            <h1>The best choice for Bigdata & AI</h1>
+            <p>이씨마이너는 고객에게 bigdata & AI 분석을 위한 최고의 환경을 제공합니다.</p>
+            <div class="hero-buttons">
+              <a href="#" onclick="showMenu('제품'); setTimeout(() => document.querySelector('#sidebar a:nth-child(1)').click(), 100);">제품 다운로드</a>
+              <a href="#" onclick="showMenu('제품'); setTimeout(() => document.querySelector('#sidebar a:nth-child(2)').click(), 100);">제품 소개</a>
+              <a href="#" onclick="showMenu('제품'); setTimeout(() => document.querySelector('#sidebar a:nth-child(3)').click(), 100);">ECMiner<sup>TM</sup> 체험하기</a>
+            </div>
+        </section>
+
+        <div class="main-hero">
+          <h1>메인</h1>
+          <p>메인입니다</p>
+          <img src="images/키키핑.webp" alt="ECMiner 메인 이미지" style="display: block; margin: 0 auto 50px;">
+          <img src="images/사탕핥는키키핑.jpg" alt="ECMiner 메인 이미지" style="display: block; margin: 0 auto;">
+        </div>
+
+        <!-- <section style="margin-top: 60px;">
+          <h2 style="text-align: center; color: #1e3a8a; margin-bottom: 16px;">
+            <img src="images/ECMiner머리.png" alt="아이콘" style="width: 28px; vertical-align: middle; margin-right: 8px;">
+            ECMiner<sup>TM</sup> 체험하기</h2>
+          <div id="editor-container" style="height: 500px; border: 1px solid #ccc;"></div>
+        </section>
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="addCustomNode('input')">입력 노드 추가</button>
+            <button onclick="addCustomNode('process')">처리 노드 추가</button>
+            <button onclick="addCustomNode('output')">출력 노드 추가</button>
+          </div> -->
+
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const menuItems = {
+      '제품': ['설치', '제품 개요', '제품 체험','버전 비교'],
+      '수행실적': {
+        '2025년': ['프로젝트1', '프로젝트2', '프로젝트3'],
+        '2024년': ['프로젝트1', '프로젝트2', '프로젝트3'],
+        '2023년': ['프로젝트1', '프로젝트2', '프로젝트3']
+      },
+      '고객지원': ['FAQ', '1:1 문의', '가이드 다운로드', 'AI도우미'],
+      '자료실': ['도움말', '매뉴얼', '교육자료', '릴리즈 노트'],
+      '커뮤니티': ['공지사항', '사용자 포럼', '이벤트']
+    };
+
+    function showMenu(menu) {
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
+
+      sidebar.innerHTML = '';
+      if (typeof menuItems[menu] === 'object' && !Array.isArray(menuItems[menu])) {
+        Object.entries(menuItems[menu]).forEach(([mainItem, subItems]) => {
+          const projectTitle = document.createElement('div');
+          projectTitle.className = 'project-title';
+          projectTitle.innerHTML = `
+            <span class="title-text">${mainItem}</span>
+            <span class="arrow">◀</span>
+          `;
+
+          const subMenu = document.createElement('div');
+          subMenu.className = 'submenu';
+
+          subItems.forEach(sub => {
+            const subLink = document.createElement('a');
+            subLink.href = "#";
+            subLink.textContent = sub;
+            subLink.onclick = () => {
+              if (mainItem === '2024년' && sub === '프로젝트1') {
+                content.innerHTML = `
+                  <h2>2024년 - 프로젝트1</h2>
+                  <img src="images/WP.png" alt="2024 프로젝트1 이미지" style="max-width: 70%; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                  <p>
+                    <a href="WP_완료보고서.pdf" target="_blank" rel="noopener" style="padding: 10px 16px; background-color: #1e3a8a; color: white; border-radius: 6px; text-decoration: none;">
+                      📄 PDF 열기 (새 탭)
+                    </a>
+                  </p>
+                `;
+              } else {
+                content.innerHTML = `<h2>${mainItem} - ${sub}</h2><p>📄 ${sub}에 대한 내용이 여기에 표시됩니다.</p>`;
+              }
+            };
+            subMenu.appendChild(subLink);
+          });
+
+          projectTitle.onclick = () => {
+            const arrow = projectTitle.querySelector(".arrow");
+            const isOpen = subMenu.classList.contains("open");
+            subMenu.classList.toggle("open");
+            arrow.textContent = isOpen ? "◀" : "▼";
+          };
+
+          sidebar.appendChild(projectTitle);
+          sidebar.appendChild(subMenu);
+        });
+
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>하위 항목을 선택하세요.</p>`;
+      } else if (menuItems[menu]) {
+        menuItems[menu].forEach(item => {
+          const link = document.createElement('a');
+          link.href = "#";
+          link.textContent = item;
+          link.onclick = () => {
+            if (menu === '자료실' && item === '도움말') {
+              content.innerHTML = `
+                <h2>📘 ECMiner 도움말</h2>
+                <iframe src="ECMiner2.html" width="100%" height="800px"></iframe>
+              `;
+            } else if (menu === '자료실' && item === '매뉴얼') {
+              content.innerHTML = `
+                <h2>📘 ECMiner 매뉴얼</h2>
+                <iframe src="Manual.htm" width="100%" height="800px"></iframe>
+              `;
+            } else if (menu === '제품' && item === '제품 체험') {
+                content.innerHTML = `
+                    <h2 style="text-align: center; color: #1e3a8a; margin-bottom: 16px;">
+                    <img src="images/ECMiner머리.png" alt="아이콘" style="width: 28px; vertical-align: middle; margin-right: 8px;">
+                    ECMiner<sup>TM</sup> 체험하기 <br>
+                    </h2>
+                    <div style="margin-top: 20px; text-align: center;">
+                    <button onclick="addCustomNode('input')">입력 노드 추가</button>
+                    <button onclick="addCustomNode('process')">처리 노드 추가</button>
+                    <button onclick="addCustomNode('output')">출력 노드 추가</button>
+                    </div>
+                    <br>
+                    <div id="editor-container" style="height: 500px; border: 1px solid #ccc;"></div>
+                    
+                `;
+
+                // drawflow 초기화
+                setTimeout(() => {
+                    if (typeof initDrawflowEditor === 'function') {
+                    initDrawflowEditor("editor-container");
+                    }
+                }, 0);
+                }
+                else if (menu === '고객지원' && item === 'AI도우미') {
+                content.innerHTML = `
+                    <h2>🗨️ AI도우미</h2>
+                    <iframe src="http://localhost:7860" width="100%" height="600" style="border:none;"></iframe>
+                `;
+                }
+                else if (menu === '자료실' && item === '교육자료') {
+                    content.innerHTML = `
+                        <h2>🎥 교육자료</h2>
+                        <video width="100%" height="500" controls>
+                        <source src="videos/KIKIPING.mp4" type="video/mp4">
+                        브라우저가 video 태그를 지원하지 않습니다.
+                        </video>
+                        <p style="margin-top: 12px;">키키핑 소개 영상입니다.</p>
+                    `;
+                    }
+
+
+            else {
+              content.innerHTML = `<h2>${item}</h2><p>${item}에 대한 내용이 여기에 표시됩니다.</p>`;
+            }
+          };
+          sidebar.appendChild(link);
+        });
+
+        sidebar.style.display = 'flex';
+        content.innerHTML = `<h2>${menu}</h2><p>${menu}에 대한 내용이 여기에 표시됩니다.</p>`;
+      }  else {
+        sidebar.style.display = 'none';
+        content.innerHTML = '내용 없음';
+      }
+    }
+
+    document.querySelector('.logo').onclick = () => {
+      window.location.href = 'homepage6.html';
+    };
+
+    // drawflow 초기화
+    window.addEventListener('DOMContentLoaded', () => {
+      if (typeof initDrawflowEditor === 'function') {
+        initDrawflowEditor("editor-container");
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">오라클 출력
+
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./images/node_out_ora.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight">오라클 입력 노드</span>노드는 오라클 데이터베이스로부터 데이터를 불러오는 노드입니다.
+	    	</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+
+	  	<h3><a name="사용법">사용법</a></h3>
+	  	<ul class="liType02">	
+	  		<p><img src="./images/node_out_ora_properties.jpg"></p>
+	  		<li>데이터베이스에 접속하기 위하여 TNS 명칭, 접속 계정, 계정암호를 입력합니다. 
+			</li>
+
+	  		<li>DB 정보 가져오기 버튼을 눌러 지정된 데이터베이스의 정보를 가져옵니다.
+			</li>
+
+			<li>데이터를 가져올 테이블을 지정하거나 쿼리문을 입력합니다.
+			</li>
+
+			<li>만약 테이블 생성 옵션을 예로 선택한 경우, 테이블 제거 및 테이블 비우기의 옵션을 확인 또는 변경합니다. 
+			</li>
+
+			<li>입력된 속성이 제대로 되었다면 변수 부분에 테이블 혹은 쿼리문이 가지고 있는 변수들이 목록으로 나열됩니다.
+			</li>
+
+			<li> 실행 버튼을 누르면, 데이터가 DB로 저장됩니다.
+			</li>
+	  	</ul>
+	  		
+	  	
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="100">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="3">오라클 접속 정보</th>
+						<td>TNS 명칭</td>
+						<td>접속할 오라클 데이터베이스의 TNS 명을 입력합니다.</td>
+						<td>필수</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>접속 계정</td>
+						<td>데이터베이스 접속 계정명을 입력합니다.</td>
+						<td>필수</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>계정 암호</td>
+						<td>데이터베이스 접속 계정의 암호를 입력합니다.</td>
+						<td>필수</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="6">선택사항</th>
+						<td>DB 정보 가져오기</td>
+						<td>입력된 데이터베이스 접속정보를 이용하여 데이터베이스의 스키마, 테이블, 뷰 등의 정보를 읽어옵니다. 가져온 정보는 아래쪽에 표시됩니다.</td>
+						<td>버튼</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>테이블 생성</td>
+						<td>테이블을 새로 생성할 지의 여부를 나타냅니다. 예로 선택될 경우에는 새로운 테이블을 생성하고, 아니오로 선택되면 기존 테이블을 이용하여 저장됩니다.</td>
+						<td></td>
+						<td>예,아니오</td>
+					</tr>
+					<tr>
+						<td>테이블 내용 초기화</td>
+						<td>테이블 내용을 초기화 합니다.</td>
+						<td></td>
+						<td>예,아니오</td>
+					</tr>
+					<tr>
+						<td>Update</td>
+						<td>선택된 키 변수와 일치하는 date을 Update 합니다.</td>
+						<td></td>
+						<td>예,아니오</td>
+					</tr>
+					<tr>
+						<td>저장 방식</td>
+						<td>변수 저장 방식을 지정합니다.</td>
+						<td></td>
+						<td>변수 순서별, 변수명 일치</td>
+					</tr>
+					<tr>
+						<td>저장할 테이블 명</td>
+						<td>저장할 테이블을 선택합니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="3">SqlLoader 옵션</th>
+						<td>Sql로더 사용</td>
+						<td>Sql Loader 사용여부를 결정합니다.</td>
+						<td></td>
+						<td>예,아니오</td>
+					</tr>
+					<tr>
+						<td>저장파일경로</td>
+						<td>저장할 파일의 경로를 지정합니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>명령문 편집</td>
+						<td>쿼리문을 편집합니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="1">변수정보</th>
+						<td>변수정보</td>
+						<td>읽을 데이터의 변수명 및 형태를 나타냅니다.</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+			</table>
+			
+			
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

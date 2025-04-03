@@ -1,0 +1,464 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">주메뉴 (데이터 탐색기)
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    	    
+	    <h3>메뉴</h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>데이터 탐색기에서는 아래와 같은 메뉴를 제공합니다. 기본적으로 아래의 메뉴를 모두 제공하지만, 노드에 따라서 일부 메뉴가 제공되지 않을 수 있습니다.</li>
+	  		
+	  		<table>
+	  			<tr>
+	  				<td>
+	  					<table class="tbStyle01">
+								<thead>
+									<tr>
+										<th width="60">메뉴 그룹</th>
+										<th width="" colspan="3">메뉴명</th>
+										<th width="">설명</th>
+										<th width="30">비고</th>
+									</tr>
+								</thead>
+									<tr>
+										<th rowspan="2">파일</th>
+										<td colspan="3"><a href="./PJH_DataExplorer_Reload.htm">다시읽기</a></td>
+										<td>데이터 탐색기상의 조작으로 데이터 변화를 모두 무시하고, 초기에 데이터 탐색기를 연 상태로 데이터를 다시 읽어옵니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3"><a href="./PJH_DataExplorer_SaveAs.htm">저장</a></td>
+										<td>데이터 탐색기의 자료를 파일로 저장합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="4">편집</th>
+										<td colspan="3">복사</td>
+										<td>행, 열, 데이터영역의 선택된 부분을 복사 합니다.</td>
+										<td></td>
+									</tr>
+									
+									<tr>
+										<td colspan="3">찾기</td>
+										<td>전체 데이터 영역에서 데이터를 찾습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3">찾기(선택필드)</td>
+										<td>선택된 필드의 데이터 영역에서 데이터를 찾습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3">모두선택</td>
+										<td>데이터 영역 전체를 선택합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="51">분석</th>
+										<td rowspan="3">데이터 통계 분석</td>
+										<td colspan="2"><a href="./DataStatisticalAnalysis.htm">전체 데이터</a></td>
+										<td>데이터 영역내의 모든 데이터에 대한 통계량과 분포를 볼 수 있습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataStatisticalAnalysis_continuous.htm">연속형 데이터</a></td>
+										<td>데이터 영역내의 모든 연속형 데이터에 대한 통계량을 한번에 볼 수 있습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataStatisticalAnalysis_dis.htm">이산형 데이터</a></td>
+										<td>데이터 영역내의 모든 이산형 데이터에 대해 그 분포를 한번에 볼 수 있습니다.</td>
+										<td></td>
+									</tr>
+									
+									<tr>
+										<td rowspan="16">기초통계</td>
+										<td colspan="2"><a href="./DescriptiveStatistic.htm">기술 통계</a></td>
+										<td>선택된 필드(범주형 데이터 필드 제외)의 기본 통계량을 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="3"><a href="./PJH_DataExplorer_Correlation.htm">상관 관계 분석</a></td>
+										<td>화면표시</td>
+										<td>모든 데이터 필드(범주형 데이터 필드 제외)에 대해 필드간의 상관 관계 값을 화면으로 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>파일로 저장</td>
+										<td>모든 데이터 필드(범주형 데이터 필드 제외)에 대해 필드간의 상관 관계 값을 파일로 저장 합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>네트워크</td>
+										<td>모든 데이터 필드(범주형 데이터 필드 제외)에 대해 필드간의 상관 관계를 시각적인 네트워크로 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="4">평균 비교 분석</td>
+										<td><a href="./1_Sample.htm">일표본</a></td>
+										<td>주어진 평균치와 선택된 필드 변수들의 평균값을 비교합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./Independent_Sample.htm">독립표본</a></td>
+										<td>상호 독립적인 각각의 필드에 대해 독립표본 T-test를 실시합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./Matching_Sample.htm">대응표본</a></td>
+										<td>상호 의존적인 각각의 필드에 대해 대응표본 T-test를 실시합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./TestOfSignificance.htm">유의차 검정</a></td>
+										<td>요인필드에 의해 그룹간 차이가 있는지 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="4">비율 검정</td>
+										<td><a href="./Prop_SingleProportionTest.htm">단일 비율 검정</a></td>
+										<td>선택된 필드의 데이터 값들이 이항 자료인 경우 그 비율에 대한 신뢰구간 계산 및 가설을 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./Prop_DoubleProportionTest.htm">두 비율 검정</a></td>
+										<td>이항 자료인 두 변수에 대하여 이벤트 비율간 차이에 대한 신뢰구간 계산 및 가설 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./Prop_PoissonProportion1.htm">1-표본 포아송 검정</a></td>
+										<td>선택된 필드의 데이터 값들이 포아송 자료인 경우 그 비율에 대한 신뢰구간 계산 및 가설을 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./Prop_PoissonProportion2.htm">2-표본 포아송 검정</a></td>
+										<td>포아송 자료인 두 변수에 대하여 이벤트 비율간 차이에 대한 신뢰구간 계산 및 가설을 검정합니다..</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="2">분산 검정</td>
+										<td><a href="./Dist_SingleDistribution.htm">단일 표본 분산 검정</a></td>
+										<td>연속형 변수의 분산에 대한 신뢰구간 계산 및 가설을 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./Dist_DoubleDistribution.htm">두 표본 분산 검정</a></td>
+										<td>두 연속형 변수의 분산 비에 대한 신뢰구간 계산 및 가설을 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./PJH_PJH_wjdrbtjd.htm">정규성 검정</a></td>
+										<td>선택된 필드의 데이터 값들이 정규 본포를 따르는지 따르지 않는지를 통계적으로 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./PoissonTest.htm">포아송 검정</a></td>
+										<td>수집된 자료가 포아송 분포를 따르는지 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="3">분산 분석</td>
+										<td colspan="2"><a href="./PJH_DataExplorer_ANOVA_1W.htm">일원 배치법 : Stack</a></td>
+										<td>Stack데이터에 대해 일원 배치를 수행합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./PJH_DataExplorer_ANOVA_2W.htm">이원 배치법 : Stack</a></td>
+										<td>Stack 데이터에 대해 이원 배치를 수행합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataExplorer_GLM.htm">GLM (일반 선형 모델)</a></td>
+										<td>데이터의 가장 일반적인 형태의 분산분석을 수행합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="2">회귀 분석</td>
+										<td colspan="2"><a href="./02ui/PJH_Orthgonal%20Regression.htm">직교 회귀분석</a></td>
+										<td>실제 관측치와 회귀 직선간 최간거리의 제곱합을 최소화하는 회귀분석을 수행합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./02ui/PJH_Nonlinear%20Regression.htm">Nonlinear Regression</a></td>
+										<td>비선형 데이터를 이용하여 회귀분석을 수행합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="5">SPC</td>
+										<td colspan="2"><a href="./SPC_CapabilityAnalysis.htm.htm">공정능력분석</a></td>
+										<td>연속형 데이터 필드에 대해 명세서 상의 데이터 분포와 실제 데이터 분포를 비교하여, 공정의 능력을 분석합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./SPC_CapabilitySummary.htm">공정능력요약</a></td>
+										<td>데이터가 원하는 공정 영역 내에서 이루어지는지 여부를 요약 리포트 형태로 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="2"><a href="./SPC_PassSampling.htm">합격표본추출</a></td>
+										<td>계수형 합격 샘플링</td>
+										<td>전체 로트(lot) 또는 배치(batch)를 대상으로 품질 기준에 의해 로트의 합격, 불합격 판정을 위한 계수형 샘플링 계획을 생성합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>계량형 합격 샘플링</td>
+										<td>전체 로트(lot) 또는 배치(batch)를 대상으로 품질 기준에 의해 로트의 합격, 불합격 판정을 위한 계량형 샘플링 계획을 생성합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./SPC_ToleranceInterval.htm">공차구간</a></td>
+										<td>최소 모집단의 비율과 신뢰 수준을 설정하며, 샘플로부터 얻어진 통계량을 기초로 지정된 모집단에서의 최소비율과 신뢰수준을 만족하는 구간을 제시합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="14">시계열 분석</td>
+										<td rowspan="8">시계열 모델</td>
+										<td><a href="./02ui/PJH_SubTime1.htm">시계열 분해</a></td>
+										<td>데이터를 성분 별로 나눈다는 것입니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime2.htm">이동 평균</a></td>
+										<td>현재 시점과 과거, 미래의 몇 데이터를 평균한 값을 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime3.htm">지수평활</a></td>
+										<td>과거의 모든 자료를 사용하여 평균을 구하되 최근의 자료에 더 많은 가중치를 높게 부여하는 방법입니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime4.htm">ARIMA</a></td>
+										<td>시계열 데이터의 기본적인 추세를 얻기 위해서 수행하는 방법</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime5.htm">추세분석</a></td>
+										<td>시계열 데이터의 기본적인 추세를 얻기 위해서 수행하는 방법론이다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime6.htm">GARCH</a></td>
+										<td>변동성을 측정하고 예측하여 줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime7.htm">VAR</a></td>
+										<td>특정 변수의 집합들이 단순히 개별적으로 움직이는 것이 아니라 서로 영향을 받으며 움직이고 있다면 VAR 모델을 상정할 수 있습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/PJH_SubTime8.htm">ARMAX</a></td>
+										<td>시계열 데이터와 적합치, 그리고 적합치의 상한, 하한을 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="4">시계열 검정</td>
+										<td><a href="./02ui/TimeSeriesTest_1.htm">단위근 검정</a></td>
+										<td>하나의 시계열이 단위근(Unit Root)을 가지고 있는지를 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/TimeSeriesTest_2.htm">그레인저 인과관계</a></td>
+										<td>하나의 시계열이 다른 시계열을 예측하는데 유용한지 그렇지 않은지를 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/TimeSeriesTest_3.htm">공적분검정</a></td>
+										<td>두 시계열이 공적분 관계(Cointegrated)를 갖는지를 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/TimeSeriesTest_4.htm">ARCH Test</a></td>
+										<td>하나의 시계열이 시간에 따라 변하는 변독성을 예측할 수 있는지 없는지를 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="2">시계열 상관성</td>
+										<td><a href="./02ui/TimeSeriesCorr_1.htm">자기상관, 편자기상관</a></td>
+										<td>시계열 데이터의 값이 과거의 데이터와 어떠한 상관관계를 갖는지를 알려줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="./02ui/TimeSeriesCorr_2.htm.htm">교차상관</a></td>
+										<td>두 시계열간의 유사성을 측정하는 지표입니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="4">표</td>
+										<td colspan="2"><a href="./files/DataExplorer_FrequencyStatistics.htm">빈도표</a></td>
+										<td>어떤 필드에 대해 특정 값의 빈도를 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataExplorer_CrossStatistics.htm">교차표</a></td>
+										<td>각각의 필드에 대해, 두 변수의 값이 공유하고 있는 빈도수가 몇개인지 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataExplorer_ChiSquareTest.htm">일변량 카이제곱 검정</a></td>
+										<td>수집된 자료가 특정 비율을 갖는 다항분포를 따르는지 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./TestOfIndependence.htm">독립성 검정</a></td>
+										<td>각각의 필드에 대해 요인간의 관계유무를 검정합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="2">확률분포</td>
+										<td colspan="2"><a href="./DataExplorer_ProbabilityDistribution.htm">모수 추정</a></td>
+										<td>데이터가 주어져 있을 때 그 데이터에 가장 잘 맞는 모수를 찾아줍니다. 또, 추정된 모수의 신뢰 구간을 구해 주어 추정된 모수를 어느 정도 신뢰할 수 있는지를 제시해줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataExplorer_IndividualDist.htm">개별분포 식별</a></td>
+										<td>데이터의 분포를 확인하기 위하여 여러 분포에 적용하여 얻어진 Anderson-Darling 통계량과 그의 P-value 값을 토대로 데이터의 가장 유사한 분포를 확인할 수 있습니다.</td>
+										<td></td>
+									</tr>	
+									<tr>
+										<td rowspan="4">비모수 검정</td>
+										<td colspan="2"><a href="./Nonpara_1_Sample.htm">일표본</a></td>
+										<td>주어진 중앙값과 선택된 필드의 중앙값을 비교합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./Nonpara_Independent_Sample.htm">독립표본</a></td>
+										<td>한 변수 내의 두 그룹간의 평균 또는 중앙값을 비교합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./Nonpara_Matching_Sample.htm">대응표본</a></td>
+										<td>상호 의존적인 각각의 필드에 대해 중앙값을 비교합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./Nonpara_Anova.htm">분산분석 - 일원배치법</a></td>
+										<td>3개 이상의 중앙값 차이 검정을 진행합니다.</td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td rowspan="2">정확도 측도</td>
+										<td colspan="2"><a href="./02ui/PrecisionMeasure_Classification.html">분류</a></td>
+										<td>독립변수를 통해 각 클래스의 label을 예측합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./02ui/PrecisionMeasure_Regression.html">예측</a></td>
+										<td>종속변수와 예측변수를 사용하여 R-square, MAPE, MAD, MSD를 제공합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="2">확률분포</td>
+										<td colspan="2"><a href="./DataExplorer_ProbabilityDistribution.htm">모수 추정</a></td>
+										<td>데이터가 주어져 있을 때 그 데이터에 가장 잘 맞는 모수를 찾아줍니다. 또, 추정된 모수의 신뢰 구간을 구해 주어 추정된 모수를 어느 정도 신뢰할 수 있는지를 제시해줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./DataExplorer_IndividualDist.htm">개별분포 식별</a></td>
+										<td>데이터의 분포를 확인하기 위하여 여러 분포에 적용하여 얻어진 Anderson-Darling 통계량과 그의 P-value 값을 토대로 데이터의 가장 유사한 분포를 확인할 수 있습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="4">Gage R&R</td>
+										<td colspan="2"><a href="./PJH_GageRnR2.htm">Gage 런차트</a></td>
+										<td>실험을 통해서 얻은 전체 관측치를 보여줍니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./PJH_GageRnR3.htm">Gage 선형성 및 편향 연구</a></td>
+										<td>부품의 규격에 따라서 측정 값과 기준 값의 차이라고 할 수 있는 편향이 선형적인 관계를 가지고 있는지를 판단하기 위해 사용합니다</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./PJH_GageRnR4.htm">Gage R&R(교차분석)</a></td>
+										<td>측정시스템이 부품간을 얼마나 잘 구별하는지, 개별 부품이 개별 작업에 의해 여러 번 측정될 때 측정시스템에서 야기하는 변동을 파악할 때 사용합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="./GageRnR5.htm">Gage R&R(내포분석)</a></td>
+										<td>파괴 검사와 같이 각 부품을 하나의 측정 시스템에서만 측정할 경우 사용합니다.</td>
+										<td></td>
+									</tr>									
+									<tr>
+										<th>차트</th>
+										<td colspan="3"><a href="./pjh_dataexplorer_chart.htm">차트</a></td>
+										<td>2D, 3D, 바, 박스, 매트릭스, 파레토, 파이, 멀티차트 등을 그릴 수 있습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="7">데이터</th>
+										<td colspan="3"><a href="./PJH_DataExplorer_Sort.htm">정렬</a></td>
+										<td>선택된 필드들을 정렬합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3"><a href="./PJH_DataExplorer_Derive.htm">파생 변수</a></td>
+										<td>지정된 조건에 따라 새로운 파생 변수를 생성합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3"><a href="./PJH_DataExplorer_Apply.htm">적용</a></td>
+										<td>데이터 탐색기에서 조작된 전처리 과정을 프로젝트의 노드를 이용하여 스트림으로 구성합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3"><a href="./DataExplorer_DataFilterFilter.htm">필터</a></td>
+										<td>사용하지 않을 변수를 걸러내거나 변수명을 변경할 수 있습니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3"><a href="./DataExplorer_DataVarFix.htm">관심변수 고정</a></td>
+										<td>특정 변수를 고정할 경우 스크롤을 움직여도 그 변수열은 움직이지 않도록 하는 기능입니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3">Box-Cox 변환</td>
+										<td>정규분포를 따르지 않는 관측치들을 정규분포를 따르도록 변환 수식을 제공합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="3">Johnson 변환</td>
+										<td>정규분포를 따르지 않는 관측치들을 정규분포를 따르도록 변환 수식을 제공합니다.</td>
+										<td></td>
+									</tr>
+									<tr>
+										<th>창</th>
+										<td colspan="3"><a href="./PJH_DataExplorer_OutputManager.htm">결과 관리</a></td>
+										<td>결과로 출력된 차트 및 통계량등의 윈도우를 관리합니다.</td>
+										<td></td>
+									</tr>
+							</table>
+	  				</td>
+	  			</tr>
+	  			<tr class="tbStyle02">
+	  				<th>Table 데이터 탐색기 메뉴</th>
+	  			</tr>
+	  		</table>
+	  	</ul>
+	  	
+	  	
+	  	
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

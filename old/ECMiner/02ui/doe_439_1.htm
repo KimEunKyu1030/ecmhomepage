@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="../default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">DOE 반응 최적화
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+
+	
+
+
+
+	<ul class="liType02">
+		<li><b>반응 변수 선택</b></li>
+		<p>ECMiner DOE 반응 최적화는 최적화를 할 반응 변수를 선택하는 것부터 시작합니다. Multiple Response Optimization을 위해서 반응 변수를 2개를 선택하도록 합니다.</p>
+		<br><p><img src="../images/doe_439_01.jpg"></p><br>
+
+	
+		<li><b>반응 최적화 설정</b></li>
+		<p>설정 단추를 누르면 다음과 같은 화면이 나타나고, 수율 1은 최대화하고, 수율 2는 최소화하고 싶을 때 다음과 같이 입력합니다. 이 때 가중치는 바람직성 함수 그림에서 보여주듯이 곡선의 곡률을 결정하고 중요도는 각 반응 변수의 중요성의 정도를 나타내는 지표입니다.</p>
+		<br><p><img src="../images/doe_439_02.jpg"></p><br>
+
+		<li><b>반응 최적화 옵션</b></li>
+		<br><p><img src="../images/doe_439_03.jpg"></p><br>
+		<p>옵션에서는 최적화 알고리즘에서 필요한 옵션을 선택하도록 합니다. </p>
+		<ul class="liType02">
+			<li>초기값 선택 방법 : 모든 최적화 알고리즘에서 초기값은 매우 중요한 역할을 합니다. 초기값에 따라 알고리즘이 local optimum을 찾을지, global optimum을 찾을 지가 갈라질 수 있기 때문입니다. ECMiner DOE에서는 요인 설계, 반응 표면 설계에서는 격자 점에서 시작, 랜덤 점에서 시작, 사용자 정의 점에서 시작이라는 선택방법을 제공하고 혼합물 설계에서는 랜덤 점에서 시작 선택 방법을 제공합니다.</li>
+
+			<li>Beta : 알고리즘의 특성상 여러 점에서 구한Composite Desirability 를 저장해 놓는데 이 때 수렴 조건은 여러 점에서 구한 Composite Desirability 사이의 최대 차이가 Beta보다 작아야 한다는 것입니다. 따라서 보다 정확한 값을 원하는 사용자의 경우, 이 Beta값을 아주 작게 하면 원하는 목적을 이룰 수 있습니다.</li>
+
+			<li>Delta : Delta는 어떤 점이 제한 영역 밖으로 나갔을 때 이를 다시 제한 영역 안으로 들어오도록 해야 하는데 이 때 가까운 제한 영역 평면의 어느 정도 영역 안까지 점을 들어오게 할지를 결정하는 measure입니다. 하지만 경험적으로 볼 때 measure가 알고리즘의 성능에 결정적인 영향을 미치지는 않습니다.</li>
+
+			<li>초기값의 개수 : 서로 다른 몇 개의 초기 값에 대해서 알고리즘을 수행할지를 결정하는 것입니다.</li>
+
+			<li>최대 반복 수 : 알고리즘을 최대 몇 번까지 반복할지를 결정하는 것입니다. 반복 수가 많을수록 더 좋은 해를 찾을 가능성이 높아집니다.</li>
+			<br>
+			
+		</ul>
+		<br>
+		<li><b>최적화 결과</b></li>
+		<br><p><img src="../images/doe_439_04.jpg"></p><br>
+		<p>ECMiner DOE에서는 위와 같이 최적화 결과를 보여줍니다. 각 요인(혹은 성분)의 어떤 값에서 Composite Desirability(종합 바람직성)이 최대화가 되는지를 보여줌으로써 사용자는 목적을 달성할 수 있습니다.</p>
+	</ul>
+
+
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

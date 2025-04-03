@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">그룹 통계량
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./images/Node06_01.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+	    		지정된 그룹핑 조건에 따라 선택된 변수의 통계량을 파생변수로 새롭게 생성합니다.
+	    		</div>
+	    	<div style="clear: both;"></div>
+	
+	    </p>
+	    
+	    <hr class="nodeLine">
+	    
+	    <a href="#사용법">사용법</a>,
+	    <a href="#속성">속성</a>
+	
+	    
+	    <h3><a name="사용법">사용법</a></h3>
+	    <ul class="liType02">
+	    	<span class="genExHighlight"></span>
+	  		<li>그룹핑 변수를 지정하여 연속형 통계량과 날짜 통계량을 구할 수 있습니다. 그리고 선택사항 선택시 선택된 사항에 따라 파생변수가 추가로 생성됩니다.</li>
+	  		<p>			
+	    	<img src="./images/Node06_02.jpg">
+	  		</p>
+	  		<p>			
+	    	<img src="./images/Node06_03.bmp">
+	  		</p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+					<tr>
+						<th rowspan="2">일반정보</th>
+						<td>이름</td>
+						<td>노드의 이름을 입력합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>노드에 대한 간단한 주석을 달 수 있습니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="">선택사항</th>
+						<td>선택사항</td>
+						<td>선택사항에 선택된 값에 대해 파생변수를 생성합니다.</td>
+						<td>빈도계산, 누적빈도계산, 백분율, 누적백분율</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="2">통계량</th>
+						<td>연속형통계량</td>
+						<td>평균, 최소값, 최대값, 범위, 총합, 분산, 표준편차, 중앙값, Q1, Q3, 왜도, 첨도, RMS를 구하여 파생변수로 생성합니다.</td>
+						<td>필수(최소 1개 이상 선택)</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>날짜형통계량</td>
+						<td>최소 날짜, 최대 날짜, 날짜 차이를 구하여 파생변수로 생성합니다.</td>
+						<td>선택</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th rowspan="2">그룹핑 변수 및 통계 변수 </th>
+						<td>그룹핑 변수</td>
+						<td>그룹핑 변수를 Drag & Drop을 통해 지정합니다. 그룹핑 변수는 이산형만 가능합니다.</td>
+						<td>필수</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>통계값 변수</td>
+						<td>그룹핑변수에 의한 통계값을 확인할 변수를 선택합니다. 통계값 변수는 연속형만 가능합니다.</td>
+						<td>필수</td>
+						<td></td>
+					</tr>
+			</table>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

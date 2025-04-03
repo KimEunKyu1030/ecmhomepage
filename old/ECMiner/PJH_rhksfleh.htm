@@ -1,0 +1,1741 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">관리도
+    		
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+	    <p>
+	    	<div class="node"><img src="./files/rhksfleh.files/image002.jpg"></div>
+	    	<div class="nodeexplain">
+	    		<span class="nodeExHighlight"></span>
+	    			<span class="nodeExHighlight">관리도 노드</span>는 산포에 대한 원인을 찾는 관리도를 그립니다.
+	    		</div>
+	    	<div style="clear: both;"></div>	
+	    </p>	    
+	    <hr class="nodeLine">
+	    
+
+
+	  	
+	  	<h3>사용법</h3>
+	    <ul class="liType02">
+			<p><img src="./files/rhksfleh.files/image004.jpg"></p>
+				<li>관리도 노드는 변수를 선택하여 XBar-R, XBar-S, I-MR, MA, EWMA, CUSUM, P, NP, C, U chart를 그릴 수 있습니다. </li>
+	  	</ul>
+
+
+		<!-- XBar-R chart -->
+		<br><br><br>
+		<div class="title">XBar-R chart</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트 형태에서 그리고자 하는 XBar-R 차트를 선택합니다. </li>
+			<li>X-Bar-R 차트를 그릴 변수를 지정합니다.</li>
+			<li>분석에 알맞은 부분군의 크기를 지정합니다.</li>
+			<li>모평균 사용과 모표준편차 사용을 예로 바꾸면 활성화된 창에 모평균과 모표준편차를 입력할 수 있습니다.</li>
+			<li>XBar-R을 선택하여 그려봅니다. 그리고 알맞은 부분군의 크기를 지정하면 아래 그림과 같이 볼 수 있습니다.
+			<p><img src="./files/rhksfleh.files/image006.jpg"></p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				 <tr>
+	        <th rowspan="2">
+	            일반정보
+	        </th>
+	        <td>
+	            이름
+	        </td>
+	        <td>
+	            노드의 이름을 입력합니다.
+	        </td>
+	        <td>
+	            선택
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            설명
+	        </td>
+	        <td>
+	            노드에 대한 간단한 주석을 달 수 있습니다.
+	        </td>
+	        <td>
+	            선택
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <th>
+	            차트옵션
+	        </th>
+	        <td>
+	            차트형태
+	        </td>
+	        <td>
+	            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+	        </td>
+	        <td>
+	            XBar-R, XBar-S, I-MR, MA, EWMA CUSUM, P, NP, C, U
+	        </td>
+	        <td>
+		</td>
+	    </tr>
+	    <tr>
+	        <th rowspan="2">
+	            분석변수
+	        </th>
+	        <td>
+	            분석변수
+	        </td>
+	        <td>
+	            XBar-R 차트를 그릴 변수를 지정합니다.
+	        </td>
+	        <td>
+	            필수
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            부분군크기
+	        </td>
+	        <td>
+	            사용자가 정한 부분군의 크기를 입력합니다.
+	        </td>
+	        <td>
+	            필수
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <th rowspan="4">
+	            모수추정
+	        </th>
+	        <td>
+	            모평균 사용
+	        </td>
+	        <td>
+	            모평균을 사용하여 차트를 그릴지 결정합니다
+	        </td>
+	        <td>
+	            예, 아니오
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            모평균
+	        </td>
+	        <td>
+	            모평균 사용이 예일 경우 활성화됩니다. 알고 싶은 모평균을 입력합니다.
+	        </td>
+	        <td>
+	            실수
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            모표준편차 사용
+	        </td>
+	        <td>
+	            모표준편차를 사용하여 차트를 그릴지 결정합니다.
+	        </td>
+	        <td>
+	            예, 아니오
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            모표준편차
+	        </td>
+	        <td>
+	            모표준편차 사용이 예일 경우 활성화됩니다. 알고 있는 모표준편차를 입력합니다.
+	        </td>
+	        <td>
+	            실수
+	        </td>
+	        <td>
+	             
+	        </td>
+	    </tr>
+				</table>
+			
+
+	  	
+		<p>NOTE: 모평균과 모표준편차를 사용하는 것에 따라서 차트가 다른 모형으로 나옵니다.
+
+모평균을 사용하면 중심값이 모평균으로 바뀌어서 파트가 그려지고, 모표준편차를 사용하면 차트의 형태가 달라지니 직접 확인해 보시는 것이 좋을 것 같습니다.
+</p>
+
+		
+	  	
+
+	    <!--XBar-S chart -->
+		<br><br><br>
+		<div class="title">XBar-S chart</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 XBar-S 차트를 선택합니다. </li>
+			<li>X-Bar-S 차트를 그릴 변수를 지정합니다.</li>
+			<li>분석에 알맞은 부분군의 크기를 지정합니다.</li>
+			<li>모평균 사용과 모표준편차 사용을 예로 바꾸면 활성화된 창에 모평균과 모표준편차를 입력할 수 있습니다.</li>
+			<p><img src="./files/rhksfleh.files/image008.jpg"></p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				 <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            XBar-S 차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            부분군크기
+        </td>
+        <td>
+            사용자가 정한 부분군의 크기를 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            모수추정
+        </th>
+        <td>
+            모평균 사용
+        </td>
+        <td>
+            모평균을 사용하여 차트를 그릴지 결정합니다
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모평균
+        </td>
+        <td>
+            모평균 사용이 예일 경우 활성화됩니다. 알고 싶은 모평균을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차 사용
+        </td>
+        <td>
+            모표준편차를 사용하여 차트를 그릴지 결정합니다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차
+        </td>
+        <td>
+            모표준편차 사용이 예일 경우 활성화됩니다. 
+알고 있는 모표준편차를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+			</table>
+			
+
+	  	
+		<p>NOTE: xbar-r차트와 비슷합니다. Xbar-r 차트와의 차이점은 xbar-r차트는 부분군의 크기가 2~5사이일 때 사용하고, xbar-s차트는 부분군의 크기가 6이상일 때 사용합니다.</p>
+	    
+	    
+ 	    <!--I-MR -->
+		<br><br><br>
+		<div class="title">I-MR</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 I-MR 차트를 선택합니다. </li>
+			<li>I-MR 차트를 그릴 변수를 지정합니다.</li>
+			<li>모평균 사용과 모표준편차 사용을 예로 바꾸면 활성화된 창에 모평균과 모표준편차를 입력할 수 있습니다.</li>
+			<li>이동범위 길이를 정합니다. </li>
+			<p><img src="./files/rhksfleh.files/image010.jpg"></p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				 <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            I-MR 차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            모수추정
+        </th>
+        <td>
+            모평균 사용
+        </td>
+        <td>
+            모평균을 사용하여 차트를 그릴지 결정합니다
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모평균
+        </td>
+        <td>
+            모평균 사용이 예일 경우 활성화됩니다. 
+알고 싶은 모평균을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차 사용
+        </td>
+        <td>
+            모표준편차를 사용하여 차트를 그릴지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차
+        </td>
+        <td>
+            모표준편차 사용이 예일 경우 활성화됩니다. 
+알고 있는 모표준편차를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            관리도별 옵션
+        </th>
+        <td>
+		이동범위 길이
+        </td>
+        <td>
+            이동범위의 길이를 입력합니다.
+        </td>
+        <td>
+             실수
+        </td>
+		<td></td>
+    </tr>
+	</table>	  	
+		<p>NOTE: 이동범위의 길이에 따라 관리한계선이 변하는 것을 알 수 있습니다.</p>   
+		
+
+ 	    <!--MA -->
+		<br><br><br>
+		<div class="title">MA</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 MA차트를 선택합니다. </li>
+			<li>MA 차트를 그릴 변수를 지정합니다.</li>
+			<li>분석에 알맞은 부분군의 크기를 지정합니다.</li>
+			<li>모평균 사용과 모표준편차 사용을 예로 바꾸면 활성화된 창에 모평균과 모표준편차를 입력할 수 있습니다.</li>
+			<li>이동평균 길이를 정합니다.</li>
+			<p><img src="./files/rhksfleh.files/image012.jpg"></p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				   <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            MA 
+차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            부분군크기
+        </td>
+        <td>
+            사용자가 정한 부분군의 크기를 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            모수추정
+        </th>
+        <td>
+            모평균 사용
+        </td>
+        <td>
+            모평균을 사용하여 차트를 그릴지 결정합니다
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모평균
+        </td>
+        <td>
+            모평균 사용이 예일 경우 활성화됩니다. 
+알고 싶은 모평균을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차 사용
+        </td>
+        <td>
+            모표준편차를 사용하여 차트를 그릴지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차
+        </td>
+        <td>
+            모표준편차 사용이 예일 경우 활성화됩니다. 
+알고 있는 모표준편차를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            관리도별 옵션
+        </th>
+        <td>
+            이동평균 길이
+        </td>
+        <td>
+            이동평균의 길이를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+			</table>
+
+
+
+ 	    <!--EWMA(Exponentially Weighted Moving Average:지수가중 이동평균 관리도) -->
+		<br><br><br>
+		<div class="title">EWMA(Exponentially Weighted Moving Average:지수가중 이동평균 관리도)</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 EWMA차트를 선택합니다. </li>
+			<li>EWMA 차트를 그릴 변수를 지정합니다.</li>
+			<li>분석에 알맞은 부분군의 크기를 지정합니다.</li>
+			<li>모평균 사용과 모표준편차 사용을 예로 바꾸면 활성화된 창에 모평균과 모표준편차를 입력할 수 있습니다. </li>
+			<li>가중치 값을 입력합니다.</li>
+			<p><img src="./files/rhksfleh.files/image014.jpg"></p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				   <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            EWMA 
+차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            부분군크기
+        </td>
+        <td>
+            사용자가 정한 부분군의 크기를 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            모수추정
+        </th>
+        <td>
+            모평균 사용
+        </td>
+        <td>
+            모평균을 사용하여 차트를 그릴지 결정합니다
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모평균
+        </td>
+        <td>
+            모평균 사용이 예일 경우 활성화됩니다. 
+알고 싶은 모평균을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차 사용
+        </td>
+        <td>
+            모표준편차를 사용하여 차트를 그릴지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차
+        </td>
+        <td>
+            모표준편차 사용이 예일 경우 활성화됩니다. 
+알고 있는 모표준편차를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            관리도별 옵션
+        </th>
+        <td>
+            Weight
+        </td>
+        <td>
+            가중치 값을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+	</table>
+	<p>NOTE: 가중치는 얻고자 하는 데이터 값을 계산할 경우, 과거 데이터와 최근 데이터의 비중을 달리 함으로써 데이터가 결과값에 미치는 영향을 비교하기 위해 어느 정도의 값으로 영향을 주어야 하는지를 결정하는 것입니다.</p>
+
+
+ 	    <!--CUSUM (Cumulative Summation:누적합관리도) -->
+		<br><br><br>
+		<div class="title">CUSUM (Cumulative Summation:누적합관리도)</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 CUSUM 차트를 선택합니다.</li>
+			<li>CUSUM 차트를 그릴 변수를 지정합니다.</li>
+			<li>분석에 알맞은 부분군의 크기를 지정합니다.</li>
+			<li>모표준편차 사용을 예로 바꾸면 활성화된 창에 모표준편차를 입력할 수 있습니다.</li>
+			<li>차트를 그리기 적당한 target과 h,k 값을 입력합니다.</li>
+			<p><img src="./files/rhksfleh.files/image016.jpg"></p>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				   <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            CUSUM 차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            부분군크기
+        </td>
+        <td>
+            사용자가 정한 부분군의 크기를 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            모수추정
+        </th>
+        <td>
+            모평균 사용
+        </td>
+        <td>
+            모평균을 사용하여 차트를 그릴지 결정합니다
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            모평균
+        </td>
+        <td>
+            모평균 사용이 예일 경우 활성화됩니다. 
+알고 싶은 모평균을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차 사용
+        </td>
+        <td>
+            모표준편차를 사용하여 차트를 그릴지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            모표준편차
+        </td>
+        <td>
+            모표준편차 사용이 예일 경우 활성화됩니다. 
+알고 있는 모표준편차를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+        <th rowspan="3">
+            CUSUM 관리도별 옵션
+
+        </th>
+        <td>
+            target
+        </td>
+        <td>
+            목표변수를 지정합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            h
+        </td>
+        <td>
+            center line과
+Control Limit line 사이에 있어야하는 표준편차의 수, 
+이상상태 신호가 발생하는 값입니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            k
+        </td>
+        <td>
+            부분군의 크기를 설정합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+	</table>
+
+
+
+ 	    <!--U chart -->
+		<br><br><br>
+		<div class="title">U chart</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 U 차트를 선택합니다.</li>
+			<li>U 차트를 그릴 변수를 지정합니다.</li>
+			<li>검사시행 횟수 변수를 선택합니다.</li>
+			<li>검사 총 횟수를 입력합니다.</li>
+			<li>평균불량수를 사용자가 지정하려면 예로 선택하고, 평균불량수 칸이 활성화되면 그 수를 입력합니다.</li>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+			  <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            U 차트를 그릴 변수를 지정합니다. 
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            기타 관리도 옵션
+        </th>
+        <td>
+            검사시행 횟수 변수
+        </td>
+        <td>
+            검사시행 횟수를 나타내는 변수를 지정합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            검사 총횟수
+        </td>
+        <td>
+            검사를 시행한 총 횟수를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            평균불량수 사용자 지정
+        </td>
+        <td>
+            평균 불량수를 사용자가 지정할지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            평균 불량수
+        </td>
+        <td>
+            평균 불량수 사용자 지정을 예라고 했을 때 활성화됩니다. 
+활성화되면 평균 불량수를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+</table>
+	
+
+
+ 	    <!--P chart -->
+		<br><br><br>
+		<div class="title">P chart</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 P 차트를 선택합니다.</li>
+			<li>P 차트를 그릴 변수를 지정합니다.</li>
+			<li>검사시행 횟수 변수를 선택합니다.</li>
+			<li>검사 총 횟수를 입력합니다.</li>
+			<li>불량률을 사용자가 지정하려면 '예'로 선택하고, 불량률 칸이 활성화되면 그 비율을 입력합니다.</li>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				    <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            P 
+차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            기타 관리도 옵션
+        </th>
+        <td>
+            검사시행 횟수 변수
+        </td>
+        <td>
+            검사시행 횟수를 나타내는 변수를 지정합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            검사총횟수
+        </td>
+        <td>
+            검사를 시행한 총 횟수를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            불량률 사용자 지정
+        </td>
+        <td>
+            불량률을 사용자가 지정할 지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            불량률
+        </td>
+        <td>
+            불량률 사용자 지정을 예라고 했을 때 활성화됩니다. 
+활성화되면 불량률을 입력합니다. 
+
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+</table>
+
+
+ 	    <!--NP -->
+		<br><br><br>
+		<div class="title">NP chart</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 NP 차트를 선택합니다.</li>
+			<li>NP 차트를 그릴 변수를 지정합니다.</li>
+			<li>검사시행 횟수 변수를 선택합니다.</li>
+			<li>검사 총 횟수를 입력합니다.</li>
+			<li>불량률을 사용자가 지정하려면 '예'로 선택하고, 불량률 칸이 활성화되면 그 수를 입력합니다.</li>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+				    <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            NP 
+차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">
+            기타 관리도 옵션
+        </th>
+        <td>
+            검사시행 횟수 변수
+        </td>
+        <td>
+            검사시행 횟수를 나타내는 변수를 지정합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            검사총횟수
+        </td>
+        <td>
+            검사를 시행한 총 횟수를 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            불량률 사용자 지정
+        </td>
+        <td>
+            불량률을 사용자가 지정할 지 결정합니다.
+        </td>
+        <td>
+            예, 
+아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            불량률
+        </td>
+        <td>
+            불량률 사용자 지정을 예라고 했을 때 활성화됩니다. 
+활성화되면 불량률을 입력합니다. 
+
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+</table>
+
+
+
+ 	    <!--C chart -->
+		<br><br><br>
+		<div class="title">C chart</div>
+		<hr class="headerLine">
+
+		<h3>사용법</h3>
+	    <ul class="liType02">
+			<li>차트형태에서 그리고자 하는 C 차트를 선택합니다.</li>
+			<li> C 차트를 그릴 변수를 지정합니다.</li>
+			<li>평균 불량수를 사용자가 지정하려면 '예'로 선택하고, 평균 불량수 칸이 활성화되면 그 수를 입력합니다.</li>
+	  	</ul>
+			
+	    <h3><a name="속성">속성</a></h3>
+			<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="60">속성그룹</th>
+						<th width="">속성명</th>
+						<th width="">설명</th>
+						<th width="40">기타</th>
+						<th width="">비고</th>
+					</tr>
+				</thead>
+
+    <tr>
+        <th rowspan="3">
+            일반정보
+        </th>
+        <td>
+            이름
+        </td>
+        <td>
+            노드의 이름을 입력합니다.
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            설명
+        </td>
+        <td>
+            노드에 대한 간단한 주석을 달 수 있습니다.
+        </td>
+        <td>
+            선택
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            차트형태
+        </td>
+        <td>
+            그리고자 하는 차트의 형태를 선택할 수 있습니다.
+        </td>
+        <td>
+            XBar-R, XBar-S,
+            I-MR, 
+            MA,
+            EWMA 
+CUSUM, P, NP, C, U
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th rowspan="1">
+            분석변수
+        </th>
+        <td>
+            분석변수
+        </td>
+        <td>
+            C 
+차트를 그릴 변수를 지정합니다. 
+
+        </td>
+        <td>
+            필수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="2">
+	    기타 관리도 옵션
+        </th>
+        <td>
+            평균 불량수 사용
+        </td>
+        <td>
+            평균 불량수를 사용자가 지정할지 결정합니다.
+        </td>
+        <td>
+            예, 아니오
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+    <tr>
+        <td>
+            평균 불량수
+        </td>
+        <td>
+            평균 불량수 사용자 지정을 '예'라고 했을 때 활성화됩니다.
+	활성화되면 불량률을 입력합니다.
+        </td>
+        <td>
+            실수
+        </td>
+        <td>
+             
+        </td>
+    </tr>
+   </table>
+
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>

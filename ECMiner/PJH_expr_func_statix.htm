@@ -1,0 +1,319 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+		<link href="./default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./default.js"></script>
+	</head>
+	
+	<body class="bdstyle" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+	  <!-- Page Title -->
+	  <div id="areafixed" class="bdstyleTitle">
+	    <div class="title">변수통계함수
+    		<div class="version"></div>
+    	</div>
+    <hr class="headerLine">
+  	</div>
+    <!-- Page Title -->
+    
+    
+    <!-- Begin Client Area -->
+    <div id="areascroll" class="bdstyleBody">
+    <ul class="liType02">
+    	<li>예시에 표현되는 결과값 형태는 함수 적용 결과 데이터 형태가 문자형일 경우 "결과값"의 형태로, 날짜형일 경우 #결과값#의 형태로 표현됩니다.(실제로 화면상에 표현되는 값은 ",#을 제외한 숫자/문자만 표현됩니다.)</li>
+	  	<li>연속형 변수</li>
+    	
+    	<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="">함수</th>
+						<th width="">인수</th>
+						<th width="">설명</th>
+						
+					</tr>
+				</thead>
+					<tr>
+						<td>_AVEDEV(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수에 대한 절대편차의 평균을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_CORR(num1, num2)</td>
+						<td>num1, num2: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수들의 선형 또는 등급 상관계수를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_COUNT(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 수치형 변수의 데이터 수를 반환합니다.(결측치 제외)</td>
+						
+					</tr>
+					<tr>
+						<td>_CSS(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 수정 제곱합을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_CV(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 변동계수를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_DEVSQ(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 표본평균으로부터의 편차의 제곱합을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_GEOMEAN(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 기하평균을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_HARMMEAN(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 조회평균을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_IQR(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 IQR를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_KURTOSIS(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 첨도를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MAD(num,flag) </td>
+						<td>num: 변수 인덱스, flag: 0 or 1</td>
+						<td>지정된 인덱스에 해당하는 변수의 중위 절대편차을 반환합니다. flag = 0 이면 mean(abs(X-mean(X))),  flag  !=  0 이면 median(abs(X-median(X)))</td>
+						
+					</tr>
+					<tr>
+						<td>_MAX(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 최대값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MAXINDEX(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 최대값에 해당하는 행의 인덱스를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MAXINGRP(idx1, val, idx2) </td>
+						<td>idx1, idx2: 변수의 인덱스<br>val: 변수값</td>
+						<td>idx1에 해당하는 변수의 값이 val인 레코드에 대하여 idx2에 해당하는 변수의 최대값을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_MEAN(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 평균을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MEDIAN(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 중앙값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MIDRANGE(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 Midrange를 반환합니다. </td>
+					
+					</tr>
+					<tr>
+						<td>_MIN(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 최소값을 반환합니다. </td>
+					
+					</tr>
+					<tr>
+						<td>_MININDEX(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 최소값에 해당하는 행의 인데스를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MININGRP(idx1, val, idx2) </td>
+						<td>idx1, idx2: 변수의 인덱스<br>val: 변수값</td>
+						<td>idx1에 해당하는 변수의 값이 val인 레코드에 대하여 idx2에 해당하는 변수의 최소값을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_MODE(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 최빈값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MOMENT(num1, num2) </td>
+						<td>num1: 변수 인덱스<br>num2: 숫자(양의 정수)</td>
+						<td>지정된 인덱스에 해당하는 변수의 표본의 n차 적률을 반환합니다.</td>
+						
+					</tr>
+					<tr>
+						<td>_PERCENTRANK(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 백분율순위을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_Q0(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 사분위수 중 첫번째 값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_Q1(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 사분위수 중 두번째 값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_Q2(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 사분위수 중 세번째 값을 반환합니다. (중앙값과 같음) </td>
+						
+					</tr>
+					<tr>
+						<td>_Q3(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 사분위수 중 네번째 값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_Q4(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 사분위수 중 다섯번째 값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_RANGE(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 범위를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_RMS(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 제곱평균제곱근을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_RSQ(num1, num2) </td>
+						<td>num1, num2: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 결정계수(피어슨 상관계수의 제곱)를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_SKEWNESS(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 왜도를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_SQRSUM(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 제곱의 합을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_STD(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 표준편차를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_STDP(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 모집단의 표준편차를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_SUM(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 총합을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_TRIMMEAN(num1, num2) </td>
+						<td>num1: 변수 인덱스<br>num2: k</td>
+						<td>지정된 인덱스에 해당하는 변수의 절사평균(이상치를 제외한 평균)을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_USS(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 제곱합을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_VARIANCE(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 분산을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_VARP(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 모집단의 분산을 반환합니다. </td>
+						
+					</tr>
+			</table>
+			
+			<li>이산형 변수</li>
+    	
+    	<table class="tbStyle01">
+				<thead>
+					<tr>
+						<th width="">함수</th>
+						<th width="">인수</th>
+						<th width="">설명</th>
+						
+					</tr>
+					<tr>
+						<td>_CLASSCNT(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수의 총 Class 개수를 반환합니다. 값이 몇가지 있는 지 알수 있습니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_CLASSTOVAL(num1, num2) </td>
+						<td>num1: 변수 인덱스<br>
+						num2: class index </td>
+						<td>지정된 인덱스에 해당하는 변수 중 num2에 해당하는 Class의 원래 값을 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MAXCNTINDEX(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수 중 휫수가 가장 많은 Class의 인덱스를 반환합니다. </td>
+						
+					</tr>
+					<tr>
+						<td>_MINCNTINDEX(num) </td>
+						<td>num: 변수 인덱스</td>
+						<td>지정된 인덱스에 해당하는 변수 중 횟수가 가장 적은 Class의 인덱스를 반환합니다. </td>
+						
+					</tr>
+				</thead>
+			</table>
+		</ul>
+			
+			<hr class="footerLine">
+			<p class="footer">
+		</div>
+	</body>
+</html>
