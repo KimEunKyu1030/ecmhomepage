@@ -96,7 +96,7 @@ function handleMenuClick(menu, item, content, secondItem = null) {
   }
   else if (menu === '자료실' && item === '교육자료') {
     content.innerHTML = `
-      <h2>🎥 교+육자료</h2>
+      <h2>🎥 교육자료</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: left;">
         
       <div style="width: 23%; cursor: pointer;" onclick="loadVideo('videos/KIKIPING.mp4', '키키핑 소개 영상입니다.')">
